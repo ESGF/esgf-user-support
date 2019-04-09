@@ -132,12 +132,15 @@ Two different ways to join a data access control group in ESGF:
     This process will automatically present a window for group registration.
 
     a. In an ESGF portal, select a dataset with data of the project you are interested in and click on "Show Files".
+
         .. image:: images/group_registration_select_dataset.png
 
     b. Click on "HTTPServer"
+
         .. image:: images/group_registration_filelist.png
 
     c. After login you will be guided to the Group Registration Request page if a group membership is missing.
+
         .. image:: images/group_registration_groups.png
 
     d. Choose a group and click on "Register".
@@ -156,6 +159,7 @@ Logging in with OpenID
 Method 1: Enter your full OpenID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #. Enter your full OpenID in the login box and click "Login"
+
     .. image:: images/login.png
 
 #. Enter your password in the ESGF OpenID password box
@@ -168,9 +172,11 @@ Method 2: Use the pull down to select your OpenID issuer
 * This method is a short cut to entering the full OpenID.
 
 #. Use the arrow icon to invoke the list of OpenID providers
+
     .. image:: images/openid_selector.png
 
 #. Enter your username and password
+
     .. image:: images/openid_user_pw.png
 
 
