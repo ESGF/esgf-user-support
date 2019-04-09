@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Tutorials &mdash; ESGF User Support 0.0.0 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="ESGF User Support 0.0.0 documentation" href="index.html"/>
+        <link rel="next" title="FAQs" href="faq.html"/>
+        <link rel="prev" title="Welcome to ESGF User Support’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ESGF User Support
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#login-openid">Login/OpenID</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#create-an-account">Create an account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#join-or-create-a-project">Join or Create a project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authorization-for-esgf-data-access">Authorization for ESGF data access</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-in-with-openid">Logging in with OpenID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forgot-openid">Forgot OpenID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#forgot-password">Forgot Password</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-password">Update Password</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-your-browser-to-accept-the-esgf-certificate">Get your browser to accept the ESGF certificate</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#data-search-and-download">Data Search and Download</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-the-esgf-search-returns">What the ESGF search returns</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#searching-with-and-or-in-the-search-text-boxes">Searching with AND/OR in the search text boxes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-a-single-file-with-the-browser">Download a single file with the browser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-cart-basics">Data Cart basics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#narrow-a-cmip5-data-search-to-just-one-variable">Narrow a CMIP5 data search to just one variable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-data-from-esgf-using-wget">Download data from ESGF using Wget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-and-browse-data-from-esgf-with-opendap">Download and browse data from ESGF with OPeNDAP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-data-using-globus-online">Download data using Globus Online</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-esgf-search-restful-api">The ESGF search RESTful API</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">FAQs</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ESGF User Support</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>User Tutorials</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/user_guide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="user-tutorials">
+<span id="user-guide"></span><h1>User Tutorials<a class="headerlink" href="#user-tutorials" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="login-openid">
+<h2>Login/OpenID<a class="headerlink" href="#login-openid" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-an-account">
+<h3>Create an account<a class="headerlink" href="#create-an-account" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Many projects are public, and can be viewed without creating an account.</li>
+<li>An account will allow you to join a project and edit that project&#8217;s wiki pages.</li>
+<li>An account is required to download data from an ESGF node.</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Create Account</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click on the &#8220;Create Account&#8221; link in the upper right corner of a CoG page</li>
+</ul>
+<img alt="_images/login_link.png" src="_images/login_link.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Fill in the User Profile</p>
+<blockquote>
+<div><ul class="simple">
+<li>Items in bold are mandatory.</li>
+<li>Interest keywords, photo, and institution will show up on a project&#8217;s People listing.</li>
+</ul>
+<img alt="_images/profile_blank.png" src="_images/profile_blank.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="join-or-create-a-project">
+<h3>Join or Create a project<a class="headerlink" href="#join-or-create-a-project" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You do not need to join a project to download data.</p>
+</div>
+<p>To join a project or create a project, you must first have an account (step 1).</p>
+<ol class="arabic">
+<li><p class="first">Join an existing project</p>
+<blockquote>
+<div><ul class="simple">
+<li>Navigate to the project you are interested in. The project owner may send you the URL in an email, or you can use the Project Browser to view a list of projects.</li>
+<li>Click the &#8220;Join the X project&#8221; in the upper right corner of the project page.</li>
+<li>Wait for approval. Only project administrators can approve new members.</li>
+</ul>
+<img alt="_images/upper_links.png" src="_images/upper_links.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Create a project</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Don&#8217;t request a new project just to download data, it will not be approved. If you are interested in data, navigate to the project hosting the data and follow their instructions for access.</p>
+</div>
+<ul>
+<li><p class="first">Click the &#8220;Register a New Project&#8221; link in the upper right-hand corner of the CoG environment</p>
+<blockquote>
+<div><img alt="_images/upper_links.png" src="_images/upper_links.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Setting Project Options</p>
+<blockquote>
+<div><p>Below is a screenshot of the project registration page. A project <strong>can</strong> be modified after creation, with the exception of the project short name. This page allows project administrators to:</p>
+<ul class="simple">
+<li>Define a project&#8217;s description</li>
+<li>Select a project&#8217;s parents and peers</li>
+<li>Add a project logo</li>
+<li>Toggle privacy</li>
+<li>Turn on Upper Navigation Bar links</li>
+<li>Turn on standardized Resource folders</li>
+<li>Turn on the data service widget</li>
+<li>Turn on Forum notifications</li>
+</ul>
+<img alt="_images/register_project.png" src="_images/register_project.png" />
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="authorization-for-esgf-data-access">
+<h3>Authorization for ESGF data access<a class="headerlink" href="#authorization-for-esgf-data-access" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="logging-in-with-openid">
+<h3>Logging in with OpenID<a class="headerlink" href="#logging-in-with-openid" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="forgot-openid">
+<h3>Forgot OpenID<a class="headerlink" href="#forgot-openid" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="forgot-password">
+<h3>Forgot Password<a class="headerlink" href="#forgot-password" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="update-password">
+<h3>Update Password<a class="headerlink" href="#update-password" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="get-your-browser-to-accept-the-esgf-certificate">
+<h3>Get your browser to accept the ESGF certificate<a class="headerlink" href="#get-your-browser-to-accept-the-esgf-certificate" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="data-search-and-download">
+<h2>Data Search and Download<a class="headerlink" href="#data-search-and-download" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-the-esgf-search-returns">
+<h3>What the ESGF search returns<a class="headerlink" href="#what-the-esgf-search-returns" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="searching-with-and-or-in-the-search-text-boxes">
+<h3>Searching with AND/OR in the search text boxes<a class="headerlink" href="#searching-with-and-or-in-the-search-text-boxes" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="download-a-single-file-with-the-browser">
+<h3>Download a single file with the browser<a class="headerlink" href="#download-a-single-file-with-the-browser" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="data-cart-basics">
+<h3>Data Cart basics<a class="headerlink" href="#data-cart-basics" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="narrow-a-cmip5-data-search-to-just-one-variable">
+<h3>Narrow a CMIP5 data search to just one variable<a class="headerlink" href="#narrow-a-cmip5-data-search-to-just-one-variable" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="download-data-from-esgf-using-wget">
+<h3>Download data from ESGF using Wget<a class="headerlink" href="#download-data-from-esgf-using-wget" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="download-and-browse-data-from-esgf-with-opendap">
+<h3>Download and browse data from ESGF with OPeNDAP<a class="headerlink" href="#download-and-browse-data-from-esgf-with-opendap" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="download-data-using-globus-online">
+<h3>Download data using Globus Online<a class="headerlink" href="#download-data-using-globus-online" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="the-esgf-search-restful-api">
+<h3>The ESGF search RESTful API<a class="headerlink" href="#the-esgf-search-restful-api" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="faq.html" class="btn btn-neutral float-right" title="FAQs" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to ESGF User Support’s documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, ESGF User Support Working Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
