@@ -86,8 +86,18 @@
 <li class="toctree-l2"><a class="reference internal" href="#login-openid">Login/OpenID</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#create-an-account">Create an account</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#join-or-create-a-project">Join or Create a project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#authorization-for-esgf-data-access">Authorization for ESGF data access</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#logging-in-with-openid">Logging in with OpenID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#authorization-for-esgf-data-access">Authorization for ESGF data access</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#why-data-access-control-groups">Why data access control groups?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#which-data-access-control-groups-currently-exist-in-esgf">Which data access control groups currently exist in ESGF?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#who-has-to-join">Who has to join?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-join">How to join?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#logging-in-with-openid">Logging in with OpenID</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#method-1-enter-your-full-openid">Method 1: Enter your full OpenID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#method-2-use-the-pull-down-to-select-your-openid-issuer">Method 2: Use the pull down to select your OpenID issuer</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#forgot-openid">Forgot OpenID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#forgot-password">Forgot Password</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#update-password">Update Password</a></li>
@@ -237,9 +247,175 @@
 </div>
 <div class="section" id="authorization-for-esgf-data-access">
 <h3>Authorization for ESGF data access<a class="headerlink" href="#authorization-for-esgf-data-access" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="why-data-access-control-groups">
+<h4>Why data access control groups?<a class="headerlink" href="#why-data-access-control-groups" title="Permalink to this headline">¶</a></h4>
+<p>Often data users must accept a &#8220;terms of use&#8221; (e.g. agree to acknowledge the data producers in publications) before downloading data.
+Therefore, the creation of a ESGF-CoG account is normally not sufficient for data access, you also need the authorization to access data.
+User&#8217;s must join a data access control group for the project they wish to download data from.
+If the right group is not joined, for example, Wget scripts will prematurely fail with a &#8220;Forbidden&#8221; error message.</p>
+</div>
+<div class="section" id="which-data-access-control-groups-currently-exist-in-esgf">
+<h4>Which data access control groups currently exist in ESGF?<a class="headerlink" href="#which-data-access-control-groups-currently-exist-in-esgf" title="Permalink to this headline">¶</a></h4>
+<p>Below is a list of access control groups by project:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Project</th>
+<th class="head">Group Name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>CMIP5</td>
+<td>CMIP5 Research, CMIP5 Commercial</td>
+</tr>
+<tr class="row-odd"><td>CORDEX</td>
+<td>CORDEX Research, CORDEX Commercial</td>
+</tr>
+<tr class="row-even"><td>EUCLIPSE</td>
+<td>CMIP5 Research</td>
+</tr>
+<tr class="row-odd"><td>GeoMIP</td>
+<td>CMIP5 Research</td>
+</tr>
+<tr class="row-even"><td>LUCID</td>
+<td>CMIP5 Research</td>
+</tr>
+<tr class="row-odd"><td>Obs4MIPS</td>
+<td>CMIP5 Research, NASA OBS</td>
+</tr>
+<tr class="row-even"><td>PMIP3</td>
+<td>CMIP5 Research</td>
+</tr>
+<tr class="row-odd"><td>TAMIP</td>
+<td>CMIP5 Research</td>
+</tr>
+<tr class="row-even"><td>ACME</td>
+<td>ACME</td>
+</tr>
+<tr class="row-odd"><td>ISI-MIP</td>
+<td>ISI-MIP Research, ISI-MIP Unrestricted</td>
+</tr>
+<tr class="row-even"><td>specs</td>
+<td>SPECS</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>For example, if you need CMIP5 data, you will need to join either CMIP5 Research or CMIP5 Commercial.
+Which CMIP5 data are restricted to non-commercial research and education and which data can also be used for commercial purposes is tabulated
+in the CMIP5 document <a class="reference external" href="https://cmip.llnl.gov/cmip5/docs/CMIP5_modeling_groups.pdf">Modeling Groups and their Terms of Use</a>.
+A membership in CMIP5 Research is also sufficient for download of data of other MIPs, not just CMIP5. An exception is ISI-MIP.
+Other projects such as CORDEX have their own groups. Which CORDEX data can only be used for non-commercial
+purposes and which thoroughly is listed in the <a class="reference external" href="https://is-enes-data.github.io/CORDEX_RCMs_info.html">CORDEX Models overview</a>.</div></blockquote>
+</div>
+<div class="section" id="who-has-to-join">
+<h4>Who has to join?<a class="headerlink" href="#who-has-to-join" title="Permalink to this headline">¶</a></h4>
+<p>Everyone who has created a CoG account and wants to download data from one of the projects listed in the table above must join the appropriate
+access control group. This will need to be repeated for each ESGF OpenID since ESGF cannot assign group memberships to persons, only to OpenIDs.
+You will need to do this for each group you need data from. It is not necessary to create a new CoG account for each group. It is possible to have
+several memberships with one OpenID.</p>
+</div>
+<div class="section" id="how-to-join">
+<h4>How to join?<a class="headerlink" href="#how-to-join" title="Permalink to this headline">¶</a></h4>
+<p>Two different ways to join a data access control group in ESGF:</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>View list of data access control groups</dt>
+<dd><p class="first last">A comprehensive list of access control groups can be found at: <a class="reference external" href="https://esgf-node.jpl.nasa.gov/ac/list/">ESGF Data Access Control Groups</a>,
+which contains a list of groups and links for registration. Note, the home pages of ESGF nodes may list or exclude groups based on their individual holdings.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Download a file with your browser</dt>
+<dd><p class="first">The easiest way to join a data access control group is a download a file with your browser&#8217;s download manager.
+This process will automatically present a window for group registration.</p>
+<ol class="last loweralpha">
+<li><dl class="first docutils">
+<dt>In an ESGF portal, select a dataset with data of the project you are interested in and click on &#8220;Show Files&#8221;.</dt>
+<dd><img alt="_images/group_registration_select_dataset.png" class="first last" src="_images/group_registration_select_dataset.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Click on &#8220;HTTPServer&#8221;</dt>
+<dd><img alt="_images/group_registration_filelist.png" class="first last" src="_images/group_registration_filelist.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>After login you will be guided to the Group Registration Request page if a group membership is missing.</dt>
+<dd><img alt="_images/group_registration_groups.png" class="first last" src="_images/group_registration_groups.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Choose a group and click on &#8220;Register&#8221;.</dt>
+<dd><ul class="first simple">
+<li>A sub-window opens with the terms of use.</li>
+<li>After accepting the terms, group membership is immediately active and the download window will open.</li>
+</ul>
+<img alt="_images/group_registration_terms.png" class="last" src="_images/group_registration_terms.png" />
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ol>
+</div>
 </div>
 <div class="section" id="logging-in-with-openid">
 <h3>Logging in with OpenID<a class="headerlink" href="#logging-in-with-openid" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">An OpenID is merely a username in the form of a URL. Do not try to open this URL in a browser window.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">ESGF uses a self-signed SSL certificate. Your browser may reject this with a security warning. View section &#8220;<a class="reference internal" href="#get-your-browser-to-accept-the-esgf-certificate">Get your browser to accept the ESGF certificate</a>&#8221; on how to manually clear this warning.</p>
+</div>
+<div class="section" id="method-1-enter-your-full-openid">
+<h4>Method 1: Enter your full OpenID<a class="headerlink" href="#method-1-enter-your-full-openid" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Enter your full OpenID in the login box and click &#8220;Login&#8221;</dt>
+<dd><img alt="_images/login.png" class="first last" src="_images/login.png" />
+</dd>
+</dl>
+</li>
+<li><p class="first">Enter your password in the ESGF OpenID password box</p>
+<blockquote>
+<div><img alt="_images/chrome_sucess.png" src="_images/chrome_sucess.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="method-2-use-the-pull-down-to-select-your-openid-issuer">
+<h4>Method 2: Use the pull down to select your OpenID issuer<a class="headerlink" href="#method-2-use-the-pull-down-to-select-your-openid-issuer" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>If your provider is not listed in the pulldown, then you have to use method 1 above.</li>
+<li>This method is a short cut to entering the full OpenID.</li>
+</ul>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Use the arrow icon to invoke the list of OpenID providers</dt>
+<dd><img alt="_images/openid_selector.png" class="first last" src="_images/openid_selector.png" />
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Enter your username and password</dt>
+<dd><img alt="_images/openid_user_pw.png" class="first last" src="_images/openid_user_pw.png" />
+</dd>
+</dl>
+</li>
+</ol>
+</div>
 </div>
 <div class="section" id="forgot-openid">
 <h3>Forgot OpenID<a class="headerlink" href="#forgot-openid" title="Permalink to this headline">¶</a></h3>
