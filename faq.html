@@ -83,8 +83,36 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Tutorials</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAQs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#cog-general">CoG General</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#data">Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data">Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-ensembles">What are ensembles?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#do-means-over-ensembles-exist">Do means over ensembles exist?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-an-internationally-common-or-recommended-model-exist">Does an internationally common or recommended model exist?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-can-i-find-model-descriptions-and-associated-literature">Where can I find model descriptions and associated literature?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-find-the-definition-of-a-variable">How can I find the definition of a variable?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-the-relation-between-variable-cf-standard-name-and-variable-long-name">What is the relation between Variable, CF Standard Name and Variable Long Name?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-can-i-find-cmip5-scenarios">Where can I find CMIP5 scenarios?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-are-cmip5-historicalaa-data">Where are CMIP5 historicalAA data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-are-cmip5-historicalsl-data">Where are CMIP5 historicalSl data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-can-i-find-ar5-data">Where can I find AR5 data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-are-the-sres-scenarios-a1b-a2-and-b1">Where are the SRES scenarios A1B, A2 and B1?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">Where can I find more CORDEX 3-hourly or 6-hourly data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-are-cordex-regional-climate-models-described">Where are CORDEX regional climate models described?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-can-i-find-the-land-sea-mask-or-landfrac">Where can I find the land sea mask or landfrac?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#which-grid-resolutions-do-cmip5-models-have">Which grid resolutions do CMIP5 models have?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-the-mpi-m-ocean-grid-be-remapped">How can the MPI-M ocean grid be remapped?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#do-all-cmip5-models-use-the-same-calendar">Do all CMIP5 models use the same calendar?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-may-i-cite-esgf-and-cmip5-data-in-my-paper">How may I cite ESGF and CMIP5 data in my paper?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#may-cmip5-historical-and-rcp-data-be-combined-to-one-long-time-series">May CMIP5 historical and RCP data be combined to one long time series?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#which-height-levels-do-the-data-have">Which height levels do the data have?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#which-heigth-boundaries-do-cordex-cloud-layers-have">Which heigth boundaries do CORDEX cloud layers have?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-which-sequence-are-the-data-ordered-inside-a-netcdf-file">In which sequence are the data ordered inside a NetCDF file?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-verify-that-the-data-have-not-been-updated-since-i-downloaded-them">How can I verify that the data have not been updated since I downloaded them?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-read-or-process-downloaded-data">How can I read or process downloaded data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-can-not-process-downloaded-data">I can not process downloaded data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-calculate-a-multi-year-average-for-each-month-of-year">How can I calculate a multi-year average for each month of year?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back">How can CORDEX data on a grid with rotated poles be rotated back?</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-general">ESGF General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-wget">ESGF Wget</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-login-registration">ESGF Login/Registration</a></li>
@@ -138,11 +166,877 @@
             
   <div class="section" id="faqs">
 <span id="faq"></span><h1>FAQs<a class="headerlink" href="#faqs" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="cog-general">
-<h2>CoG General<a class="headerlink" href="#cog-general" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
+<p>This FAQ focuses on questions concerning data, e.g. data format, data processing, CMIP and CORDEX data.</p>
+<p>Each ESGF question is sorted into exactly one topic. See also section &#8220;<a class="reference internal" href="#esgf-general">ESGF General</a>&#8221;. since questions of general
+interest and questions matching several topics are under topic ESGF General.</p>
+<div class="section" id="what-are-ensembles">
+<h3>What are ensembles?<a class="headerlink" href="#what-are-ensembles" title="Permalink to this headline">¶</a></h3>
+<p>Results of climate model runs depend on the starting point of the calculation, on the initialisation method and on the model physics.
+Ensemble calculations facilitate quantifying the variability of simulation data concerning a single model. In the CMIP and CORDEX projects,
+ensemble members are named in the rip-nomenclature, r for realization (starting point), i for initialization, p for physics, followed by an
+integer, e.g. &#8220;r1i1p1&#8221;. <a class="reference external" href="https://verc.enes.org/data/enes-model-data/cmip5/datastructure">[More information]</a></p>
+</div>
+<div class="section" id="do-means-over-ensembles-exist">
+<h3>Do means over ensembles exist?<a class="headerlink" href="#do-means-over-ensembles-exist" title="Permalink to this headline">¶</a></h3>
+<p>Means over several ensemble members are not in the ESGF.
+You may download the individual ensemble members and calculate the mean using tools, e.g. with
+<a class="reference external" href="https://code.zmaw.de/projects/cdo/wiki/Cdo">Climate Data Operators (CDO)</a>.</p>
+</div>
+<div class="section" id="does-an-internationally-common-or-recommended-model-exist">
+<h3>Does an internationally common or recommended model exist?<a class="headerlink" href="#does-an-internationally-common-or-recommended-model-exist" title="Permalink to this headline">¶</a></h3>
+<p>A generally recommended model doesn&#8217;t exist in the CMIP and CORDEX projects. Many researchers take data from more than one model and also more
+than one ensemble member per model and calculate a mean or plot them together to have a measure for the deviations of the models.</p>
+</div>
+<div class="section" id="where-can-i-find-model-descriptions-and-associated-literature">
+<h3>Where can I find model descriptions and associated literature?<a class="headerlink" href="#where-can-i-find-model-descriptions-and-associated-literature" title="Permalink to this headline">¶</a></h3>
+<p>Go to the <a class="reference external" href="http://es-doc.org/">es-doc portal</a>.</p>
+</div>
+<div class="section" id="how-can-i-find-the-definition-of-a-variable">
+<h3>How can I find the definition of a variable?<a class="headerlink" href="#how-can-i-find-the-definition-of-a-variable" title="Permalink to this headline">¶</a></h3>
+<p>CMIP and CORDEX variables obey the CF standard incl. the <a class="reference external" href="http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html">CF Standard Name Table</a>
+(CF for &#8220;Climate and Forecast&#8221;). In this table is also a definition of the variable. Additional information is in the variable requirement tables of the projects, see next question.</p>
+</div>
+<div class="section" id="what-is-the-relation-between-variable-cf-standard-name-and-variable-long-name">
+<h3>What is the relation between Variable, CF Standard Name and Variable Long Name?<a class="headerlink" href="#what-is-the-relation-between-variable-cf-standard-name-and-variable-long-name" title="Permalink to this headline">¶</a></h3>
+<p>The search category Variable only contains abbreviations. The CF Standard Name obeys the <a class="reference external" href="http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html">CF Standard Name Table</a>
+(CF for &#8220;Climate and Forecast&#8221;). For CMIP5 variables, the relation between all three, Variable, CF Standard Name and Variable Long Name,
+is tabulated in the <a class="reference external" href="http://cmip.llnl.gov/cmip5/docs/standard_output.pdf">CMIP5 Standard Output document</a>,
+for CORDEX variables see the <a class="reference external" href="http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf">CORDEX Variables Requirement Table</a>.</p>
+</div>
+<div class="section" id="where-can-i-find-cmip5-scenarios">
+<h3>Where can I find CMIP5 scenarios?<a class="headerlink" href="#where-can-i-find-cmip5-scenarios" title="Permalink to this headline">¶</a></h3>
+<p>In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed, with many models even both.
+Some of the decadal experiments are Near Term future scenarios. CMIP5 Long Term scenarios are the Representative Concentration Pathways (RCPs),
+which represent the full bandwidth of future emission trajectories for the years 2006-2100, some continued until 2300.
+<a class="reference external" href="https://verc.enes.org/data/enes-model-data/cmip5/datastructure">[More information]</a></p>
+</div>
+<div class="section" id="where-are-cmip5-historicalaa-data">
+<h3>Where are CMIP5 historicalAA data?<a class="headerlink" href="#where-are-cmip5-historicalaa-data" title="Permalink to this headline">¶</a></h3>
+<p>CMIP5 historicalAA, historical data with anthropogenic aerosol forcing only, can be found in the historicalMisc experiment.
+Select historicalMisc and look for &#8220;Forcing = AA&#8221; in the metadata of the search results.</p>
+<p>An overview which CMIP5 data for historicalAA and other forcings should exist can be found in the
+<a class="reference external" href="https://cmip.llnl.gov/cmip5/docs/historical_Misc_forcing.pdf">tables of Gavin Schmidt</a>, for CCSM and CESM models see the updated
+<a class="reference external" href="http://www.cgd.ucar.edu/ccr/strandwg/SingleForcings_20C.html">table of Gary Strand</a>.</p>
+</div>
+<div class="section" id="where-are-cmip5-historicalsl-data">
+<h3>Where are CMIP5 historicalSl data?<a class="headerlink" href="#where-are-cmip5-historicalsl-data" title="Permalink to this headline">¶</a></h3>
+<p>CMIP5 historicalSl, historical data with solar forcing only, can be found in the historicalMisc experiment.
+Select historicalMisc and look for &#8220;Forcing = Sl&#8221; in the metadata of the search results.</p>
+<p>An overview which CMIP5 data for historicalSl and other forcings should exist can be found in the
+<a class="reference external" href="https://cmip.llnl.gov/cmip5/docs/historical_Misc_forcing.pdf">tables of Gavin Schmidt</a>.</p>
+</div>
+<div class="section" id="where-can-i-find-ar5-data">
+<h3>Where can I find AR5 data?<a class="headerlink" href="#where-can-i-find-ar5-data" title="Permalink to this headline">¶</a></h3>
+<p>Climate model output used in the IPCC&#8217;s Fifth Assessment Report (AR5) is a subset of CMIP5 data. Two snapshots of these data were taken for documentation.
+Both are based on the status of CMIP5 data on March 15, 2013, the cutoff date for literature to be included in the
+<a class="reference external" href="http://www.ipcc.ch/report/ar5/wg1/">Working Group I report CLIMATE CHANGE 2013, The Physical Science Basis</a>.
+Data updates since March 15, 2013, are not included in the snapshots. A more detailed description inclusive links to access points to the two snapshots can be
+found on the <a class="reference external" href="http://www.ipcc-data.org/sim/gcm_monthly/AR5/index.html">AR5 GCM data page</a> of Data Distribution Centre (DDC).</p>
+<p>Unless you really need the frozen data with deadline March 15, 2013, we recommend CMIP5 data because erroneous CMIP5 data have usually been corrected by
+publication of a new version. CMIP5 data can be downloaded from ESGF.</p>
+</div>
+<div class="section" id="where-are-the-sres-scenarios-a1b-a2-and-b1">
+<h3>Where are the SRES scenarios A1B, A2 and B1?<a class="headerlink" href="#where-are-the-sres-scenarios-a1b-a2-and-b1" title="Permalink to this headline">¶</a></h3>
+<p>The SRES scenarios (<a class="reference external" href="http://sedac.ipcc-data.org/ddc/sres/index.html">Special Report on Emission Scenarios</a>, for the Third Assessment Report)
+belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=CMIP3 and, for example, experiment=sresa1b.</p>
+</div>
+<div class="section" id="where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">
+<h3>Where can I find more CORDEX 3-hourly or 6-hourly data?<a class="headerlink" href="#where-can-i-find-more-cordex-3-hourly-or-6-hourly-data" title="Permalink to this headline">¶</a></h3>
+<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modeling centers according to the
+<a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design</a>. Please contact the modeling groups.</p>
+</div>
+<div class="section" id="where-are-cordex-regional-climate-models-described">
+<h3>Where are CORDEX regional climate models described?<a class="headerlink" href="#where-are-cordex-regional-climate-models-described" title="Permalink to this headline">¶</a></h3>
+<p>A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
+header with a global attribute &#8220;references&#8221;, which usually contains a web address. You may see this and other attributes without a file download:
+Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section &#8220;Global Attributes&#8221;.</p>
+</div>
+<div class="section" id="where-can-i-find-the-land-sea-mask-or-landfrac">
+<h3>Where can I find the land sea mask or landfrac?<a class="headerlink" href="#where-can-i-find-the-land-sea-mask-or-landfrac" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>&#8220;landfrac&#8221; is not a variable name in ESGF. Please look for variable &#8220;sftlf&#8221;, standard name &#8220;land_area_fraction&#8221;.
+This is the land sea mask of the model in the projects CMIP5, CORDEX, GeoMIP, LUCID, PMIP3, ...</div></blockquote>
+</div>
+<div class="section" id="which-grid-resolutions-do-cmip5-models-have">
+<h3>Which grid resolutions do CMIP5 models have?<a class="headerlink" href="#which-grid-resolutions-do-cmip5-models-have" title="Permalink to this headline">¶</a></h3>
+<p>The following table lists the grid resolutions, i.e. the distance between adjacent grid points in degrees.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="18%" />
+<col width="11%" />
+<col width="12%" />
+<col width="17%" />
+<col width="43%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" rowspan="2">Model</th>
+<th class="head" colspan="2">Atmospheric Grid</th>
+<th class="head" colspan="2">Ocean Grid</th>
+</tr>
+<tr class="row-even"><th class="head">Latitude</th>
+<th class="head">Longitude</th>
+<th class="head">Latitude</th>
+<th class="head">Longitude</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>ACCESS1.0</td>
+<td>1.25</td>
+<td>1.875</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>ACCESS1.3</td>
+<td>1.25</td>
+<td>1.875</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>BCC-CSM1.1</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.3333, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>BCC-CSM1.1(m)</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.3333, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>BNU-ESM</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.3344, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>CCSM4</td>
+<td>0.9424</td>
+<td>1.25</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>CESM1(BGC)</td>
+<td>0.9424</td>
+<td>1.25</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>CESM1(CAM5)</td>
+<td>0.9424</td>
+<td>1.25</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>CESM1(FASTCHEM)</td>
+<td>0.9424</td>
+<td>1.25</td>
+<td colspan="2">only time-independent ocean data</td>
+</tr>
+<tr class="row-even"><td>CESM1(WACCM)</td>
+<td>1.8848</td>
+<td>2.5</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>CFSv2-2011</td>
+<td>1</td>
+<td>1</td>
+<td>0.5</td>
+<td>0.5</td>
+</tr>
+<tr class="row-even"><td>CMCC-CESM</td>
+<td>3.4431</td>
+<td>3.75</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>CMCC-CM</td>
+<td>0.7484</td>
+<td>0.75</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>CMCC-CMS</td>
+<td>3.7111</td>
+<td>3.75</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>CNRM-CM5</td>
+<td>1.4008</td>
+<td>1.40625</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>CNRM-CM5-2</td>
+<td>1.4008</td>
+<td>1.40625</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>CSIRO-Mk3.6.0</td>
+<td>1.8653</td>
+<td>1.875</td>
+<td>0.9327, 0.9457</td>
+<td>1.875</td>
+</tr>
+<tr class="row-even"><td>CSIRO-Mk3L-1-2</td>
+<td>3.1857</td>
+<td>5.625</td>
+<td colspan="2">only time-independent ocean data</td>
+</tr>
+<tr class="row-odd"><td>CanAM4</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td colspan="2">no ocean data</td>
+</tr>
+<tr class="row-even"><td>CanCM4</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.9303, 1.1407</td>
+<td>1.40625</td>
+</tr>
+<tr class="row-odd"><td>CanESM2</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.9303, 1.1407</td>
+<td>1.40625</td>
+</tr>
+<tr class="row-even"><td>EC-EARTH</td>
+<td>1.1215</td>
+<td>1.125</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>FGOALS-g2</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.5, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>FGOALS-gl</td>
+<td>4.1026</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>FGOALS-s2</td>
+<td>1.6590</td>
+<td>2.8125</td>
+<td>0.5, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>GEOS-5</td>
+<td>2</td>
+<td>2.5</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>GFDL-CM2.1</td>
+<td>2.0225</td>
+<td>2.5</td>
+<td>0.3344, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>GFDL-CM3</td>
+<td>2</td>
+<td>2.5</td>
+<td>0.3344, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>GFDL-ESM2G</td>
+<td>2.0225</td>
+<td>2</td>
+<td>0.375, 0.5</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>GFDL-ESM2M</td>
+<td>2.0225</td>
+<td>2.5</td>
+<td>0.3344, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>GISS-E2-H</td>
+<td>2</td>
+<td>2.5</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>GISS-E2-H-CC</td>
+<td>2</td>
+<td>2.5</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>GISS-E2-R</td>
+<td>2</td>
+<td>2.5</td>
+<td>1</td>
+<td>1.25</td>
+</tr>
+<tr class="row-even"><td>GISS-E2-R-CC</td>
+<td>2</td>
+<td>2.5</td>
+<td>1</td>
+<td>1.25</td>
+</tr>
+<tr class="row-odd"><td>HadCM3</td>
+<td>2.5</td>
+<td>3.75</td>
+<td>1.25</td>
+<td>1.25</td>
+</tr>
+<tr class="row-even"><td>HadGEM2-A</td>
+<td>1.25</td>
+<td>1.875</td>
+<td colspan="2">no ocean data</td>
+</tr>
+<tr class="row-odd"><td>HadGEM2-AO</td>
+<td>1.25</td>
+<td>1.875</td>
+<td>0.3396, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>HadGEM2-CC</td>
+<td>1.25</td>
+<td>1.875</td>
+<td>0.3396, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>HadGEM2-ES</td>
+<td>1.25</td>
+<td>1.875</td>
+<td>0.3396, 1</td>
+<td>1</td>
+</tr>
+<tr class="row-even"><td>INM-CM4</td>
+<td>1.5</td>
+<td>2</td>
+<td>0.5</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>IPSL-CM5A-LR</td>
+<td>1.8947</td>
+<td>3.75</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>IPSL-CM5A-MR</td>
+<td>1.2676</td>
+<td>2.5</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>IPSL-CM5B-LR</td>
+<td>1.8947</td>
+<td>3.75</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>MIROC-ESM</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.5582, 1.7111</td>
+<td>1.40625</td>
+</tr>
+<tr class="row-odd"><td>MIROC-ESM-CHEM</td>
+<td>2.7906</td>
+<td>2.8125</td>
+<td>0.5582, 1.7111</td>
+<td>1.40625</td>
+</tr>
+<tr class="row-even"><td>MIROC4h</td>
+<td>0.5616</td>
+<td>0.5625</td>
+<td>0.1875</td>
+<td>0.28125</td>
+</tr>
+<tr class="row-odd"><td>MIROC5</td>
+<td>1.4008</td>
+<td>1.40625</td>
+<td>0.5, 0.5</td>
+<td>1.40625</td>
+</tr>
+<tr class="row-even"><td>MPI-ESM-LR</td>
+<td>1.8653</td>
+<td>1.875</td>
+<td colspan="2">orthogonal curvilinear coordinates lat(i,j) and lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>MPI-ESM-MR</td>
+<td>1.8653</td>
+<td>1.875</td>
+<td colspan="2">orthogonal curvilinear coordinates lat(i,j) and lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>MPI-ESM-P</td>
+<td>1.8653</td>
+<td>1.875</td>
+<td colspan="2">orthogonal curvilinear coordinates lat(i,j) and lon(i,j)</td>
+</tr>
+<tr class="row-odd"><td>MRI-AGCM3-2H</td>
+<td>0.562</td>
+<td>0.5625</td>
+<td colspan="2">no ocean data</td>
+</tr>
+<tr class="row-even"><td>MRI-AGCM3-2S</td>
+<td>0.188</td>
+<td>0.1875</td>
+<td colspan="2">no ocean data</td>
+</tr>
+<tr class="row-odd"><td>MRI-CGCM3</td>
+<td>1.12148</td>
+<td>1.125</td>
+<td>0.5, 0.5</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>MRI-ESM1</td>
+<td>1.12148</td>
+<td>1.125</td>
+<td>0.5, 1.125</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td>NorESM1-M</td>
+<td>1.8947</td>
+<td>2.5</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+<tr class="row-even"><td>NorESM1-ME</td>
+<td>1.8947</td>
+<td>2.5</td>
+<td>lat(i,j)</td>
+<td>lon(i,j)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div>In case of the atmospheric grid and its latitude, the tabulated resolution is only valid for the equator region.
+For higher latitudes deviations may occur.</div></blockquote>
+<p>Ocean models have their own, finer grid. If two values are given for the latitude resolution of the ocean grid, the resolution is not constant.
+The first value is that for the equator, the second for the poles (maximum for the two poles if different).
+In case of rotated poles the resolutions for the rotated coordinates rlon and rlat are tabulated. If latitude and longitude are defined with two indices i and j,
+the resolution cannot simply be read out. In this case lat(i,j) and lon(i,j) have been entered.</p>
+</div>
+<div class="section" id="how-can-the-mpi-m-ocean-grid-be-remapped">
+<h3>How can the MPI-M ocean grid be remapped?<a class="headerlink" href="#how-can-the-mpi-m-ocean-grid-be-remapped" title="Permalink to this headline">¶</a></h3>
+<p>MPI-M ocean data are upside down, due to the MPI-M history to store the data from North to South (positive to negative latitude values). Additionally, a curvilinear grid with the North Pole over Greenland is used.</p>
+<p><strong>Solution:</strong> Use Climate Data Operator remapbil:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ cdo remapbil,r240x220 inputfile.nc outputfile.nc
+</pre></div>
+</div>
+<p>More details in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>.</p>
+</div>
+<div class="section" id="do-all-cmip5-models-use-the-same-calendar">
+<h3>Do all CMIP5 models use the same calendar?<a class="headerlink" href="#do-all-cmip5-models-use-the-same-calendar" title="Permalink to this headline">¶</a></h3>
+<p>No, see the table below.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="10%" />
+<col width="5%" />
+<col width="76%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Model</th>
+<th class="head">Calendar</th>
+<th class="head" colspan="2">Experiments</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>ACCESS1.0</td>
+<td>proleptic_gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>ACCESS1.3</td>
+<td>proleptic_gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>BCC-CSM1.1</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>BCC-CSM1.1(m)</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>BNU-ESM</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CanAM4</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CanCM4</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CanESM2</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CCSM4</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CESM1(BGC)</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CESM1(CAM5)</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CESM1(FASTCHEM)</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CESM1(WACCM)</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CFSv2-2011</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CMCC-CESM</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CMCC-CM</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CMCC-CMS</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CNRM-CM5</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CNRM-CM5-2</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>CSIRO-Mk3.6.0</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>CSIRO-Mk3L-1-2</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>EC-EARTH</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>GEOS-5</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>FGOALS-g2</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>FGOALS-gl</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>FGOALS-s2</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>GFDL-CM2.1</td>
+<td>julian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>GFDL-CM3</td>
+<td>365_day</td>
+<td colspan="2">all but amip: julian</td>
+</tr>
+<tr class="row-even"><td>GFDL-ESM2G</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>GFDL-ESM2M</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>GISS-E2-H</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>GISS-E2-H-CC</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>GISS-E2-R</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>GISS-E2-R-CC</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>HadCM3</td>
+<td>360_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>HadGEM2-A</td>
+<td>360_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>HadGEM2-AO</td>
+<td>360_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>HadGEM2-CC</td>
+<td>360_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>HadGEM2-ES</td>
+<td>360_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>INM-CM4</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>IPSL-CM5A-LR</td>
+<td>365_day</td>
+<td colspan="2">all but aqua4K, aqua4xCO2, aquaControl, past1000: 360_day</td>
+</tr>
+<tr class="row-odd"><td>IPSL-CM5A-MR</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>IPSL-CM5B-LR</td>
+<td>365_day</td>
+<td colspan="2">all but aquaControl: 360_day</td>
+</tr>
+<tr class="row-odd"><td rowspan="2">MIROC-ESM</td>
+<td>proleptic_gregorian</td>
+<td colspan="2">1pctCO2, abrupt4xCO2, past1000</td>
+</tr>
+<tr class="row-even"><td>gregorian</td>
+<td colspan="2">esmControl, esmFixClim2, esmHistorical, lgm, midHolocene, piControl, rcp26, rcp45, rcp60, rcp85, esmrcp85, historical, historicalGHG, historicalNat</td>
+</tr>
+<tr class="row-odd"><td>MIROC-ESM-CHEM</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>MIROC4h</td>
+<td>gregorian</td>
+<td colspan="2">all but piControl: 365_day</td>
+</tr>
+<tr class="row-odd"><td rowspan="3">MIROC5</td>
+<td>360_day</td>
+<td colspan="2">aqua4K, aqua4xCO2, aquaControl</td>
+</tr>
+<tr class="row-even"><td>365_day</td>
+<td colspan="2">1pctCO2, abrupt4xCO2, amip, amip4K, amip4xCO2, amipFuture, historical, piControl, rcp26, rcp45, rcp60, rcp85, sstClim, sstClim4xCO2, sstClimAerosol, sstClimSulfate</td>
+</tr>
+<tr class="row-odd"><td>gregorian</td>
+<td colspan="2">decadals</td>
+</tr>
+<tr class="row-even"><td>MPI-ESM-LR</td>
+<td>proleptic_gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>MPI-ESM-MR</td>
+<td>proleptic_gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>MPI-ESM-P</td>
+<td>proleptic_gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>MRI-AGCM3-2H</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>MRI-AGCM3-2S</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>MRI-CGCM3</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>MRI-ESM1</td>
+<td>gregorian</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-odd"><td>NorESM1-M</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+<tr class="row-even"><td>NorESM1-ME</td>
+<td>365_day</td>
+<td colspan="2">all</td>
+</tr>
+</tbody>
+</table>
+<p>The values in the table have been taken from the calendar attributes of the NetCDF files. Since the calendars &#8220;standard&#8221; and &#8220;gregorian&#8221;
+are identical as well as &#8220;noleap&#8221; and &#8220;365_day&#8221;, only the latter are used in the table. CMIP5 calendars are defined in the
+<a class="reference external" href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#calendar">CF standard</a> and in the
+<a class="reference external" href="https://cmip.llnl.gov/?cmip5/docs/CMIP5_output_metadata_requirements.pdf">CMIP5 Model Output Requirements</a>.</p>
+</div>
+<div class="section" id="how-may-i-cite-esgf-and-cmip5-data-in-my-paper">
+<h3>How may I cite ESGF and CMIP5 data in my paper?<a class="headerlink" href="#how-may-i-cite-esgf-and-cmip5-data-in-my-paper" title="Permalink to this headline">¶</a></h3>
+<p>Our most up to date paper describing ESGF can be found <a class="reference external" href="http://www.sciencedirect.com/science/article/pii/S0167739X13001477">here</a>.</p>
+<p>CMIP5 in general:
+<a class="reference external" href="http://dx.doi.org/doi:10.1175/BAMS-D-11-00094.1">Taylor, K.E., R.J. Stouffer, G.A. Meehl: An Overview of CMIP5 and the experiment design.” Bull. Amer. Meteor. Soc., 93, 485-498, doi:10.1175/BAMS-D-11-00094.1, 2012</a>.</p>
+<p>For many CMIP5 data a DataCite DOI has been assigned providing persistent citation information. These data may therefore be cited. Two ways are possible to find the corresponding DOIs:</p>
+<ul class="simple">
+<li>Via <a class="reference external" href="http://www.ipcc-data.org/sim/gcm_monthly/AR5/Reference-Archive.html">Data Distribution Centre (DDC)</a>: Follow one of the green links in the tables to the landing page of the DOI.</li>
+<li>Via <a class="reference external" href="http://cera-www.dkrz.de/WDCC/CMIP5/Citation.jsp">CMIP5 Citation Information Service</a>: An existing DOI can be found with help of this service using the tracking_id of the data. The tracking_id is component of the general attribute section of the NetCDF file header.</li>
+</ul>
+</div>
+<div class="section" id="may-cmip5-historical-and-rcp-data-be-combined-to-one-long-time-series">
+<h3>May CMIP5 historical and RCP data be combined to one long time series?<a class="headerlink" href="#may-cmip5-historical-and-rcp-data-be-combined-to-one-long-time-series" title="Permalink to this headline">¶</a></h3>
+<p>Yes, if you select matching ensemble members. Look into the header of the RCP data file:
+The attributes parent_experiment_id and parent_experiment_rip name the right ensemble member for combination.
+<a class="reference external" href="https://verc.enes.org/data/enes-model-data/cmip5/datastructure">[Background information]</a></p>
+</div>
+<div class="section" id="which-height-levels-do-the-data-have">
+<h3>Which height levels do the data have?<a class="headerlink" href="#which-height-levels-do-the-data-have" title="Permalink to this headline">¶</a></h3>
+<p><strong>CORDEX data:</strong> The height level is part of the short variable name. For example, ta500 is the air temperature at the 500 hPa pressure level.</p>
+<p><strong>Before download with OPeNDAP:</strong> Expand the dataset you need with &#8220;Show Files&#8221; and click on &#8220;OPENDAP&#8221;. In the OPeNDAP Dataset Access Form look for lev and enable it. Click on &#8220;Get ASCII&#8221; and login. The lev array with the height levels will be listed.</p>
+<p><strong>After download:</strong> Use local software, for example ncdump, which is a command line tool belonging to
+<a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf/">NetCDF software</a>.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ncdump</span> <span class="o">-</span><span class="n">c</span> <span class="n">filename</span><span class="o">.</span><span class="n">nc</span>
+</pre></div>
+</div>
+<p>The option -c causes ncdump to output header and coordinate arrays.</p>
+</div>
+<div class="section" id="which-heigth-boundaries-do-cordex-cloud-layers-have">
+<h3>Which heigth boundaries do CORDEX cloud layers have?<a class="headerlink" href="#which-heigth-boundaries-do-cordex-cloud-layers-have" title="Permalink to this headline">¶</a></h3>
+<p>CORDEX offers cloud fraction variables for the following three height layers.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">&nbsp;</th>
+<th class="head">Variable name</th>
+<th class="head">Lower boundary in Pa</th>
+<th class="head">Upper boundary in Pa</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Low Clouds</td>
+<td>cll</td>
+<td>100000</td>
+<td>68000</td>
+</tr>
+<tr class="row-odd"><td>Medium Clouds</td>
+<td>clm</td>
+<td>68000</td>
+<td>44000</td>
+</tr>
+<tr class="row-even"><td>High Clouds</td>
+<td>clh</td>
+<td>44000</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The height boundaries for the three layers are given as pressure levels and are defined in the
+<a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design document</a>.
+The height boundaries of the layer are also stored in the netCDF file in the variable plev_bnds.</p>
+</div>
+<div class="section" id="in-which-sequence-are-the-data-ordered-inside-a-netcdf-file">
+<h3>In which sequence are the data ordered inside a NetCDF file?<a class="headerlink" href="#in-which-sequence-are-the-data-ordered-inside-a-netcdf-file" title="Permalink to this headline">¶</a></h3>
+<p>The Network Common Data Format (NetCDF) is a binary data format for the exchange of scientific data and consists of a header and a data part.
+The header contains beside attributes the structure of the data part. The data itself are deposited in arrays in the data part. This enables quick access.</p>
+<p>Data variables are defined by means of coordinate variables, for example the near-surface air temperature tas is defined as a function of time, latitude and longitude.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">tas</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For Mathematicians: The order inside the array corresponds to the lexical order of its index set.
+The index set of the data variable is the cartesian product of the index sets of the coordinate variables, for example</p>
+<p>I <sub>tas</sub> = I <sub>time</sub> X I <sub>lat</sub> X I <sub>lon</sub></p>
+<p>The definition of the data variable in the file header contains the manner and sequence of the coordinate variables.</p>
+<p>For Programmers: The first value in the tas array is the value for the first time, first lat and first lon. The second value is that for first time, first lat and second lon. Then the tas values for the other longitudes follow. If the number of longitudes is only 2, now the value for first time, second lat and first lon follows. If the number of latitudes is also 2, the first tas value for the second time appears in position 5.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="o">|</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="o">|</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="o">|</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>Technically spoken, the values are written to the array in a nested loop. The innermost loop is lon, the outermost is time with lat in the middle.</p>
+</div>
+<div class="section" id="how-can-i-verify-that-the-data-have-not-been-updated-since-i-downloaded-them">
+<h3>How can I verify that the data have not been updated since I downloaded them?<a class="headerlink" href="#how-can-i-verify-that-the-data-have-not-been-updated-since-i-downloaded-them" title="Permalink to this headline">¶</a></h3>
+<p><strong>Solution 1:</strong> You may compare the version of the data. The version is part of the metadata and can be found in the ESGF portals. It is also printed in the NetCDF header.</p>
+<p><strong>Solution 2:</strong> ESGF offers a comfortable comparison using Wget scripting. Keep your Wget script after download and again run it with the -u option.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -u
+</pre></div>
+</div>
+<p>This does not repeat the download but creates a new version of the download script. The old and the new script version are compared and this comparison includes the checksums in the download file lists of both scripts. A change in a file checksum is a hint for a new dataset version.</p>
+<p><strong>Solution 3:</strong> Sometimes data producers replace data without updating the version number in case of minor changes. In ESGF, this is not allowed and fortunately seldom. Ruling out these hidden changes is tedious. You may compare the checksum of your download file with that of a freshly downloaded file. Checksums may be calculated with md5sum:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ md5sum myfile.nc
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-can-i-read-or-process-downloaded-data">
+<h3>How can I read or process downloaded data?<a class="headerlink" href="#how-can-i-read-or-process-downloaded-data" title="Permalink to this headline">¶</a></h3>
+<p>Data downloaded from ESGF are usually in NetCDF format. NetCDF is a header based binary format and can be read/processed by</p>
+<ul class="simple">
+<li>ncdump (conversion to ASCII) and ncview (simple graphics), i.e. command line tools belonging to <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf/">NetCDF software</a></li>
+<li>Command line tools, e.g. <a class="reference external" href="https://code.zmaw.de/projects/cdo/wiki/Cdo">Climate Data Operators (CDO)</a>, <a class="reference external" href="http://nco.sourceforge.net/">netCDF Operator (NCO)</a> and <a class="reference external" href="http://uvcdat.llnl.gov/">UVCDAT</a>: show, convert, split, merge, write and perform arithmetic operations on NetCDF</li>
+<li>Command line graphics, e.g. <a class="reference external" href="http://ncl.ucar.edu/">NCAR Command Language (NCL)</a> and <a class="reference external" href="http://uvcdat.llnl.gov/">UVCDAT</a></li>
+<li>Some applications, e.g. Matlab and Ferret</li>
+<li>Python: <a class="reference external" href="https://pypi.python.org/pypi/netCDF4">netcdf4-python</a> is a Python interface to the netCDF C library</li>
+</ul>
+<p>An exception is NetCDF OPeNDAP download. Here you can get ASCII CSV, i.e. readable text (Comma Separated Values), or dodc (binary OPeNDAP data format). ASCII CSV can directly be imported, for example, into Microsoft Excel.</p>
+</div>
+<div class="section" id="i-can-not-process-downloaded-data">
+<h3>I can not process downloaded data<a class="headerlink" href="#i-can-not-process-downloaded-data" title="Permalink to this headline">¶</a></h3>
+<p>There might be several reasons and solutions for this issue:</p>
+<p><strong>Solution 1:</strong> If you have downloaded the file with your browser&#8217;s download manager (following a HTTPServer link),
+compare the checksum of your downloaded file with that in the metadata. In case the checksums are different,
+repeat the download since the file may have been changed during download. ESGF Wget scripts perform this check automatically.</p>
+<p><strong>Solution 2:</strong> Many data, especially CORDEX data, are stored in the format <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf/">NetCDF4</a>
+or compressed NetCDF4. Ensure that your local software can handle this relatively new data format.</p>
+</div>
+<div class="section" id="how-can-i-calculate-a-multi-year-average-for-each-month-of-year">
+<h3>How can I calculate a multi-year average for each month of year?<a class="headerlink" href="#how-can-i-calculate-a-multi-year-average-for-each-month-of-year" title="Permalink to this headline">¶</a></h3>
+<p>A multi-year average for each month of year can easily be calculated with CDO ymonavg. Example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span># split into years
+$ cdo splityear OH_Amon_ULAQ_rcp45_r1i1p1_196001-210012.nc OH_
+# concatenate to a file containing 10 years
+$ cdo cat OH_1995.nc OH_1996.nc OH_1997.nc OH_1998.nc OH_1999.nc OH_2000.nc OH_2001.nc OH_2002.nc OH_2003.nc OH_2004.nc  OH_Amon_ULAQ_rcp45_r1i1p1_1995-2004.nc
+# calculate multi-year average for each month
+$ cdo ymonavg OH_Amon_ULAQ_rcp45_r1i1p1_1995-2004.nc OH_average_over_1195-2004_ULAQ_rcp45_r1i1p1_Jan-Dec.nc
+</pre></div>
+</div>
+<p>More details are in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>,</p>
+</div>
+<div class="section" id="how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back">
+<h3>How can CORDEX data on a grid with rotated poles be rotated back?<a class="headerlink" href="#how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back" title="Permalink to this headline">¶</a></h3>
+<p>Some native CORDEX grids have rotated poles, for example the native European domains EUR-44 and EUR-11. They can easily be regridded (rotated back).</p>
+<p><strong>Solution 1:</strong> Use interpolated data
+Interpolated data are in the domains with &#8220;i&#8221; at the end, e.g. EUR-44i. These data already have a grid which has been rotated back.</p>
+<p><strong>Solution 2:</strong> Use cf-python
+cf-python uses the ESMF regridding library as its regridding engine, and currently provides first-order conservative (by default) or bilinear spherical regridding. CORDEX data are usually NetCDF/CF compliant; so cf-python only needs the following commands:</p>
+<p>The rotated_fields may have more dimensions than just rotated latitude (X) and rotated longitude (Y). The above command will regrid each X-Y slice and so regridded_fields will have the same rank as the original.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">cf</span>
+<span class="n">rotated_fields</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;rotated_pole_file.nc&#39;</span><span class="p">)</span>
+<span class="n">unrotated_field</span> <span class="o">=</span> <span class="n">cf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="s1">&#39;unrotated_latlon_file.nc&#39;</span><span class="p">)</span>
+<span class="n">regridded_fields</span> <span class="o">=</span> <span class="n">rotated_fields</span><span class="o">.</span><span class="n">regrids</span><span class="p">(</span><span class="n">unrotated_field</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>More details in the <a class="reference external" href="http://cfpython.bitbucket.org/docs/latest/generated/cf.Field.regrids.html">cf-python documentation</a></p>
+<p><strong>Solution 3:</strong> Use CDO
+Climate Data Operators (CDO) offer <a class="reference external" href="https://code.zmaw.de/boards/2/topics/1283">different ways of regridding</a>,
+for example cdo rotuvb can perform a backward transformation of velocity components U and V from a rotated spherical system to a geographical system.
+More details in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>.</p>
+</div>
 </div>
 <div class="section" id="esgf-general">
 <h2>ESGF General<a class="headerlink" href="#esgf-general" title="Permalink to this headline">¶</a></h2>
