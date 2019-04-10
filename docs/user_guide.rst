@@ -235,9 +235,69 @@ Update Password
     .. image:: images/change_password.png
 
 
-
 Get your browser to accept the ESGF certificate
 -----------------------------------------------
+The SSL certificate used by ESGF is self-signed. Some browsers have difficulty with this certificate and users will need to tell their browser to trust it.
+Every browser has a different mechanism for accepting SSL certificates it does not trust.
+
+Firefox
+^^^^^^^
+
+#. Click on "Advanced"
+
+    .. image:: images/ff_1.png
+
+#. Click "Add Exception..."
+
+    .. image:: images/ff_2.png
+
+#. Click "Confirm Security Exception"
+
+    .. image:: images/ff_3.png
+
+#. Click "Resend"
+
+    .. image:: images/ff_4.png
+
+Safari
+^^^^^^
+
+.. note::  If you still can not display the ESGF login page after these steps AND you are using a Mac, please contact support. Some institutions, e.g. NASA, preinstall the ESGF certificate and this will have to be removed in order to be trusted. You may also which to switch to FireFox or Chrome.
+
+#, Click the "Show Certificate" button
+
+    .. image:: images/safari_1.png
+
+#. Expand the Trust section
+
+    .. image:: images/safari_2.png
+
+#. Change the Trust settings
+
+    .. image:: images/safari_3.png
+    .. image:: images/safari_4.png
+
+#. Authenticate
+
+    .. image:: images/safari_5.png
+
+Chrome
+^^^^^^
+
+#. Click "Advanced" on the warning page
+
+    .. image:: images/chrome_1.png
+
+#. Click "Proceed to $node (unsafe)"
+
+    .. image:: images/chrome_2.png
+
+Internet Explorer
+^^^^^^^^^^^^^^^^^
+
+#. Click the "Continue to this website (not recommended) link.
+
+    .. image:: images/ie_1.png
 
 
 Data Search and Download
