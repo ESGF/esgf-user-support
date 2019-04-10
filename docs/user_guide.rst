@@ -6,6 +6,10 @@ User Tutorials
 Login/OpenID
 ************
 
+.. note:: In May 2014, CoG began using the ESGF OpenID authentication system. If you have an *older* OpenID you need to re-register.
+
+.. note:: OpenIDs issued by earthsystemgrid.org are not supported in the ESGF anymore.
+
 Create an account
 -----------------
 
@@ -179,16 +183,58 @@ Method 2: Use the pull down to select your OpenID issuer
 
     .. image:: images/openid_user_pw.png
 
-
-
 Forgot OpenID
 -------------
+
+#. Go to the Login page of any ESGF portal, e.g `<esgf-data.dkrz.de>`_, `<esgf-node.llnl.gov>`_, ...
+
+    .. image:: images/login_link.png
+
+#. Click the Forgot OpenID link located beneath the login box
+
+    .. image:: images/login_empty.png
+
+#. Fill out the template
+
+    .. image:: images/forgot_openid.png
+
 
 Forgot Password
 ---------------
 
+* Passwords are associated with particular OpenIDs, which may be issued from an ESGF node other than the one currently logged into.
+* Passwords can only be retrieved if logged into the ESGF node that issued the ESGF OpenID.
+
+#. Click the Login link in the upper right corner of the CoG page
+
+    .. image:: images/login_link.png
+
+#. Click the "Forgot Password?" link on the login page
+
+    .. image:: images/forgot_openid.png
+
+#. Enter the ESGF OpenID and email associated with that OpenID into the form and submit
+
+    .. image:: images/forgot_password.png
+
+
 Update Password
 ---------------
+
+.. note:: The Update Password link is located on your "My Profile" page. You must be logged in to change your password.
+    If you don't know your password, follow the instructions on section "`Forgot Password`_".
+
+#. Login. See section "`Logging in with OpenID`_" for more information
+
+#. Click on "My Profile"
+
+    .. image:: images/my_profile.png
+
+#. Click on Update password
+
+    .. image:: images/change_password.png
+
+
 
 Get your browser to accept the ESGF certificate
 -----------------------------------------------
