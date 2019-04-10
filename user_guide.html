@@ -101,7 +101,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#forgot-openid">Forgot OpenID</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#forgot-password">Forgot Password</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#update-password">Update Password</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#get-your-browser-to-accept-the-esgf-certificate">Get your browser to accept the ESGF certificate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-your-browser-to-accept-the-esgf-certificate">Get your browser to accept the ESGF certificate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#firefox">Firefox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#safari">Safari</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#chrome">Chrome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#internet-explorer">Internet Explorer</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#data-search-and-download">Data Search and Download</a><ul>
@@ -167,6 +173,14 @@
 <span id="user-guide"></span><h1>User Tutorials<a class="headerlink" href="#user-tutorials" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="login-openid">
 <h2>Login/OpenID<a class="headerlink" href="#login-openid" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In May 2014, CoG began using the ESGF OpenID authentication system. If you have an <em>older</em> OpenID you need to re-register.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">OpenIDs issued by earthsystemgrid.org are not supported in the ESGF anymore.</p>
+</div>
 <div class="section" id="create-an-account">
 <h3>Create an account<a class="headerlink" href="#create-an-account" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -413,15 +427,153 @@ This process will automatically present a window for group registration.</p>
 </div>
 <div class="section" id="forgot-openid">
 <h3>Forgot OpenID<a class="headerlink" href="#forgot-openid" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Go to the Login page of any ESGF portal, e.g <a class="reference external" href="esgf-data.dkrz.de">esgf-data.dkrz.de</a>, <a class="reference external" href="esgf-node.llnl.gov">esgf-node.llnl.gov</a>, ...</p>
+<blockquote>
+<div><img alt="_images/login_link.png" src="_images/login_link.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click the Forgot OpenID link located beneath the login box</p>
+<blockquote>
+<div><img alt="_images/login_empty.png" src="_images/login_empty.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Fill out the template</p>
+<blockquote>
+<div><img alt="_images/forgot_openid.png" src="_images/forgot_openid.png" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="forgot-password">
 <h3>Forgot Password<a class="headerlink" href="#forgot-password" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Passwords are associated with particular OpenIDs, which may be issued from an ESGF node other than the one currently logged into.</li>
+<li>Passwords can only be retrieved if logged into the ESGF node that issued the ESGF OpenID.</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Click the Login link in the upper right corner of the CoG page</p>
+<blockquote>
+<div><img alt="_images/login_link.png" src="_images/login_link.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click the &#8220;Forgot Password?&#8221; link on the login page</p>
+<blockquote>
+<div><img alt="_images/forgot_openid.png" src="_images/forgot_openid.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Enter the ESGF OpenID and email associated with that OpenID into the form and submit</p>
+<blockquote>
+<div><img alt="_images/forgot_password.png" src="_images/forgot_password.png" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="update-password">
 <h3>Update Password<a class="headerlink" href="#update-password" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Update Password link is located on your &#8220;My Profile&#8221; page. You must be logged in to change your password.
+If you don&#8217;t know your password, follow the instructions on section &#8220;<a class="reference internal" href="#forgot-password">Forgot Password</a>&#8221;.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Login. See section &#8220;<a class="reference internal" href="#logging-in-with-openid">Logging in with OpenID</a>&#8221; for more information</p>
+</li>
+<li><p class="first">Click on &#8220;My Profile&#8221;</p>
+<blockquote>
+<div><img alt="_images/my_profile.png" src="_images/my_profile.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on Update password</p>
+<blockquote>
+<div><img alt="_images/change_password.png" src="_images/change_password.png" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="get-your-browser-to-accept-the-esgf-certificate">
 <h3>Get your browser to accept the ESGF certificate<a class="headerlink" href="#get-your-browser-to-accept-the-esgf-certificate" title="Permalink to this headline">¶</a></h3>
+<p>The SSL certificate used by ESGF is self-signed. Some browsers have difficulty with this certificate and users will need to tell their browser to trust it.
+Every browser has a different mechanism for accepting SSL certificates it does not trust.</p>
+<div class="section" id="firefox">
+<h4>Firefox<a class="headerlink" href="#firefox" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Click on &#8220;Advanced&#8221;</p>
+<blockquote>
+<div><img alt="_images/ff_1.png" src="_images/ff_1.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click &#8220;Add Exception...&#8221;</p>
+<blockquote>
+<div><img alt="_images/ff_2.png" src="_images/ff_2.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click &#8220;Confirm Security Exception&#8221;</p>
+<blockquote>
+<div><img alt="_images/ff_3.png" src="_images/ff_3.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click &#8220;Resend&#8221;</p>
+<blockquote>
+<div><img alt="_images/ff_4.png" src="_images/ff_4.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="safari">
+<h4>Safari<a class="headerlink" href="#safari" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you still can not display the ESGF login page after these steps AND you are using a Mac, please contact support. Some institutions, e.g. NASA, preinstall the ESGF certificate and this will have to be removed in order to be trusted. You may also which to switch to FireFox or Chrome.</p>
+</div>
+<p>#, Click the &#8220;Show Certificate&#8221; button</p>
+<blockquote>
+<div><img alt="_images/safari_1.png" src="_images/safari_1.png" />
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Expand the Trust section</p>
+<blockquote>
+<div><img alt="_images/safari_2.png" src="_images/safari_2.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Change the Trust settings</p>
+<blockquote>
+<div><img alt="_images/safari_3.png" src="_images/safari_3.png" />
+<img alt="_images/safari_4.png" src="_images/safari_4.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Authenticate</p>
+<blockquote>
+<div><img alt="_images/safari_5.png" src="_images/safari_5.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="chrome">
+<h4>Chrome<a class="headerlink" href="#chrome" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Click &#8220;Advanced&#8221; on the warning page</p>
+<blockquote>
+<div><img alt="_images/chrome_1.png" src="_images/chrome_1.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click &#8220;Proceed to $node (unsafe)&#8221;</p>
+<blockquote>
+<div><img alt="_images/chrome_2.png" src="_images/chrome_2.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="internet-explorer">
+<h4>Internet Explorer<a class="headerlink" href="#internet-explorer" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;Continue to this website (not recommended) link.</p>
+<blockquote>
+<div><img alt="_images/ie_1.png" src="_images/ie_1.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
 </div>
 </div>
 <div class="section" id="data-search-and-download">

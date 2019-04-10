@@ -6,6 +6,10 @@ User Tutorials
 Login/OpenID
 ************
 
+.. note:: In May 2014, CoG began using the ESGF OpenID authentication system. If you have an *older* OpenID you need to re-register.
+
+.. note:: OpenIDs issued by earthsystemgrid.org are not supported in the ESGF anymore.
+
 Create an account
 -----------------
 
@@ -179,19 +183,121 @@ Method 2: Use the pull down to select your OpenID issuer
 
     .. image:: images/openid_user_pw.png
 
-
-
 Forgot OpenID
 -------------
+
+#. Go to the Login page of any ESGF portal, e.g `<esgf-data.dkrz.de>`_, `<esgf-node.llnl.gov>`_, ...
+
+    .. image:: images/login_link.png
+
+#. Click the Forgot OpenID link located beneath the login box
+
+    .. image:: images/login_empty.png
+
+#. Fill out the template
+
+    .. image:: images/forgot_openid.png
+
 
 Forgot Password
 ---------------
 
+* Passwords are associated with particular OpenIDs, which may be issued from an ESGF node other than the one currently logged into.
+* Passwords can only be retrieved if logged into the ESGF node that issued the ESGF OpenID.
+
+#. Click the Login link in the upper right corner of the CoG page
+
+    .. image:: images/login_link.png
+
+#. Click the "Forgot Password?" link on the login page
+
+    .. image:: images/forgot_openid.png
+
+#. Enter the ESGF OpenID and email associated with that OpenID into the form and submit
+
+    .. image:: images/forgot_password.png
+
+
 Update Password
 ---------------
 
+.. note:: The Update Password link is located on your "My Profile" page. You must be logged in to change your password.
+    If you don't know your password, follow the instructions on section "`Forgot Password`_".
+
+#. Login. See section "`Logging in with OpenID`_" for more information
+
+#. Click on "My Profile"
+
+    .. image:: images/my_profile.png
+
+#. Click on Update password
+
+    .. image:: images/change_password.png
+
+
 Get your browser to accept the ESGF certificate
 -----------------------------------------------
+The SSL certificate used by ESGF is self-signed. Some browsers have difficulty with this certificate and users will need to tell their browser to trust it.
+Every browser has a different mechanism for accepting SSL certificates it does not trust.
+
+Firefox
+^^^^^^^
+
+#. Click on "Advanced"
+
+    .. image:: images/ff_1.png
+
+#. Click "Add Exception..."
+
+    .. image:: images/ff_2.png
+
+#. Click "Confirm Security Exception"
+
+    .. image:: images/ff_3.png
+
+#. Click "Resend"
+
+    .. image:: images/ff_4.png
+
+Safari
+^^^^^^
+
+.. note::  If you still can not display the ESGF login page after these steps AND you are using a Mac, please contact support. Some institutions, e.g. NASA, preinstall the ESGF certificate and this will have to be removed in order to be trusted. You may also which to switch to FireFox or Chrome.
+
+#, Click the "Show Certificate" button
+
+    .. image:: images/safari_1.png
+
+#. Expand the Trust section
+
+    .. image:: images/safari_2.png
+
+#. Change the Trust settings
+
+    .. image:: images/safari_3.png
+    .. image:: images/safari_4.png
+
+#. Authenticate
+
+    .. image:: images/safari_5.png
+
+Chrome
+^^^^^^
+
+#. Click "Advanced" on the warning page
+
+    .. image:: images/chrome_1.png
+
+#. Click "Proceed to $node (unsafe)"
+
+    .. image:: images/chrome_2.png
+
+Internet Explorer
+^^^^^^^^^^^^^^^^^
+
+#. Click the "Continue to this website (not recommended) link.
+
+    .. image:: images/ie_1.png
 
 
 Data Search and Download
