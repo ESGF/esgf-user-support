@@ -201,6 +201,8 @@ Forgot OpenID
     .. image:: images/forgot_openid.png
 
 
+..  _forgot_password:
+
 Forgot Password
 ---------------
 
@@ -236,6 +238,7 @@ Update Password
 
     .. image:: images/change_password.png
 
+..  _accept_esgf_cert:
 
 Get your browser to accept the ESGF certificate
 -----------------------------------------------
