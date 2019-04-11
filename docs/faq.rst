@@ -535,14 +535,815 @@ for example cdo rotuvb can perform a backward transformation of velocity compone
 More details in the `CDO documentation <https://code.zmaw.de/projects/cdo/embedded/index.html>`_.
 
 
-
-
-
 ESGF General
 ************
 
+What browsers does ESGF support?
+--------------------------------
+ESGF supports the following browsers. These are the browsers we test on.
+
+* Firefox (best in a Private Window, see Firefox's main menu)
+* Chrome
+* Internet Explorer
+
+**Safari Issue:** Safari has a known bug that prevents it from sending too many certificates when interacting over SSL.
+This results in some ESGF sites failing to display the login page. If you encounter such a problem, please use Firefox or Chrome.
+
+**Internet Explorer Issue:** Registration to an ESGF data access group may be slow with Internet Explorer. If you experience this, try another browser.
+
+Shall I use my personal certificate in the browser?
+---------------------------------------------------
+No. If a message appears whether to use your personal credials imported into your browser, please press "Cancel".
+
+I get the error: "Secure Connection Failed" with Firefox
+--------------------------------------------------------
+This error has to do with encryption and seems to depend on Firefox version, operating system and ESGF portal.
+
+.. image:: images/secure_connection_failed.png
+
+**Solution:** In Firefox open local page about:config and add the portal or site name to the security.tls.insecure_fallback_hosts. An example is shown in the image below.
+
+.. image:: images/secure_connection_failed_solution.png
+
+I have a question or error to report to ESGF
+--------------------------------------------
+Questions and error reports related to ESGF should be sent to esgf-user@lists.llnl.gov.
+
+How can I subscribe/unsubscribe esgf-user@lists.llnl.gov?
+---------------------------------------------------------
+* Subscribe:
+    Send a mail to: listserv@listserv.llnl.gov.
+    The subject should be blank. The body should contain only the following:
+
+    ::
+
+        Subscribe esgf-user
+
+* Unsubscribe:
+    Send a mail to: listserv@listserv.llnl.gov.
+    The subject should be blank. The body should contain only the following:
+
+    ::
+
+        Signoff esgf-user
+
+
 ESGF Wget
 *********
+
+Issues with Script Generation
+-----------------------------
+
+I get the error: "Request-URI Too Large"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error message:
+
+::
+
+    Request-URI Too Large
+    The requested URL's length Exceeds the capacity limit for this server.
+
+This is a current error on the Web DataCart. Internally, script creation is initiated by an URL containing commands. At the moment, this URL is becoming too long if the request contains a large number of datasets. A fix is announced.
+
+* Solution 1
+    Create several Wget scripts, i.e. split your big request into smaller ones. Subdivision of the request into different scripts, one for each data node, will automatically be done but in case of this error an additional subdivision by the user is necessary.
+
+* Solution 2
+    Create a text file post_data_dataset_id.txt. Copy and paste to this file the URL address which appears in your browser when you get the "Request-URI Too Large" error. From this URL remove everything until the first 'dataset_id=' text token appears (including it). Then run the following command in a Shell:
+
+    ::
+
+        wget --post-file post_data_dataset_id.txt "http://esgf-data.dkrz.de/esg-search/wget/?distrib=false&limit=10000" -O wget_script.sh
+
+    If everything is ok, you will end with a wget_script.sh that you can execute to download the full collection of datasets.
+
+Issues with Certificates or Java
+--------------------------------
+
+Error: "Unsupported major.minor version 51.0"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error message:
+
+::
+
+    Retrieving Credentials...Exception in thread "main" java.lang.UnsupportedClassVersionError: esg/security/myproxy/MyProxyConsole :
+    Unsupported major.minor version 51.0
+	    at java.lang.ClassLoader.defineClass1(Native Method)
+	    at java.lang.ClassLoader.defineClass(ClassLoader.java:643)
+	    at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	    at java.net.URLClassLoader.defineClass(URLClassLoader.java:277)
+	    at java.net.URLClassLoader.access$000(URLClassLoader.java:73)
+	    at java.net.URLClassLoader$1.run(URLClassLoader.java:212)
+	    at java.security.AccessController.doPrivileged(Native Method)
+	    at java.net.URLClassLoader.findClass(URLClassLoader.java:205)
+	    at java.lang.ClassLoader.loadClass(ClassLoader.java:323)
+	    at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:294)
+	    at java.lang.ClassLoader.loadClass(ClassLoader.java:268)
+    Could not find the main class: esg.security.myproxy.MyProxyConsole. Program will exit.
+    Certificate could not be retrieved
+
+Two solutions are possible in case of this Java issue:
+
+* Solution 1
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+
+* Solution 2
+    Install Oracle Java 1.7 or newer and add it to your environment (define JAVA_HOME etc.). The Wget script can usually be used without options then.
+
+Error: "RSA premaster secret error"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error message:
+
+::
+
+    Retrieving Credentials...RSA premaster secret error
+    Use --help to display help.
+    Certificate could not be retrieved
+
+Two solutions are possible in case of this Java issue:
+
+* Solution 1
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+
+* Solution 2
+    Install Oracle Java 1.7 or newer and add it to your environment (define JAVA_HOME etc.). The Wget script can usually be used without options then.
+
+Error: "algorithm/RSA/ECB/PKCS1Padding is not available from provider Cryptix"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error message:
+
+::
+
+    java.security.NoSuchAlgorithmException: algorithm/RSA/ECB/PKCS1Padding is not available from provider Cryptix
+
+Two solutions are possible in case of this Java issue:
+
+* Solution 1
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+
+* Solution 2
+    Install Oracle Java 1.7 or newer and add it to your environment (define JAVA_HOME etc.). The Wget script can usually be used without options then.
+
+Error: "GSSException"
+^^^^^^^^^^^^^^^^^^^^^
+Example error message:
+
+::
+
+    Please give your OpenID (hit ENTER to accept default)
+    [https://myserver/example/username]? https://esgf-node.llnl.gov/esgf-idp/openid/.......
+    MyProxy Password?
+    Retrieving Credentials...
+    MyProxy get failed. [Caused by: Authentication failed
+    [Caused by: org.ietf.jgss.GSSException, major code: 11, minor code: 0 major string: General failure, unspecified at GSSAPI level minor string:
+    None
+    [Caused by: Bad certificate (java.security.SignatureException: SHA-1/RSA/PKCS#1: Not initialized)]]] Use --help to display help.
+    Certificate could not be retrieved
+
+Two solutions are possible in case of this Java issue:
+
+* Solution 1
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+
+* Solution 2
+    Install Oracle Java 1.7 or newer and add it to your environment (define JAVA_HOME etc.). The Wget script can usually be used without options then.
+
+Error: "MyProxy bootstrapTrust failed"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error message:
+
+::
+
+    Connecting to esgf-node.llnl.gov...
+    Error: MyProxy bootstrapTrust failed. [Caused by: No appropriate protocol (protocol is disabled or cipher suites are inappropriate)]
+
+Three solutions are possible in case of this Java issue:
+
+* Solution 1
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+* Solution 2
+    Run the wget script with the -T option.
+
+    ::
+
+        $ bash wget-xxx.sh -T
+
+    Another cryptographic protocol will be used for communication then: TLS (Transport Layer Security) instead of SSL (Secure Sockets Layer).
+
+* Solution 3
+    Install Oracle Java 1.7 or newer and add it to your environment (define JAVA_HOME etc.). The Wget script can usually be used without options then.
+
+Error: "Received fatal alert: handshake_failure"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Error message:
+
+    ::
+
+        Received fatal alert: handshake_failure
+
+Three solutions are possible in case of this Java issue:
+
+* Solution 1
+    Run the wget script with the -T option.
+
+    ::
+
+        $ bash wget-xxx.sh -T
+
+    Another cryptographic protocol will be used for communication then: TLS (Transport Layer Security) instead of SSL (Secure Sockets Layer).
+
+* Solution 2
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+* Solution 3
+    Install Oracle Java 1.7 or newer and add it to your environment (define JAVA_HOME etc.). The Wget script can usually be used without options then.
+
+getcert.jar cannot be retrieved
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example error message:
+
+::
+
+    MyProxy Password?
+    Retrieving Credentials...
+    Invalid or corrupt jarfile /Users/..../.esg/getcert.jar
+    Certificate could not be retrieved
+
+Further example:
+
+::
+
+    MyProxy Password?
+    Retrieving Credentials...Error: Unable to access jarfile /home/..../.esg/getcert.jar
+    Certificate could not be retrieved
+
+* Solution 1
+    Your certificates are presumably corrupted. Remove everything under the credentials directory `~/.esg` and run the Wget script again. The .esg will automatically be rebuilt when you run the next Wget script.
+
+* Solution 2
+    Run the wget script with the -H option.
+
+    ::
+
+        $ bash wget-xxx.sh -H
+
+    Authentication will be tried without certificates then.
+
+* Solution 3
+    The Wget application installed on your system might not be compiled with SSL (Secure Sockets Layer). You can check this by issuing
+
+    ::
+
+        $ wget --help
+
+    and investigating wether or not there are some SSL options. If not
+
+        * Run the Wget script with the -T option. Another cryptographic protocol will be used for communication then: TLS (Transport Layer Security) instead of SSL
+        * Or talk to your system administrator about installing a new version of Wget with SSL support
+
+* Solution 4
+    Create the files credentials.pem and esg-truststore.ts as well as the certificates directory with the `ESGF Credentials Provider <https://meteo.unican.es/trac/wiki/ESGFGetCredentials>`_. Put them all into .esg under your home directory. This should also work under Windows.
+
+    .. image:: images/esgf_credentials_provider.png
+
+* Solution 5
+    Try to obtain certificates from another system. Run a short download with a Wget script there. Copy the certificates from the other system onto the system, where you want to run the script, in the location ~/.esg/credentials.pem then. Maybe the easiest way is to copy the whole credentials directory .esg
+
+The Wget script does not trust the certificate of the server
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example error message:
+
+::
+
+    Self-signed certificate encountered.
+
+Further example error message:
+
+::
+
+    Connecting to ... connected.
+    OpenSSL: error:14094416:SSL routines:SSL3_READ_BYTES:sslv3 alert certificate unknown
+    Unable to establish SSL connection.
+    download failed
+
+"Certificate unknown" signals that the server does not trust the certificate issued by the MyProxy CA (Certification Authority)
+
+* Solution 1
+    Run the wget script with the -i option.
+
+    ::
+
+        $ bash wget-xxx.sh -i
+
+    The server certificate will not be checked then.
+
+* Solution 2
+    Your certificates are maybe corrupted. Remove everything under the cert directory `~/.esg` and run the Wget script again. The .esg will automatically be rebuilt when you run the next Wget script.
+
+* Solution 3
+    Contact the ESGF users mailing list esgf-user@lists.llnl.gov to notify the ESGF administrators there might be a problem with the server certificate.
+
+Error: "no CA certificates found"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The user's local ESGF certificates directory ~/.esg is incomplete. Example error message:
+
+::
+
+    java.security.cert.CertificateException: no CA certificates found in /Users/user_name/.esg/certificates
+    Use --help to display help.
+    Certificate could not be retrieved
+
+* Solution
+    Remove everything under `~/.esg` and run the Wget script again. The .esg will automatically be rebuilt when you run the script again.
+
+Error: "Unknown CA
+^^^^^^^^^^^^^^^^^^
+
+::
+
+    [Caused by: Authentication failed [Caused by: Failure unspecified at GSS-API level [Caused by: Unknown CA]]]
+
+* Solution
+    Remove everything under `~/.esg` and run the Wget script again. The .esg will automatically be rebuilt when you run the script again.
+
+Error: "Unrecognized SSL message, plaintext connection?"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This error occurs if an OpenID provider is not properly registered after the ESGF overhaul. The ESGF federation began to upgrade its servers in October 2015. Not every Node has been upgraded yet. OpenIDs issued from un-upgraded nodes, will not work. Example error message:
+
+    ::
+
+        MyProxy Password?
+        Retrieving Credentials...Apr 05, 2016 7:15:43 PM esg.security.myproxy.CredentialConnection getCredential
+        WARNING: Remote host closed connection during handshake
+        Unrecognized SSL message, plaintext connection?
+        Use --help to display help.
+        Certificate could not be retrieved
+
+* Solution 1
+    If you have an OpenID issued by the old "hydra.fsl.noaa.gov" server, your new OpenID will contain the string "esgf.esrl.noaa.gov" instead. For example, instead of using: https://hydra.fsl.noaa.gov/esgf-idp/openid/your_username use instead: https://esgf.esrl.noaa.gov/esgf-idp/openid/your_username (or choose "NOAA/ESRL" in the openid pull down menu). Your username and password have NOT changed.
+
+* Solution 2
+    Create a new account at upgraded Nodes. You can find upgraded Nodes by using the "Federated ESGF-CoG Nodes", which should be located on the Home page of all ESGF Nodes.
+
+    .. image:: images/federated_nodes.png
+
+Error: "Failed to open cert"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example error message:
+
+    ::
+
+        ERROR: Failed to open cert /Users/someone/.esg/certificates/0119347c.signing_policy: (0).
+
+The error message indicates that something is wrong with your local certificate directory. This error is usually not fatal, i.e. the script run is continued. If your script run ended prematurely, also look for messages below.
+
+* Solution
+    Remove all contents of the directory ~/.esg and try running the Wget script again. The .esg will automatically be rebuilt when you run the next Wget script.
+
+I have a problem running MyProxyLogon application
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+MyProxyLogon application may be used to prepare a download script run (Wget script run) but this is error prone. Under Linux or Mac OS this is also outdated since Wget scripts are itself able to fetch the necessary credentials and to inquire OpenID and password.
+
+Please try running the wget script alone. Before you try it again, remove your credentials directory .esg since your credentials may be damaged due to the MyProxyLogon failure. ESGF Wget scripts will automatically rebuild the credentials directory if it is missing.
+
+
+Issues with Option -H
+---------------------
+An ESGF Wget script with option -H does not need locally stored certificates for user authentication but sends OpenID and password encrypted with Wget. On the one hand, use of option -H can avoid many potential error sources. On the other hand, some new errors may occur, which come without verbose respose, sometimes even without an error message. Please enable debug mode with option -d to get an error message in this case.
+
+::
+
+    $ bash wget-xxx.sh -H -d
+
+Error: "Retry failed"
+^^^^^^^^^^^^^^^^^^^^^
+After an unsuccessful try, the script tries again to download a file, also without success.
+
+::
+
+    sftlf_fx_HadGEM2-ES_esmFixClim1_r0i0p0.nc ...Downloading
+    Retrying....
+    ERROR : Retry failed.
+    download failed
+
+One possible reason for this error is a missing membership in a data access control group. In debug mode, the script additionally throws the error message "403 Forbidden" in this case.
+
+* Solution
+    Join a matching :ref:`data access control group <data_access_groups>`.
+
+Server issues may also affect script runs with option -H. If you get the additional error message "Self-signed certificate encountered" when you use debug option -d, try the following.
+
+* Solution
+    Combination with the "insecure" option.
+
+    ::
+
+        $ bash wget-xxx.sh -H -i
+
+    The server certificate will not be checked then.
+
+Another possible reason may affect Windows/Cygwin users. Under Windows, user names with blanks are allowed. These user names are overtaken into Cygwin during Cygwin installation and disturbe Wget scripting.
+
+* Solution 1
+    Change your Windows user name before you install Cygwin.
+
+* Solution 2
+    Change your Cygwin user name and the name of your Cygwin home directory. By default Cygwin does not create an /etc/passwd file, where users are defined under UNIX, but it can be created with
+
+    ::
+
+        mkpasswd
+
+    Create a new home directory without blank in its name and copy all important files including .bash_profile, .bashrc, .inputrc and .profile to this new directory. Adapt the last line in /etc/passwd (that defining your account) using a text editor.
+
+Error: "HTTP request to OpenID Relying Party service failed"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example error message:
+
+::
+
+    sftgif_ARC-44_ECMWF-ERAINT_evaluation_r1i1p1_AWI-HIRHAM5_v1_fx.nc ...Downloading
+    ERROR : HTTP request to OpenID Relying Party service failed.
+    download failed
+    done
+
+* Solution 1
+    The user name alone is not sufficient. Enter your complete, correctly spelled OpenID behind
+
+    ::
+
+        Enter your openid :
+
+* Solution 2
+    OpenIDs with machine names pcmdi.llnl.gov, pcmdi9.llnl.gov or hydra.fsl.noaa.gov are outdated. Please replace the machine name by the new one, esgf-node.llnl.gov or esgf.esrl.noaa.gov, in the OpenID.
+
+* Solution 3
+    OpenIDs issued from www.earthsystemgrid.org are no longer accepted in the ESGF. Please case create a new OpenID at a running ESGF portal, for example https://esgf-data.dkrz.de/ or https://esgf-node.llnl.gov/.
+
+* Solution 4
+    Under Mac OS this error may be thrown if Wget is not installed. Please install it, see question `Error: "wget: command not found"`_.
+
+* Solution 5
+    This error may also be thrown if a node is not fully online, for example if it is maintained. Please wait until maintenance has been finished.
+
+In all other cases contact ESGF support esgf-user@lists.llnl.gov
+
+Error: "401 Unauthorized"
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Access to ESGF data is usually restricted. Before you can download data, you have to join a data access control group since acknowledgement of a policy is a condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script and options -H -d, you will get an error message like this:
+
+::
+
+    HTTP request sent, awaiting response... 401 Unauthorized
+    Username/Password Authentication Failed.
+
+* Solution:
+    Please join a proper :ref:`data access control group <data_access_groups>`.
+
+How to avoid entering OpenID and password before executing a Wget script?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If Oracle Java, version 1.7 or newer, is locally installed and Wget scripts are run without option -H, OpenID and password are only inquired once per data node.
+
+Network Issues
+--------------
+
+Error: "Connection timed out" or "Connection refused"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example error message:
+
+::
+
+    Retrieving Credentials...MyProxy get failed. [Caused by: connect timed out]
+    Use --help to display help.
+    Certificate could not be retrieved
+
+* Solution 1
+    Please make sure that your Wget script can connect to an ESGF MyProxy server, for example on host esgf-data.dkrz.de, and port 7512. For testing you may do the following:
+
+    ::
+
+        echo | telnet esgf-data.dkrz.de 7512
+
+    This is the output expected if you can connect successfully:
+
+    ::
+
+        Trying 136.172.50.66...
+        Connected to esgf-data.dkrz.de.
+        Escape character is '^]'.
+        Connection closed by foreign host.
+
+    And this is an example for an output if you cannot make the connection:
+
+    ::
+
+        Trying 136.172.50.66...
+        telnet: connect to address 136.172.50.66: Connection refused
+        telnet: Unable to connect to remote host: Connection refused
+
+    If this is the case, you need to contact with your system administrator and tell him/her you need to access esgf-data.dkrz.de over port 7512 (TCP) (or the server and port you are trying to connect to).
+
+* Solution 2
+    ESGF data node esgf2.dkrz.de is tape-based and might be slow, dependent on the workload. The default timeout for ESGF Wget scripts is set to 15 minutes and this is not sufficient sometimes. The easiest way to handle this error is to re-run the script. This should not take too long since already downloaded files are not re-downloaded and most of the tape data should be ready in esgf2's disk cache after a request for it.
+
+Error: "No route to host"
+^^^^^^^^^^^^^^^^^^^^^^^^^
+Your request could not be routed to the server. This problem can be caused at the server's or the user's site or in between. Maybe a part of the network is down.
+
+
+Checksum Issues or Command not Found
+------------------------------------
+ESGF Wget scripts contain a SHA256 or MD5 checksum for each download file. After download, the checksum is again calculated on the user's local machine and compared with that in the script. In case of a mismatch the downloaded file is deleted. This shall prevent unwanted bitstream changes during download.
+
+sha256 or md5 fails or file gets downloaded over and over
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The SHA256 or MD5 checksum does not match. Example error message:
+
+::
+
+    sftlf_EUR-11_CNRM-CERFACS-CNRM-CM5_rcp45_r1i1p1_CNRM-ALADIN53_v1_fx.nc ...Downloading
+      sha256 failed!
+      re-trying...Downloading
+      sha256 failed!
+    The file returns always a different checksum!
+    Contact the data owner to verify what is happening.
+
+This or a similar error message is usually thrown if the expected software to calculate the checksum is locally not installed. Seldom, even though this should not happen, data have been altered by staff without updating the corresponding metadata, e.g. version number and checksum. In both cases deletion of the downloaded file and re-download are completely useless but the download script cannot automatically know this.
+
+* Solution 1
+    If you additionally received the message "command not found", install the missing SHA or MD5 software, see the next two questions.
+
+* Solution 2
+    Use the option -p to preserve the downloaded files from beeing deleted and to suppress re-download.
+
+    ::
+
+        $ bash wget-xxx.sh -p
+
+    If the -p option is set, the script does check the sha256 or md5 checksum and provides the result of that comparison, though it leaves the file as it was downloaded.
+
+    Hint: If you want to verify a proper download anyway, you may download the file twice and compare the two files. Exactly the same bit change during both downloads is very unlikely. The first download file has to be renamed before you can start the second download since ESGF download scripts are able to recognise already downloaded files by their name.
+
+#. Solution 3
+    Contact the ESGF support. The responsible data node administrator will update the checksum then.
+
+Error: "sha256sum: command not found"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ESGF Wget scripts for data download need a command line tool to calculate the SHA256 checksum after download. Under Linux, it is sha256sum, which is usually in one of the standard packages. Under Mac OS, SHA software is not standard.
+
+* Solution 1
+    As a Mac user, please install GNU SHA2. The easiest way to do this is utilization of Homebrew:
+
+    ::
+
+        $ brew install sha2
+
+    Homebrew itself can be installed with the following command:
+
+    ::
+
+        $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+* Solution 2
+    Install GNU coreutils package provided by MacPorts. Other package managers, as Fink, would also work.
+
+* Solution 3
+    If no package manager is installed, you may try the following:
+
+    ::
+
+        function sha256sum() { shasum -a 256 "$@" ; } && export -f sha256sum
+
+    This should be added to your $HOME/.bashrc file.
+
+Error: "md5sum: command not found"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ESGF Wget scripts need the command line tool md5sum. Please install it. mdsum5 is sometimes used instead of sha256sum for calculating a checksum after download. This checksum is compared with the checksum in the file list. In this way, a proper download, i.e. an unchanged file, is ensured.
+
+* Solution
+    Under Linux, md5sum is usually in one of the standard packages. Under Mac OS, md5sum is not standard. The easiest way to install md5sum on a Mac is utilization of Homebrew:
+
+    ::
+
+        $ brew install md5sha1sum
+
+    GNU md5sha1sum contains md5sum besides other checksum software.
+
+Error: "wget: command not found"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+For fetching files, ESGF Wget scripts need the command line tool Wget. Please install it.
+
+* Solution
+    Under Linux, Wget is usually in one of the standard packages. Nevertheless, Wget is not standard under Mac OS X. The easiest way to install Wget under Mac OS X is utilization of Homebrew:
+
+    ::
+
+        $ brew install wget
+
+    Cygwin users should install the package Web-Wget with help of the Cygwin setup executable under Windows.
+
+
+Wget Script File List Issues
+----------------------------
+
+The download file list in Wget script is incomplete
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Downloads with ESGF wget scripts are usually limited to 1000 files per run. Therefore the download file list is truncated if the number of files exceeds 1000. Two ways are possible to overcome this issue:
+
+* Solution 1
+    Select the variables you need with help of text field
+    Unless you need all variables, you should filter them. How this can easily be done is answered below with the next question.
+
+* Solution 2
+    Use URL-based script generation
+    Sometimes the number of download files will still exceed 1000. Scripts for huge downloads can efficiently be created by using ESGF Search RESTful URLs. The example below shows the URL for creation of a wget script for several variables and all CMIP5 RCP Amon scenarios:
+
+    ::
+
+        http://esgf-data.dkrz.de/esg-search/wget/?project=CMIP5&experiment_family=RCP&cmor_table=Amon&variable=tas&variable=tasmin&variable=tasmax&limit=8000
+
+    * With the command `limit=8000` the file number limit is enlarged to 8000. The maximum file number limit allowed in ESGF is 10000
+    * Search categories are delimited by `&`
+    * Equal search categories will be processed in the sense of logical OR. Since the URL contains three "variable" statements for the three variables tas, tasmax and tasmin, the search will provide a file list for these three variables
+    * Different search categories will be processed in the sense of AND
+    * Blanks in the category name have to be replaced by `_`
+
+A comprehensive description of ESGF Search RESTful URLs can be found in section ":ref:`The ESGF search RESTful API <restful_api>`".
+
+How to create a wget script that contains only the files for some selected variables?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Please follow these steps:
+
+#. Login
+#. Use any of the facet constraints on the left to return a set of datasets (each dataset containing many files, possibly for more than one variable)
+#. Add the datasets you need to your Data Cart
+#. Switch to your Data Cart
+#. Type-in the names of the variables you need in the text field
+#. Press the "Apply" button
+#. Create your WGET script, download and run it
+
+In case you need more than one variable, use a blank as delimiter, for example:
+
+.. image:: images/textfeld.png
+
+Other Wget Script Issues
+------------------------
+
+Error: "ERROR 403: Forbidden"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Access to ESGF data is usually restricted. Before you can download data, you have to join a data access control group since acknowledgement of a policy is condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script, you will get an error message like this:
+
+::
+
+    Connecting to esg.cnrm-game-meteo.fr (esg.cnrm-game-meteo.fr)|193.49.97.157|:443... connected.
+    HTTP request sent, awaiting response... 403 Forbidden
+    2016-04-27 21:16:18 ERROR 403: Forbidden.
+
+    download failed
+
+The error "403 Forbidden" may also be caused by a server issue. A typical behaviour of a server, which has difficulties in handling group memberships, is an endless loop of registration requests without accepting you if you try to download a file following a HTTPServer link.
+
+* Solution in case of a missing group membership:
+    Please join a proper data access control group.
+
+* Solution in case of a server issue:
+    Try downloading a replica. Most CMIP5 data are also available as a replica. Enable the checkbox “Show All Replicas” in ESGF Search to see replicas in the search results.
+
+Info: "302 Moved temporarily"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This is not an error but a usual message in the output of an ESGF wget script. For example, it may be printed by ESGF-CoG authentication system or in case of a redirect from the node's THREDDS catalog to the device where the data are really stored.
+
+If your download failed, look for a later error message below.
+
+Wget script was not recognized as a batch file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Example error messages:
+
+::
+
+    wget-xxx.sh: Permission denied
+    'wget-xxx.sh' not recognized as an internal or external command, operable program or batch file
+
+* Solution 1
+    Run the script in its own Bourne Again Shell:
+
+    ::
+
+        $ bash wget-xxx.sh
+
+* Solution 2
+    Make the script executable before running it:
+
+    ::
+
+        $ chmod u+x wget-xxx.sh
+        $ ./wget-xxx.sh
+
+Wget script stopped after inquiring the OpenID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+
+    $ bash wget-xxx.sh &
+        ...
+        Please give your OpenID (Example: https://myserver/example/username) ? https://esgf-data.dkrz.de/esgf-idp/openid/myname
+
+        [1]+  Stopped                 ./wget-xxx.sh
+
+Do not send the script to the background with the ampersand at the end of the command. Instead run the script in the foreground (without “&” at the end).
+
+
+Are MyProxy password and account password the same?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Yes, the following passwords are all the same:
+
+* MyProxy password inquired by an ESGF Wget script or by MyProxyLogon application
+* ESGF-CoG account password
+* OpenID password
+
+How to preserve the directory structure?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you want to create a directory structure on your local computer and to copy your downloaded files into this structure, create your Wget script via URL (more precisely ESGF Search RESTful API) and use the download_structure command. For example, a CMIP5 directory structure can be created with
+
+::
+
+    http://esgf-data.dkrz.de/esg-search/wget?download_structure=project,product,institute,model,experiment,time_frequency,realm,cmor_table,ensemble,variable&project=CMIP5&experiment=historical&cmor_table=Amon&variable=tas&variable=pr
+
+The other commands, delimited by &, are search categories.
+
+* Equal search categories will be processed in the sense of logical OR. Since the URL contains two “variable” statements, one for near surface temperature tas and one for precipitation pr, the search will provide a file list for these two variables
+* Different search categories will be processed in the sense of AND
+* Blanks in the category name are to be replaced by _
+
+For preservation of the CORDEX data structure you may use
+
+::
+
+    http://esgf-data.dkrz.de/esg-search/wget?download_structure=project,product,domain,institute,driving_model,experiment,ensemble,rcm_name,rcm_version,time_frequency,variable&project=CORDEX
+
+followed by the search categories you need.
+
+.. note:: ESGF Search RESTful API cannot use the original CORDEX DRS (Data Reference Syntax). Instead a similar structure is used. Whereas the CORDEX DRS specifies "rcm-model" for the real directory structure, use "rcm-name" here instead.
+
+A description of ESGF Search RESTful URLs can be found in section ":ref:`The ESGF search RESTful API <restful_api>`".
+
+Are ESGF download scripts also available for the MS Windows command prompt?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+No, but you may try to run the downloaded script in a Linux emulation as Cygwin under Windows. Cygwin/Windows is not officially supported by ESGF but some users prefer it. Or install a virtual Linux machine under Windows.
+
+
+
+
+
+
+
+
+
+
+
+
 
 ESGF Login/Registration
 ***********************
