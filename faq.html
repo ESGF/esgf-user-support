@@ -178,9 +178,35 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#esgf-login-registration">ESGF Login/Registration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#esgf-search">ESGF Search</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#esgf-download">ESGF Download</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esgf-login-registration">ESGF Login/Registration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#do-i-have-to-have-a-user-account-to-search-for-data">Do I have to have a user account to search for data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#do-i-need-to-join-the-project-serving-the-data">Do I need to join the project serving the data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#which-group-membership-is-necessary-for-download-of-esgf-data">Which group membership is necessary for download of ESGF data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-group-memberships-are-not-shown">My group memberships are not shown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-am-getting-a-security-warning-when-trying-to-login">I am getting a security warning when trying to login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-get-a-java-error-on-login">I get a Java error on login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-project-i-have-navigated-to-does-not-have-a-search-widget">The project I have navigated to does not have a search widget?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-cannot-login-with-my-openid-issued-by-pcmdi-llnl-gov">I cannot login with my OpenID issued by pcmdi.llnl.gov</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-cannot-login-with-my-openid-created-before-january-2016">I cannot login with my OpenID created before January 2016</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-get-the-error-cannot-resolve-openid">I get the error: &#8220;Cannot resolve openid&#8221;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-get-the-error-openid-discovery-error-unrecognized-by-the-identity-provider">I get the error: &#8220;OpenID Discovery Error: unrecognized by the Identity Provider&#8221;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my-new-openid-is-not-available-in-firefox">My new OpenID is not available in Firefox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-have-not-received-an-email-confirming-my-registration">I have not received an email confirming my registration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#esgf-search">ESGF Search</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-do-i-find-data">How do I find data?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-don-t-find-the-expected-data">I don&#8217;t find the expected data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-get-the-error-transaction-aborted-undefined">I get the error: &#8220;transaction aborted undefined&#8221;</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#esgf-download">ESGF Download</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-can-i-get-data-for-a-specified-area-only">How can I get data for a specified area only?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#does-esgf-support-opendap-downloads">Does ESGF support OPeNDAP downloads?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-can-t-add-data-to-my-datacart">I can&#8217;t add data to my DataCart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#where-can-i-get-data-on-media">Where can I get data on media?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -2023,12 +2049,226 @@ $ ./wget-xxx.sh
 </div>
 <div class="section" id="esgf-login-registration">
 <h2>ESGF Login/Registration<a class="headerlink" href="#esgf-login-registration" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="do-i-have-to-have-a-user-account-to-search-for-data">
+<h3>Do I have to have a user account to search for data?<a class="headerlink" href="#do-i-have-to-have-a-user-account-to-search-for-data" title="Permalink to this headline">¶</a></h3>
+<p>You don&#8217;t need an account to search for data on a public project. You will need an account to download data. You should get an account on the node you wish to download data from.</p>
+</div>
+<div class="section" id="do-i-need-to-join-the-project-serving-the-data">
+<h3>Do I need to join the project serving the data?<a class="headerlink" href="#do-i-need-to-join-the-project-serving-the-data" title="Permalink to this headline">¶</a></h3>
+<p>You only need to join the project if you plan to edit wiki pages, upload files etc. In case you want to download data from ESGF, you will most likely have to join a data access control group.
+These groups are not the same as CoG projects. For details about data access groups see tutorial <a class="reference internal" href="user_guide.html#data-access-groups"><span class="std std-ref">Authorization for ESGF Data Access</span></a>..</p>
+</div>
+<div class="section" id="which-group-membership-is-necessary-for-download-of-esgf-data">
+<h3>Which group membership is necessary for download of ESGF data?<a class="headerlink" href="#which-group-membership-is-necessary-for-download-of-esgf-data" title="Permalink to this headline">¶</a></h3>
+<p>See tutorial <a class="reference internal" href="user_guide.html#data-access-groups"><span class="std std-ref">Authorization for ESGF Data Access</span></a>.</p>
+</div>
+<div class="section" id="my-group-memberships-are-not-shown">
+<h3>My group memberships are not shown<a class="headerlink" href="#my-group-memberships-are-not-shown" title="Permalink to this headline">¶</a></h3>
+<p>Normally, group memberships are shown on your User Profile. User Profiles and group registration are related to an account, not a person. You may have registered for group access using a different account or an account created before the 2015 ESGF overhaul, that no longer exists.</p>
+</div>
+<div class="section" id="i-am-getting-a-security-warning-when-trying-to-login">
+<h3>I am getting a security warning when trying to login<a class="headerlink" href="#i-am-getting-a-security-warning-when-trying-to-login" title="Permalink to this headline">¶</a></h3>
+<p>ESGF uses a self-signed certificate. You have to tell your browser to accept this non-commerical certificate. Each browser does this differently.
+See tutorial <a class="reference internal" href="user_guide.html#accept-esgf-cert"><span class="std std-ref">Get your browser to accept the ESGF certificate</span></a></p>
+</div>
+<div class="section" id="i-get-a-java-error-on-login">
+<h3>I get a Java error on login<a class="headerlink" href="#i-get-a-java-error-on-login" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/java_err.png" src="_images/java_err.png" />
+<ul>
+<li><dl class="first docutils">
+<dt>Solution 1</dt>
+<dd><p class="first last">To get a new cookie you will need to clear your cache, close your browser, and try logging in again.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 2</dt>
+<dd><p class="first last">Open a private window. Firefox will not remember its cookies in this window.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="the-project-i-have-navigated-to-does-not-have-a-search-widget">
+<h3>The project I have navigated to does not have a search widget?<a class="headerlink" href="#the-project-i-have-navigated-to-does-not-have-a-search-widget" title="Permalink to this headline">¶</a></h3>
+<p>That project may not be serving any data or they have turned off the widget and instead have a link somewhere on the page to the search area.</p>
+</div>
+<div class="section" id="i-cannot-login-with-my-openid-issued-by-pcmdi-llnl-gov">
+<h3>I cannot login with my OpenID issued by pcmdi.llnl.gov<a class="headerlink" href="#i-cannot-login-with-my-openid-issued-by-pcmdi-llnl-gov" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/pcmdi_openid_failed.png" src="_images/pcmdi_openid_failed.png" />
+<ul>
+<li><dl class="first docutils">
+<dt>Solution</dt>
+<dd><p class="first">pcmdi.llnl.gov has been renamed to esgf-node.llnl.gov.</p>
+<p class="last">Use <a class="reference external" href="https://esgf-node.llnl.gov/esgf-idp/openid/your_account_name">https://esgf-node.llnl.gov/esgf-idp/openid/your_account_name</a> instead of <a class="reference external" href="https://pcmdi.llnl.gov/esgf-idp/openid/your_account_name">https://pcmdi.llnl.gov/esgf-idp/openid/your_account_name</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="i-cannot-login-with-my-openid-created-before-january-2016">
+<h3>I cannot login with my OpenID created before January 2016<a class="headerlink" href="#i-cannot-login-with-my-openid-created-before-january-2016" title="Permalink to this headline">¶</a></h3>
+<p>Instead, I&#8217;m getting an error &#8220;Error: unable to resolve OpenID identifier&#8221; or I&#8217;m guided to a Group Registration Request page and, after pressing &#8220;Register&#8221;, I&#8217;m getting a &#8220;HTTP Status 500&#8221;.</p>
+<p>Most ESGF partners do not maintain accounts from before the ESGF overhaul. The same may be true for accounts created on test nodes during the overhaul (June 2015 - January 2016). These include OpenIDs from pcmdi9 and esg-dev.</p>
+<p>Please create a new account on an ESGF node of your choice. Your new account should be accepted by every ESGF portal and ESGF data nodes. Note to change your password and account information, you must login into the ESGF node you created the account on. Also register to the data access control groups again, e.g. CMIP5 Research or CMIP5 Commercial (for download of CMIP5 data).</p>
+</div>
+<div class="section" id="i-get-the-error-cannot-resolve-openid">
+<h3>I get the error: &#8220;Cannot resolve openid&#8221;<a class="headerlink" href="#i-get-the-error-cannot-resolve-openid" title="Permalink to this headline">¶</a></h3>
+<p>This could be either a problem with the user account, or with the server setup where the user registered:</p>
+<ul>
+<li><p class="first">If the user data (openid, first name, last name, etc.) contains non-standard characters, the login will fail. The user should change the data him/herself, or contact the server administrator to update their account</p>
+</li>
+<li><p class="first">The server pcmdi.llnl.gov has been moved to esgf-node.llnl.gov. If you have an OpenID <a class="reference external" href="https://pcmdi.llnl.gov/esgf-idp/openid/your_username">https://pcmdi.llnl.gov/esgf-idp/openid/your_username</a>, simply use <a class="reference external" href="https://esgf-node.llnl.gov/esgf-idp/openid/your_username">https://esgf-node.llnl.gov/esgf-idp/openid/your_username</a> instead.</p>
+</li>
+<li><p class="first">The account may no longer be valid (e.g. an pre-2016 OpenID). Simply create a new account.</p>
+</li>
+<li><p class="first">The OpenID issuer is not in the ESGF whitelist of accepted issuers. For example, www.earthsystemgrid.org OpenIDs are no longer compatible with ESGF identity provider service since ESGF overhaul. Therefore, they are not accepted even if they are new. In this case, you should create a new account at a running ESGF portal.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Or the server is not setup correctly. The administrator should check for these possible problems:</dt>
+<dd><ul class="first last simple">
+<li>Certificate expired (host certificate or CA certificate)</li>
+<li>Root CA not in the truststore or not in the federation certificate repository</li>
+<li>Server OpenID provider URL not in the whitelist of OpenID relying party</li>
+<li>Server clock sync issue</li>
+<li>Firewall side effects</li>
+<li>The file esg-trustore.ts does not match the file jssecacerts in the JAVA installation directory</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="i-get-the-error-openid-discovery-error-unrecognized-by-the-identity-provider">
+<h3>I get the error: &#8220;OpenID Discovery Error: unrecognized by the Identity Provider&#8221;<a class="headerlink" href="#i-get-the-error-openid-discovery-error-unrecognized-by-the-identity-provider" title="Permalink to this headline">¶</a></h3>
+<img alt="_images/openid_discovery_error.png" src="_images/openid_discovery_error.png" />
+<p>The server which issued the OpenID was retired or now has a different name, e.g. pcmdi3, pcmdi9 and pcmdi.llnl.gov were changed to esgf-node.llnl.gov and esgf-node.ipsl.fr was changed to esgf-node.ipsl.upmc.fr. If you have an OpenID <a class="reference external" href="https://pcmdi.llnl.gov/esgf-idp/openid/your_username">https://pcmdi.llnl.gov/esgf-idp/openid/your_username</a>, simply use <a class="reference external" href="https://esgf-node.llnl.gov/esgf-idp/openid/your_username">https://esgf-node.llnl.gov/esgf-idp/openid/your_username</a> instead. In all other cases, the old OpenIDs are no longer valid. Create a new OpenID at the ESGF node of your choice.</p>
+</div>
+<div class="section" id="my-new-openid-is-not-available-in-firefox">
+<h3>My new OpenID is not available in Firefox<a class="headerlink" href="#my-new-openid-is-not-available-in-firefox" title="Permalink to this headline">¶</a></h3>
+<p>Instead Firefox uses an old OpenID.</p>
+<p>Did a message appear in the same Firefox session whether to use your credials imported into your browser? Please respond that query with pressing &#8220;cancel&#8221; since an old OpenID may have been assigned to your credential. This can even happen in a private window.</p>
+</div>
+<div class="section" id="i-have-not-received-an-email-confirming-my-registration">
+<h3>I have not received an email confirming my registration<a class="headerlink" href="#i-have-not-received-an-email-confirming-my-registration" title="Permalink to this headline">¶</a></h3>
+<p>ESGF does not require the user to reply to any confirmation email. You can immediately use your new account.</p>
+<p>I forgot my password
+See tutorial <a class="reference internal" href="user_guide.html#forgot-password"><span class="std std-ref">Forgot Password</span></a></p>
+</div>
 </div>
 <div class="section" id="esgf-search">
 <h2>ESGF Search<a class="headerlink" href="#esgf-search" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-do-i-find-data">
+<h3>How do I find data?<a class="headerlink" href="#how-do-i-find-data" title="Permalink to this headline">¶</a></h3>
+<p>Visit the home page of one of the ESGF portals with your web browser and follow one of the general or project-specific links to a search surface.  In easy cases you also may use the Search &amp; Download Data box with its search text field. This box contains a link &#8220;Search with options&#8221; to a general search surface as well.</p>
+<img alt="_images/search_and_download.png" src="_images/search_and_download.png" />
+</div>
+<div class="section" id="i-don-t-find-the-expected-data">
+<h3>I don&#8217;t find the expected data<a class="headerlink" href="#i-don-t-find-the-expected-data" title="Permalink to this headline">¶</a></h3>
+<p>There might be several reasons and solutions for this issue:</p>
+<ul>
+<li><dl class="first docutils">
+<dt>Solution 1</dt>
+<dd><p class="first last">ESGF portals may be disturbed by Firefox&#8217;s cache content or old cookies. Use Firefox in a private window (see Firefox menu).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 2</dt>
+<dd><p class="first last">Make sure the checkbox &#8220;Search Local Node Only&#8221; is not checked. Otherwise only data nodes locally connected with the portal you use are searched instead of a worldwide search.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 3</dt>
+<dd><p class="first last">If you need CMIP5 data, enable the checkbox &#8220;Show All Replicas&#8221;. The most important part of the CMIP5 data, the output1 data, have been replicated. Replicas are a good choice if one or more data nodes are down.
+Especially now, in the phase of redeployment after ESGF overhaul, many data nodes are still down. The bitstreams of replica and master copy are identical if the number or date of the version is the same.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 4</dt>
+<dd><p class="first last">Look into the errata of the project whether the data you need are withdrawn.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 5</dt>
+<dd><p class="first last">Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
+Which CMIP5 data have been required for which time frequency and experiment is tabulated in the <a class="reference external" href="http://cmip.llnl.gov/cmip5/docs/standard_output.pdf">CMIP5 Standard Output document</a>.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 6</dt>
+<dd><p class="first last">In case a portal has technical problems, try another ESGF portal</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 7</dt>
+<dd><p class="first last">Seldom metadata have not properly been overtaken from a data node. In this case circumvent portals and try finding data on the data nodes directly. With help of the usual ESGF Search, find out which model simulations have been stored on which data node. Go to the THREDDS catalog of that data node and use the download links there.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="i-get-the-error-transaction-aborted-undefined">
+<h3>I get the error: &#8220;transaction aborted undefined&#8221;<a class="headerlink" href="#i-get-the-error-transaction-aborted-undefined" title="Permalink to this headline">¶</a></h3>
+<p>This error may occur after clicking on &#8220;Show Files&#8221; to expand the file list of a dataset and is probably caused by Firefox&#8217;s cache content or old cookies.</p>
+<img alt="_images/transaction_aborted_undefined.png" src="_images/transaction_aborted_undefined.png" />
+<ul>
+<li><dl class="first docutils">
+<dt>Solution</dt>
+<dd><p class="first last">Use Firefox in a private window (see Firefox menu).</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 </div>
 <div class="section" id="esgf-download">
 <h2>ESGF Download<a class="headerlink" href="#esgf-download" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-can-i-get-data-for-a-specified-area-only">
+<h3>How can I get data for a specified area only?<a class="headerlink" href="#how-can-i-get-data-for-a-specified-area-only" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><dl class="first docutils">
+<dt>Solution 1</dt>
+<dd><p class="first">If you want to specify an area and download data for that area only, you may look for an OPENDAP download link. Data downloaded via OPENDAP are in ASCII CSV (Comma Separated Values, readable text), or dodc (a binary OPENDAP data format). OPENDAP links are available for all data files now.</p>
+<p>In ESGF Search, add the data you are interested into your Cart and click on &#8220;Show Files&#8221; and then on &#8220;OPENDAP&#8221;. In the &#8220;OPeNDAP Dataset Access Form&#8221; fill in the index ranges you want and get the array. Details for ASCII CSV:</p>
+<ol class="last arabic simple">
+<li>The &#8220;OPeNDAP Dataset Access Form&#8221; consists of many coordinate variable blocks (time, time_bnds, lat, lat_bnds, lon, lon_bnds, height) followed by the data variable you are interested in, e.g. near surface temperature tas. First enable all the coordinate variables to find out which indices you need (check the checkboxes)</li>
+<li>Click on the &#8220;GetASCII&#8221; button</li>
+<li>The ASCII output contains the values of the coordinate variables. The same indices will be used in the data variable array. Choose an index range</li>
+<li>Check the data variable checkbox and type-in your index ranges there. Three integers may be set for each coordinate variable: lower boundary index, increment, upper boundary index</li>
+<li>Click on the &#8220;GetASCII&#8221; button again</li>
+<li>The output should contain your data variable array now. If the array is too big, an error message is thrown. In this case reduce the index ranges or increase the increments. For example &#8220;time: 0:2:100&#8221; will provide every second value of the first 100 times</li>
+<li>Copy and paste the data variable array to a file</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Solution 2</dt>
+<dd><p class="first last">Download the whole file and cut the region you need with a tool. Among others, one useful tool is CDO sellatlonbox, see <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="does-esgf-support-opendap-downloads">
+<h3>Does ESGF support OPeNDAP downloads?<a class="headerlink" href="#does-esgf-support-opendap-downloads" title="Permalink to this headline">¶</a></h3>
+<p>Yes, OPeNDAP URLs are available for all data files now. Once search results (datasets) have been added to your Data Cart, on that pane use the &#8220;Show Files&#8221; link for a dataset, to reveal the files and OPeNDAP links for each.</p>
+</div>
+<div class="section" id="i-can-t-add-data-to-my-datacart">
+<h3>I can&#8217;t add data to my DataCart<a class="headerlink" href="#i-can-t-add-data-to-my-datacart" title="Permalink to this headline">¶</a></h3>
+<p>Please login first.</p>
+</div>
+<div class="section" id="where-can-i-get-data-on-media">
+<h3>Where can I get data on media?<a class="headerlink" href="#where-can-i-get-data-on-media" title="Permalink to this headline">¶</a></h3>
+<p>World Data Centre for Climate (WDCC) offers a <a class="reference external" href="http://www.dkrz.de/daten-en/wdcc/projects_cooperations/ipcc-data/order-ipcc-data-on-dvd">subset of CMIP5/AR5 data on a medium, usually on a USB stick</a>.
+This service may especially be useful for scientists who cannot download data from ESGF because of very low network bandwidth.</p>
+</div>
 </div>
 </div>
 

@@ -1334,22 +1334,177 @@ Are ESGF download scripts also available for the MS Windows command prompt?
 No, but you may try to run the downloaded script in a Linux emulation as Cygwin under Windows. Cygwin/Windows is not officially supported by ESGF but some users prefer it. Or install a virtual Linux machine under Windows.
 
 
-
-
-
-
-
-
-
-
-
-
-
 ESGF Login/Registration
 ***********************
+
+Do I have to have a user account to search for data?
+----------------------------------------------------
+You don't need an account to search for data on a public project. You will need an account to download data. You should get an account on the node you wish to download data from.
+
+
+Do I need to join the project serving the data?
+-----------------------------------------------
+You only need to join the project if you plan to edit wiki pages, upload files etc. In case you want to download data from ESGF, you will most likely have to join a data access control group.
+These groups are not the same as CoG projects. For details about data access groups see tutorial :ref:`Authorization for ESGF Data Access <data_access_groups>`..
+
+Which group membership is necessary for download of ESGF data?
+--------------------------------------------------------------
+See tutorial :ref:`Authorization for ESGF Data Access <data_access_groups>`.
+
+My group memberships are not shown
+----------------------------------
+Normally, group memberships are shown on your User Profile. User Profiles and group registration are related to an account, not a person. You may have registered for group access using a different account or an account created before the 2015 ESGF overhaul, that no longer exists.
+
+I am getting a security warning when trying to login
+----------------------------------------------------
+ESGF uses a self-signed certificate. You have to tell your browser to accept this non-commerical certificate. Each browser does this differently.
+See tutorial :ref:`Get your browser to accept the ESGF certificate <accept_esgf_cert>`
+
+I get a Java error on login
+----------------------------
+
+.. image:: images/java_err.png
+
+* Solution 1
+    To get a new cookie you will need to clear your cache, close your browser, and try logging in again.
+
+* Solution 2
+    Open a private window. Firefox will not remember its cookies in this window.
+
+The project I have navigated to does not have a search widget?
+--------------------------------------------------------------
+That project may not be serving any data or they have turned off the widget and instead have a link somewhere on the page to the search area.
+
+I cannot login with my OpenID issued by pcmdi.llnl.gov
+------------------------------------------------------
+
+.. image:: images/pcmdi_openid_failed.png
+
+* Solution
+    pcmdi.llnl.gov has been renamed to esgf-node.llnl.gov.
+
+    Use https://esgf-node.llnl.gov/esgf-idp/openid/your_account_name instead of https://pcmdi.llnl.gov/esgf-idp/openid/your_account_name
+
+I cannot login with my OpenID created before January 2016
+---------------------------------------------------------
+Instead, I'm getting an error "Error: unable to resolve OpenID identifier" or I'm guided to a Group Registration Request page and, after pressing "Register", I'm getting a "HTTP Status 500".
+
+Most ESGF partners do not maintain accounts from before the ESGF overhaul. The same may be true for accounts created on test nodes during the overhaul (June 2015 - January 2016). These include OpenIDs from pcmdi9 and esg-dev.
+
+Please create a new account on an ESGF node of your choice. Your new account should be accepted by every ESGF portal and ESGF data nodes. Note to change your password and account information, you must login into the ESGF node you created the account on. Also register to the data access control groups again, e.g. CMIP5 Research or CMIP5 Commercial (for download of CMIP5 data).
+
+I get the error: "Cannot resolve openid"
+----------------------------------------
+This could be either a problem with the user account, or with the server setup where the user registered:
+
+* If the user data (openid, first name, last name, etc.) contains non-standard characters, the login will fail. The user should change the data him/herself, or contact the server administrator to update their account
+* The server pcmdi.llnl.gov has been moved to esgf-node.llnl.gov. If you have an OpenID https://pcmdi.llnl.gov/esgf-idp/openid/your_username, simply use https://esgf-node.llnl.gov/esgf-idp/openid/your_username instead.
+* The account may no longer be valid (e.g. an pre-2016 OpenID). Simply create a new account.
+* The OpenID issuer is not in the ESGF whitelist of accepted issuers. For example, www.earthsystemgrid.org OpenIDs are no longer compatible with ESGF identity provider service since ESGF overhaul. Therefore, they are not accepted even if they are new. In this case, you should create a new account at a running ESGF portal.
+* Or the server is not setup correctly. The administrator should check for these possible problems:
+    * Certificate expired (host certificate or CA certificate)
+    * Root CA not in the truststore or not in the federation certificate repository
+    * Server OpenID provider URL not in the whitelist of OpenID relying party
+    * Server clock sync issue
+    * Firewall side effects
+    * The file esg-trustore.ts does not match the file jssecacerts in the JAVA installation directory
+
+I get the error: "OpenID Discovery Error: unrecognized by the Identity Provider"
+--------------------------------------------------------------------------------
+
+.. image:: images/openid_discovery_error.png
+
+The server which issued the OpenID was retired or now has a different name, e.g. pcmdi3, pcmdi9 and pcmdi.llnl.gov were changed to esgf-node.llnl.gov and esgf-node.ipsl.fr was changed to esgf-node.ipsl.upmc.fr. If you have an OpenID https://pcmdi.llnl.gov/esgf-idp/openid/your_username, simply use https://esgf-node.llnl.gov/esgf-idp/openid/your_username instead. In all other cases, the old OpenIDs are no longer valid. Create a new OpenID at the ESGF node of your choice.
+
+My new OpenID is not available in Firefox
+-----------------------------------------
+Instead Firefox uses an old OpenID.
+
+Did a message appear in the same Firefox session whether to use your credials imported into your browser? Please respond that query with pressing "cancel" since an old OpenID may have been assigned to your credential. This can even happen in a private window.
+
+I have not received an email confirming my registration
+-------------------------------------------------------
+ESGF does not require the user to reply to any confirmation email. You can immediately use your new account.
+
+I forgot my password
+See tutorial :ref:`Forgot Password <forgot_password>`
 
 ESGF Search
 ************
 
+How do I find data?
+-------------------
+Visit the home page of one of the ESGF portals with your web browser and follow one of the general or project-specific links to a search surface.  In easy cases you also may use the Search & Download Data box with its search text field. This box contains a link "Search with options" to a general search surface as well.
+
+.. image:: images/search_and_download.png
+
+I don't find the expected data
+------------------------------
+There might be several reasons and solutions for this issue:
+
+* Solution 1
+    ESGF portals may be disturbed by Firefox's cache content or old cookies. Use Firefox in a private window (see Firefox menu).
+
+* Solution 2
+    Make sure the checkbox "Search Local Node Only" is not checked. Otherwise only data nodes locally connected with the portal you use are searched instead of a worldwide search.
+
+* Solution 3
+    If you need CMIP5 data, enable the checkbox "Show All Replicas". The most important part of the CMIP5 data, the output1 data, have been replicated. Replicas are a good choice if one or more data nodes are down.
+    Especially now, in the phase of redeployment after ESGF overhaul, many data nodes are still down. The bitstreams of replica and master copy are identical if the number or date of the version is the same.
+
+* Solution 4
+    Look into the errata of the project whether the data you need are withdrawn.
+
+* Solution 5
+    Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
+    Which CMIP5 data have been required for which time frequency and experiment is tabulated in the `CMIP5 Standard Output document <http://cmip.llnl.gov/cmip5/docs/standard_output.pdf>`_.
+
+* Solution 6
+    In case a portal has technical problems, try another ESGF portal
+
+* Solution 7
+    Seldom metadata have not properly been overtaken from a data node. In this case circumvent portals and try finding data on the data nodes directly. With help of the usual ESGF Search, find out which model simulations have been stored on which data node. Go to the THREDDS catalog of that data node and use the download links there.
+
+I get the error: "transaction aborted undefined"
+------------------------------------------------
+This error may occur after clicking on "Show Files" to expand the file list of a dataset and is probably caused by Firefox's cache content or old cookies.
+
+.. image:: images/transaction_aborted_undefined.png
+
+* Solution
+    Use Firefox in a private window (see Firefox menu).
+
+
 ESGF Download
 *************
+
+How can I get data for a specified area only?
+---------------------------------------------
+* Solution 1
+    If you want to specify an area and download data for that area only, you may look for an OPENDAP download link. Data downloaded via OPENDAP are in ASCII CSV (Comma Separated Values, readable text), or dodc (a binary OPENDAP data format). OPENDAP links are available for all data files now.
+
+    In ESGF Search, add the data you are interested into your Cart and click on "Show Files" and then on "OPENDAP". In the "OPeNDAP Dataset Access Form" fill in the index ranges you want and get the array. Details for ASCII CSV:
+
+    #. The "OPeNDAP Dataset Access Form" consists of many coordinate variable blocks (time, time_bnds, lat, lat_bnds, lon, lon_bnds, height) followed by the data variable you are interested in, e.g. near surface temperature tas. First enable all the coordinate variables to find out which indices you need (check the checkboxes)
+    #. Click on the "GetASCII" button
+    #. The ASCII output contains the values of the coordinate variables. The same indices will be used in the data variable array. Choose an index range
+    #. Check the data variable checkbox and type-in your index ranges there. Three integers may be set for each coordinate variable: lower boundary index, increment, upper boundary index
+    #. Click on the "GetASCII" button again
+    #. The output should contain your data variable array now. If the array is too big, an error message is thrown. In this case reduce the index ranges or increase the increments. For example "time: 0:2:100" will provide every second value of the first 100 times
+    #. Copy and paste the data variable array to a file
+
+* Solution 2
+    Download the whole file and cut the region you need with a tool. Among others, one useful tool is CDO sellatlonbox, see `CDO documentation <https://code.zmaw.de/projects/cdo/embedded/index.html>`_.
+
+Does ESGF support OPeNDAP downloads?
+------------------------------------
+Yes, OPeNDAP URLs are available for all data files now. Once search results (datasets) have been added to your Data Cart, on that pane use the "Show Files" link for a dataset, to reveal the files and OPeNDAP links for each.
+
+I can't add data to my DataCart
+-------------------------------
+Please login first.
+
+Where can I get data on media?
+------------------------------
+World Data Centre for Climate (WDCC) offers a `subset of CMIP5/AR5 data on a medium, usually on a USB stick <http://www.dkrz.de/daten-en/wdcc/projects_cooperations/ipcc-data/order-ipcc-data-on-dvd>`_.
+This service may especially be useful for scientists who cannot download data from ESGF because of very low network bandwidth.
