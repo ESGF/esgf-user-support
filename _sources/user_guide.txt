@@ -69,6 +69,8 @@ To join a project or create a project, you must first have an account (step 1).
         .. image:: images/register_project.png
 
 
+.. _data_access_groups:
+
 Authorization for ESGF data access
 ----------------------------------
 
@@ -326,6 +328,8 @@ Download and browse data from ESGF with OPeNDAP
 
 Download data using Globus Online
 ---------------------------------
+
+.. _restful_api:
 
 The ESGF search RESTful API
 ---------------------------
