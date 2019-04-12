@@ -331,7 +331,7 @@ What the ESGF search returns
 
     .. image:: images/logical_and.png
 
-    .. image:: images/logical_and_advance.png
+    .. image:: images/logical_and_advanced.png
 
 Searching with AND/OR in the search text boxes
 ----------------------------------------------
@@ -341,7 +341,7 @@ Page (see figures below) are combined via a logical -OR-. To search via a logica
 
 .. image:: images/logical_and.png
 
-.. image:: images/logical_and_advance.png
+.. image:: images/logical_and_advanced.png
 
 Download a single file with the browser
 ---------------------------------------
@@ -801,7 +801,7 @@ There are two options for submitting this request.
 
 You will get a confirmation that your download has started, but no matter how a data transfer request is started, the user must use the `Globus Activity <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3D132y5iamjyao&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&redirect_name=Globus+Web+App>`_ page to monitor their transfer. Additionally, Globus will send an email to the user at job completion.
 
-    .. image:: globus_confirmation.png
+    .. image:: images/globus_confirmation.png
 
 The ESGF search RESTful API
 ---------------------------
