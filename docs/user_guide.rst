@@ -1390,3 +1390,264 @@ Share a wiki page with Facebook or Twitter
 **Twitter**
 
     .. image:: images/twitter.png
+
+Files
+********
+Upload a File
+-------------
+CoG comes bundled with an associated file server for the storage of files < 50mb. For larger, scientific data sets, use the attached ESGF data node.
+
+- Files are uploaded via the "Add File" link in the left navigation bar.
+- Files can be given a title and description.
+- Files can be universal to the project or specific to a wiki page (using the "Add Attachment" link at the bottom of the wiki page).
+
+    .. image:: images/file_upload.png
+
+Using the File Browser
+^^^^^^^^^^^^^^^^^^^^^^
+- Use the "List All Files" in the left navigation bar to see all of a project's uploaded files.
+- Files can be searched for by type, or listed alphabetically.
+- Files can be deleted from the server using this interface.
+
+    .. image:: images/file_listing.png
+
+Information Interface
+^^^^^^^^^^^^^^^^^^^^^
+
+- Information is available about individual files by clicking on the "Info" link in the File Browser.
+- The information interface allows users to modify the metadata associated with a document or delete a document.
+
+    .. image:: images/file_details.png
+
+Update a File on the system
+---------------------------
+#. Click the "List All Files" in the left navigation bar
+
+    This opens up a list of files in the File Browser interface.
+    The interface sorts by:
+
+    - Type (e.g. Presentations, Images)
+    - Title (alphabetical or reverse alphabetical)
+    - Last Updated and Last Updated (Reverse)
+
+    .. image:: images/list_all_files.png
+
+#. Click on the "info" link next to the file to be updated
+
+    .. image:: images/file_listing.png
+
+#. Click on the "Update" link on the File Info Box
+
+    .. image:: images/file_update.png
+
+#. Click on the "Browse" button on the File Update page
+
+    .. image:: images/file_details.png
+
+#. Choose a file using your specific operating system's file browser
+
+Update File metadata
+--------------------
+#. Click the "List All Files" in the left navigation bar
+
+    This opens up a list of files in the File Browser interface.
+    The interface sorts by:
+
+    - Type (e.g. Presentations, Images)
+    - Title (alphabetical or reverse alphabetical)
+    - Last Updated and Last Updated (Reverse)
+
+    .. image:: images/list_all_files.png
+
+#. Click on the "info" link next to the file to be updated
+
+    .. image:: images/file_listing.png
+
+#. Click on the "Update" link on the File Info Box
+
+    .. image:: images/file_update.png
+
+#. Change or add to the file metadata on the File Update page
+
+    - Metadata includes
+        - Title
+        - Description
+        - Private (viewable to only project Users, Contributors, or Admins)
+
+    .. image:: images/file_details.png
+
+Search for a File
+-----------------
+#. Click the "List All Files" in the left navigation bar
+
+    - The interface sorts by:
+
+        - Type (e.g. Presentations, Images)
+        - Title (alphabetical or reverse alphabetical)
+        - Last Updated and Last Updated (Reverse)
+    - Files can be deleted from the server using this interface
+    - Clicking on the file name downloads the file
+
+    .. image:: images/file_listing.png
+
+
+Delete a File
+-------------
+#. Click the "List All Files" in the left navigation bar
+
+    This opens up a list of files in the File Browser interface.
+    The interface sorts by:
+
+    - Type (e.g. Presentations, Images)
+    - Title (alphabetical or reverse alphabetical)
+    - Last Updated and Last Updated (Reverse)
+
+    .. image:: images/list_all_files.png
+
+#. Click on the "Delete" link next to the file to be deleted
+
+    .. image:: images/file_listing.png
+
+Left Navigation Bar
+*******************
+
+Add links to wiki pages
+-----------------------
+- The left navigation bar is project specific, auto-generated, but customizable.
+- The left navigation bar can contain links to wiki pages or external URLs
+
+Use the wiki form to add a page to the left navigation bar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- The Labels and Topics on the wiki editing form are used to create the text and dividers in the left navigation bar.
+    - Labels are link text in the left navigation bar
+    - Topics are the light teal headers.
+- Once a topic has been created, it can be reused.
+- A new topic can be created at any time.
+- Only pages without a parent page will show up in the left navigation bar.
+- Child pages are listed at the bottom of their parent page.
+
+    .. image:: images/wiki_page.png
+
+Add links to non-CoG pages in the left navigation bar
+-----------------------------------------------------
+#. Click the "Add Link" link under "Contributors" in the left navigation bar.
+
+    - Users must be assigned a "Contributor" role to see this link.
+
+    .. image:: images/contributor_links.png
+
+#. Fill in the form
+
+- Title and URL are required.
+- Topics are the light teal headers between sections in the left navigation bar.
+- Labels are the links in the left navigation bar.
+
+    .. image:: images/add_link_template.png
+
+Reorder the left navigation bar (admins only)
+---------------------------------------------
+- Only Project or Node Administrators can reorder the left navigation bar (must be logged in).
+
+#. Click the "Edit Site Index" Link in the Left Navigation Bar
+
+    .. image:: images/edit_site_menu.png
+
+#. Use the interface to reorder links within topics or whole topics
+
+    .. image:: images/update_index.png
+
+
+Resources
+*********
+
+Resource basics
+---------------
+- A Resource in CoG is a link to URL. This can be an external URL such as a web page or an internal URL such as a project file or saved dataset.
+- These objects can be edited by Contributors and Admins, but not Users or Visitors.
+- Deleting a Resource Folder will delete all its Resources and sub-folders.
+- Resources contain an optional description field, which can be used to annotate it in a relevant way.
+
+Pre-defined Resource Folders
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+- Every CoG project comes with a Bookmarks folder AND the option to turn on (project admins only) any of the following **pre-defined** Resource Folders.
+
+    - Presentations
+    - Publications
+    - Minutes
+    - Newsletters
+    - Proposals
+    - Figures
+    - Test Cases
+    - Evaluations
+
+- These Folders are turned on and off using the "Update Project" link.
+
+Resource Folder Ordering
+^^^^^^^^^^^^^^^^^^^^^^^^
+- Resource Folders are listed in alphabetical order.
+- Resource Folders that are years are listed in reverse chronological order.
+- Resource Folders can be nested.
+
+Resource Ordering
+^^^^^^^^^^^^^^^^^
+- Resources stored in Folders that are years are listed in reverse chronological order.
+- Resources stored in other Folders are listed in the order created.
+
+    .. image:: images/resources.png
+
+Add a Resource to an external URL
+---------------------------------
+#. Click the "Add Resource" link in the Left Navigation Bar under Members
+
+    .. image:: images/add_resource.png
+
+#. Fill out the Resource Form
+
+- The same form is used to create a new Resource Folder or Resource
+- Select the Folder the Resource should be stored under
+
+    .. image:: images/resource_form.png
+
+Add a Resource to a File (with File upload)
+-------------------------------------------
+
+- Resources to an external URL can be created directly (see previous section in this tutorial)
+- A Resource can be created to an internal File at the time of upload (this tutorial section)
+
+#. Click the "Add Resource" link in the Left Navigation Bar under Members
+
+    .. image:: images/add_resource.png
+
+#. Fill out the File Upload Form
+
+- The Folder pull down is used to assign a Resource Folder to the uploaded File.
+- The File metadata will be automatically copied to the Resource
+
+    .. image:: images/file_upload.png
+
+News
+****
+
+- News is a way to send information to project members and ACROSS projects.
+- Members have to be logged in to see news.
+- Email, RSS, and other social networking options are under consideration.
+
+Add a news item
+---------------
+#. Fill out the news entry form
+
+- Sending news is initiated via "publish news" link in the left navigation bar.
+- Select the project or projects by clicking the appropriate checkbox.
+- Note that while you will be able to select projects to which you are not a member, you news will not appear on those projects.
+- An entire hierarchy can be selected by clicking the check box next to "Parent Projects", "Peer Projects" or "Child Projects".
+- Give your news item a short informative title, and describe your news item in more detail in the text prompt. Any urls you put in the text will automatically become links.
+- When you are ready to post your news item, click the submit button.
+
+    .. image:: images/news.png
+
+#.  The news appears in the news widget
+
+- For users that are logged into the system, the news widget is located above the Project Browser on the right-hand side of the page in the services section. Not all pages have these widgets enabled.
+- You can click on a news item to read the entire text.
+
+    .. image:: images/news_widget.png
