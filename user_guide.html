@@ -117,9 +117,98 @@
 <li class="toctree-l3"><a class="reference internal" href="#data-cart-basics">Data Cart basics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#narrow-a-cmip5-data-search-to-just-one-variable">Narrow a CMIP5 data search to just one variable</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#download-data-from-esgf-using-wget">Download data from ESGF using Wget</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#download-and-browse-data-from-esgf-with-opendap">Download and browse data from ESGF with OPeNDAP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#download-data-using-globus-online">Download data using Globus Online</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-esgf-search-restful-api">The ESGF search RESTful API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#download-and-browse-data-from-esgf-with-opendap">Download and browse data from ESGF with OPeNDAP</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#access-via-an-esgf-portal">Access via an ESGF portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aggregations">Aggregations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#opendap-data-url">OPeNDAP data URL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#access-data-with-the-command-line-via-opendap">Access data with the command line via OPeNDAP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#own-python-scripts">Own Python scripts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#download-data-using-globus-online">Download data using Globus Online</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#setup-globus">Setup Globus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#globus-transfer">Globus Transfer</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#the-esgf-search-restful-api">The ESGF search RESTful API</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keywords">Keywords</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#default-query">Default Query</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#free-text-queries">Free Text Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#facet-queries">Facet Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#facet-listings">Facet Listings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#temporal-coverage-queries">Temporal Coverage Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spatial-coverage-queries">Spatial Coverage Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#distributed-queries">Distributed Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shard-queries">Shard Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#replica-queries">Replica Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#latest-and-version-queries">Latest and Version Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#retracted-queries">Retracted Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#minimum-and-maximum-version-queries">Minimum and Maximum Version Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#results-pagination">Results Pagination</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output-format">Output Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#returned-metadata-fields">Returned Metadata Fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#identifiers">Identifiers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#access-urls">Access URLs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wget-scripting">Wget scripting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#projects">Projects</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#join-a-project-not-required-to-download-data">Join a project (not required to download data)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-a-project-s-network">View a project&#8217;s network</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#project-browser">Project Browser</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#search-for-projects-by-tag">Search for projects by tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#save-a-project-tag-and-retrieve-projects-with-that-tag">Save a project tag and retrieve projects with that tag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-a-project-s-rollup">View a project&#8217;s rollup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wiki-editing">Wiki Editing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-the-built-in-wiki-system">How to use the built-in wiki system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-new-image-to-a-wiki-page">Add a new image to a wiki page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-pre-existing-image-to-a-wiki-page">Add a pre-existing image to a wiki page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-an-html-link-to-a-project-file-to-a-wiki-page">Add an HTML link (to a Project File) to a wiki page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maximize-the-wiki-window-while-editing">Maximize the wiki window while editing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#make-a-wiki-page-private">Make a wiki page private</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#share-a-wiki-page-with-facebook-or-twitter">Share a wiki page with Facebook or Twitter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#files">Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upload-a-file">Upload a File</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#using-the-file-browser">Using the File Browser</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#information-interface">Information Interface</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#update-a-file-on-the-system">Update a File on the system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update-file-metadata">Update File metadata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-for-a-file">Search for a File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-a-file">Delete a File</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#left-navigation-bar">Left Navigation Bar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-links-to-wiki-pages">Add links to wiki pages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#use-the-wiki-form-to-add-a-page-to-the-left-navigation-bar">Use the wiki form to add a page to the left navigation bar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-links-to-non-cog-pages-in-the-left-navigation-bar">Add links to non-CoG pages in the left navigation bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reorder-the-left-navigation-bar-admins-only">Reorder the left navigation bar (admins only)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#resources">Resources</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#resource-basics">Resource basics</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pre-defined-resource-folders">Pre-defined Resource Folders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resource-folder-ordering">Resource Folder Ordering</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resource-ordering">Resource Ordering</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-resource-to-an-external-url">Add a Resource to an external URL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-resource-to-a-file-with-file-upload">Add a Resource to a File (with File upload)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#news">News</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-a-news-item">Add a news item</a></li>
 </ul>
 </li>
 </ul>
@@ -580,30 +669,1614 @@ Every browser has a different mechanism for accepting SSL certificates it does n
 <h2>Data Search and Download<a class="headerlink" href="#data-search-and-download" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="what-the-esgf-search-returns">
 <h3>What the ESGF search returns<a class="headerlink" href="#what-the-esgf-search-returns" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">ESGF Search Basics</p>
+<blockquote>
+<div><p>The basic unit in ESGF is the dataset. Datasets are collections of individual files.
+Some datasets contain files that represent different variables. Some datasets are restricted to one variable.
+CMIP5 contained many datasets with multiple variables. To search for individual files, save a dataset to your Data Cart
+and search using the sub-select text box in the Data Cart itself
+(<a class="reference external" href="https://www.earthsystemcog.org/projects/cog/doc/cmip5_specific_variable">see tutorial</a>)</p>
+</div></blockquote>
+</li>
+<li><p class="first">Search Defaults</p>
+<blockquote>
+<div><p>By default, ESGF searches are conducted across all nodes and return only the latest version of a dataset (without replicas).
+Use the check boxes (if enabled by the project administrator) below the text box to narrow the search (see figure). Note that searching the Local Node means searching on the node configured for this search. It is possible that node is not local.</p>
+<img alt="_images/search_options.png" src="_images/search_options.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Searching with AND/OR</p>
+<blockquote>
+<div><p>By default, all words entered into the text boxes in the Search Widget or on the Advanced Search
+Page are combined via a logical -OR-. To search via a logical -AND-, use the AND keyword.</p>
+<img alt="_images/logical_and.png" src="_images/logical_and.png" />
+<img alt="_images/logical_and_advanced.png" src="_images/logical_and_advanced.png" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="searching-with-and-or-in-the-search-text-boxes">
 <h3>Searching with AND/OR in the search text boxes<a class="headerlink" href="#searching-with-and-or-in-the-search-text-boxes" title="Permalink to this headline">¶</a></h3>
+<p>By default, all words entered into the text boxes in the Search Widget or on the Advanced Search
+Page (see figures below) are combined via a logical -OR-. To search via a logical -AND-, use the AND keyword.</p>
+<img alt="_images/logical_and.png" src="_images/logical_and.png" />
+<img alt="_images/logical_and_advanced.png" src="_images/logical_and_advanced.png" />
 </div>
 <div class="section" id="download-a-single-file-with-the-browser">
 <h3>Download a single file with the browser<a class="headerlink" href="#download-a-single-file-with-the-browser" title="Permalink to this headline">¶</a></h3>
+<p>From the ESGF, data search results can be downloaded</p>
+<blockquote>
+<div><ul class="simple">
+<li>one file at a time with the browser or</li>
+<li>several files together with scripts (Wget, Globus, Synda or Python, view separate tutorials).</li>
+</ul>
+</div></blockquote>
+<p>This tutorial is a description how a file can be downloaded from ESGF without scripts and additional software, i.e. with the browser only. For the download of a single file, this is the easiest way and is recommended for beginners even if they need more than one file and want to switch to scripting because the user&#8217;s authorization for data download can be completed embedded in a download with the browser.</p>
+<ol class="arabic">
+<li><dl class="first docutils">
+<dt>Search for Data</dt>
+<dd><ul class="first">
+<li><p class="first">Use the facets on the left of the search page to narrow the search.</p>
+</li>
+<li><p class="first">Click the &#8220;Show Files&#8221; link below the dataset of interest.</p>
+</li>
+<li><p class="first">Search results within ESGF are links to datasets, which are collections of files.</p>
+<blockquote>
+<div><ul class="simple">
+<li>How many files exist within each dataset is up to the data publisher.</li>
+<li>Some datasets contain just one variable, others contain multiple variables</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="_images/datasearch.png" class="last" src="_images/datasearch.png" />
+</dd>
+</dl>
+</li>
+<li><p class="first">Authentication and Authorization</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click the &#8220;HTTPServer&#8221; link across from the file of interest.</li>
+<li>The ESGF data node inquires your OpenID and password, the same password you need to login. If you already downloaded a file from the same data node during the same session, this step is omitted.</li>
+<li>If a membership in a data access control group is missing, you are guided to the Group Registration Request page, where you can join such a group (accept the terms).</li>
+</ul>
+<img alt="_images/4_files.png" src="_images/4_files.png" />
+</div></blockquote>
+</li>
+<li><p class="first">File Download</p>
+</li>
+</ol>
+<p>The download control window of your browser pops up. Start the download.</p>
 </div>
 <div class="section" id="data-cart-basics">
 <h3>Data Cart basics<a class="headerlink" href="#data-cart-basics" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>CoG users have a Data Cart associated with their account.</li>
+<li>The Data Cart stores links to datasets of interest.</li>
+<li>The links in the Data Cart persist unless removed.</li>
+</ul>
+</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Login</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click on the &#8220;Login&#8221; button in the upper right-hand corner of the page.</li>
+</ul>
+<img alt="_images/login_link_detail.png" src="_images/login_link_detail.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Open the Data Widget</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Click on the &#8220;Advanced Data Search&#8221; link in the Data Search widget.</p>
+</li>
+<li><p class="first">Note not all projects have this widget enabled.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This may mean there is no data associated with that project OR</li>
+<li>The project has chosen to provide an alternate means of linking to their data (e.g. an image on their home page).</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Search for data</p>
+<blockquote>
+<div><ul class="simple">
+<li>Use the facets on the left of the search page to narrow the search.</li>
+</ul>
+<img alt="_images/datasearch.png" src="_images/datasearch.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Send data to the Data Cart</p>
+<blockquote>
+<div><ul class="simple">
+<li>Click the &#8220;Add to Data Cart&#8221;, located below each search result to store that file in the Data Cart.</li>
+<li>Click the &#8220;Add all displayed result to Data Cart&#8221;, located above the search results to store all displayed datasets in the Data Cart.</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Access the the Data Cart</p>
+<blockquote>
+<div><p>The link &#8220;My Data Cart&#8221; is located right next to &#8220;My Profile&#8221; beneath the CoG logo.</p>
+<img alt="_images/datacart_link.png" src="_images/datacart_link.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Explore the Features of the Data Cart</p>
+<blockquote>
+<div><ul>
+<li><p class="first">In addition to storing datasets, the Data Cart (Figure 5)  can be used to:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Explore the metadata associated with a dataset (click the &#8220;Show Metadata&#8221; link).</li>
+<li>Send the dataset to the Live Access Server visualization service (click the &#8220;LAS Visualization&#8221; link). Note only CF compliant netCDF datasets work with LAS.</li>
+<li>Generate a WGET download script (click the &#8220;WGET Script&#8221; link).</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Individual datasets can be sent to the above services by selecting the check box next to the datasets of interest.</p>
+</li>
+<li><p class="first">All saved datasets can be selected (click the &#8220;Select All Datasets&#8221; checkbox).</p>
+</li>
+<li><p class="first">A dataset can be removed from the Data Cart (click the &#8220;Remove&#8221; link).</p>
+</li>
+<li><p class="first">All datasets can be removed (click the &#8220;Remove All&#8221; link).</p>
+</li>
+</ul>
+<img alt="_images/datacart.png" src="_images/datacart.png" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="narrow-a-cmip5-data-search-to-just-one-variable">
 <h3>Narrow a CMIP5 data search to just one variable<a class="headerlink" href="#narrow-a-cmip5-data-search-to-just-one-variable" title="Permalink to this headline">¶</a></h3>
+<p>Many users of CMIP5 data have complained that they can not download just one variable without downloading large files containing other variables.
+This is because some CMIP modeling groups bundled their variables together when they published their datasets.</p>
+<p>CoG has created a way around this problem.</p>
+<ol class="arabic">
+<li><p class="first">Save a dataset to your Data Cart (see Data Cart basics section).</p>
+</li>
+<li><p class="first">Click the &#8220;Show Files&#8221; link associated with a particular dataset. In the example below you can see that there are 71 files associated with that dataset.</p>
+<blockquote>
+<div><img alt="_images/71_files.png" src="_images/71_files.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Enter the variable of interest into the text box at the top of the Data Cart. In this example the variable &#8220;omega&#8221; was entered. See how the list of files is reduced from 71 to 4. Selecting the dataset check box and the the &#8220;WGET Script&#8221; link will create a WGET script for just the variable of interest, in this case &#8220;omega&#8221;.</p>
+<blockquote>
+<div><img alt="_images/4_files.png" src="_images/4_files.png" />
+</div></blockquote>
+</li>
+</ol>
 </div>
 <div class="section" id="download-data-from-esgf-using-wget">
 <h3>Download data from ESGF using Wget<a class="headerlink" href="#download-data-from-esgf-using-wget" title="Permalink to this headline">¶</a></h3>
+<p>One of the most powerful features of the Earth System Grid Federation (ESGF) is the capability to generate scripts to download files for arbitrary query parameters, that can download more than one file from one data node. The script generator is even able to create several scripts in one request if data from several data nodes are desired. Currently, these scripts are based on the wget command, which is typically installed by default on nearly all modern laptops and desktops. Before downloading the data, the script will prompt the user for their OpenID and password, which will be used to retrieve a short-lifetime digital certificate from the ESGF site where the user registered. This certificate (which is valid for only 72 hours) is passed by Wget to the server holding the data, as a proof of the user&#8217;s identity.</p>
+<p>ESGF Wget scripts are smart enough to recognize if files have already been downloaded and skip them. If the download was interrupted before having finished, simply run the script in the same directory again. The script will continue the download then. Even the download of a partially downloaded file will be continued.</p>
+<p>ESGF Wget scripts can also help you to recognize if a new version of the downloaded data is available in ESGF. After download, keep the script and run it again with the option -u to search for new versions. The download itself is not repeated then but the download script is created again and is compared with the old one.</p>
+<p><strong>Pre-requisites</strong></p>
+<p>Before being able to execute a Wget download script, the following pre-requisites must be satisfied:</p>
+<ul>
+<li><p class="first">The user needs the following software:</p>
+<blockquote>
+<div><ul class="simple">
+<li>A UNIX-like operating system (Linux or Mac OS). Under Windows, Linux may be installed as a virtual machine (recommended). Many users instead utilize a UNIX emulation under Windows, e.g. Cygwin (not recommended but maybe easier than a Linux installation)</li>
+<li>Wget application (version 1.12 or later) compliled with the OpenSSL libraries. Under Linux, this is already installed with one of the base packages usually. Nevertheless, Mac users may have to install Wget first (details see ESGF Wget FAQ). Cygwin users have to install the package Web-Wget (again run the Cygwin setup executable to install it).</li>
+<li>Tools for calculation of SHA256 and MD5 checksums. Under Linux and Cygwin, this is already installed usually. Mac users may have to install these tools first.</li>
+<li>For use of Wget scripts in the default mode additionally Oracle Java, version 1.7 or newer. OpenJRE is not sufficient. Java is not needed if Wget scripts are used with the option -H (details see below).</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">The user must have been registered with one of the ESGF sites (portals). To register with an ESGF node, simply use a browser to visit the portal&#8217;s home page and follow the Create Account link.</p>
+</li>
+<li><p class="first">The user must have been authorized to access the desired data, see tutorial &#8220;Authorization for ESGF data access&#8221;.</p>
+</li>
+<li><p class="first">Network port 7512 (TCP) has to be open.</p>
+</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Generate a Wget script</p>
+<blockquote>
+<div><p>Login to an ESGF portal, perform a search and add all datasets you desire to your DataCart. Go to your DataCart.</p>
+<p>Many CMIP datasets contain several hundreds of files, some even more than thousand. If you want to download CMIP data, narrow your search with help of the text field (arrow &#8220;N&#8221;). In detail, take down the names of the variables you need delimited by a blank and press the Apply button. This affects also files inside a dataset and usually reduces the number of download files considerably. On the contrary, the categories &#8220;Variable&#8221;, &#8220;Variable Long Name&#8221; and &#8220;CF Standard Name&#8221; in the search form only influence the dataset selection, not the selection of files inside a dataset.</p>
+<blockquote>
+<div><img alt="_images/Wget_DataCart.png" src="_images/Wget_DataCart.png" />
+</div></blockquote>
+<p>In the DataCart, several links &#8220;WGET Script&#8221; are shown, for every dataset one (e.g. arrow &#8220;1&#8221;) and additionally one for all selected datasets (arrow &#8220;all&#8221;). To select a dataset click on the little square left of the dataset. The link at every dataset allows creation of a separate Wget script for the one dataset only. After clicking on one of these links, the download manager of your browser pops up a control window for script download. In the case of Chrome, the downloaded script will appear at the bottom of the browser. Download the script to your local machine now.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Edit the script (optional)</p>
+<blockquote>
+<div><p>The file name wget-############.sh of the downloaded script begins with wget- followed by a time stamp, a number and the extension .sh. The script is a UNIX Shell script and may be edited with a text editor. In this way, you may shorten the list of download files, e.g. if you do not need data for all available periods. Do not change other parts of the script.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Run the script</p>
+<blockquote>
+<div><p>Open a terminal window. Mac users can find a terminal icon in the Launchpad. If Oracle Java is available, run the script in the default mode:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="n">xxx</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>Otherwise run the script with option -H to avoid use of Java and locally downloaded certificates.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="n">xxx</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">H</span>
+</pre></div>
+</div>
+<p>The bash command in front of the script name opens the right Shell for running the script. The script will ask you for your OpenID and password. Only in default mode and if you run several downloads from the same ESGF data node, this will be skipped and a locally stored credential will be used for authentication instead.</p>
+</div></blockquote>
+</li>
+</ol>
+<dl class="docutils">
+<dt>Alternative for step 1</dt>
+<dd><p class="first">Create a wget script using a special URL</p>
+<p>Wget scripts can also be generated with help of the ESGF Search RESTful API, which can be used by a script or by simply typing-in a URL augmented with commands, which are interpreted by an ESGF index node (portal). For example, the following URL will generate a Wget script that match all CMIP5 files in the ESGF, across all sites:</p>
+<p><a class="reference external" href="http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5">http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5</a></p>
+<p>Nevertheless, this script will contain download links for only the first 1000 files, the recent limit for the number of download files. CMIP5 has much more. For generation of a useful script, more selection commands are needed. For example,</p>
+<p><a class="reference external" href="http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5&amp;experiment=decadal2000&amp;variable=tas">http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5&amp;experiment=decadal2000&amp;variable=tas</a></p>
+<p>will generate a script for download of all surface temperature files for experiment decadal2000 across all CMIP5 models.</p>
+<p>The blanks in the category name (facet name) you may know from the CoG surface, for example in &#8220;Time Frequency&#8221;, have to be replaced by underscores:</p>
+<p><a class="reference external" href="http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5&amp;experiment=decadal2000&amp;variable=tas&amp;time_frequency=day">http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5&amp;experiment=decadal2000&amp;variable=tas&amp;time_frequency=day</a></p>
+<p>Selection commands are delimited by an ampersand and interpreted in the sense of a logical AND, except those specifying the same category. For example, in</p>
+<p><a class="reference external" href="http://esgf-data.dkrz.de/esg-search/wget?experiment=decadal2000&amp;variable=tas&amp;variable=tasmax">http://esgf-data.dkrz.de/esg-search/wget?experiment=decadal2000&amp;variable=tas&amp;variable=tasmax</a></p>
+<p>the category variable is used twice. These two selection commands are interpreted in the sense of a logical OR, in detail:</p>
+<blockquote>
+<div>experiment=decadal2000 AND (variable=tas OR variable=tasmax)</div></blockquote>
+<p>A script will be generated for download of all decadal2000 files containing the variables tas or tasmax, i.e. both variables will be downloaded in one script run.</p>
+<p>Use as much selection commands as possible and useful in your case to reduce the number of download files. For some power users, thousand files in one script run may not be suffient. They can use the limit command to raise the limit for the number of download files, e.g.:</p>
+<p><a class="reference external" href="http://esgf-data.dkrz.de/esg-search/wget?experiment=decadal2000&amp;variable=tas&amp;limit=2000">http://esgf-data.dkrz.de/esg-search/wget?experiment=decadal2000&amp;variable=tas&amp;limit=2000</a></p>
+<p>This additional command would enable the example URLs above (except the first) to create a script with a complete file list. Please note that a limit of more than 10000 files will generally not be accepted.</p>
+<p>Another nice feature for users who need many data files is preservation of the directory structure with the command download_structure. This command can be used to define a directory tree at the user&#8217;s local machine. If you want to copy the files to a directory tree which is also used in ESGF for CMIP5 data, utilize the following command:</p>
+<p>download_structure=project,product,institute,model,experiment,time_frequency,realm,cmor_table,ensemble,variable</p>
+<p>Accordingly the same for CORDEX:</p>
+<p>download_structure=project,product,domain,institute,driving_model,experiment,ensemble,rcm_name,rcm_version,time_frequency,variable</p>
+<p>Last an example for a complete URL with preservation of the CMIP5 directory tree:</p>
+<p class="last"><a class="reference external" href="http://esgf-data.dkrz.de/esg-search/wget?experiment=decadal2000&amp;variable=tas&amp;limit=2000&amp;download_structure=project,product,institute,model,experiment,time_frequency,realm,cmor_table,ensemble,variable">http://esgf-data.dkrz.de/esg-search/wget?experiment=decadal2000&amp;variable=tas&amp;limit=2000&amp;download_structure=project,product,institute,model,experiment,time_frequency,realm,cmor_table,ensemble,variable</a></p>
+</dd>
+<dt>Wget script options</dt>
+<dd><p class="first">ESGF Wget scripts can be run with options. For an overview of possible options type-in.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="c1">##############.sh -h</span>
+
+<span class="p">(</span><span class="o">-</span><span class="n">h</span> <span class="k">for</span> <span class="n">help</span><span class="p">)</span><span class="o">.</span> <span class="n">Different</span> <span class="n">options</span> <span class="n">can</span> <span class="n">be</span> <span class="n">combined</span><span class="o">.</span> <span class="n">The</span> <span class="n">following</span> <span class="n">options</span> <span class="n">are</span> <span class="n">important</span><span class="p">:</span>
+</pre></div>
+</div>
+<dl class="last docutils">
+<dt>-d, the debug option</dt>
+<dd><p class="first">This option causes the script to send more than the usual response to standard output. Use</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="c1">##############.sh -H -d</span>
+</pre></div>
+</div>
+<p>if you have problems with option -H since scripts run with option -H are nearly silent. They don&#8217;t even send useful error messages.</p>
+<p class="last"><strong>Caution</strong>: Do not send your standard output to the user support mailing list <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a> because option -d may cause the script to print your password! Everyone can subscribe to <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a> and your post will be distributed to every subscriber.</p>
+</dd>
+<dt>-H, the certificate-less option</dt>
+<dd>Since many users have problems with Java and certificates on their local machines, the option -H was developed to avoid use of Java and locally stored certificates. Instead, your OpenID and password are sent with help of a Wget command. Your password is encrypted with SSL (or TLS if you have additionally switched to TLS with option -T). Without option -H, a local credential is created and sent to ESGF servers for the user&#8217;s authentication but Oracle Java 1.7+ is needed for this purpose.</dd>
+<dt>-i, the &#8220;insecure&#8221; option</dt>
+<dd><p class="first">This option disables check of server certificates. This has nothing to do with locally stored certificates and option -H. On the contrary, in a Grid as ESGF authentication is needed in two directions: The user has to authenticate herself/himself at the server and the server has to authenticate itself at the user&#8217;s local machine. You may use</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="c1">##############.sh -i</span>
+</pre></div>
+</div>
+<p class="last">to switch off the check of the server certificate by your local machine. This is sometimes helping in case of an expired server certificate. Before use of this option, you should ask your system administrator if you are allowed to do this.</p>
+</dd>
+<dt>-p, the preserve option</dt>
+<dd><p class="first">After download, the Wget script calculates a checksum for the freshly downloaded file. If -p is not set, downloaded files will usually be deleted if their checksum does not match the value in the script&#8217;s file list. Afterwards, download will be repeated until it succeeds. This feature shall automatically correct alterations in the bitstream of the downloaded file. Use the -p option to suppress file deletion.</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="c1">##############.sh -p</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p class="last">The downloaded file will then be preserved despite checksum mismatch. This option does not suppress checksum comparison. In case the calculated checksum of a downloaded file does not match the checksum in the download file list, a warning will be thrown. This option may be useful if the checksum stored in the data node&#8217;s metadata is outdated (seldom but already happened).</p>
+</dd>
+<dt>-T, the TLS option</dt>
+<dd>Network traffic between ESGF servers and the user&#8217;s local machine is usually encrypted using SSL (Secure Sockets Layer). The option -T switches to TLS v1 (Transport Layer Security) instead of SSL.</dd>
+<dt>Find changes with -u</dt>
+<dd>The option -u is used to repeat the search and find changes in the download file list. In more detail, the Wget script is again generated and compared with the old, locally stored Wget script. New available files are listed as well as new versions of previously downloaded files since the checksum of a replaced file differs from that of the old version. Other changes in the script are also shown. If a modification is detected, the Wget script will be updated and the previous version will be stored at my_wget_script.old.# where # is just a running index. This option needs the UNIX diff program. Data files will not be downloaded.</dd>
+</dl>
+</dd>
+</dl>
 </div>
 <div class="section" id="download-and-browse-data-from-esgf-with-opendap">
 <h3>Download and browse data from ESGF with OPeNDAP<a class="headerlink" href="#download-and-browse-data-from-esgf-with-opendap" title="Permalink to this headline">¶</a></h3>
+<p>OPeNDAP is a data transport architecture and can be used for data download, data browsing and data processing, for example image creation. This page describes data download and browsing in the ESGF via OPeNDAP, especially how to</p>
+<ul class="simple">
+<li>Browse attributes (global attributes and variable-specific attributes in the NetCDF file header)</li>
+<li>Convert data format to ASCII or dodc</li>
+<li>Cut out data for a specific area and period</li>
+<li>Access data with own software</li>
+</ul>
+<div class="section" id="access-via-an-esgf-portal">
+<h4>Access via an ESGF portal<a class="headerlink" href="#access-via-an-esgf-portal" title="Permalink to this headline">¶</a></h4>
+<p>Data access via OPeNDAP is possible by using any ESGF portal. Perform a usual ESGF search, an example is in the image below.</p>
+<blockquote>
+<div><img alt="_images/results.PNG" src="_images/results.PNG" />
+</div></blockquote>
+<p>Click on &#8220;Show Files&#8221; for a file listing.</p>
+<blockquote>
+<div><img alt="_images/show-files.PNG" src="_images/show-files.PNG" />
+</div></blockquote>
+<p>Click on &#8220;OPENDAP&#8221; to reach the OPeNDAP Dataset Access Form.</p>
+<blockquote>
+<div><img alt="_images/dataset-access-form.PNG" src="_images/dataset-access-form.PNG" />
+</div></blockquote>
+<p>The OPeNDAP Dataset Access Form consists of a global attributes block and many coordinate variable blocks (in the example time, lat, lat_bnds, lon, lon_bnds) followed by the data variable block (in the example psl). The attributes are taken from the NetCDF file header and can directly be browsed in the blocks.</p>
+<p>If you want to cut out an area or period, you may do the following:</p>
+<ul class="simple">
+<li>Enable all the coordinate variables to find out which indices you need (check the checkboxes)</li>
+<li>Click on the “Get ASCII” button</li>
+<li>You are asked for your ESGF OpenID and password</li>
+<li>The ASCII output contains the values of the coordinate variables. The same indices will be used in the data variable array. Choose an index range</li>
+<li>Check the data variable checkbox and type-in your index ranges there, as done in the screen shot above. Three integers should be set for each coordinate variable: lower boundary index, increment, upper boundary index. If the increment is greater than 1, data would be leaved out. For example, an increment of 2 means that every second value is taken</li>
+<li>Click on the “Get ASCII” button again for text format or &#8220;Get Binary&#8221; for dodc. Only these two data formats are available here, not NetCDF</li>
+</ul>
+<p>Result in text format for the filled-in OPeNDAP Dataset Access Form above:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Dataset</span> <span class="p">{</span>
+    <span class="n">Grid</span> <span class="p">{</span>
+     <span class="n">ARRAY</span><span class="p">:</span>
+        <span class="n">Float32</span> <span class="n">psl</span><span class="p">[</span><span class="n">time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">][</span><span class="n">lat</span> <span class="o">=</span> <span class="mi">6</span><span class="p">][</span><span class="n">lon</span> <span class="o">=</span> <span class="mi">6</span><span class="p">];</span>
+     <span class="n">MAPS</span><span class="p">:</span>
+        <span class="n">Float64</span> <span class="n">time</span><span class="p">[</span><span class="n">time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">];</span>
+        <span class="n">Float64</span> <span class="n">lat</span><span class="p">[</span><span class="n">lat</span> <span class="o">=</span> <span class="mi">6</span><span class="p">];</span>
+        <span class="n">Float64</span> <span class="n">lon</span><span class="p">[</span><span class="n">lon</span> <span class="o">=</span> <span class="mi">6</span><span class="p">];</span>
+    <span class="p">}</span> <span class="n">psl</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">cmip5</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">output1</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">M</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR</span><span class="o">/</span><span class="n">rcp45</span><span class="o">/</span><span class="mi">6</span><span class="n">hr</span><span class="o">/</span><span class="n">atmos</span><span class="o">/</span><span class="mi">6</span><span class="n">hrPlev</span><span class="o">/</span><span class="n">r1i1p1</span><span class="o">/</span><span class="n">v20111006</span><span class="o">/</span><span class="n">psl</span><span class="o">/</span><span class="n">psl_6hrPlev_MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR_rcp45_r1i1p1_2100010100</span><span class="o">-</span><span class="mf">2100123118.</span><span class="n">nc</span><span class="p">;</span>
+<span class="o">---------------------------------------------</span>
+<span class="n">psl</span><span class="o">.</span><span class="n">psl</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">6</span><span class="p">][</span><span class="mi">6</span><span class="p">]</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="mf">101965.19</span><span class="p">,</span> <span class="mf">101979.19</span><span class="p">,</span> <span class="mf">101995.44</span><span class="p">,</span> <span class="mf">102007.69</span><span class="p">,</span> <span class="mf">102016.19</span><span class="p">,</span> <span class="mf">102012.69</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="mf">101990.19</span><span class="p">,</span> <span class="mf">101997.69</span><span class="p">,</span> <span class="mf">102004.94</span><span class="p">,</span> <span class="mf">101997.94</span><span class="p">,</span> <span class="mf">101986.94</span><span class="p">,</span> <span class="mf">101978.44</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="mf">101932.44</span><span class="p">,</span> <span class="mf">101936.19</span><span class="p">,</span> <span class="mf">101921.44</span><span class="p">,</span> <span class="mf">101885.94</span><span class="p">,</span> <span class="mf">101856.94</span><span class="p">,</span> <span class="mf">101856.19</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">],</span> <span class="mf">101808.69</span><span class="p">,</span> <span class="mf">101803.44</span><span class="p">,</span> <span class="mf">101784.69</span><span class="p">,</span> <span class="mf">101757.19</span><span class="p">,</span> <span class="mf">101739.44</span><span class="p">,</span> <span class="mf">101746.69</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">],</span> <span class="mf">101676.69</span><span class="p">,</span> <span class="mf">101653.94</span><span class="p">,</span> <span class="mf">101638.44</span><span class="p">,</span> <span class="mf">101634.19</span><span class="p">,</span> <span class="mf">101638.19</span><span class="p">,</span> <span class="mf">101645.94</span>
+<span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">],</span> <span class="mf">101527.69</span><span class="p">,</span> <span class="mf">101498.44</span><span class="p">,</span> <span class="mf">101475.19</span><span class="p">,</span> <span class="mf">101468.94</span><span class="p">,</span> <span class="mf">101477.19</span><span class="p">,</span> <span class="mf">101482.94</span>
+
+<span class="n">psl</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="mf">91311.0</span>
+
+<span class="n">psl</span><span class="o">.</span><span class="n">lat</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="o">-</span><span class="mf">32.64199447631836</span><span class="p">,</span> <span class="o">-</span><span class="mf">30.776744842529297</span><span class="p">,</span> <span class="o">-</span><span class="mf">28.9114933013916</span><span class="p">,</span> <span class="o">-</span><span class="mf">27.046239852905273</span><span class="p">,</span> <span class="o">-</span><span class="mf">25.180986404418945</span><span class="p">,</span> <span class="o">-</span><span class="mf">23.315731048583984</span>
+
+<span class="n">psl</span><span class="o">.</span><span class="n">lon</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+<span class="mf">84.375</span><span class="p">,</span> <span class="mf">86.25</span><span class="p">,</span> <span class="mf">88.125</span><span class="p">,</span> <span class="mf">90.0</span><span class="p">,</span> <span class="mf">91.875</span><span class="p">,</span> <span class="mf">93.75</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>You may copy and paste e.g. the data variable array to a file now. If you have chosen &#8220;Get Binary&#8221;, a download window for the dodc file pops-up.</p>
+</div>
+<div class="section" id="aggregations">
+<h4>Aggregations<a class="headerlink" href="#aggregations" title="Permalink to this headline">¶</a></h4>
+<p>Usually, data is divided into files of reasonable size, reasonable for downloads of whole files. This cut has been done along the time coordinate, i.e. each file contains data belonging to one or few years only. Since the main purpose of OPeNDAP is not the download of whole files, concatenated time series have been made accessible via OPeNDAP, the aggregations.</p>
+<p>Aggregations cannot be found in portals. They are only available from ESGF data nodes. Generally, aggregations may only be in the data node that has stored the non-aggregated data. An ESGF portal can therefore be used to find the right data node. Go to the THREDDS catalog of that data node and browse it. When you have found the right dataset, click on its link to get the file list. For the example above, the beginning of the file list is shown in the screenshot below.</p>
+<blockquote>
+<div><img alt="_images/thredds1.PNG" src="_images/thredds1.PNG" />
+</div></blockquote>
+<p>Scroll down the list until you find the aggregation you need. In the example below, the link to the aggregation has the extension .aggregation.</p>
+<blockquote>
+<div><img alt="_images/thredds2.png" src="_images/thredds2.png" />
+</div></blockquote>
+<p>Aggregations may be divided into several parts, which are of course longer than the time period of a single non-aggregated file. The aggregation link leads to the page shown in the screenshot below.</p>
+<blockquote>
+<div><img alt="_images/thredds3.PNG" src="_images/thredds3.PNG" />
+</div></blockquote>
+<p>The time period of the aggregation can be taken from section &#8220;Time Coverage&#8221;. Clicking on the link in section &#8220;Access&#8221; will open the aggregation&#8217;s OPeNDAP Dataset Access Form. The form can be handled in the same way as for non-aggregated data.</p>
+</div>
+<div class="section" id="opendap-data-url">
+<h4>OPeNDAP data URL<a class="headerlink" href="#opendap-data-url" title="Permalink to this headline">¶</a></h4>
+<p>The filled OPeNDAP Dataset Access Form in the example above leads to the following URL if &#8220;Get ASCII&#8221; is pressed:</p>
+<p><a class="reference external" href="https://esgf1.dkrz.de/thredds/dodsC/cmip5/cmip5/output1/MPI-M/MPI-ESM-LR/rcp45/6hr/atmos/6hrPlev/r1i1p1/v20111006/psl/psl_6hrPlev_MPI-ESM-LR_rcp45_r1i1p1_2100010100-2100123118.nc.ascii?psl[0:1:0][30:1:35][45:1:50">https://esgf1.dkrz.de/thredds/dodsC/cmip5/cmip5/output1/MPI-M/MPI-ESM-LR/rcp45/6hr/atmos/6hrPlev/r1i1p1/v20111006/psl/psl_6hrPlev_MPI-ESM-LR_rcp45_r1i1p1_2100010100-2100123118.nc.ascii?psl[0:1:0][30:1:35][45:1:50</a>]</p>
+<p>Behind the file extension .ascii it consists of the variable name (in the example &#8220;psl&#8221;) and the variable&#8217;s index ranges. This URL may be used, for example, by a program for direct data processing. Index ranges and file extension may be changed:</p>
+<ul class="simple">
+<li>.dods instead of .ascii points to the binary file</li>
+<li>.dds to the Dataset Descriptor Structure file, which is identical with the text header of the dods file</li>
+<li>.das to the Data Attribute Structure file containing the attributes (text format)</li>
+</ul>
+<p>The Dataset Descriptor Structure (DDS) for the example above:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Dataset</span> <span class="p">{</span>
+    <span class="n">Grid</span> <span class="p">{</span>
+    <span class="n">ARRAY</span><span class="p">:</span>
+        <span class="n">Float32</span> <span class="n">psl</span><span class="p">[</span><span class="n">time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">][</span><span class="n">lat</span> <span class="o">=</span> <span class="mi">6</span><span class="p">][</span><span class="n">lon</span> <span class="o">=</span> <span class="mi">6</span><span class="p">];</span>
+    <span class="n">MAPS</span><span class="p">:</span>
+        <span class="n">Float64</span> <span class="n">time</span><span class="p">[</span><span class="n">time</span> <span class="o">=</span> <span class="mi">1</span><span class="p">];</span>
+        <span class="n">Float64</span> <span class="n">lat</span><span class="p">[</span><span class="n">lat</span> <span class="o">=</span> <span class="mi">6</span><span class="p">];</span>
+        <span class="n">Float64</span> <span class="n">lon</span><span class="p">[</span><span class="n">lon</span> <span class="o">=</span> <span class="mi">6</span><span class="p">];</span>
+    <span class="p">}</span> <span class="n">psl</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">cmip5</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">output1</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">M</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR</span><span class="o">/</span><span class="n">rcp45</span><span class="o">/</span><span class="mi">6</span><span class="n">hr</span><span class="o">/</span><span class="n">atmos</span><span class="o">/</span><span class="mi">6</span><span class="n">hrPlev</span><span class="o">/</span><span class="n">r1i1p1</span><span class="o">/</span><span class="n">v20111006</span><span class="o">/</span><span class="n">psl</span><span class="o">/</span><span class="n">psl_6hrPlev_MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR_rcp45_r1i1p1_2100010100</span><span class="o">-</span><span class="mf">2100123118.</span><span class="n">nc</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="access-data-with-the-command-line-via-opendap">
+<h4>Access data with the command line via OPeNDAP<a class="headerlink" href="#access-data-with-the-command-line-via-opendap" title="Permalink to this headline">¶</a></h4>
+<p>OPeNDAP data URLs may be used with local software, for example your own script. Since data access is restricted to registered users in ESGF, valid credentials have to be sent with your requests. These credentials can be created on the command line, embedded in a download of a single file with an ESGF Wget script or with the following myproxy command:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">myproxy</span><span class="o">-</span><span class="n">logon</span> <span class="o">-</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">my_ESGF_portal</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">l</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span><span class="n">T</span> <span class="o">-</span><span class="n">t</span> <span class="mi">72</span> <span class="o">-</span><span class="n">o</span> <span class="o">~/.</span><span class="n">esg</span><span class="o">/</span><span class="n">credentials</span><span class="o">.</span><span class="n">pem</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>&lt;my_ESGF_portal&gt; is the DNS name of the portal which you used to create your ESGF account, for example pcmdi.llnl.gov; &lt;username&gt; is not the complete OpenID but its last part only, your user name. Some Linux distributions offer a package myproxy, which also contains the myproxy-logon tool. ESGF Wget scripts and myproxy-logon create and fetch all needed credentials or renew expired local certificates. ESGF Wget scripts automatically create the credentials directory with name .esg in your HOME directory whereas myproxy-logon expects an existing directory .esg in your HOME. In .esg, the file credentials.pem contains two certificates and the private key you need for data access.</p>
+<p>In ESGF, user certificates are short-term certificates valid for 72 hours maximum. The exact value depends on the settings in the Identity Provider (IdP) which has issued your OpenID. In a UNIX Shell, you can inquire the period of validity with the following command:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>openssl x509 -text -noout -in $HOME/.esg/credentials.pem
+</pre></div>
+</div>
+</div></blockquote>
+<p>The period of validity will be appended to standard output (console) among other output. Example:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Validity</span>
+    <span class="n">Not</span> <span class="n">Before</span><span class="p">:</span> <span class="n">Jun</span> <span class="mi">24</span> <span class="mi">16</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mi">10</span> <span class="mi">2016</span> <span class="n">GMT</span>
+    <span class="n">Not</span> <span class="n">After</span> <span class="p">:</span> <span class="n">Jun</span> <span class="mi">27</span> <span class="mi">16</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">10</span> <span class="mi">2016</span> <span class="n">GMT</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>If you only want to create or renew your certificate with help of an ESGF Wget script, choose a short data file for download, e.g. a fixed-field file. For example, the surface altitude (variable orog) is time-independent and, hence, orog files are short.</p>
+<p>Next, you need an OPeNDAP configuration file .dodsrc in your HOME directory. It can be generated, for example, with the following UNIX command:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>cat &gt; .dodsrc &lt;&lt; EOF
+HTTP.COOKIEJAR=${HOME}/.esg/dods_cookies
+HTTP.SSL.VALIDATE=0
+HTTP.SSL.CERTIFICATE=${HOME}/.esg/credentials.pem
+HTTP.SSL.KEY=${HOME}/.esg/credentials.pem
+HTTP.SSL.CAPATH=${HOME}/.esg/credentials.pem
+EOF
+</pre></div>
+</div>
+</div></blockquote>
+<p>With these preparations, access of ESGF OPeNDAP data should be possible. For example ESGF OPeNDAP data can directly be processed with ncdump:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ncdump</span> <span class="o">-</span><span class="n">h</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">esgf1</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">thredds</span><span class="o">/</span><span class="n">dodsC</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">output1</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">M</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR</span><span class="o">/</span><span class="n">rcp45</span><span class="o">/</span><span class="mi">6</span><span class="n">hr</span><span class="o">/</span><span class="n">atmos</span><span class="o">/</span><span class="mi">6</span><span class="n">hrPlev</span><span class="o">/</span><span class="n">r1i1p1</span><span class="o">/</span><span class="n">v20111006</span><span class="o">/</span><span class="n">psl</span><span class="o">/</span><span class="n">psl_6hrPlev_MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR_rcp45_r1i1p1_2100010100</span><span class="o">-</span><span class="mf">2100123118.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>ncdump belongs to the <a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">NetCDF software</a> and converts the binary NetCDF file to text. The option -h causes ncdump to output the file header only.</p>
+<p>A second example: Use of <a class="reference external" href="https://code.mpimet.mpg.de/projects/cdo/wiki">Climate Data Operators (CDO)</a></p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cdo</span> <span class="n">showformat</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">esgf1</span><span class="o">.</span><span class="n">dkrz</span><span class="o">.</span><span class="n">de</span><span class="o">/</span><span class="n">thredds</span><span class="o">/</span><span class="n">dodsC</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">output1</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">M</span><span class="o">/</span><span class="n">MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR</span><span class="o">/</span><span class="n">rcp45</span><span class="o">/</span><span class="mi">6</span><span class="n">hr</span><span class="o">/</span><span class="n">atmos</span><span class="o">/</span><span class="mi">6</span><span class="n">hrPlev</span><span class="o">/</span><span class="n">r1i1p1</span><span class="o">/</span><span class="n">v20111006</span><span class="o">/</span><span class="n">psl</span><span class="o">/</span><span class="n">psl_6hrPlev_MPI</span><span class="o">-</span><span class="n">ESM</span><span class="o">-</span><span class="n">LR_rcp45_r1i1p1_2100010100</span><span class="o">-</span><span class="mf">2100123118.</span><span class="n">nc</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>cdo showformat simply outputs the format of the specified climate data file.</p>
+<p>Also possible: Download using the Wget command</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>wget --certificate ${HOME}/.esg/credentials.pem --private-key=${HOME}/.esg/credentials.pem --ca-certificate=${HOME}/.esg/credentials.pem --no-check-certificate http://esgf1.dkrz.de/thredds/dodsC/cmip5/cmip5/output1/MPI-M/MPI-ESM-LR/rcp45/6hr/atmos/6hrPlev/r1i1p1/v20111006/psl/psl_6hrPlev_MPI-ESM-LR_rcp45_r1i1p1_2100010100-2100123118.nc.ascii?psl[0:1:0][30:1:35][45:1:50]
+</pre></div>
+</div>
+</div></blockquote>
+<p>This Wget command writes the same text file as shown above in the first text box. .dods, .dds and .das files can be created using the corresponding file extension in the command.</p>
+<p>The credentials directory .esg may also be copied from another computer where it already exists.</p>
+</div>
+<div class="section" id="own-python-scripts">
+<h4>Own Python scripts<a class="headerlink" href="#own-python-scripts" title="Permalink to this headline">¶</a></h4>
+<p>The <a class="reference external" href="https://pypi.org/project/esgf-pyclient/">esgf-pyclient package</a> enables data access via OPeNDAP and also contains an interface to the ESGF Search API (see the ESGF Search RESTful API tutorial section) and a help function for login. A good starting point for an own script using esgf-pyclient is Carsten Ehbrecht&#8217;s demo notebook. Once installed, this IPython notebook can be run in a web browser. It is an interactive worksheet, which enables a step-by-step run of search, login, data access and processing. Even changes in the <a class="reference external" href="https://github.com/cehbrecht/demo-notebooks/blob/master/esgf-opendap.ipynb">demo script</a> may be tried.</p>
+<p>For installation of the demo notebook go to <a class="reference external" href="https://github.com/cehbrecht/demo-notebooks/">Carsten&#8217;s GitHub repository</a>, press the green button &#8220;Clone or download&#8221; to get the software and follow the instructions in the README.md file, i.e. install Conda and run the three given initialization commands.</p>
+</div>
 </div>
 <div class="section" id="download-data-using-globus-online">
 <h3>Download data using Globus Online<a class="headerlink" href="#download-data-using-globus-online" title="Permalink to this headline">¶</a></h3>
+<p>ESGF is starting to enable <a class="reference external" href="https://www.globus.org/">Globus</a> as one of the options for downloading data to the user personal laptop. When available, Globus allows for easier, faster and more reliable downloads. &#8220;Globus Download&#8221; will show up as an additional access option when datasets are found by the ESGF Search, and when those datasets are saved in the Data Cart.</p>
+<div class="section" id="setup-globus">
+<h4>Setup Globus<a class="headerlink" href="#setup-globus" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Sign up for a <a class="reference external" href="https://auth.globus.org/p/login?client_name=globus_webapp&amp;redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3Do5freyqqm7l%26signup%3D1&amp;response_type=token&amp;client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&amp;scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&amp;signup=1&amp;redirect_name=Globus+Web+App">Globus Account</a>  (free)</li>
+<li>Install the <a class="reference external" href="https://www.globus.org/globus-connect-personal">Globus Connect Personal</a>  client on their machine (click-through)</li>
+<li>Additionally, to use the Python scripts (download option #2 below), the user needs to upload their public ssh key to the Globus site (<a class="reference external" href="https://docs.globus.org/faq/ssh-keys-and-x509-certs/">see instructions</a> )</li>
+</ul>
+</div>
+<div class="section" id="globus-transfer">
+<h4>Globus Transfer<a class="headerlink" href="#globus-transfer" title="Permalink to this headline">¶</a></h4>
+<p>A user is allowed to start a Globus data transfer request by following the &#8220;[Globus Download]&#8221; link that will show up for enabled datasets.</p>
+<blockquote>
+<div><img alt="_images/globus_link.png" src="_images/globus_link.png" />
+</div></blockquote>
+<p>There are two options for submitting this request.</p>
+<ul>
+<li><p class="first"><strong>Option 1: Web Download.</strong> The user submits the download request entirely through the web browser. He/she will be asked to sign-in to the Globus site (if not signed in already), and to select the destination folder on their laptop</p>
+</li>
+<li><p class="first"><strong>Option 2: Script Download.</strong> The user will download a Python script that he/she can later execute to submit the request. Python must be already installed on the user&#8217;s machine, but no special libraries are needed. The general syntax to execute the script is: python globus_download_yyyymmddhhmmss.py -e &lt;your globus endpoint&gt; -u your globus username&gt; -p &lt;target directory&gt;. For example: python globus_download_20150101033422.py -e globuser#themac -u globuser</p>
+<blockquote>
+<div><img alt="_images/globus_page.png" src="_images/globus_page.png" />
+</div></blockquote>
+</li>
+</ul>
+<p>You will get a confirmation that your download has started, but no matter how a data transfer request is started, the user must use the <a class="reference external" href="https://auth.globus.org/p/login?client_name=globus_webapp&amp;redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3D132y5iamjyao&amp;response_type=token&amp;client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&amp;scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&amp;redirect_name=Globus+Web+App">Globus Activity</a> page to monitor their transfer. Additionally, Globus will send an email to the user at job completion.</p>
+<blockquote>
+<div><img alt="_images/globus_confirmation.png" src="_images/globus_confirmation.png" />
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="the-esgf-search-restful-api">
 <span id="restful-api"></span><h3>The ESGF search RESTful API<a class="headerlink" href="#the-esgf-search-restful-api" title="Permalink to this headline">¶</a></h3>
+<p>The ESGF search service exposes a RESTful URL that can be used by clients (browsers and desktop clients) to query the contents of the underlying search index, and return results matching the given constraints. Because of the distributed capabilities of the ESGF search, the URL at any Index Node can be used to query that Node only, or all Nodes in the ESGF system.</p>
+<p>Syntax
+c
+The general syntax of the ESGF search service URL is:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>http://&lt;base_search_URL&gt;/search?[keyword parameters as (name, value) pairs][facet parameters as (name,value) pairs]
+</pre></div>
+</div>
+</div></blockquote>
+<p>where &#8220;&lt;base_search_url&gt;&#8221; is the base URL of the search service at a given Index Node.</p>
+<p>All parameters (keyword and facet) are optional. Also, the value of all parameters must be URL-encoded, so that the complete search URL is well formed.</p>
+<div class="section" id="keywords">
+<h4>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h4>
+<p>Keyword parameters are query parameters that have reserved names, and are interpreted by the search service to control the fundamental nature of a search request: where to issue the request to, how many results to return, etc.</p>
+<p>The following keywords are currently used by the system - see later for usage examples:</p>
+<ul class="simple">
+<li><strong>facets</strong> = to return facet values and counts</li>
+<li><strong>offset</strong> = , limit= to paginate through the available results (default: offset=0, limit=10)</li>
+<li><strong>fields</strong> = to return only specific metadata fields for each matching result (default: fields=*)</li>
+<li><strong>format</strong> = to specify the response document output format</li>
+<li><strong>type</strong> = (searches record of the specified type: Dataset, File or Aggregation)</li>
+<li><strong>replica=false/true</strong> (searches for all records, or records that are NOT replicas)</li>
+<li><strong>latest=true/false</strong> (searches for just the latest version, or all versions)</li>
+<li><strong>distrib=true/false</strong> (searches across all nodes, or the target node only)</li>
+<li><strong>shards</strong> = (searches the specified shards only)</li>
+<li><strong>bbox</strong> =[west, south, east, north] (searches within a geo-spatial box)</li>
+<li><strong>start</strong> =, end= (select records based on their nominal data coverage, i.e. their datetime_start, datetime_stop values )</li>
+<li><strong>from</strong> =, to= (select records based on when the data was marked as last modified, i.e. their nominal &#8220;timestamp&#8221; value)</li>
+</ul>
+</div>
+<div class="section" id="default-query">
+<h4>Default Query<a class="headerlink" href="#default-query" title="Permalink to this headline">¶</a></h4>
+<p>If no parameters at all are specified, the search service will execute a query using all the default values, specifically:</p>
+<blockquote>
+<div>query=* (query all records)
+distrib=true (execute a distributed search)
+type=Dataset (return results of type &#8220;Dataset&#8221;)</div></blockquote>
+<p>Example:</p>
+<blockquote>
+<div><a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search">http://esgf-node.jpl.nasa.gov/esg-search/search</a></div></blockquote>
+</div>
+<div class="section" id="free-text-queries">
+<h4>Free Text Queries<a class="headerlink" href="#free-text-queries" title="Permalink to this headline">¶</a></h4>
+<p>The keyword parameter query= can be specified to execute a query that matches the given text _ anywhere _ in the records metadata fields. The parameter value can be any expression following the Apache Lucene query syntax (because it is passed &#8220;as-is&#8221; to the back-end Solr query), and must be URL- encoded. When using the CoG user interface at any ESGF node and project, the &#8220;query=&#8221; parameter value must be entered in the text field at the top of the page.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Search for any text, anywhere: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=*">http://esgf-node.jpl.nasa.gov/esg-search/search?query=*</a> (the default value of the query parameter)</li>
+<li>Search for &#8220;humidity&#8221; in all metadata fields: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=humidity">http://esgf-node.jpl.nasa.gov/esg-search/search?query=humidity</a></li>
+<li>Search for the exact sentence &#8220;specific humidity&#8221; in all metadata fields (the sentence must be surrounded by quotes and URL-encoded): <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=%22specific%20humidity%22">http://esgf-node.jpl.nasa.gov/esg-search/search?query=%22specific%20humidity%22</a></li>
+<li>Search for both words &#8220;specific&#8221; and &#8220;humidity&#8221;, but not necessarily in an exact sequence (must use a space between the two words = this is the same as executing a query with the logical OR): <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=specific%20humidity">http://esgf-node.jpl.nasa.gov/esg-search/search?query=specific%20humidity</a></li>
+<li>Search for the word &#8220;observations&#8221; ONLY in the metadata field &#8220;product&#8221; : <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=product:observations">http://esgf-node.jpl.nasa.gov/esg-search/search?query=product:observations</a></li>
+<li>Using logical AND: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20AND%20humidity">http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20AND%20humidity</a> (must use upper case &#8220;AND&#8221;)</li>
+<li>Using logical OR: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20OR%20humidity">http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20OR%20humidity</a> (must use upper case &#8220;OR&#8221;). This is the same as using simply a blank space: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20humidity">http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20humidity</a> )</li>
+<li>Search for a dataset with a specific id: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.hus.mon">http://esgf-node.jpl.nasa.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.hus.mon</a>.v20110608|esgf-data.jpl.nasa.gov</li>
+<li>Search for all datasets that match an id pattern: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.*">http://esgf-node.jpl.nasa.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.*</a></li>
+</ul>
+</div>
+<div class="section" id="facet-queries">
+<h4>Facet Queries<a class="headerlink" href="#facet-queries" title="Permalink to this headline">¶</a></h4>
+<p>A request to the search service can be constrained to return only those records that match specific values for one or more facets. Specifically, a facet constraint is expressed through the general form: &lt;facet_name&gt;=&lt;facet_value&gt;, where &lt;facet_name&gt; is chosen from the controlled vocabulary of facet names configured at each site, and must match exactly one of the possible values for that particular facet.</p>
+<p>When specifying more than one facet constraint in the request, multiple values for the same facet are combined with a logical OR, while multiple values for different facets are combined with a logical AND. Also, multiple possible values for teh same facets can be expressed as a comma-separated list. For example:</p>
+<ul class="simple">
+<li>experiment=decadal2000&amp;variable=hus : will return all records that match experiment=decadal2000 AND variable=hus</li>
+<li>variable=hus&amp;variable=ta : will return all records that match variable=hus OR variable=ta</li>
+<li>variable=hus,ta : will also return all records that match variable=hus OR variable=ta</li>
+</ul>
+<p>A facet constraint can be negated by using the != operator. For example, model!=CCSM searches for all items that do NOT match the CCSM model. Note that all negative facets are combined in logical AND, for example, model!=CCSM&amp;model!=HadCAM searches for all items that do not match CCSM, and do not match HadCAM.</p>
+<p>By default, no facet counts are returned in the output document. Facet counts must be explicitly requested by specifying the facet names individually (for example: facets=experiment,model) or via the special notation facets=*. The facets list must be comma-separated, and white spaces are ignored.</p>
+<p>If facet counts is requested, facet values are sorted alphabetically (facet.sort=lex), and all facet values are returned (facet.limit=-1), provided they match one or more records (facet.mincount=1)</p>
+<p>The &#8220;type&#8221; facet must be always specified as part of any request to the ESGF search services, so that the appropriate records can be searched and returned. If not specified explicitly, the default value is type=Dataset .</p>
+<p>Examples:</p>
+<ul>
+<li><p class="first">Single facet query: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?cf_standard_name=air_temperature">http://esgf-node.jpl.nasa.gov/esg-search/search?cf_standard_name=air_temperature</a></p>
+</li>
+<li><p class="first">Query with two different facet constraints: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?cf_standard_name=air_temperature&amp;project=obs4MIPs">http://esgf-node.jpl.nasa.gov/esg-search/search?cf_standard_name=air_temperature&amp;project=obs4MIPs</a></p>
+</li>
+<li><p class="first">Combining two values of the same facet with a logical OR: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;variable=hus&amp;variable=ta">http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;variable=hus&amp;variable=ta</a> (search for all obs4MIPs files that have variable &#8220;ta&#8221; OR variable &#8220;hus&#8221;)</p>
+</li>
+<li><p class="first">Using a negative facet:</p>
+<blockquote>
+<div><p><a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;variable=hus&amp;variable=ta&amp;model!=Obs-AIRS">http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;variable=hus&amp;variable=ta&amp;model!=Obs-AIRS</a> (search for all obs4MIPs datasets that have variable ta OR hus, excluding those produced by AIRS)
+<a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;variable!=ta&amp;variable!=huss">http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;variable!=ta&amp;variable!=huss</a> (search for all obs4MIPs datasets that do not contain neither variable ta nor variable huss)</p>
+</div></blockquote>
+</li>
+<li><p class="first">Search a file by its tracking id: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;tracking_id=2209a0d0-9b77-4ecb-b2ab-b7ae412e7a3f">http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;tracking_id=2209a0d0-9b77-4ecb-b2ab-b7ae412e7a3f</a></p>
+</li>
+<li><p class="first">Search a file by its checksum: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;checksum=83df8ae93e85e26df797d5f770449470987a4ecd8f2d405159995b5cac9a410c">http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;checksum=83df8ae93e85e26df797d5f770449470987a4ecd8f2d405159995b5cac9a410c</a></p>
+</li>
+<li><p class="first">Issue a query for all supported facets and their values at one site, while returning no results (note that only facets with one or more values are returned): <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?facets=*&amp;limit=0&amp;distrib=false">http://esgf-node.jpl.nasa.gov/esg-search/search?facets=*&amp;limit=0&amp;distrib=false</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="facet-listings">
+<h4>Facet Listings<a class="headerlink" href="#facet-listings" title="Permalink to this headline">¶</a></h4>
+<p>The available facet names and values for searching data within a specific project can be listed with a query of the form ...project=&lt;project_name&gt;&amp;facets=*&amp;limit=0 (i.e. return no results). Only facet values that match one or more records will be returned.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>List all obs4MIPs facet names and values: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;facets=*&amp;limit=0">http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&amp;facets=*&amp;limit=0</a></li>
+<li>List all CMIP5 facet names and values: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;facets=*&amp;limit=0">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;facets=*&amp;limit=0</a></li>
+</ul>
+<p>The same query with no project constraint will return all facet names and values for ALL data across the federation:</p>
+<ul class="simple">
+<li>List ALL facet names and values: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?facets=*&amp;limit=0">http://esgf-node.jpl.nasa.gov/esg-search/search?facets=*&amp;limit=0</a></li>
+</ul>
+<p>To retrieve a listing of available values for only a few facets, simply specify a comma-separated list of facet names:</p>
+<ul class="simple">
+<li>List all values of model, experiment and project throughout the federation: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?facets=model,experiment,project&amp;limit=0">http://esgf-node.jpl.nasa.gov/esg-search/search?facets=model,experiment,project&amp;limit=0</a></li>
+<li>List all values of model, experiment for CMIP5 data: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?facets=model,experiment&amp;project=CMIP5&amp;limit=0">http://esgf-node.jpl.nasa.gov/esg-search/search?facets=model,experiment&amp;project=CMIP5&amp;limit=0</a></li>
+</ul>
+</div>
+<div class="section" id="temporal-coverage-queries">
+<h4>Temporal Coverage Queries<a class="headerlink" href="#temporal-coverage-queries" title="Permalink to this headline">¶</a></h4>
+<p>The keyword parameters start= and/or end= can be used to query for data with temporal coverage that <strong>overlaps</strong> the specified range. The parameter values can either be date-times in the format &#8220;YYYY-MM-DDTHH:MM:SSZ&#8221; (UTC ISO 8601 format), or special values supported by the Solr DateMath syntax.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Search for data in the past year: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?start=NOW-1YEAR">http://esgf-node.jpl.nasa.gov/esg-search/search?start=NOW-1YEAR</a> (translates into the constraint datetime_stop:[NOW-1YEAR TO *] or datetime_stop &gt; NOW-1YEAR)</li>
+<li>Search for data before the year 2000: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?end=2000-01-01T00:00:00Z">http://esgf-node.jpl.nasa.gov/esg-search/search?end=2000-01-01T00:00:00Z</a> (translates into the constraint datetime_start:[* TO 2000-01-01T00:00:00Z] or datetime_start &lt; 2000-01-01)</li>
+</ul>
+</div>
+<div class="section" id="spatial-coverage-queries">
+<h4>Spatial Coverage Queries<a class="headerlink" href="#spatial-coverage-queries" title="Permalink to this headline">¶</a></h4>
+<p>The keyword parameter bbox=[west, south, east, north] can be used to query for data with spatial coverage that overlaps the given bounding box. As usual, the parameter value must be URL-encoded.</p>
+<p>Examples:</p>
+<blockquote>
+<div><a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?bbox=%5B-10,-10,+10,+10%5D">http://esgf-node.jpl.nasa.gov/esg-search/search?bbox=%5B-10,-10,+10,+10%5D</a> ( translates to: east_degrees:[-10 TO <em>] AND north_degrees:[-10 TO *] AND west_degrees:[</em> TO 10] AND south_degrees:[* TO 10] )</div></blockquote>
+<p>Please note though that NOT all ESGF records contain geo-spatial information, and therefore will not be returned by a geo-spatial search.</p>
+</div>
+<div class="section" id="distributed-queries">
+<h4>Distributed Queries<a class="headerlink" href="#distributed-queries" title="Permalink to this headline">¶</a></h4>
+<p>The keyword parameter distrib= can be used to control whether the query is executed versus the local Index Node only, or distributed to all other Nodes in the federation. If not specified, the default value distrib=true is assumed.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Search for all datasets in the federation: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?distrib=true">http://esgf-node.jpl.nasa.gov/esg-search/search?distrib=true</a></li>
+<li>Search for all datasets at one Node only: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?distrib=false">http://esgf-node.jpl.nasa.gov/esg-search/search?distrib=false</a></li>
+</ul>
+</div>
+<div class="section" id="shard-queries">
+<h4>Shard Queries<a class="headerlink" href="#shard-queries" title="Permalink to this headline">¶</a></h4>
+<p>By default, a distributed query (distrib=true) targets all ESGF Nodes in the current peer group, i.e. all nodes that are listed in the local configuration file /esg/config/esgf_shards.xml , which is continuously updated by the local node manager to reflect the latest state of the federation. It is possible to execute a distributed search that targets only one or more specific nodes, by specifying them in the &#8220;shards&#8221; parameter, as such: shards=hostname1:port1/solr,hostname2:port2/solr,.... . Note that the explicit shards value is ignored if distrib=false (but distrib=true by default if not otherwise specified).</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Query for CMIP5 data at the PCMDI and CEDA sites only: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;shards=pcmdi.llnl.gov/solr,esgf-index1.ceda.ac.uk/solr">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;shards=pcmdi.llnl.gov/solr,esgf-index1.ceda.ac.uk/solr</a></li>
+<li>Query for all files belonging to a given dataset at one site only: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;shards=esgf-node.jpl.nasa.gov/solr&amp;dataset_id=obs4MIPs.NASA-JPL.TES.tro3.mon">http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;shards=esgf-node.jpl.nasa.gov/solr&amp;dataset_id=obs4MIPs.NASA-JPL.TES.tro3.mon</a>.v20110608|esgf-data.jpl.nasa.gov</li>
+</ul>
+</div>
+<div class="section" id="replica-queries">
+<h4>Replica Queries<a class="headerlink" href="#replica-queries" title="Permalink to this headline">¶</a></h4>
+<p>Replicas (Datasets and Files) are distinguished from the original record (a.k.a. the &#8220;master&#8221;) in the Solr index by the value of two special keywords:</p>
+<ul class="simple">
+<li><strong>replica</strong>: a flag that is set to false for master records, true for replica records.</li>
+<li><strong>master_id</strong>: a string that is identical for the master and all replicas of a given logical record (Dataset or File).</li>
+</ul>
+<p>By default, a query returns all records (masters and replicas) matching the search criteria, i.e. no replica=... constraint is used. To return only master records, use replica=false, to return only replicas, use replica=true. To search for all identical Datasets or Files (i.e. for the master AND replicas of a Dataset or File), use master_id=....</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Search for all datasets in the system (masters and replicas): <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search">http://esgf-node.jpl.nasa.gov/esg-search/search</a></li>
+<li>Search for just master datasets, no replicas: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?replica=false">http://esgf-node.jpl.nasa.gov/esg-search/search?replica=false</a></li>
+<li>Search for just replica datasets, no masters: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?replica=true">http://esgf-node.jpl.nasa.gov/esg-search/search?replica=true</a></li>
+<li>Search for the master AND replicas of a given dataset: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?master_id=cmip5.output1.LASG-CESS.FGOALS-g2.midHolocene.3hr.land.3hr.r1i1p1">http://esgf-node.jpl.nasa.gov/esg-search/search?master_id=cmip5.output1.LASG-CESS.FGOALS-g2.midHolocene.3hr.land.3hr.r1i1p1</a></li>
+<li>Search for the master and replicas of a given file: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;master_id=cmip5.output1.MIROC.MIROC5.decadal1978.mon.ocean.Omon.r4i1p1.wfo_Omon_MIROC5_decadal1978_r4i1p1_197901-198812.nc">http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&amp;master_id=cmip5.output1.MIROC.MIROC5.decadal1978.mon.ocean.Omon.r4i1p1.wfo_Omon_MIROC5_decadal1978_r4i1p1_197901-198812.nc</a></li>
+</ul>
+</div>
+<div class="section" id="latest-and-version-queries">
+<h4>Latest and Version Queries<a class="headerlink" href="#latest-and-version-queries" title="Permalink to this headline">¶</a></h4>
+<p>By default, a query to the ESGF search services will return all versions of the matching records (Datasets or Files). To only return the very last, up-to-date version include latest=true . To return a specific version, use version=... . Using latest=false will return only datasets that were superseded by newer versions.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Search for all latest CMIP5 datasets: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;latest=true">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;latest=true</a></li>
+<li>Search for all versions of a given dataset: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;master_id=cmip5.output1.MOHC.HadCM3.decadal1972.day.atmos.day.r10i2p1&amp;facets=version">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;master_id=cmip5.output1.MOHC.HadCM3.decadal1972.day.atmos.day.r10i2p1&amp;facets=version</a></li>
+<li>Search for a specific version of a given dataset: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;master_id=cmip5.output1.NSF-DOE-NCAR.CESM1-CAM5-1-FV2.historical.mon.atmos.Amon.r1i1p1&amp;version=20120712">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;master_id=cmip5.output1.NSF-DOE-NCAR.CESM1-CAM5-1-FV2.historical.mon.atmos.Amon.r1i1p1&amp;version=20120712</a></li>
+</ul>
+</div>
+<div class="section" id="retracted-queries">
+<h4>Retracted Queries<a class="headerlink" href="#retracted-queries" title="Permalink to this headline">¶</a></h4>
+<p><strong>NOTE: this feature is NOT yet released</strong></p>
+<p>Retracted datasets are marked by &#8220;retracted=true&#8221;, and also have the flag &#8220;latest=false&#8221; set. Consequently, retracted datasets are automatically NOT included in any search for the latest version data (&#8220;latest=true&#8221;), while they are automatically included in searches the span all versions (no &#8220;latest&#8221; constraint). To search specifically for only retracted datasets, use the constraint &#8220;retracted=true&#8221;.</p>
+<p>Example:</p>
+<ul class="simple">
+<li>Search for all retracted datasets in the CMIP5 project, across all nodes: <a class="reference external" href="https://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;retracted=true">https://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;retracted=true</a></li>
+</ul>
+</div>
+<div class="section" id="minimum-and-maximum-version-queries">
+<h4>Minimum and Maximum Version Queries<a class="headerlink" href="#minimum-and-maximum-version-queries" title="Permalink to this headline">¶</a></h4>
+<p><strong>NOTE: this feature is NOT yet released</strong></p>
+<p>The special keywords &#8220;min_version&#8221; and &#8220;max_version&#8221; can be used to query for all records that have a version greater or equal, or less or equal, of a given numerical value. Because often in ESGF versions are expressed as dates of the format YYYYMMDD, it is possible to query for all records that have a version greater/less or equal of a certain date. The two constraints can be combined with each other to specify a version (aka date) range, and can also be combined with other constraints.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>All datasets with version less than a given date: <a class="reference external" href="https://esgf-node.jpl.nasa.gov/esg-search/search?max_version=20150101">https://esgf-node.jpl.nasa.gov/esg-search/search?max_version=20150101</a></li>
+<li>All Obs4MIPs datasets with version between two dates: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?min_version=20120101&amp;max_version=20131231&amp;project=obs4MIPs">http://esgf-node.jpl.nasa.gov/esg-search/search?min_version=20120101&amp;max_version=20131231&amp;project=obs4MIPs</a></li>
+</ul>
+</div>
+<div class="section" id="results-pagination">
+<h4>Results Pagination<a class="headerlink" href="#results-pagination" title="Permalink to this headline">¶</a></h4>
+<p>By default, a query to the search service will return the first 10 records matching the given constraints. The offset into the returned results, and the total number of returned results, can be changed through the keyword parameters limit= and offset= . The system imposes a maximum value of limit &lt;= 10,000.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Query for 100 CMIP5 datasets in the system: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;limit=100">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;limit=100</a></li>
+<li>Query for the next 100 CMIP5 datasets in the system: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;limit=100&amp;offset=100">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;limit=100&amp;offset=100</a></li>
+</ul>
+</div>
+<div class="section" id="output-format">
+<h4>Output Format<a class="headerlink" href="#output-format" title="Permalink to this headline">¶</a></h4>
+<p>The keyword parameter output= can be used to request results in a specific output format. Currently the only available options are Solr/XML (the default) and Solr/JSON.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Request results in Solr XML format: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?format=application%2Fsolr%2Bxml">http://esgf-node.jpl.nasa.gov/esg-search/search?format=application%2Fsolr%2Bxml</a></li>
+<li>Request results in Solr JSON format: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?format=application%2Fsolr%2Bjson">http://esgf-node.jpl.nasa.gov/esg-search/search?format=application%2Fsolr%2Bjson</a></li>
+</ul>
+</div>
+<div class="section" id="returned-metadata-fields">
+<h4>Returned Metadata Fields<a class="headerlink" href="#returned-metadata-fields" title="Permalink to this headline">¶</a></h4>
+<p>By default, all available metadata fields are returned for each result. The keyword parameter fields= can be used to limit the number of fields returned in the response document, for each matching result. The list must be comma-separated, and white spaces are ignored. Use fields=* to return all fields (same as not specifiying it, since it is the default). Note that the pseudo field &#8220;score&#8221; is always appended to any fields list.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Return all available metadata fields for CMIP5 datasets: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;fields=*">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;fields=*</a></li>
+<li>Return only the &#8220;model&#8221; and &#8220;experiment&#8221;  fields for CMIP5 datasets: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;fields=model,experiment">http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&amp;fields=model,experiment</a></li>
+</ul>
+</div>
+<div class="section" id="identifiers">
+<h4>Identifiers<a class="headerlink" href="#identifiers" title="Permalink to this headline">¶</a></h4>
+<p>Each search record in the system is assigned the following identifiers (all of type string):</p>
+<ul>
+<li><p class="first"><strong>id</strong> : universally unique for each record across the federation, i.e. specific to each Dataset or File, version and replica (and the data node storing the data). It is intended to be &#8220;opaque&#8221;, i.e. it should not be parsed by clients to extract any information.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Dataset example: id=obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608|esgf-data.jpl.nasa.gov</li>
+<li>File example: id=obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608.tro3Stderr_TES_L3_tbd_200507-200912.nc|esgf-data.jpl.nasa.gov</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>master_id</strong> : same for all replicas and versions across the federation. When parsing THREDDS catalogs, it is extracted from the properties &#8220;dataset_id&#8221; or &#8220;file_id&#8221;.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Dataset example: obs4MIPs.NASA-JPL.TES.tro3.mon (for a Dataset)</li>
+<li>File example: obs4MIPs.NASA-JPL.TES.tro3.mon.tro3Stderr_TES_L3_tbd_200507-200912.nc</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><strong>instance_id</strong> : same for all replicas across federation, but specific to each version. When parsing THREDDS catalogs, it is extracted from the ID attribute of the corresponding THREDDS catalog element (for both Datasets and Files).</p>
+<blockquote>
+<div><ul class="simple">
+<li>Dataset example: obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608</li>
+<li>File example: obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608.tro3Stderr_TES_L3_tbd_200507-200912.nc</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Note also that the record version is the same for all replicas of that record, but different across versions. Examples:</p>
+<ul class="simple">
+<li>Dataset example: version=20110608</li>
+<li>File example: version=1</li>
+</ul>
+</div>
+<div class="section" id="access-urls">
+<h4>Access URLs<a class="headerlink" href="#access-urls" title="Permalink to this headline">¶</a></h4>
+<p>In the Solr output document returned by a search, URLs that are access points for Datasets and Files are encoded as 3-tuple of the form &#8220;url|mime type|service name&#8221;, where the fields are separated by the &#8220;pipe (&#8220;|&#8221;) character, and the &#8220;mime type&#8221; and &#8220;service name&#8221; are chosen from the ESGF controlled vocabulary.</p>
+<p>Example of Dataset access URLs:</p>
+<ul class="simple">
+<li>THREDDS catalog: <a class="reference external" href="http://esgf-data.jpl.nasa.gov/thredds/catalog/esgcet/1/obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608.xml#obs4MIPs.NASA-JPL.TES.tro3.mon">http://esgf-data.jpl.nasa.gov/thredds/catalog/esgcet/1/obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608.xml#obs4MIPs.NASA-JPL.TES.tro3.mon</a>.v20110608|application/xml+thredds|THREDDS</li>
+<li>LAS server: <a class="reference external" href="http://esgf-node.jpl.nasa.gov/las/getUI.do?catid=0C5410C250379F2D139F978F7BF48BB9_ns_obs4MIPs.NASA-JPL.TES.tro3.mon">http://esgf-node.jpl.nasa.gov/las/getUI.do?catid=0C5410C250379F2D139F978F7BF48BB9_ns_obs4MIPs.NASA-JPL.TES.tro3.mon</a>.v20110608|application/las|LAS</li>
+</ul>
+<p>Example of File access URLs:</p>
+<ul class="simple">
+<li>HTTP download: <a class="reference external" href="http://esgf-data.jpl.nasa.gov/thredds/fileServer/esg_dataroot/obs4MIPs/observations/atmos/tro3Stderr/mon/grid/NASA-JPL/TES/v20110608/tro3Stderr_TES_L3_tbd_200507-200912">http://esgf-data.jpl.nasa.gov/thredds/fileServer/esg_dataroot/obs4MIPs/observations/atmos/tro3Stderr/mon/grid/NASA-JPL/TES/v20110608/tro3Stderr_TES_L3_tbd_200507-200912</a>.nc|application/netcdf|HTTPServer</li>
+<li>GridFTP download: gsiftp://esgf-data.jpl.nasa.gov:2811//esg_dataroot/obs4MIPs/observations/atmos/tro3Stderr/mon/grid/NASA-JPL/TES/v20110608/tro3Stderr_TES_L3_tbd_200507-200912.nc|application/gridftp|GridFTP</li>
+<li>OpenDAP download: <a class="reference external" href="http://esgf-data.jpl.nasa.gov/thredds/dodsC/esg_dataroot/obs4MIPs/observations/atmos/tro3Stderr/mon/grid/NASA-JPL/TES/v20110608/tro3Stderr_TES_L3_tbd_200507-200912.nc">http://esgf-data.jpl.nasa.gov/thredds/dodsC/esg_dataroot/obs4MIPs/observations/atmos/tro3Stderr/mon/grid/NASA-JPL/TES/v20110608/tro3Stderr_TES_L3_tbd_200507-200912.nc</a>.html|application/opendap-html|OPENDAP</li>
+<li>Globus As-A-Service download: globus:e3f6216e-063e-11e6-a732-22000bf2d559/esg_dataroot/obs4MIPs/observations/atmos/tro3Stderr/mon/grid/NASA-JPL/TES/v20110608/tro3Stderr_TES_L3_tbd_200507-200912.nc|Globus|Globus</li>
+</ul>
+</div>
+<div class="section" id="wget-scripting">
+<h4>Wget scripting<a class="headerlink" href="#wget-scripting" title="Permalink to this headline">¶</a></h4>
+<p>The same RESTful API that is used to query the ESGF search services can also be used, with minor modifications, to generate a Wget script to download all files matching the given constraints. Specifically, each ESGF Index Node exposes the following URL for generating Wget scripts:</p>
+<blockquote>
+<div><div class="highlight-default"><div class="highlight"><pre><span></span>http://&lt;base_search_URL&gt;/wget?[keyword parameters as (name, value) pairs][facet parameters as (name,value) pairs]
+</pre></div>
+</div>
+</div></blockquote>
+<p>where again&#8221;&lt;base_search_url&gt;&#8221; is the base URL of the search service at a given Index Node. As for searching, all parameters (keyword and facet) are optional, and the value of all parameters must be URL-encoded, so that the complete search URL is well formed.</p>
+<p>The only syntax differences with respect to the search URL are:</p>
+<ul class="simple">
+<li>The keyword parameter type= is not allowed, as the wget URL always assumes type=File .</li>
+<li>The keyword parameter format= is not allowed, as the wget URL always returns a shell script as response document.</li>
+<li>The keyword parameter limit= is assigned a default value of limit=1000 (and must still be limit &lt; 10,000).</li>
+<li>The keyword parameter download_structure= is used for defining a relative directory structure for the download by using the facets value (i.e. of Files and not Datasets).</li>
+<li>The keyword parameter download_emptypath= is used to define what to do when download_structure is set and the facet returned has no value (for example, when mixing files from CMIP5 and obs4MIP and selecting instrument as a facet value will result in all CMIP5 files returning an empty value)</li>
+</ul>
+<p>A typical workflow pattern consists in first identifying all datasets or files matching some scientific criteria, then changing the request URL from &#8220;/search?&#8221; to &#8220;/wget?&#8221; to generate the corresponding shell scripts for bulk download of files.</p>
+<p>Examples:</p>
+<ul class="simple">
+<li>Download all obs4MIPs files from the JPL node with variable &#8220;hus&#8221; : <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false">http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false</a></li>
+<li>Download the files as in the previous examples, and organize them in a directory structure such as project/product/institute/time_frequency : <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false&amp;download_structure=project,product,institute,time_frequency">http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false&amp;download_structure=project,product,institute,time_frequency</a></li>
+</ul>
+<p>For more information, see also the Wget FAQ.</p>
+</div>
+</div>
+</div>
+<div class="section" id="projects">
+<h2>Projects<a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="join-a-project-not-required-to-download-data">
+<h3>Join a project (not required to download data)<a class="headerlink" href="#join-a-project-not-required-to-download-data" title="Permalink to this headline">¶</a></h3>
+<p>See Create an account in the Login/OpenID section on this tutorial.</p>
+</div>
+<div class="section" id="view-a-project-s-network">
+<h3>View a project&#8217;s network<a class="headerlink" href="#view-a-project-s-network" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="project-browser">
+<h4>Project Browser<a class="headerlink" href="#project-browser" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">The project browser widget has four different views...&#8221;This&#8221;, &#8220;All&#8221;, &#8220;My&#8221;, and &#8220;Tags&#8221;.</p>
+</li>
+<li><p class="first">The widget is located on the right hand side of the screen in the &#8220;services&#8221; section.</p>
+</li>
+<li><p class="first">You can navigate to a project by clicking on its name.</p>
+</li>
+<li><dl class="first docutils">
+<dt>Projects can be classified by tag.</dt>
+<dd><ul class="first last simple">
+<li>To see all tags use the &#8220;Delete&#8221; key in the tag box.</li>
+<li>Selecting a tag will narrow projects in the browser to projects with that tag.</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="28%" />
+<col width="30%" />
+<col width="20%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#8220;This&#8221; View</td>
+<td>&#8220;All&#8221; View</td>
+<td>&#8220;My&#8221; View</td>
+<td>&#8220;Tags&#8221; View</td>
+</tr>
+<tr class="row-even"><td>Shows the project&#8217;s parent, peer,
+and child projects</td>
+<td>Shows all the projects currently hosted on
+CoG</td>
+<td>Lists all the project a particular user is a
+member of</td>
+<td>Lists projects with saved tags</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<div><img alt="_images/all.png" src="_images/all.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="search-for-projects-by-tag">
+<h3>Search for projects by tag<a class="headerlink" href="#search-for-projects-by-tag" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Project administrators can assign keywords (&#8220;tags&#8221;) to their project (see separate tutorial section on How to tag a project).</li>
+<li>Project tags appear below the Project Browser.</li>
+<li>Tags can be used to search for projects.</li>
+</ul>
+<ol class="arabic simple">
+<li>Enter a tag or select one from the pull down menu and click &#8220;Go&#8221;</li>
+</ol>
+<ul>
+<li><p class="first">Tags auto complete (e.g. typing the letter &#8220;c&#8221; in the box will bring up a list of all tags that start with &#8220;c&#8221;.)</p>
+</li>
+<li><p class="first">Clicking the delete key while in the box brings up the list of all tags</p>
+<blockquote>
+<div><img alt="_images/tag_search.png" src="_images/tag_search.png" />
+</div></blockquote>
+</li>
+<li><p class="first">The Project Browser will automatically switch to the &#8220;All&#8221; tab</p>
+</li>
+<li><p class="first">The project list will automatically be limited to those projects with the tagged searched.</p>
+</li>
+<li><p class="first">The tag search applies to all tabs in the Project Browser.</p>
+<blockquote>
+<div><img alt="_images/search_results.png" src="_images/search_results.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="save-a-project-tag-and-retrieve-projects-with-that-tag">
+<h3>Save a project tag and retrieve projects with that tag<a class="headerlink" href="#save-a-project-tag-and-retrieve-projects-with-that-tag" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Project administrators can assign keywords (&#8220;tags&#8221;) to their project (view separate tutorial section on How to tag a project).</li>
+<li>Project tags appear below the Project Browser.</li>
+<li>Tags can be used to search for projects (view separate tutorial section on How to search for projects using tags).</li>
+</ul>
+<ol class="arabic simple">
+<li>Enter a tag or select one from the pull down menu and click &#8220;Save Tag&#8221;</li>
+</ol>
+<ul>
+<li><p class="first">Tags auto complete (e.g. typing the letter &#8220;c&#8221; in the box will bring up a list of all tags that start with &#8220;c&#8221;.)</p>
+</li>
+<li><p class="first">Clicking the delete key while in the box brings up the list of all tags.</p>
+</li>
+<li><p class="first">Projects associated with the saved tag show up under the &#8220;Tags&#8221; tab.</p>
+<blockquote>
+<div><img alt="_images/tag_search.png" src="_images/tag_search.png" />
+<img alt="_images/saved_tags.png" src="_images/saved_tags.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="view-a-project-s-rollup">
+<h3>View a project&#8217;s rollup<a class="headerlink" href="#view-a-project-s-rollup" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>All governance information is consolidated across a project&#8217;s heirarchy (peers and children) and displayed with the project&#8217;s own information.</li>
+<li>You will only see the roll-up if a project has their information filled in</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Click on a link in the Upper Navigation Bar</p>
+</li>
+<li><p class="first">Scan the bottom of the page for a &#8220;View Peer...&#8221; or &#8220;View Child...&#8221; accordion</p>
+</li>
+<li><p class="first">Click the accordion</p>
+<blockquote>
+<div><img alt="_images/roll-up.png" src="_images/roll-up.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="wiki-editing">
+<h2>Wiki Editing<a class="headerlink" href="#wiki-editing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-to-use-the-built-in-wiki-system">
+<h3>How to use the built-in wiki system<a class="headerlink" href="#how-to-use-the-built-in-wiki-system" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Freeform content in CoG is created using a built-in wiki.</li>
+<li>You must be logged in to edit wiki pages</li>
+<li>You must be a Contributor or Admin to edit wiki pages.</li>
+<li>The wiki can be edited via a WYSIWYG GUI or via HTML (by choosing the &#8220;Source&#8221; button in the wiki editor).</li>
+</ul>
+<p><strong>WARNING: Copying text from a browser window (e.g. an email, a google document, another web page), will copy the hidden styles as well. These styles will interfer with the styling of your conent.</strong></p>
+<ol class="arabic simple">
+<li>Choose to either create a new page or edit an old one.</li>
+</ol>
+<ul>
+<li><p class="first">New pages are added via the &#8220;Add Page&#8221; link in the left navigation bar under the &#8220;Contributors&#8221; heading.</p>
+<blockquote>
+<div><img alt="_images/contributor_links.png" src="_images/contributor_links.png" />
+</div></blockquote>
+</li>
+<li><p class="first">To edit an existing page, click the &#8220;Update Page&#8221; link located at the bottom of every page .</p>
+<blockquote>
+<div><img alt="_images/links_in_wiki.png" src="_images/links_in_wiki.png" />
+</div></blockquote>
+</li>
+</ul>
+<ol class="arabic simple">
+<li>Fill in the wiki form</li>
+</ol>
+<ul>
+<li><p class="first">There are three wiki templates that are selected via the &#8220;Template&#8221; pull down menu (Figure 3).</p>
+<blockquote>
+<div><ul class="simple">
+<li>all three columns (left navigation bar, wiki content, right column services)</li>
+<li>wiki and right column services</li>
+<li>wiki only</li>
+</ul>
+<img alt="_images/wiki_page.png" src="_images/wiki_page.png" />
+<ol class="loweralpha simple">
+<li>Adding Images</li>
+</ol>
+<ul class="simple">
+<li>To insert an image into the wiki, it must first be uploaded to the server.</li>
+<li>Images can be formatted when uploaded or after the fact.</li>
+<li>Read tutorial on Add a new image to a wiki page.</li>
+</ul>
+<ol class="loweralpha simple" start="2">
+<li>Using Labels and Topics (for left navigation bar)</li>
+</ol>
+<ul class="simple">
+<li>The label and topic fields are used to create the auto-generated left navigation bar:</li>
+<li>The label is what will show up as text on the left navigation bar.</li>
+<li>The topic is the label divider on the left navigation bar.  You can choose from an existing topic or create a new one.</li>
+<li>Only parent pages will show up on the left.  Child pages can be found listed at the bottom of their parent wiki page.</li>
+</ul>
+<ol class="loweralpha simple" start="3">
+<li>Wiki Page Visibility</li>
+</ol>
+<ul class="simple">
+<li>Pages can be made &#8220;Not Viewable&#8221; by clicking on the appropriate checkbox on the form.</li>
+<li>Pages that are &#8220;Not Viewable&#8221; will have a lock icon next to them in the navigation bar but will visible to project members when logged in.</li>
+</ul>
+<ol class="loweralpha simple" start="4">
+<li>Wiki Page Editability</li>
+</ol>
+<ul class="simple">
+<li>Pages can be made &#8220;Not Editable&#8221; by clicking on the appropriate checkbox on the form.</li>
+<li>Pages that are &#8220;Not Editable&#8221; can only be edited by Project Administrators.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="add-a-new-image-to-a-wiki-page">
+<h3>Add a new image to a wiki page<a class="headerlink" href="#add-a-new-image-to-a-wiki-page" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Images can be added to the wiki two ways</p>
+<blockquote>
+<div><ul class="simple">
+<li>Direct upload (see this section)</li>
+<li>Link to file previously uploaded (see tutorial next section)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">TIFFs are not allowed</p>
+</li>
+<li><p class="first">Images can be formatted once in the wiki</p>
+</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Open a wiki page in edit mode</p>
+<blockquote>
+<div><img alt="_images/wiki_page.png" src="_images/wiki_page.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;image icon&#8221; in the wiki WYSIWYG editor</p>
+<blockquote>
+<div><img alt="_images/image_icon.png" src="_images/image_icon.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Upload&#8221; tab in the Image Properties box</p>
+<blockquote>
+<div><img alt="_images/image_properties.png" src="_images/image_properties.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Browse...&#8221; button when the &#8220;Upload&#8221; tab is active</p>
+<blockquote>
+<div><img alt="_images/upload_tab.png" src="_images/upload_tab.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Select the file from the file system.</p>
+</li>
+</ol>
+<ul class="simple">
+<li>The look and feel of the file browsing interface varies by OS</li>
+<li>TIFFs are not allowed</li>
+</ul>
+<ol class="arabic simple">
+<li>Click on &#8220;Send it to the Server&#8221; (Figure 4)</li>
+</ol>
+<ul>
+<li><p class="first">The Image Properties box will appear after the file has been selected</p>
+</li>
+<li><p class="first">The Image Properties box will activate to the &#8220;Image Properties&#8221; tab</p>
+</li>
+<li><p class="first">Fill in any formatting options:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Width and Height control the size of the image</li>
+<li>The image can also be resized with the mouse</li>
+<li>Border as a line around the image</li>
+<li>HSpace adds horizontal space around the image</li>
+<li>VSpace adds vertical space around the image</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Click ok</p>
+</li>
+<li><p class="first">Right click the image and select &#8220;Image Properties&#8221; to edit again</p>
+</li>
+</ul>
+</div>
+<div class="section" id="add-a-pre-existing-image-to-a-wiki-page">
+<h3>Add a pre-existing image to a wiki page<a class="headerlink" href="#add-a-pre-existing-image-to-a-wiki-page" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Images can be added to the wiki two ways</p>
+<blockquote>
+<div><ul class="simple">
+<li>Direct upload (see previous section tutorial)</li>
+<li>Link to file previously uploaded (see this section)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Images can be formatted once in the wiki</p>
+</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Open a wiki page in edit mode</p>
+<blockquote>
+<div><img alt="_images/wiki_page.png" src="_images/wiki_page.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;image icon&#8221; in the wiki WYSIWYG editor</p>
+<blockquote>
+<div><img alt="_images/image_icon.png" src="_images/image_icon.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Browse Server&#8221; button (Figure 3) in the Image Properties box</p>
+<blockquote>
+<div><ul class="simple">
+<li>This invokes CoG&#8217;s File Browser</li>
+</ul>
+<img alt="_images/image_properties.png" src="_images/image_properties.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on your project</p>
+<blockquote>
+<div><ul class="simple">
+<li>This invokes a listing of files associated with that project</li>
+</ul>
+<img alt="_images/file_browser_projects.png" src="_images/file_browser_projects.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Select the image of choice</p>
+<blockquote>
+<div><img alt="_images/file_browser.png" src="_images/file_browser.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Format the image accordingly</p>
+</li>
+</ol>
+<ul class="simple">
+<li>Width and Height control the size of the image</li>
+<li>The image can also be resized with the mouse</li>
+<li>Border as a line around the image</li>
+<li>HSpace adds horizontal space around the image</li>
+<li>VSpace adds vertical space around the image</li>
+<li>Right click the image and select &#8220;Image Properties&#8221; to edit again</li>
+</ul>
+</div>
+<div class="section" id="add-an-html-link-to-a-project-file-to-a-wiki-page">
+<h3>Add an HTML link (to a Project File) to a wiki page<a class="headerlink" href="#add-an-html-link-to-a-project-file-to-a-wiki-page" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Open a wiki page in edit mode</p>
+<blockquote>
+<div><img alt="_images/wiki_page.png" src="_images/wiki_page.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the link icon in the wiki WYSIWYG editor</p>
+<blockquote>
+<div><img alt="_images/link_icon.png" src="_images/link_icon.png" />
+<p>This opens up the Link Browser.</p>
+<img alt="_images/link_browser.png" src="_images/link_browser.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on &#8220;Browser Server&#8221; in the Link Browser.</p>
+<blockquote>
+<div><p>This opens up the first page of the FileBrowser, which lists individual project folders.</p>
+<img alt="_images/file_browser_projects.png" src="_images/file_browser_projects.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on Click on your project.</p>
+<blockquote>
+<div><p>This opens up the second page of the FileBrowser listing all of the files on the server.</p>
+<img alt="_images/file_browser.png" src="_images/file_browser.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click the blue &#8220;Select&#8221; button next to the file you wish to link to</p>
+<blockquote>
+<div><p>This creates a link in your wiki page.</p>
+<img alt="_images/links_in_wiki.png" src="_images/links_in_wiki.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="maximize-the-wiki-window-while-editing">
+<h3>Maximize the wiki window while editing<a class="headerlink" href="#maximize-the-wiki-window-while-editing" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The built-in wiki editing area is small be default</li>
+<li>This area can be expanded</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Open a wiki page in edit mode</p>
+<blockquote>
+<div><img alt="_images/wiki_page.png" src="_images/wiki_page.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;maximize icon&#8221; to make the window larger</p>
+<blockquote>
+<div><img alt="_images/maximize_icon.png" src="_images/maximize_icon.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click the &#8220;maximize icon&#8221; again to return to previous screen.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="make-a-wiki-page-private">
+<h3>Make a wiki page private<a class="headerlink" href="#make-a-wiki-page-private" title="Permalink to this headline">¶</a></h3>
+<p>See How to use the built-in wiki system section.</p>
+</div>
+<div class="section" id="share-a-wiki-page-with-facebook-or-twitter">
+<h3>Share a wiki page with Facebook or Twitter<a class="headerlink" href="#share-a-wiki-page-with-facebook-or-twitter" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">CoG has implemented hooks for sharing wiki pages with Facebook and Twitter.</p>
+</li>
+<li><p class="first">You must already have accounts with these services.</p>
+</li>
+<li><p class="first">Social networking Icons are located at the bottom of every wiki page.</p>
+<blockquote>
+<div><img alt="_images/sn_latest.png" src="_images/sn_latest.png" />
+</div></blockquote>
+</li>
+</ul>
+<p><strong>Facebook</strong></p>
+<blockquote>
+<div><img alt="_images/facebook.png" src="_images/facebook.png" />
+</div></blockquote>
+<p><strong>Twitter</strong></p>
+<blockquote>
+<div><img alt="_images/twitter.png" src="_images/twitter.png" />
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="upload-a-file">
+<h3>Upload a File<a class="headerlink" href="#upload-a-file" title="Permalink to this headline">¶</a></h3>
+<p>CoG comes bundled with an associated file server for the storage of files &lt; 50mb. For larger, scientific data sets, use the attached ESGF data node.</p>
+<ul>
+<li><p class="first">Files are uploaded via the &#8220;Add File&#8221; link in the left navigation bar.</p>
+</li>
+<li><p class="first">Files can be given a title and description.</p>
+</li>
+<li><p class="first">Files can be universal to the project or specific to a wiki page (using the &#8220;Add Attachment&#8221; link at the bottom of the wiki page).</p>
+<blockquote>
+<div><img alt="_images/file_upload.png" src="_images/file_upload.png" />
+</div></blockquote>
+</li>
+</ul>
+<div class="section" id="using-the-file-browser">
+<h4>Using the File Browser<a class="headerlink" href="#using-the-file-browser" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Use the &#8220;List All Files&#8221; in the left navigation bar to see all of a project&#8217;s uploaded files.</p>
+</li>
+<li><p class="first">Files can be searched for by type, or listed alphabetically.</p>
+</li>
+<li><p class="first">Files can be deleted from the server using this interface.</p>
+<blockquote>
+<div><img alt="_images/file_listing.png" src="_images/file_listing.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="information-interface">
+<h4>Information Interface<a class="headerlink" href="#information-interface" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Information is available about individual files by clicking on the &#8220;Info&#8221; link in the File Browser.</p>
+</li>
+<li><p class="first">The information interface allows users to modify the metadata associated with a document or delete a document.</p>
+<blockquote>
+<div><img alt="_images/file_details.png" src="_images/file_details.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="update-a-file-on-the-system">
+<h3>Update a File on the system<a class="headerlink" href="#update-a-file-on-the-system" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;List All Files&#8221; in the left navigation bar</p>
+<blockquote>
+<div><p>This opens up a list of files in the File Browser interface.
+The interface sorts by:</p>
+<ul class="simple">
+<li>Type (e.g. Presentations, Images)</li>
+<li>Title (alphabetical or reverse alphabetical)</li>
+<li>Last Updated and Last Updated (Reverse)</li>
+</ul>
+<img alt="_images/list_all_files.png" src="_images/list_all_files.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;info&#8221; link next to the file to be updated</p>
+<blockquote>
+<div><img alt="_images/file_listing.png" src="_images/file_listing.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Update&#8221; link on the File Info Box</p>
+<blockquote>
+<div><img alt="_images/file_update.png" src="_images/file_update.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Browse&#8221; button on the File Update page</p>
+<blockquote>
+<div><img alt="_images/file_details.png" src="_images/file_details.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Choose a file using your specific operating system&#8217;s file browser</p>
+</li>
+</ol>
+</div>
+<div class="section" id="update-file-metadata">
+<h3>Update File metadata<a class="headerlink" href="#update-file-metadata" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;List All Files&#8221; in the left navigation bar</p>
+<blockquote>
+<div><p>This opens up a list of files in the File Browser interface.
+The interface sorts by:</p>
+<ul class="simple">
+<li>Type (e.g. Presentations, Images)</li>
+<li>Title (alphabetical or reverse alphabetical)</li>
+<li>Last Updated and Last Updated (Reverse)</li>
+</ul>
+<img alt="_images/list_all_files.png" src="_images/list_all_files.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;info&#8221; link next to the file to be updated</p>
+<blockquote>
+<div><img alt="_images/file_listing.png" src="_images/file_listing.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Update&#8221; link on the File Info Box</p>
+<blockquote>
+<div><img alt="_images/file_update.png" src="_images/file_update.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Change or add to the file metadata on the File Update page</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>Metadata includes</dt>
+<dd><ul class="first last simple">
+<li>Title</li>
+<li>Description</li>
+<li>Private (viewable to only project Users, Contributors, or Admins)</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="_images/file_details.png" src="_images/file_details.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="search-for-a-file">
+<h3>Search for a File<a class="headerlink" href="#search-for-a-file" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;List All Files&#8221; in the left navigation bar</p>
+<blockquote>
+<div><ul>
+<li><p class="first">The interface sorts by:</p>
+<blockquote>
+<div><ul class="simple">
+<li>Type (e.g. Presentations, Images)</li>
+<li>Title (alphabetical or reverse alphabetical)</li>
+<li>Last Updated and Last Updated (Reverse)</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">Files can be deleted from the server using this interface</p>
+</li>
+<li><p class="first">Clicking on the file name downloads the file</p>
+</li>
+</ul>
+<img alt="_images/file_listing.png" src="_images/file_listing.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="delete-a-file">
+<h3>Delete a File<a class="headerlink" href="#delete-a-file" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;List All Files&#8221; in the left navigation bar</p>
+<blockquote>
+<div><p>This opens up a list of files in the File Browser interface.
+The interface sorts by:</p>
+<ul class="simple">
+<li>Type (e.g. Presentations, Images)</li>
+<li>Title (alphabetical or reverse alphabetical)</li>
+<li>Last Updated and Last Updated (Reverse)</li>
+</ul>
+<img alt="_images/list_all_files.png" src="_images/list_all_files.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Click on the &#8220;Delete&#8221; link next to the file to be deleted</p>
+<blockquote>
+<div><img alt="_images/file_listing.png" src="_images/file_listing.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="left-navigation-bar">
+<h2>Left Navigation Bar<a class="headerlink" href="#left-navigation-bar" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="add-links-to-wiki-pages">
+<h3>Add links to wiki pages<a class="headerlink" href="#add-links-to-wiki-pages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>The left navigation bar is project specific, auto-generated, but customizable.</li>
+<li>The left navigation bar can contain links to wiki pages or external URLs</li>
+</ul>
+<div class="section" id="use-the-wiki-form-to-add-a-page-to-the-left-navigation-bar">
+<h4>Use the wiki form to add a page to the left navigation bar<a class="headerlink" href="#use-the-wiki-form-to-add-a-page-to-the-left-navigation-bar" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><dl class="first docutils">
+<dt>The Labels and Topics on the wiki editing form are used to create the text and dividers in the left navigation bar.</dt>
+<dd><ul class="first last simple">
+<li>Labels are link text in the left navigation bar</li>
+<li>Topics are the light teal headers.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Once a topic has been created, it can be reused.</p>
+</li>
+<li><p class="first">A new topic can be created at any time.</p>
+</li>
+<li><p class="first">Only pages without a parent page will show up in the left navigation bar.</p>
+</li>
+<li><p class="first">Child pages are listed at the bottom of their parent page.</p>
+<blockquote>
+<div><img alt="_images/wiki_page.png" src="_images/wiki_page.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="add-links-to-non-cog-pages-in-the-left-navigation-bar">
+<h3>Add links to non-CoG pages in the left navigation bar<a class="headerlink" href="#add-links-to-non-cog-pages-in-the-left-navigation-bar" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;Add Link&#8221; link under &#8220;Contributors&#8221; in the left navigation bar.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Users must be assigned a &#8220;Contributor&#8221; role to see this link.</li>
+</ul>
+<img alt="_images/contributor_links.png" src="_images/contributor_links.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Fill in the form</p>
+</li>
+</ol>
+<ul>
+<li><p class="first">Title and URL are required.</p>
+</li>
+<li><p class="first">Topics are the light teal headers between sections in the left navigation bar.</p>
+</li>
+<li><p class="first">Labels are the links in the left navigation bar.</p>
+<blockquote>
+<div><img alt="_images/add_link_template.png" src="_images/add_link_template.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="reorder-the-left-navigation-bar-admins-only">
+<h3>Reorder the left navigation bar (admins only)<a class="headerlink" href="#reorder-the-left-navigation-bar-admins-only" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Only Project or Node Administrators can reorder the left navigation bar (must be logged in).</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;Edit Site Index&#8221; Link in the Left Navigation Bar</p>
+<blockquote>
+<div><img alt="_images/edit_site_menu.png" src="_images/edit_site_menu.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Use the interface to reorder links within topics or whole topics</p>
+<blockquote>
+<div><img alt="_images/update_index.png" src="_images/update_index.png" />
+</div></blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="resources">
+<h2>Resources<a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="resource-basics">
+<h3>Resource basics<a class="headerlink" href="#resource-basics" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>A Resource in CoG is a link to URL. This can be an external URL such as a web page or an internal URL such as a project file or saved dataset.</li>
+<li>These objects can be edited by Contributors and Admins, but not Users or Visitors.</li>
+<li>Deleting a Resource Folder will delete all its Resources and sub-folders.</li>
+<li>Resources contain an optional description field, which can be used to annotate it in a relevant way.</li>
+</ul>
+<div class="section" id="pre-defined-resource-folders">
+<h4>Pre-defined Resource Folders<a class="headerlink" href="#pre-defined-resource-folders" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Every CoG project comes with a Bookmarks folder AND the option to turn on (project admins only) any of the following <strong>pre-defined</strong> Resource Folders.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Presentations</li>
+<li>Publications</li>
+<li>Minutes</li>
+<li>Newsletters</li>
+<li>Proposals</li>
+<li>Figures</li>
+<li>Test Cases</li>
+<li>Evaluations</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">These Folders are turned on and off using the &#8220;Update Project&#8221; link.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="resource-folder-ordering">
+<h4>Resource Folder Ordering<a class="headerlink" href="#resource-folder-ordering" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li>Resource Folders are listed in alphabetical order.</li>
+<li>Resource Folders that are years are listed in reverse chronological order.</li>
+<li>Resource Folders can be nested.</li>
+</ul>
+</div>
+<div class="section" id="resource-ordering">
+<h4>Resource Ordering<a class="headerlink" href="#resource-ordering" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p class="first">Resources stored in Folders that are years are listed in reverse chronological order.</p>
+</li>
+<li><p class="first">Resources stored in other Folders are listed in the order created.</p>
+<blockquote>
+<div><img alt="_images/resources.png" src="_images/resources.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="add-a-resource-to-an-external-url">
+<h3>Add a Resource to an external URL<a class="headerlink" href="#add-a-resource-to-an-external-url" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;Add Resource&#8221; link in the Left Navigation Bar under Members</p>
+<blockquote>
+<div><img alt="_images/add_resource.png" src="_images/add_resource.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Fill out the Resource Form</p>
+</li>
+</ol>
+<ul>
+<li><p class="first">The same form is used to create a new Resource Folder or Resource</p>
+</li>
+<li><p class="first">Select the Folder the Resource should be stored under</p>
+<blockquote>
+<div><img alt="_images/resource_form.png" src="_images/resource_form.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="add-a-resource-to-a-file-with-file-upload">
+<h3>Add a Resource to a File (with File upload)<a class="headerlink" href="#add-a-resource-to-a-file-with-file-upload" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Resources to an external URL can be created directly (see previous section in this tutorial)</li>
+<li>A Resource can be created to an internal File at the time of upload (this tutorial section)</li>
+</ul>
+<ol class="arabic">
+<li><p class="first">Click the &#8220;Add Resource&#8221; link in the Left Navigation Bar under Members</p>
+<blockquote>
+<div><img alt="_images/add_resource.png" src="_images/add_resource.png" />
+</div></blockquote>
+</li>
+<li><p class="first">Fill out the File Upload Form</p>
+</li>
+</ol>
+<ul>
+<li><p class="first">The Folder pull down is used to assign a Resource Folder to the uploaded File.</p>
+</li>
+<li><p class="first">The File metadata will be automatically copied to the Resource</p>
+<blockquote>
+<div><img alt="_images/file_upload.png" src="_images/file_upload.png" />
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="news">
+<h2>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>News is a way to send information to project members and ACROSS projects.</li>
+<li>Members have to be logged in to see news.</li>
+<li>Email, RSS, and other social networking options are under consideration.</li>
+</ul>
+<div class="section" id="add-a-news-item">
+<h3>Add a news item<a class="headerlink" href="#add-a-news-item" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Fill out the news entry form</li>
+</ol>
+<ul>
+<li><p class="first">Sending news is initiated via &#8220;publish news&#8221; link in the left navigation bar.</p>
+</li>
+<li><p class="first">Select the project or projects by clicking the appropriate checkbox.</p>
+</li>
+<li><p class="first">Note that while you will be able to select projects to which you are not a member, you news will not appear on those projects.</p>
+</li>
+<li><p class="first">An entire hierarchy can be selected by clicking the check box next to &#8220;Parent Projects&#8221;, &#8220;Peer Projects&#8221; or &#8220;Child Projects&#8221;.</p>
+</li>
+<li><p class="first">Give your news item a short informative title, and describe your news item in more detail in the text prompt. Any urls you put in the text will automatically become links.</p>
+</li>
+<li><p class="first">When you are ready to post your news item, click the submit button.</p>
+<blockquote>
+<div><img alt="_images/news.png" src="_images/news.png" />
+</div></blockquote>
+</li>
+</ul>
+<ol class="arabic simple">
+<li>The news appears in the news widget</li>
+</ol>
+<ul>
+<li><p class="first">For users that are logged into the system, the news widget is located above the Project Browser on the right-hand side of the page in the services section. Not all pages have these widgets enabled.</p>
+</li>
+<li><p class="first">You can click on a news item to read the entire text.</p>
+<blockquote>
+<div><img alt="_images/news_widget.png" src="_images/news_widget.png" />
+</div></blockquote>
+</li>
+</ul>
 </div>
 </div>
 </div>
