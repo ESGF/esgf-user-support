@@ -1025,7 +1025,15 @@ Example error message:
     Under Mac OS this error may be thrown if Wget is not installed. Please install it, see question `Error: "wget: command not found"`_.
 
 * Solution 5
-    This error may also be thrown if a node is not fully online, for example if it is maintained. Please wait until maintenance has been finished.
+    This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished.
+
+* Solution 6
+    The data node is online, but the local operating system is outdated and does not recognize the data nodes's web certificate when trying to establish a secure connection via wget.  In this case, upgrade the local operating system, try a different client system.  This scenario is revealed if running the script in debug mode (-d).
+    The following workaround using the -i option has shown to work when using -H:
+
+    ::
+
+        wget-XXXXXX -H -i
 
 In all other cases contact ESGF support esgf-user@lists.llnl.gov
 
