@@ -1457,7 +1457,7 @@ There might be several reasons and solutions for this issue:
 
 * Solution 5
     Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
-    Which CMIP5 data have been required for which time frequency and experiment is tabulated in the `CMIP5 Standard Output document <http://cmip.llnl.gov/cmip5/docs/standard_output.pdf>`_.
+    Which CMIP5 data have been required for which time frequency and experiment is tabulated in the `CMIP5 Standard Output document <https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf>`_.
 
 * Solution 6
     In case a portal has technical problems, try another ESGF portal
