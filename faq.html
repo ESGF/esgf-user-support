@@ -116,6 +116,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#i-can-not-process-downloaded-data">I can not process downloaded data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-can-i-calculate-a-multi-year-average-for-each-month-of-year">How can I calculate a multi-year average for each month of year?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back">How can CORDEX data on a grid with rotated poles be rotated back?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#there-seems-to-be-missing-data-for-some-models">There seems to be missing data for some models.</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-general">ESGF General</a><ul>
@@ -1130,6 +1131,14 @@ cf-python uses the ESMF regridding library as its regridding engine, and current
 Climate Data Operators (CDO) offer <a class="reference external" href="https://code.zmaw.de/boards/2/topics/1283">different ways of regridding</a>,
 for example cdo rotuvb can perform a backward transformation of velocity components U and V from a rotated spherical system to a geographical system.
 More details in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>.</p>
+</div>
+<div class="section" id="there-seems-to-be-missing-data-for-some-models">
+<h3>There seems to be missing data for some models.<a class="headerlink" href="#there-seems-to-be-missing-data-for-some-models" title="Permalink to this headline">¶</a></h3>
+<p>Some models do not provide data for all years. For questions related to the models and possibly missing data,
+please contact the individual modeling centers using the supplied contact information in the file header.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ ncdump -h &lt;filename&gt;  | grep contact
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="esgf-general">
