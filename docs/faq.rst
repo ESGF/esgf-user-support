@@ -3,20 +3,27 @@
 FAQs
 ====
 
+This FAQ focuses on question concerning the performance of the ESGF portals. For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:
+
++ with netCDF4 in python: dataset_name.contact  
+
++ in shell: ncdump -h dataset_name.nc  | grep contact
+  
+
 Data
 ****
 
 This FAQ focuses on questions concerning data, e.g. data format, data processing, CMIP and CORDEX data.
 
-Each ESGF question is sorted into exactly one topic. See also section "`ESGF General`_". since questions of general
-interest and questions matching several topics are under topic ESGF General.
+Each ESGF question is sorted into exactly one topic. Questions of general interest and questions matching 
+several topics are under topic `ESGF General`_.
 
 What are ensembles?
 -------------------
 Results of climate model runs depend on the starting point of the calculation, on the initialisation method and on the model physics.
 Ensemble calculations facilitate quantifying the variability of simulation data concerning a single model. In the CMIP and CORDEX projects,
 ensemble members are named in the rip-nomenclature, r for realization (starting point), i for initialization, p for physics, followed by an
-integer, e.g. "r1i1p1". `[More information] <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_
+integer, e.g. "r1i1p1". Find more on the data structure `here <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_.
 
 Do means over ensembles exist?
 ------------------------------
@@ -31,7 +38,7 @@ than one ensemble member per model and calculate a mean or plot them together to
 
 Where can I find model descriptions and associated literature?
 --------------------------------------------------------------
-Go to the `es-doc portal <http://es-doc.org/>`_.
+Go to the `ES-DOC portal <http://es-doc.org/>`_.
 
 How can I find the definition of a variable?
 --------------------------------------------
@@ -43,14 +50,16 @@ What is the relation between Variable, CF Standard Name and Variable Long Name?
 The search category Variable only contains abbreviations. The CF Standard Name obeys the `CF Standard Name Table <http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html>`_
 (CF for "Climate and Forecast"). For CMIP5 variables, the relation between all three, Variable, CF Standard Name and Variable Long Name,
 is tabulated in the `CMIP5 Standard Output document <http://cmip.llnl.gov/cmip5/docs/standard_output.pdf>`_,
-for CORDEX variables see the `CORDEX Variables Requirement Table <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_.
+for CORDEX variables see the `CORDEX Variables Requirement Table <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_. Find CMIP6 variables information here: 
+`CMIP6 variable name <http://clipc-services.ceda.ac.uk/dreq/mipVars.html>`_, `CMIP6 variable frequency <http://clipc-services.ceda.ac.uk/dreq/index/miptable.html>`_, 
+and `CMIP6 Excel table <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html>`_.
 
 Where can I find CMIP5 scenarios?
 ---------------------------------
 In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed, with many models even both.
 Some of the decadal experiments are Near Term future scenarios. CMIP5 Long Term scenarios are the Representative Concentration Pathways (RCPs),
 which represent the full bandwidth of future emission trajectories for the years 2006-2100, some continued until 2300.
-`[More information] <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_
+Find more information on `here <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_.
 
 Where are CMIP5 historicalAA data?
 ----------------------------------
@@ -58,7 +67,7 @@ CMIP5 historicalAA, historical data with anthropogenic aerosol forcing only, can
 Select historicalMisc and look for "Forcing = AA" in the metadata of the search results.
 
 An overview which CMIP5 data for historicalAA and other forcings should exist can be found in the
-`tables of Gavin Schmidt <https://cmip.llnl.gov/cmip5/docs/historical_Misc_forcing.pdf>`_, for CCSM and CESM models see the updated
+`tables of Gavin Schmidt <https://pcmdi.llnl.gov/mips/cmip5/historical_Misc_forcing.pdf>`_, for CCSM and CESM models see the updated
 `table of Gary Strand <http://www.cgd.ucar.edu/ccr/strandwg/SingleForcings_20C.html>`_.
 
 Where are CMIP5 historicalSl data?
@@ -67,7 +76,7 @@ CMIP5 historicalSl, historical data with solar forcing only, can be found in the
 Select historicalMisc and look for "Forcing = Sl" in the metadata of the search results.
 
 An overview which CMIP5 data for historicalSl and other forcings should exist can be found in the
-`tables of Gavin Schmidt <https://cmip.llnl.gov/cmip5/docs/historical_Misc_forcing.pdf>`_.
+`tables of Gavin Schmidt <https://pcmdi.llnl.gov/mips/cmip5/historical_Misc_forcing.pdf>`_.
 
 Where can I find AR5 data?
 --------------------------
@@ -88,7 +97,13 @@ belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=
 Where can I find more CORDEX 3-hourly or 6-hourly data?
 -------------------------------------------------------
 CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modeling centers according to the
-`CORDEX Archive Design <http://is-enes-data.github.io/cordex_archive_specifications.pdf>`_. Please contact the modeling groups.
+`CORDEX Archive Design <http://is-enes-data.github.io/cordex_archive_specifications.pdf>`_. Please contact the modeling groups. Find the supplied contact information in the header of the downloaded NetCDF file:
+
++ with netCDF4 in python: dataset_name.contact  
+
++ in shell: ncdump -h dataset_name.nc  | grep contact
+  
+
 
 Where are CORDEX regional climate models described?
 ---------------------------------------------------
@@ -371,27 +386,29 @@ No, see the table below.
 +-----------------+---------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 The values in the table have been taken from the calendar attributes of the NetCDF files. Since the calendars "standard" and "gregorian"
-are identical as well as "noleap" and "365_day", only the latter are used in the table. CMIP5 calendars are defined in the
-`CF standard <http://cfconventions.org/Data/cf-conventions/cf-conventions-1.6/build/cf-conventions.html#calendar>`_ and in the
-`CMIP5 Model Output Requirements <https://cmip.llnl.gov/?cmip5/docs/CMIP5_output_metadata_requirements.pdf>`_.
+are identical as well as "noleap" and "365_day", only the latter are used in the table. CMIP calendars are defined in the
+`CF standard <http://cfconventions.org/cf-conventions/cf-conventions.html#calendar>`_ and in the model output specifications for
+`CMIP5 <https://pcmdi.llnl.gov/mips/cmip5/output_req.html#metadata>`_ and `CMIP6 <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html>`_.
 
-How may I cite ESGF and CMIP5 data in my paper?
+How may I cite ESGF and CMIP data in my paper?
 -----------------------------------------------
-Our most up to date paper describing ESGF can be found `here <http://www.sciencedirect.com/science/article/pii/S0167739X13001477>`_.
 
-CMIP5 in general:
-`Taylor, K.E., R.J. Stouffer, G.A. Meehl: An Overview of CMIP5 and the experiment design.” Bull. Amer. Meteor. Soc., 93, 485-498, doi:10.1175/BAMS-D-11-00094.1, 2012 <http://dx.doi.org/doi:10.1175/BAMS-D-11-00094.1>`_.
+Find here the citation guidelines for `CMIP6 <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html#4-terms-of-use-and-citation-requirements>`_
+and `CMIP5 <https://pcmdi.llnl.gov/mips/cmip5/citation.html>`_.
 
-For many CMIP5 data a DataCite DOI has been assigned providing persistent citation information. These data may therefore be cited. Two ways are possible to find the corresponding DOIs:
+Find here the references for: 
 
-* Via `Data Distribution Centre (DDC) <http://www.ipcc-data.org/sim/gcm_monthly/AR5/Reference-Archive.html>`_: Follow one of the green links in the tables to the landing page of the DOI.
-* Via `CMIP5 Citation Information Service <http://cera-www.dkrz.de/WDCC/CMIP5/Citation.jsp>`_: An existing DOI can be found with help of this service using the tracking_id of the data. The tracking_id is component of the general attribute section of the NetCDF file header.
++ ESGF: "The Earth System Grid Federation: An open infrastructure for access to distributed geospatial data". Future Generation Computer Systems, 36, 400-417, doi:10.1016/j.future.2013.07.002, 2014 `(article) <http://www.sciencedirect.com/science/article/pii/S0167739X13001477>`_.
+
++ CMIP6 "Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization" `(special issue) <https://www.geosci-model-dev.net/special_issue590.html>`_
+
++ CMIP5 `(list or articles) <https://pcmdi.llnl.gov/mips/cmip5/cmip5-references.html>`_
 
 May CMIP5 historical and RCP data be combined to one long time series?
 ----------------------------------------------------------------------
 Yes, if you select matching ensemble members. Look into the header of the RCP data file:
-The attributes parent_experiment_id and parent_experiment_rip name the right ensemble member for combination.
-`[Background information] <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_
+The attributes parent_experiment_id and parent_experiment_rip name the right ensemble member for combination. Find here more
+`background information <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_.
 
 Which height levels do the data have?
 -------------------------------------
@@ -450,7 +467,7 @@ For Programmers: The first value in the tas array is the value for the first tim
 
    | 1 1 1 | 1 1 2 | 1 2 1 | 1 2 2 | 2 1 1 | ...
 
-Technically spoken, the values are written to the array in a nested loop. The innermost loop is lon, the outermost is time with lat in the middle.
+The values are written to the array in a nested loop. The innermost loop is lon, the outermost is time with lat in the middle.
 
 How can I verify that the data have not been updated since I downloaded them?
 -----------------------------------------------------------------------------
@@ -482,7 +499,7 @@ Data downloaded from ESGF are usually in NetCDF format. NetCDF is a header based
 
 An exception is NetCDF OPeNDAP download. Here you can get ASCII CSV, i.e. readable text (Comma Separated Values), or dodc (binary OPeNDAP data format). ASCII CSV can directly be imported, for example, into Microsoft Excel.
 
-I can not process downloaded data
+I cannot process downloaded data
 ---------------------------------
 There might be several reasons and solutions for this issue:
 
@@ -527,7 +544,7 @@ The rotated_fields may have more dimensions than just rotated latitude (X) and r
     unrotated_field = cf.read('unrotated_latlon_file.nc')
     regridded_fields = rotated_fields.regrids(unrotated_field)
 
-More details in the `cf-python documentation <http://cfpython.bitbucket.org/docs/latest/generated/cf.Field.regrids.html>`_
+More details in the `cf-python documentation <https://cfpython.bitbucket.io/docs/latest/field_manipulation.html#regridding-operations>`_
 
 **Solution 3:** Use CDO
 Climate Data Operators (CDO) offer `different ways of regridding <https://code.zmaw.de/boards/2/topics/1283>`_,
@@ -576,7 +593,16 @@ This error has to do with encryption and seems to depend on Firefox version, ope
 
 I have a question or error to report to ESGF
 --------------------------------------------
-Questions and error reports related to ESGF should be sent to esgf-user@lists.llnl.gov.
+Questions and error reports related to the ESGF portals and nodes performance should be sent to esgf-user@lists.llnl.gov. 
+
+For questions related to the models output or performance, please contact the individual modeling centers using the supplied contact information in the file header:
+
++ with netCDF4 in python: dataset_name.contact  
+
++ in shell: ncdump -h dataset_name.nc  | grep contact
+
+
+As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to find or report an issue.
 
 How can I subscribe/unsubscribe esgf-user@lists.llnl.gov?
 ---------------------------------------------------------
@@ -852,11 +878,6 @@ Further example:
         * Or talk to your system administrator about installing a new version of Wget with SSL support
 
 * Solution 4
-    Create the files credentials.pem and esg-truststore.ts as well as the certificates directory with the `ESGF Credentials Provider <https://meteo.unican.es/trac/wiki/ESGFGetCredentials>`_. Put them all into .esg under your home directory. This should also work under Windows.
-
-    .. image:: images/esgf_credentials_provider.png
-
-* Solution 5
     Try to obtain certificates from another system. Run a short download with a Wget script there. Copy the certificates from the other system onto the system, where you want to run the script, in the location ~/.esg/credentials.pem then. Maybe the easiest way is to copy the whole credentials directory .esg
 
 The Wget script does not trust the certificate of the server
@@ -906,8 +927,8 @@ The user's local ESGF certificates directory ~/.esg is incomplete. Example error
 * Solution
     Remove everything under `~/.esg` and run the Wget script again. The .esg will automatically be rebuilt when you run the script again.
 
-Error: "Unknown CA
-^^^^^^^^^^^^^^^^^^
+Error: "Unknown CA"
+^^^^^^^^^^^^^^^^^^^
 
 ::
 
@@ -1111,7 +1132,9 @@ Your request could not be routed to the server. This problem can be caused at th
 
 Checksum Issues or Command not Found
 ------------------------------------
-ESGF Wget scripts contain a SHA256 or MD5 checksum for each download file. After download, the checksum is again calculated on the user's local machine and compared with that in the script. In case of a mismatch the downloaded file is deleted. This shall prevent unwanted bitstream changes during download.
+ESGF Wget scripts contain a SHA256 or MD5 checksum for each download file. After download, the checksum is 
+again calculated on the user's local machine and compared with that in the script. In case of a mismatch the 
+downloaded file is deleted. This shall prevent unwanted bitstream changes during download.
 
 sha256 or md5 fails or file gets downloaded over and over
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1126,7 +1149,17 @@ The SHA256 or MD5 checksum does not match. Example error message:
     The file returns always a different checksum!
     Contact the data owner to verify what is happening.
 
-This or a similar error message is usually thrown if the expected software to calculate the checksum is locally not installed. Seldom, even though this should not happen, data have been altered by staff without updating the corresponding metadata, e.g. version number and checksum. In both cases deletion of the downloaded file and re-download are completely useless but the download script cannot automatically know this.
+This or a similar error message announces a checksum fail, which could be due to:
+
++ the expected software to calculate the checksum is locally not installed
+
++ the file has being accidentally published with the wrong checksum, which requires republishing.
+
++ the file has being published with the correct checksum, but being corrupted on the disk, which is grounds for investigation of the storage media. If the media or file is corrupted, the error can be corrected. No republish is necessary if the path to the file hasn't changed. Seldom, even though this should not happen, data have been altered by staff without updating the corresponding metadata, e.g. version number and checksum. 
+
++ there is an issue with internet quality of the user, proxies which are mangling packets etc.
+
+In all cases, the deletion of the downloaded file and re-download are completely useless but the download script cannot automatically know this.
 
 * Solution 1
     If you additionally received the message "command not found", install the missing SHA or MD5 software, see the next two questions.
@@ -1141,6 +1174,8 @@ This or a similar error message is usually thrown if the expected software to ca
     If the -p option is set, the script does check the sha256 or md5 checksum and provides the result of that comparison, though it leaves the file as it was downloaded.
 
     Hint: If you want to verify a proper download anyway, you may download the file twice and compare the two files. Exactly the same bit change during both downloads is very unlikely. The first download file has to be renamed before you can start the second download since ESGF download scripts are able to recognise already downloaded files by their name.
+    
+    Warning: Unlike host certificate checking, the checksum should not be skipped. All the cases mentioned above are serious, and it probably means the user has data which is not the same thing delivered by the data provider.
 
 #. Solution 3
     Contact the ESGF support. The responsible data node administrator will update the checksum then.
@@ -1362,7 +1397,7 @@ You don't need an account to search for data on a public project. You will need 
 Do I need to join the project serving the data?
 -----------------------------------------------
 You only need to join the project if you plan to edit wiki pages, upload files etc. In case you want to download data from ESGF, you will most likely have to join a data access control group.
-These groups are not the same as CoG projects. For details about data access groups see tutorial :ref:`Authorization for ESGF Data Access <data_access_groups>`..
+These groups are not the same as projects. For details about data access groups see tutorial :ref:`Authorization for ESGF Data Access <data_access_groups>`.
 
 Which group membership is necessary for download of ESGF data?
 --------------------------------------------------------------
@@ -1470,7 +1505,8 @@ There might be several reasons and solutions for this issue:
     Especially now, in the phase of redeployment after ESGF overhaul, many data nodes are still down. The bitstreams of replica and master copy are identical if the number or date of the version is the same.
 
 * Solution 4
-    Look into the errata of the project whether the data you need are withdrawn.
+    Look into the errata of the project whether the data you need are withdrawn. As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to find or report an issue.
+
 
 * Solution 5
     Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.

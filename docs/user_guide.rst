@@ -6,7 +6,7 @@ User Tutorials
 Login/OpenID
 ************
 
-.. note:: In May 2014, CoG began using the ESGF OpenID authentication system. If you have an *older* OpenID you need to re-register.
+.. note:: In May 2014, ESGF portals began using the ESGF OpenID authentication system. If you have an *older* OpenID you need to re-register.
 
 .. note:: OpenIDs issued by earthsystemgrid.org are not supported in the ESGF anymore.
 
@@ -19,7 +19,7 @@ Create an account
 
 #. Create Account
 
-    * Click on the "Create Account" link in the upper right corner of a CoG page
+    * Click on the "Create Account" link in the upper right corner of a portal page
 
     .. image:: images/login_link.png
 
@@ -49,7 +49,7 @@ To join a project or create a project, you must first have an account (step 1).
 
     .. note:: Don't request a new project just to download data, it will not be approved. If you are interested in data, navigate to the project hosting the data and follow their instructions for access.
 
-    * Click the "Register a New Project" link in the upper right-hand corner of the CoG environment
+    * Click the "Register a New Project" link in the upper right-hand corner of the portal environment
 
         .. image:: images/upper_links.png
 
@@ -76,7 +76,7 @@ Authorization for ESGF data access
 Why data access control groups?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Often data users must accept a "terms of use" (e.g. agree to acknowledge the data producers in publications) before downloading data.
-Therefore, the creation of a ESGF-CoG account is normally not sufficient for data access, you also need the authorization to access data.
+Therefore, the creation of a ESGF portal account is normally not sufficient for data access, you also need the authorization to access data.
 User's must join a data access control group for the project they wish to download data from.
 If the right group is not joined, for example, Wget scripts will prematurely fail with a "Forbidden" error message.
 
@@ -112,7 +112,7 @@ Below is a list of access control groups by project:
 
  For example, if you need CMIP5 data, you will need to join either CMIP5 Research or CMIP5 Commercial.
  Which CMIP5 data are restricted to non-commercial research and education and which data can also be used for commercial purposes is tabulated
- in the CMIP5 document `Modeling Groups and their Terms of Use <https://cmip.llnl.gov/cmip5/docs/CMIP5_modeling_groups.pdf>`_.
+ in the CMIP5 document `Modeling Groups and their Terms of Use <https://pcmdi.llnl.gov/mips/cmip5/availability.html>`_.
  A membership in CMIP5 Research is also sufficient for download of data of other MIPs, not just CMIP5. An exception is ISI-MIP.
  Other projects such as CORDEX have their own groups. Which CORDEX data can only be used for non-commercial
  purposes and which thoroughly is listed in the `CORDEX Models overview <https://is-enes-data.github.io/CORDEX_RCMs_info.html>`_.
@@ -120,9 +120,9 @@ Below is a list of access control groups by project:
 
 Who has to join?
 ^^^^^^^^^^^^^^^^
-Everyone who has created a CoG account and wants to download data from one of the projects listed in the table above must join the appropriate
+Everyone who has created a account and wants to download data from one of the projects listed in the table above must join the appropriate
 access control group. This will need to be repeated for each ESGF OpenID since ESGF cannot assign group memberships to persons, only to OpenIDs.
-You will need to do this for each group you need data from. It is not necessary to create a new CoG account for each group. It is possible to have
+You will need to do this for each group you need data from. It is not necessary to create a new account for each group. It is possible to have
 several memberships with one OpenID.
 
 How to join?
@@ -208,7 +208,7 @@ Forgot Password
 * Passwords are associated with particular OpenIDs, which may be issued from an ESGF node other than the one currently logged into.
 * Passwords can only be retrieved if logged into the ESGF node that issued the ESGF OpenID.
 
-#. Click the Login link in the upper right corner of the CoG page
+#. Click the Login link in the upper right corner of the page
 
     .. image:: images/login_link.png
 
@@ -309,17 +309,13 @@ Data Search and Download
 What the ESGF search returns
 ----------------------------
 
-.. warning! the link lands in cog again, i try to find github.io links like the one in sec.
-    Which data access control groups currently exist in ESGF? is-enes-data.github.io/CORDEX_RCMs_info.html
-    but I only found tech info like https://github.com/ESGF/esgf.github.io/wiki/ESGF_Search
-
 #. ESGF Search Basics
 
     The basic unit in ESGF is the dataset. Datasets are collections of individual files.
     Some datasets contain files that represent different variables. Some datasets are restricted to one variable.
-    CMIP5 contained many datasets with multiple variables. To search for individual files, save a dataset to your Data Cart
+    Other, like CMIP5, contained many datasets with multiple variables. To search for individual files, save a dataset to your Data Cart
     and search using the sub-select text box in the Data Cart itself
-    (`see tutorial <https://www.earthsystemcog.org/projects/cog/doc/cmip5_specific_variable>`_)
+    (`see tutorial <https://esgf.github.io/esgf-user-support/user_guide.html#narrow-a-cmip5-data-search-to-just-one-variable>`_).
 
 #. Search Defaults
 
@@ -382,7 +378,7 @@ The download control window of your browser pops up. Start the download.
 Data Cart basics
 ----------------
 
-    * CoG users have a Data Cart associated with their account.
+    * Users have a Data Cart associated with their account.
     * The Data Cart stores links to datasets of interest.
     * The links in the Data Cart persist unless removed.
 
@@ -413,7 +409,7 @@ Data Cart basics
 
 #. Access the the Data Cart
 
-    The link "My Data Cart" is located right next to "My Profile" beneath the CoG logo.
+    The link "My Data Cart" is located right next to "My Profile" beneath the Earth System COG logo.
 
     .. image:: images/datacart_link.png
 
@@ -438,7 +434,7 @@ Narrow a CMIP5 data search to just one variable
 Many users of CMIP5 data have complained that they can not download just one variable without downloading large files containing other variables.
 This is because some CMIP modeling groups bundled their variables together when they published their datasets.
 
-CoG has created a way around this problem.
+There is a way around this problem.
 
 #. Save a dataset to your Data Cart (see Data Cart basics section).
 
@@ -516,7 +512,7 @@ Alternative for step 1
 
     will generate a script for download of all surface temperature files for experiment decadal2000 across all CMIP5 models.
 
-    The blanks in the category name (facet name) you may know from the CoG surface, for example in "Time Frequency", have to be replaced by underscores:
+    The blanks in the category name (facet name) you may know from the ESGF portal surface, for example in "Time Frequency", have to be replaced by underscores:
 
     http://esgf-data.dkrz.de/esg-search/wget?project=CMIP5&experiment=decadal2000&variable=tas&time_frequency=day
 
@@ -773,6 +769,10 @@ This Wget command writes the same text file as shown above in the first text box
 
 The credentials directory .esg may also be copied from another computer where it already exists.
 
+Synda
+^^^^^
+Synda is a tool to download and (one-way) synchronize local data repositories. Find more information `here <https://portal.enes.org/data/data-metadata-service/data-discovery/synda>`_.
+
 Own Python scripts
 ^^^^^^^^^^^^^^^^^^
 The `esgf-pyclient package <https://pypi.org/project/esgf-pyclient/>`_ enables data access via OPeNDAP and also contains an interface to the ESGF Search API (see the ESGF Search RESTful API tutorial section) and a help function for login. A good starting point for an own script using esgf-pyclient is Carsten Ehbrecht's demo notebook. Once installed, this IPython notebook can be run in a web browser. It is an interactive worksheet, which enables a step-by-step run of search, login, data access and processing. Even changes in the `demo script <https://github.com/cehbrecht/demo-notebooks/blob/master/esgf-opendap.ipynb>`_ may be tried.
@@ -814,7 +814,8 @@ The ESGF search RESTful API
 The ESGF search service exposes a RESTful URL that can be used by clients (browsers and desktop clients) to query the contents of the underlying search index, and return results matching the given constraints. Because of the distributed capabilities of the ESGF search, the URL at any Index Node can be used to query that Node only, or all Nodes in the ESGF system.
 
 Syntax
-c
+^^^^^^
+
 The general syntax of the ESGF search service URL is:
 
     ::
@@ -855,23 +856,23 @@ If no parameters at all are specified, the search service will execute a query u
 
 Example:
 
-    http://esgf-node.jpl.nasa.gov/esg-search/search
+    https://esgf-node.llnl.gov/esg-search/search?
 
 Free Text Queries
 ^^^^^^^^^^^^^^^^^
-The keyword parameter query= can be specified to execute a query that matches the given text _ anywhere _ in the records metadata fields. The parameter value can be any expression following the Apache Lucene query syntax (because it is passed "as-is" to the back-end Solr query), and must be URL- encoded. When using the CoG user interface at any ESGF node and project, the "query=" parameter value must be entered in the text field at the top of the page.
+The keyword parameter query= can be specified to execute a query that matches the given text _ anywhere _ in the records metadata fields. The parameter value can be any expression following the Apache Lucene query syntax (because it is passed "as-is" to the back-end Solr query), and must be URL- encoded. When using the portal user interface at any ESGF node and project, the "query=" parameter value must be entered in the text field at the top of the page.
 
 Examples:
 
-* Search for any text, anywhere: http://esgf-node.jpl.nasa.gov/esg-search/search?query=* (the default value of the query parameter)
-* Search for "humidity" in all metadata fields: http://esgf-node.jpl.nasa.gov/esg-search/search?query=humidity
-* Search for the exact sentence "specific humidity" in all metadata fields (the sentence must be surrounded by quotes and URL-encoded): http://esgf-node.jpl.nasa.gov/esg-search/search?query=%22specific%20humidity%22
-* Search for both words "specific" and "humidity", but not necessarily in an exact sequence (must use a space between the two words = this is the same as executing a query with the logical OR): http://esgf-node.jpl.nasa.gov/esg-search/search?query=specific%20humidity
-* Search for the word "observations" ONLY in the metadata field "product" : http://esgf-node.jpl.nasa.gov/esg-search/search?query=product:observations
-* Using logical AND: http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20AND%20humidity (must use upper case "AND")
-* Using logical OR: http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20OR%20humidity (must use upper case "OR"). This is the same as using simply a blank space: http://esgf-node.jpl.nasa.gov/esg-search/search?query=airs%20humidity )
-* Search for a dataset with a specific id: http://esgf-node.jpl.nasa.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.hus.mon.v20110608|esgf-data.jpl.nasa.gov
-* Search for all datasets that match an id pattern: http://esgf-node.jpl.nasa.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.*
+* Search for any text, anywhere: http://esgf-node.llnl.gov/esg-search/search?query=* (the default value of the query parameter)
+* Search for "humidity" in all metadata fields: http://esgf-node.llnl.gov/esg-search/search?query=humidity
+* Search for the exact sentence "specific humidity" in all metadata fields (the sentence must be surrounded by quotes and URL-encoded): http://esgf-node.llnl.gov/esg-search/search?query=%22specific%20humidity%22
+* Search for both words "specific" and "humidity", but not necessarily in an exact sequence (must use a space between the two words = this is the same as executing a query with the logical OR): http://esgf-node.llnl.gov/esg-search/search?query=specific%20humidity
+* Search for the word "observations" ONLY in the metadata field "product" : http://esgf-node.llnl.gov/esg-search/search?query=product:observations
+* Using logical AND: http://esgf-node.llnl.gov/esg-search/search?query=airs%20AND%20humidity (must use upper case "AND")
+* Using logical OR: http://esgf-node.llnl.gov/esg-search/search?query=airs%20OR%20humidity (must use upper case "OR"). This is the same as using simply a blank space: http://esgf-node.llnl.gov/esg-search/search?query=airs%20humidity )
+* Search for a dataset with a specific id: http://esgf-node.llnl.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.hus.mon.v20110608|esgf-data.jpl.nasa.gov
+* Search for all datasets that match an id pattern: http://esgf-node.llnl.gov/esg-search/search?query=id:obs4MIPs.NASA-JPL.AIRS.*
 
 Facet Queries
 ^^^^^^^^^^^^^
@@ -893,16 +894,16 @@ The "type" facet must be always specified as part of any request to the ESGF sea
 
 Examples:
 
-* Single facet query: http://esgf-node.jpl.nasa.gov/esg-search/search?cf_standard_name=air_temperature
-* Query with two different facet constraints: http://esgf-node.jpl.nasa.gov/esg-search/search?cf_standard_name=air_temperature&project=obs4MIPs
-* Combining two values of the same facet with a logical OR: http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&variable=hus&variable=ta (search for all obs4MIPs files that have variable "ta" OR variable "hus")
+* Single facet query: http://esgf-node.llnl.gov/esg-search/search?cf_standard_name=air_temperature
+* Query with two different facet constraints: http://esgf-node.llnl.gov/esg-search/search?cf_standard_name=air_temperature&project=obs4MIPs
+* Combining two values of the same facet with a logical OR: http://esgf-node.llnl.gov/esg-search/search?project=obs4MIPs&variable=hus&variable=ta (search for all obs4MIPs files that have variable "ta" OR variable "hus")
 * Using a negative facet:
 
-    http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&variable=hus&variable=ta&model!=Obs-AIRS (search for all obs4MIPs datasets that have variable ta OR hus, excluding those produced by AIRS)
-    http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&variable!=ta&variable!=huss (search for all obs4MIPs datasets that do not contain neither variable ta nor variable huss)
+    http://esgf-node.llnl.gov/esg-search/search?project=obs4MIPs&variable=hus&variable=ta&model!=Obs-AIRS (search for all obs4MIPs datasets that have variable ta OR hus, excluding those produced by AIRS)
+    http://esgf-node.llnl.gov/esg-search/search?project=obs4MIPs&variable!=ta&variable!=huss (search for all obs4MIPs datasets that do not contain neither variable ta nor variable huss)
 
-* Search a file by its tracking id: http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&tracking_id=2209a0d0-9b77-4ecb-b2ab-b7ae412e7a3f
-* Search a file by its checksum: http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&checksum=83df8ae93e85e26df797d5f770449470987a4ecd8f2d405159995b5cac9a410c
+* Search a file by its tracking id: http://esgf-node.llnl.gov/esg-search/search?type=File&tracking_id=2209a0d0-9b77-4ecb-b2ab-b7ae412e7a3f
+* Search a file by its checksum: http://esgf-node.llnl.gov/esg-search/search?type=File&checksum=83df8ae93e85e26df797d5f770449470987a4ecd8f2d405159995b5cac9a410c
 * Issue a query for all supported facets and their values at one site, while returning no results (note that only facets with one or more values are returned): http://esgf-node.jpl.nasa.gov/esg-search/search?facets=*&limit=0&distrib=false
 
 Facet Listings
@@ -911,17 +912,17 @@ The available facet names and values for searching data within a specific projec
 
 Examples:
 
-* List all obs4MIPs facet names and values: http://esgf-node.jpl.nasa.gov/esg-search/search?project=obs4MIPs&facets=*&limit=0
-* List all CMIP5 facet names and values: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&facets=*&limit=0
+* List all obs4MIPs facet names and values: http://esgf-node.llnl.gov/esg-search/search?project=obs4MIPs&facets=*&limit=0
+* List all CMIP5 facet names and values: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&facets=*&limit=0
 
 The same query with no project constraint will return all facet names and values for ALL data across the federation:
 
-* List ALL facet names and values: http://esgf-node.jpl.nasa.gov/esg-search/search?facets=*&limit=0
+* List ALL facet names and values: http://esgf-node.llnl.gov/esg-search/search?facets=*&limit=0
 
 To retrieve a listing of available values for only a few facets, simply specify a comma-separated list of facet names:
 
-* List all values of model, experiment and project throughout the federation: http://esgf-node.jpl.nasa.gov/esg-search/search?facets=model,experiment,project&limit=0
-* List all values of model, experiment for CMIP5 data: http://esgf-node.jpl.nasa.gov/esg-search/search?facets=model,experiment&project=CMIP5&limit=0
+* List all values of model, experiment and project throughout the federation: http://esgf-node.llnl.gov/esg-search/search?facets=model,experiment,project&limit=0
+* List all values of model, experiment for CMIP5 data: http://esgf-node.llnl.gov/esg-search/search?facets=model,experiment&project=CMIP5&limit=0
 
 Temporal Coverage Queries
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -929,8 +930,8 @@ The keyword parameters start= and/or end= can be used to query for data with tem
 
 Examples:
 
-* Search for data in the past year: http://esgf-node.jpl.nasa.gov/esg-search/search?start=NOW-1YEAR (translates into the constraint datetime_stop:[NOW-1YEAR TO \*] or datetime_stop > NOW-1YEAR)
-* Search for data before the year 2000: http://esgf-node.jpl.nasa.gov/esg-search/search?end=2000-01-01T00:00:00Z (translates into the constraint datetime_start:[* TO 2000-01-01T00:00:00Z] or datetime_start < 2000-01-01)
+* Search for data in the past year: http://esgf-node.llnl.gov/esg-search/search?start=NOW-1YEAR (translates into the constraint datetime_stop:[NOW-1YEAR TO \*] or datetime_stop > NOW-1YEAR)
+* Search for data before the year 2000: http://esgf-node.llnl.gov/esg-search/search?end=2000-01-01T00:00:00Z (translates into the constraint datetime_start:[* TO 2000-01-01T00:00:00Z] or datetime_start < 2000-01-01)
 
 Spatial Coverage Queries
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -938,7 +939,7 @@ The keyword parameter bbox=[west, south, east, north] can be used to query for d
 
 Examples:
 
-    http://esgf-node.jpl.nasa.gov/esg-search/search?bbox=%5B-10,-10,+10,+10%5D ( translates to: east_degrees:[-10 TO *] AND north_degrees:[-10 TO *] AND west_degrees:[* TO 10] AND south_degrees:[* TO 10] )
+    http://esgf-node.llnl.gov/esg-search/search?bbox=%5B-10,-10,+10,+10%5D ( translates to: east_degrees:[-10 TO *] AND north_degrees:[-10 TO *] AND west_degrees:[* TO 10] AND south_degrees:[* TO 10] )
 
 Please note though that NOT all ESGF records contain geo-spatial information, and therefore will not be returned by a geo-spatial search.
 
@@ -948,8 +949,8 @@ The keyword parameter distrib= can be used to control whether the query is execu
 
 Examples:
 
-* Search for all datasets in the federation: http://esgf-node.jpl.nasa.gov/esg-search/search?distrib=true
-* Search for all datasets at one Node only: http://esgf-node.jpl.nasa.gov/esg-search/search?distrib=false
+* Search for all datasets in the federation: http://esgf-node.llnl.gov/esg-search/search?distrib=true
+* Search for all datasets at one Node only: http://esgf-node.llnl.gov/esg-search/search?distrib=false
 
 Shard Queries
 ^^^^^^^^^^^^^
@@ -957,8 +958,8 @@ By default, a distributed query (distrib=true) targets all ESGF Nodes in the cur
 
 Examples:
 
-* Query for CMIP5 data at the PCMDI and CEDA sites only: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&shards=pcmdi.llnl.gov/solr,esgf-index1.ceda.ac.uk/solr
-* Query for all files belonging to a given dataset at one site only: http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&shards=esgf-node.jpl.nasa.gov/solr&dataset_id=obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608|esgf-data.jpl.nasa.gov
+* Query for CMIP5 data at the PCMDI and CEDA sites only: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&shards=pcmdi.llnl.gov/solr,esgf-index1.ceda.ac.uk/solr
+* Query for all files belonging to a given dataset at one site only: http://esgf-node.llnl.gov/esg-search/search?type=File&shards=esgf-node.jpl.nasa.gov/solr&dataset_id=obs4MIPs.NASA-JPL.TES.tro3.mon.v20110608|esgf-data.jpl.nasa.gov
 
 Replica Queries
 ^^^^^^^^^^^^^^^
@@ -971,11 +972,11 @@ By default, a query returns all records (masters and replicas) matching the sear
 
 Examples:
 
-* Search for all datasets in the system (masters and replicas): http://esgf-node.jpl.nasa.gov/esg-search/search
-* Search for just master datasets, no replicas: http://esgf-node.jpl.nasa.gov/esg-search/search?replica=false
-* Search for just replica datasets, no masters: http://esgf-node.jpl.nasa.gov/esg-search/search?replica=true
-* Search for the master AND replicas of a given dataset: http://esgf-node.jpl.nasa.gov/esg-search/search?master_id=cmip5.output1.LASG-CESS.FGOALS-g2.midHolocene.3hr.land.3hr.r1i1p1
-* Search for the master and replicas of a given file: http://esgf-node.jpl.nasa.gov/esg-search/search?type=File&master_id=cmip5.output1.MIROC.MIROC5.decadal1978.mon.ocean.Omon.r4i1p1.wfo_Omon_MIROC5_decadal1978_r4i1p1_197901-198812.nc
+* Search for all datasets in the system (masters and replicas): http://esgf-node.llnl.gov/esg-search/search
+* Search for just master datasets, no replicas: http://esgf-node.llnl.gov/esg-search/search?replica=false
+* Search for just replica datasets, no masters: http://esgf-node.llnl.gov/esg-search/search?replica=true
+* Search for the master AND replicas of a given dataset: http://esgf-node.llnl.gov/esg-search/search?master_id=cmip5.output1.LASG-CESS.FGOALS-g2.midHolocene.3hr.land.3hr.r1i1p1
+* Search for the master and replicas of a given file: http://esgf-node.llnl.gov/esg-search/search?type=File&master_id=cmip5.output1.MIROC.MIROC5.decadal1978.mon.ocean.Omon.r4i1p1.wfo_Omon_MIROC5_decadal1978_r4i1p1_197901-198812.nc
 
 Latest and Version Queries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -983,9 +984,9 @@ By default, a query to the ESGF search services will return all versions of the 
 
 Examples:
 
-* Search for all latest CMIP5 datasets: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&latest=true
-* Search for all versions of a given dataset: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&master_id=cmip5.output1.MOHC.HadCM3.decadal1972.day.atmos.day.r10i2p1&facets=version
-* Search for a specific version of a given dataset: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&master_id=cmip5.output1.NSF-DOE-NCAR.CESM1-CAM5-1-FV2.historical.mon.atmos.Amon.r1i1p1&version=20120712
+* Search for all latest CMIP5 datasets: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&latest=true
+* Search for all versions of a given dataset: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&master_id=cmip5.output1.MOHC.HadCM3.decadal1972.day.atmos.day.r10i2p1&facets=version
+* Search for a specific version of a given dataset: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&master_id=cmip5.output1.NSF-DOE-NCAR.CESM1-CAM5-1-FV2.historical.mon.atmos.Amon.r1i1p1&version=20120712
 
 Retracted Queries
 ^^^^^^^^^^^^^^^^^
@@ -995,7 +996,7 @@ Retracted datasets are marked by "retracted=true", and also have the flag "lates
 
 Example:
 
-* Search for all retracted datasets in the CMIP5 project, across all nodes: https://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&retracted=true
+* Search for all retracted datasets in the CMIP5 project, across all nodes: https://esgf-node.llnl.gov/esg-search/search?project=CMIP5&retracted=true
 
 Minimum and Maximum Version Queries
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1005,8 +1006,8 @@ The special keywords "min_version" and "max_version" can be used to query for al
 
 Examples:
 
-* All datasets with version less than a given date: https://esgf-node.jpl.nasa.gov/esg-search/search?max_version=20150101
-* All Obs4MIPs datasets with version between two dates: http://esgf-node.jpl.nasa.gov/esg-search/search?min_version=20120101&max_version=20131231&project=obs4MIPs
+* All datasets with version less than a given date: https://esgf-node.llnl.gov/esg-search/search?max_version=20150101
+* All Obs4MIPs datasets with version between two dates: http://esgf-node.llnl.gov/esg-search/search?min_version=20120101&max_version=20131231&project=obs4MIPs
 
 Results Pagination
 ^^^^^^^^^^^^^^^^^^
@@ -1014,8 +1015,8 @@ By default, a query to the search service will return the first 10 records match
 
 Examples:
 
-* Query for 100 CMIP5 datasets in the system: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&limit=100
-* Query for the next 100 CMIP5 datasets in the system: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&limit=100&offset=100
+* Query for 100 CMIP5 datasets in the system: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&limit=100
+* Query for the next 100 CMIP5 datasets in the system: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&limit=100&offset=100
 
 Output Format
 ^^^^^^^^^^^^^
@@ -1023,8 +1024,8 @@ The keyword parameter output= can be used to request results in a specific outpu
 
 Examples:
 
-* Request results in Solr XML format: http://esgf-node.jpl.nasa.gov/esg-search/search?format=application%2Fsolr%2Bxml
-* Request results in Solr JSON format: http://esgf-node.jpl.nasa.gov/esg-search/search?format=application%2Fsolr%2Bjson
+* Request results in Solr XML format: http://esgf-node.llnl.gov/esg-search/search?format=application%2Fsolr%2Bxml
+* Request results in Solr JSON format: http://esgf-node.llnl.gov/esg-search/search?format=application%2Fsolr%2Bjson
 
 Returned Metadata Fields
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1032,8 +1033,8 @@ By default, all available metadata fields are returned for each result. The keyw
 
 Examples:
 
-* Return all available metadata fields for CMIP5 datasets: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&fields=*
-* Return only the "model" and "experiment"  fields for CMIP5 datasets: http://esgf-node.jpl.nasa.gov/esg-search/search?project=CMIP5&fields=model,experiment
+* Return all available metadata fields for CMIP5 datasets: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&fields=*
+* Return only the "model" and "experiment"  fields for CMIP5 datasets: http://esgf-node.llnl.gov/esg-search/search?project=CMIP5&fields=model,experiment
 
 Identifiers
 ^^^^^^^^^^^
@@ -1129,7 +1130,7 @@ Project Browser
 | "This" View 	                   | "All" View                                 | "My" View                                    | "Tags" View                   |
 +----------------------------------+--------------------------------------------+----------------------------------------------+-------------------------------+
 |Shows the project's parent, peer, | Shows all the projects currently hosted on | Lists all the project a particular user is a | Lists projects with saved tags|
-|and child projects                | CoG                                        | member of                                    |                               |
+|and child projects                | the system                                 | member of                                    |                               |
 +----------------------------------+--------------------------------------------+----------------------------------------------+-------------------------------+
 
     .. image:: images/all.png
@@ -1190,7 +1191,7 @@ Wiki Editing
 
 How to use the built-in wiki system
 ----------------------------------------------
-* Freeform content in CoG is created using a built-in wiki.
+* Freeform content is created using a built-in wiki.
 * You must be logged in to edit wiki pages
 * You must be a Contributor or Admin to edit wiki pages.
 * The wiki can be edited via a WYSIWYG GUI or via HTML (by choosing the "Source" button in the wiki editor).
@@ -1383,7 +1384,7 @@ See How to use the built-in wiki system section.
 
 Share a wiki page with Facebook or Twitter
 ------------------------------------------
-- CoG has implemented hooks for sharing wiki pages with Facebook and Twitter.
+- There are hooks for sharing wiki pages with Facebook and Twitter.
 - You must already have accounts with these services.
 - Social networking Icons are located at the bottom of every wiki page.
 
