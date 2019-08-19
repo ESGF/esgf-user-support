@@ -1,0 +1,34 @@
+.. _user_guide:
+
+User Tutorials
+==============
+
+Files
+********
+
+Upload a File
+-------------
+
+#. ESGF Search Basics
+
+    The basic
+    `see tutorial <https://www.earthsystemcog.org/>`_
+
+    .. image:: images/search_options.png
+
+    ::
+
+        bash wget-xxx.sh
+
+
+
+Access via an ESGF portal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Update a File on the system
+---------------------------
+Update File metadata
+--------------------
+Search for a File
+-----------------
+Delete a File
+-------------

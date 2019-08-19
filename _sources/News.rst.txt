@@ -1,0 +1,26 @@
+.. _user_guide:
+
+User Tutorials
+==============
+
+News
+****
+
+Add a news item
+---------------
+
+#. ESGF Search Basics
+
+    The basic
+    `see tutorial <https://www.earthsystemcog.org/>`_
+
+    .. image:: images/search_options.png
+
+    ::
+
+        bash wget-xxx.sh
+
+
+
+Access via an ESGF portal
+^^^^^^^^^^^^^^^^^^^^^^^^^
