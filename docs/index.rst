@@ -13,6 +13,7 @@ Contents:
 
    user_guide
    faq
+   videos
 
 Indices and tables
 ==================
