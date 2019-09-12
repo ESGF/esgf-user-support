@@ -102,8 +102,6 @@ CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the mo
 + with netCDF4 in python: dataset_name.contact  
 
 + in shell: ncdump -h dataset_name.nc  | grep contact
-  
-
 
 Where are CORDEX regional climate models described?
 ---------------------------------------------------
@@ -559,6 +557,12 @@ please contact the individual modeling centers using the supplied contact inform
 ::
 
     $ ncdump -h <filename>  | grep contact
+
+What do 'x' and 'y' refer to in the ocean variables 'hfx' and 'hfy' in CMIP5?
+-----------------------------------------------------------------------------
+'x' and 'y' refer to grid directions, which may vary from one grid cell to another.
+This is explained in the definitions of the standard names, e.g. for ocean_heat_x_transport: 'x' indicates a vector component along the grid x-axis,
+positive with increasing x.
 
 
 ESGF General
