@@ -103,6 +103,7 @@ CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the mo
 
 + in shell: ncdump -h dataset_name.nc  | grep contact
 
+
 Where are CORDEX regional climate models described?
 ---------------------------------------------------
 A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
