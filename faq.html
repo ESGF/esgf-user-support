@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#how-can-i-calculate-a-multi-year-average-for-each-month-of-year">How can I calculate a multi-year average for each month of year?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back">How can CORDEX data on a grid with rotated poles be rotated back?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#there-seems-to-be-missing-data-for-some-models">There seems to be missing data for some models.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5">What do &#8216;x&#8217; and &#8216;y&#8217; refer to in the ocean variables &#8216;hfx&#8217; and &#8216;hfy&#8217; in CMIP5?</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-general">ESGF General</a><ul>
@@ -1152,6 +1153,12 @@ please contact the individual modeling centers using the supplied contact inform
 <div class="highlight-default"><div class="highlight"><pre><span></span>$ ncdump -h &lt;filename&gt;  | grep contact
 </pre></div>
 </div>
+</div>
+<div class="section" id="what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5">
+<h3>What do &#8216;x&#8217; and &#8216;y&#8217; refer to in the ocean variables &#8216;hfx&#8217; and &#8216;hfy&#8217; in CMIP5?<a class="headerlink" href="#what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5" title="Permalink to this headline">¶</a></h3>
+<p>&#8216;x&#8217; and &#8216;y&#8217; refer to grid directions, which may vary from one grid cell to another.
+This is explained in the definitions of the standard names, e.g. for ocean_heat_x_transport: &#8216;x&#8217; indicates a vector component along the grid x-axis,
+positive with increasing x.</p>
 </div>
 </div>
 <div class="section" id="esgf-general">
