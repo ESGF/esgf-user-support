@@ -771,11 +771,18 @@ The credentials directory .esg may also be copied from another computer where it
 
 Synda
 ^^^^^
-Synda is a tool to download and (one-way) synchronize local data repositories. Find more information `here <https://portal.enes.org/data/data-metadata-service/data-discovery/synda>`_.
+Synda is a data synchronization and download tool that can be used by users in order to easily download files hosted on ESGF data nodes. 
+
+Starting August 2019, It can be obtained via conda package to ease installation for average users and still maintain a reliable release workflow to data managers wishing to replicate data across the grid. 
+
+Further information about the tool (installation, configuration, usage, contact and contribution to the tool) can be found `here <https://portal.enes.org/data/data-metadata-service/data-discovery/synda>`_.
 
 Own Python scripts
 ^^^^^^^^^^^^^^^^^^
-The `esgf-pyclient package <https://pypi.org/project/esgf-pyclient/>`_ enables data access via OPeNDAP and also contains an interface to the ESGF Search API (see the ESGF Search RESTful API tutorial section) and a help function for login. A good starting point for an own script using esgf-pyclient is Carsten Ehbrecht's demo notebook. Once installed, this IPython notebook can be run in a web browser. It is an interactive worksheet, which enables a step-by-step run of search, login, data access and processing. Even changes in the `demo script <https://github.com/cehbrecht/demo-notebooks/blob/master/esgf-opendap.ipynb>`_ may be tried.
+The `esgf-pyclient package <https://pypi.org/project/esgf-pyclient/>`_ enables data access via OPeNDAP and also contains an interface to the ESGF Search API (see the ESGF Search RESTful API tutorial section) and a help function for login. Find the documentation `here <https://esgf-pyclient.readthedocs.io/en/latest/>`_.
+
+
+A good starting point for an own script using esgf-pyclient is Carsten Ehbrecht's demo notebook. Once installed, this IPython notebook can be run in a web browser. It is an interactive worksheet, which enables a step-by-step run of search, login, data access and processing. Even changes in the `demo script <https://github.com/cehbrecht/demo-notebooks/blob/master/esgf-opendap.ipynb>`_ may be tried.
 
 For installation of the demo notebook go to `Carsten's GitHub repository <https://github.com/cehbrecht/demo-notebooks/>`_, press the green button "Clone or download" to get the software and follow the instructions in the README.md file, i.e. install Conda and run the three given initialization commands.
 
