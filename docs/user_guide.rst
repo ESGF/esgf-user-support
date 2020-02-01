@@ -87,8 +87,6 @@ Below is a list of access control groups by project:
 +----------+----------------------------------------+
 | Project  | Group Name                             |
 +==========+========================================+
-| CMIP5    | CMIP5 Research, CMIP5 Commercial       |
-+----------+----------------------------------------+
 | CORDEX   | CORDEX Research, CORDEX Commercial     |
 +----------+----------------------------------------+
 | EUCLIPSE | CMIP5 Research                         |
@@ -97,25 +95,18 @@ Below is a list of access control groups by project:
 +----------+----------------------------------------+
 | LUCID    | CMIP5 Research                         |
 +----------+----------------------------------------+
-| Obs4MIPS | CMIP5 Research, NASA OBS               |
-+----------+----------------------------------------+
 | PMIP3    | CMIP5 Research                         |
 +----------+----------------------------------------+
 | TAMIP    | CMIP5 Research                         |
-+----------+----------------------------------------+
-| ACME     | ACME                                   |
 +----------+----------------------------------------+
 | ISI-MIP  | ISI-MIP Research, ISI-MIP Unrestricted |
 +----------+----------------------------------------+
 | specs    | SPECS                                  |
 +----------+----------------------------------------+
 
- For example, if you need CMIP5 data, you will need to join either CMIP5 Research or CMIP5 Commercial.
- Which CMIP5 data are restricted to non-commercial research and education and which data can also be used for commercial purposes is tabulated
- in the CMIP5 document `Modeling Groups and their Terms of Use <https://pcmdi.llnl.gov/mips/cmip5/availability.html>`_.
- A membership in CMIP5 Research is also sufficient for download of data of other MIPs, not just CMIP5. An exception is ISI-MIP.
+ For example, membership in the CMIP5 Research group is required for download of data from the "sattilite MIPs" from the CMIP5 era, with the exception of ISI-MIP.
  Other projects such as CORDEX have their own groups. Which CORDEX data can only be used for non-commercial
- purposes and which thoroughly is listed in the `CORDEX Models overview <https://is-enes-data.github.io/CORDEX_RCMs_info.html>`_.
+ purposes and which thoroughly is listed in the `CORDEX Models overview <https://is-enes-data.github.io/CORDEX_RCMs_info.html>`_.  The CMIP projects (3-6) datasets are available without restriction, as are input4MIPs and obs4MIPs.
 
 
 Who has to join?
@@ -464,7 +455,8 @@ Before being able to execute a Wget download script, the following pre-requisite
     * A UNIX-like operating system (Linux or Mac OS). Under Windows, Linux may be installed as a virtual machine (recommended). Many users instead utilize a UNIX emulation under Windows, e.g. Cygwin (not recommended but maybe easier than a Linux installation)
     * Wget application (version 1.12 or later) compliled with the OpenSSL libraries. Under Linux, this is already installed with one of the base packages usually. Nevertheless, Mac users may have to install Wget first (details see ESGF Wget FAQ). Cygwin users have to install the package Web-Wget (again run the Cygwin setup executable to install it).
     * Tools for calculation of SHA256 and MD5 checksums. Under Linux and Cygwin, this is already installed usually. Mac users may have to install these tools first.
-    * For use of Wget scripts in the default mode additionally Oracle Java, version 1.7 or newer. OpenJRE is not sufficient. Java is not needed if Wget scripts are used with the option -H (details see below).
+    * For use of Wget scripts in the default mode additionally Oracle Java, version 1.7 or newer. OpenJRE is not sufficient. Java is not needed if Wget scripts are used with the options -H or -s (details see below).
+* For unrestricted data, the user should use the -s option.  No authorization is required.
 * The user must have been registered with one of the ESGF sites (portals). To register with an ESGF node, simply use a browser to visit the portal's home page and follow the Create Account link.
 * The user must have been authorized to access the desired data, see tutorial "Authorization for ESGF data access".
 * Network port 7512 (TCP) has to be open.
@@ -485,8 +477,14 @@ Before being able to execute a Wget download script, the following pre-requisite
 
 #. Run the script
 
-    Open a terminal window. Mac users can find a terminal icon in the Launchpad. If Oracle Java is available, run the script in the default mode:
+    Open a terminal window. Mac users can find a terminal icon in the Launchpad.
 
+    If the datasets to be downloaded are unrestricted, run the script with the option -s.
+    ::
+
+        bash wget-xxx.sh -s
+
+    If Oracle Java is available, run the script in the default mode:
     ::
 
         bash wget-xxx.sh
@@ -798,7 +796,7 @@ A user is allowed to start a Globus data transfer request by following the "[Glo
 
 There are two options for submitting this request.
 
-* **Option 1: Web Download.** The user submits the download request entirely through the web browser. He/she will be asked to sign-in to the Globus site (if not signed in already), and to select the destination folder on their laptop
+* **Option 1: Web Download.** The user submits the download request entirely through the web browser. He/she will be asked to sign-in to the Globus site (if not signed in already), and to select the destination Collection/Endpoint and folder using the Globus File Manager.  The destination could be a remote location, eg. a compute center or Globus Connect Personal that runs on a local system, eg. the user's laptop.
 * **Option 2: Script Download.** The user will download a Python script that he/she can later execute to submit the request. Python must be already installed on the user's machine, but no special libraries are needed. The general syntax to execute the script is: python globus_download_yyyymmddhhmmss.py -e <your globus endpoint> -u your globus username> -p <target directory>. For example: python globus_download_20150101033422.py -e globuser#themac -u globuser
 
     .. image:: images/globus_page.png
