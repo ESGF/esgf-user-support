@@ -658,6 +658,18 @@ This is a current error on the Web DataCart. Internally, script creation is init
 
     If everything is ok, you will end with a wget_script.sh that you can execute to download the full collection of datasets.
 
+General Wget Runtime Issues
+---------------------------
+
+Do I need to use my username / password?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.
+
+    ::
+
+        $ bash wget-xxx.sh -s
+
+
 Issues with Certificates or Java
 --------------------------------
 
