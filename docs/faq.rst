@@ -48,18 +48,23 @@ CMIP and CORDEX variables obey the CF standard incl. the `CF Standard Name Table
 What is the relation between Variable, CF Standard Name and Variable Long Name?
 -------------------------------------------------------------------------------
 The search category Variable only contains abbreviations. The CF Standard Name obeys the `CF Standard Name Table <http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html>`_
-(CF for "Climate and Forecast"). For CMIP5 variables, the relation between all three, Variable, CF Standard Name and Variable Long Name,
-is tabulated in the `CMIP5 Standard Output document <http://cmip.llnl.gov/cmip5/docs/standard_output.pdf>`_,
-for CORDEX variables see the `CORDEX Variables Requirement Table <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_. Find CMIP6 variables information here: 
-`CMIP6 variable name <http://clipc-services.ceda.ac.uk/dreq/mipVars.html>`_, `CMIP6 variable frequency <http://clipc-services.ceda.ac.uk/dreq/index/miptable.html>`_, 
-and `CMIP6 Excel table <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html>`_.
+(CF for "Climate and Forecast"). 
 
-Where can I find CMIP5 scenarios?
++ For CMIP5 variables, the relation between all three, Variable, CF Standard Name and Variable Long Name, is tabulated in the `CMIP5 Overview page <https://pcmdi.llnl.gov/mips/cmip5/index.html>`_, in the Output Requirements section under `Standard output <https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf?id=73>`_.
+
++ For CORDEX variables see the `CORDEX Variables Requirement Table <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_. 
+
++ For CMIP6 variables see here: `CMIP6 variable name <http://clipc-services.ceda.ac.uk/dreq/mipVars.html>`_, `CMIP6 variable frequency <http://clipc-services.ceda.ac.uk/dreq/index/miptable.html>`_, and `CMIP6 Excel table <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html>`_.
+
+Where can I find CMIP scenarios?
 ---------------------------------
-In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed, with many models even both.
+In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed by many models.
 Some of the decadal experiments are Near Term future scenarios. CMIP5 Long Term scenarios are the Representative Concentration Pathways (RCPs),
 which represent the full bandwidth of future emission trajectories for the years 2006-2100, some continued until 2300.
 Find more information on `here <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_.
+
+CMIP6 does not have experiments based on the RCP that were used for CMIP5, because scenarios are based on the Shared Socioeconomic Pathways
+(SSP) instead (see "ssp..." under the Experiment ID). The reference paper is `The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6 <https://www.geosci-model-dev.net/9/3461/2016/gmd-9-3461-2016.html>`_ as part of the `CMIP6 Special Issue <https://www.geosci-model-dev.net/special_issue590.html>`_ “Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization”.
 
 Where are CMIP5 historicalAA data?
 ----------------------------------
