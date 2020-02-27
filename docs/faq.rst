@@ -3,12 +3,46 @@
 FAQs
 ====
 
-This FAQ focuses on question concerning the performance of the ESGF portals. For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:
+This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes. 
+
+How to contact the modelling group
+**********************************
+
+For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:
 
 + with netCDF4 in python: dataset_name.contact  
 
-+ in shell: ncdump -h dataset_name.nc  | grep contact
-  
++ in shell: 
+::
+
+    $ ncdump -h dataset_name.nc  | grep contact
+
+The contact of the CMIP6 modelling groups is under the "[Show citation]" button in the list of "Full Dataset Services" in the information below the result of your search.
+
+How to contact us
+******************
+
+For questions regarding the data management and the performance of ESGF portals and nodes, please send an email to the user support emailing list: esgf-user@lists.llnl.gov. 
+
+We are the data managers of several petabytes of data, in order to reproduce your issue we need the following information: 
+
+- Your browser and operating sytem, e.g. Firefox 68.0.2 on Ubuntu 18.04.
+
+- Your OpenID.
+
+- The complete name of the file(s) or data set(s) you attempt to download.
+
+- The host node, for instance, esgf-index1.ceda.ac.uk, esgf-node.llnl.gov,...
+
+- The steps required to reproduce the problem.
+
+- The exact error message. Run the script in debug mode to get a detailed error message: 
+
+::
+
+    $ bash wget-xxx.sh -H -d
+
+If you want to meet the community and be informed of downtime notifications and updates, please subscribe to the emailing list `here <https://esgf.llnl.gov/mailing-list.html>`_.
 
 Data
 ****
