@@ -92,6 +92,8 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="user_guide.html">User Tutorials</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">FAQs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-contact-the-modelling-group">How to contact the modelling group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-contact-us">How to contact us</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#data">Data</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#what-are-ensembles">What are ensembles?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#do-means-over-ensembles-exist">Do means over ensembles exist?</a></li>
@@ -291,11 +293,36 @@
             
   <div class="section" id="faqs">
 <span id="faq"></span><h1>FAQs<a class="headerlink" href="#faqs" title="Permalink to this headline">¶</a></h1>
-<p>This FAQ focuses on question concerning the performance of the ESGF portals. For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:</p>
+<p>This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes.</p>
+<div class="section" id="how-to-contact-the-modelling-group">
+<h2>How to contact the modelling group<a class="headerlink" href="#how-to-contact-the-modelling-group" title="Permalink to this headline">¶</a></h2>
+<p>For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:</p>
 <ul class="simple">
 <li><p>with netCDF4 in python: dataset_name.contact</p></li>
-<li><p>in shell: ncdump -h dataset_name.nc  | grep contact</p></li>
+<li><p>in shell:</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ncdump -h dataset_name.nc  | grep contact
+</pre></div>
+</div>
+<p>The contact of the CMIP6 modelling groups is under the “[Show citation]” button in the list of “Full Dataset Services” in the information below the result of your search.</p>
+</div>
+<div class="section" id="how-to-contact-us">
+<h2>How to contact us<a class="headerlink" href="#how-to-contact-us" title="Permalink to this headline">¶</a></h2>
+<p>For questions regarding the data management and the performance of ESGF portals and nodes, please send an email to the user support emailing list: <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a>.</p>
+<p>We are the data managers of several petabytes of data, in order to reproduce your issue we need the following information:</p>
+<ul class="simple">
+<li><p>Your browser and operating sytem, e.g. Firefox 68.0.2 on Ubuntu 18.04.</p></li>
+<li><p>Your OpenID.</p></li>
+<li><p>The complete name of the file(s) or data set(s) you attempt to download.</p></li>
+<li><p>The host node, for instance, esgf-index1.ceda.ac.uk, esgf-node.llnl.gov,…</p></li>
+<li><p>The steps required to reproduce the problem.</p></li>
+<li><p>The exact error message. Run the script in debug mode to get a detailed error message:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -H -d
+</pre></div>
+</div>
+<p>If you want to meet the community and be informed of downtime notifications and updates, please subscribe to the emailing list <a class="reference external" href="https://esgf.llnl.gov/mailing-list.html">here</a>.</p>
+</div>
 <div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
 <p>This FAQ focuses on questions concerning data, e.g. data format, data processing, CMIP and CORDEX data.</p>
