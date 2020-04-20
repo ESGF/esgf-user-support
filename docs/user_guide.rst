@@ -3,6 +3,11 @@
 User Tutorials
 ==============
 
+ESGF manages several petabytes of data data distributed in several federated data centers, also called data nodes. 
+
+Some nodes also host portals to facilitate the search and download, find the list of nodes with portals and the link to the portals here: `<https://esgf.llnl.gov/nodes.html>`_.
+
+
 Login/OpenID
 ************
 
@@ -296,6 +301,12 @@ Internet Explorer
 
 Data Search and Download
 ************************
+
+IMPORTANT TIPS:
+
++ Enable 'Show All Replicas' in the faceted search engine to increase the chances of finding a suitable node that hosts the data of your interest. 
+
++ Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ to find the nodes that are down. 
 
 What the ESGF search returns
 ----------------------------

@@ -3,12 +3,19 @@
 FAQs
 ====
 
-This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes. 
+IMPORTANT TIPS:
+
++ Enable 'Show All Replicas' in the faceted search engine to increase the chances of finding a suitable node that hosts the data of your interest. 
+
++ Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ to find the nodes that are down. 
+
+
+This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes. For questions regarding models performance, please contact the individual modeling centers (see just below).
 
 How to contact the modelling group
 **********************************
 
-For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:
+The contact information is in the header of the downloaded NetCDF file:
 
 + with netCDF4 in python: dataset_name.contact  
 
