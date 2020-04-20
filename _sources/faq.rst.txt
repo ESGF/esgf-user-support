@@ -3,12 +3,53 @@
 FAQs
 ====
 
-This FAQ focuses on question concerning the performance of the ESGF portals. For questions regarding models performance, please contact the individual modeling centers using the supplied contact information in the header of the downloaded NetCDF file:
+IMPORTANT TIPS:
+
++ Enable 'Show All Replicas' in the faceted search engine to increase the chances of finding a suitable node that hosts the data of your interest. 
+
++ Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ to find the nodes that are down. 
+
+
+This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes. For questions regarding models performance, please contact the individual modeling centers (see just below).
+
+How to contact the modelling group
+**********************************
+
+The contact information is in the header of the downloaded NetCDF file:
 
 + with netCDF4 in python: dataset_name.contact  
 
-+ in shell: ncdump -h dataset_name.nc  | grep contact
-  
++ in shell: 
+::
+
+    $ ncdump -h dataset_name.nc  | grep contact
+
+The contact of the CMIP6 modelling groups is under the "[Show citation]" button in the list of "Full Dataset Services" in the information below the result of your search.
+
+How to contact us
+******************
+
+For questions regarding the data management and the performance of ESGF portals and nodes, please send an email to the user support emailing list: esgf-user@lists.llnl.gov. 
+
+We are the data managers of several petabytes of data, in order to reproduce your issue we need the following information: 
+
+- Your browser and operating sytem, e.g. Firefox 68.0.2 on Ubuntu 18.04.
+
+- Your OpenID.
+
+- The complete name of the file(s) or data set(s) you attempt to download.
+
+- The host node, for instance, esgf-index1.ceda.ac.uk, esgf-node.llnl.gov,...
+
+- The steps required to reproduce the problem.
+
+- The exact error message. Run the script in debug mode to get a detailed error message: 
+
+::
+
+    $ bash wget-xxx.sh -H -d
+
+If you want to meet the community and be informed of downtime notifications and updates, please subscribe to the emailing list `here <https://esgf.llnl.gov/mailing-list.html>`_.
 
 Data
 ****
@@ -48,18 +89,23 @@ CMIP and CORDEX variables obey the CF standard incl. the `CF Standard Name Table
 What is the relation between Variable, CF Standard Name and Variable Long Name?
 -------------------------------------------------------------------------------
 The search category Variable only contains abbreviations. The CF Standard Name obeys the `CF Standard Name Table <http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html>`_
-(CF for "Climate and Forecast"). For CMIP5 variables, the relation between all three, Variable, CF Standard Name and Variable Long Name,
-is tabulated in the `CMIP5 Standard Output document <http://cmip.llnl.gov/cmip5/docs/standard_output.pdf>`_,
-for CORDEX variables see the `CORDEX Variables Requirement Table <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_. Find CMIP6 variables information here: 
-`CMIP6 variable name <http://clipc-services.ceda.ac.uk/dreq/mipVars.html>`_, `CMIP6 variable frequency <http://clipc-services.ceda.ac.uk/dreq/index/miptable.html>`_, 
-and `CMIP6 Excel table <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html>`_.
+(CF for "Climate and Forecast"). 
 
-Where can I find CMIP5 scenarios?
++ For CMIP5 variables, the relation between all three, Variable, CF Standard Name and Variable Long Name, is tabulated in the `CMIP5 Overview page <https://pcmdi.llnl.gov/mips/cmip5/index.html>`_, in the Output Requirements section under `Standard output <https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf?id=73>`_.
+
++ For CORDEX variables see the `CORDEX Variables Requirement Table <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_. 
+
++ For CMIP6 variables see here: `CMIP6 variable name <http://clipc-services.ceda.ac.uk/dreq/mipVars.html>`_, `CMIP6 variable frequency <http://clipc-services.ceda.ac.uk/dreq/index/miptable.html>`_, and `CMIP6 Excel table <https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html>`_.
+
+Where can I find CMIP scenarios?
 ---------------------------------
-In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed, with many models even both.
+In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed by many models.
 Some of the decadal experiments are Near Term future scenarios. CMIP5 Long Term scenarios are the Representative Concentration Pathways (RCPs),
 which represent the full bandwidth of future emission trajectories for the years 2006-2100, some continued until 2300.
 Find more information on `here <https://verc.enes.org/data/enes-model-data/cmip5/datastructure>`_.
+
+CMIP6 does not have experiments based on the RCP that were used for CMIP5, because scenarios are based on the Shared Socioeconomic Pathways
+(SSP) instead (see "ssp..." under the Experiment ID). The reference paper is `The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6 <https://www.geosci-model-dev.net/9/3461/2016/gmd-9-3461-2016.html>`_ as part of the `CMIP6 Special Issue <https://www.geosci-model-dev.net/special_issue590.html>`_ “Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization”.
 
 Where are CMIP5 historicalAA data?
 ----------------------------------
@@ -102,7 +148,6 @@ CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the mo
 + with netCDF4 in python: dataset_name.contact  
 
 + in shell: ncdump -h dataset_name.nc  | grep contact
-  
 
 
 Where are CORDEX regional climate models described?
@@ -561,6 +606,13 @@ please contact the individual modeling centers using the supplied contact inform
     $ ncdump -h <filename>  | grep contact
 
 
+What do 'x' and 'y' refer to in the ocean variables 'hfx' and 'hfy' in CMIP5?
+-----------------------------------------------------------------------------
+'x' and 'y' refer to grid directions, which may vary from one grid cell to another.
+This is explained in the definitions of the standard names, e.g. for ocean_heat_x_transport: 'x' indicates a vector component along the grid x-axis,
+positive with increasing x.
+
+
 ESGF General
 ************
 
@@ -651,6 +703,18 @@ This is a current error on the Web DataCart. Internally, script creation is init
         wget --post-file post_data_dataset_id.txt "http://esgf-data.dkrz.de/esg-search/wget/?distrib=false&limit=10000" -O wget_script.sh
 
     If everything is ok, you will end with a wget_script.sh that you can execute to download the full collection of datasets.
+
+General Wget Runtime Issues
+---------------------------
+
+Do I need to use my username / password?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.
+
+    ::
+
+        $ bash wget-xxx.sh -s
+
 
 Issues with Certificates or Java
 --------------------------------
