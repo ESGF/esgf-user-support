@@ -1214,11 +1214,17 @@ More details in the <a class="reference external" href="https://code.zmaw.de/pro
 </div>
 <div class="section" id="there-seems-to-be-missing-data-for-some-models">
 <h3>There seems to be missing data for some models.<a class="headerlink" href="#there-seems-to-be-missing-data-for-some-models" title="Permalink to this headline">¶</a></h3>
-<p>Some models do not provide data for all years. For questions related to the models and possibly missing data,
-please contact the individual modeling centers using the supplied contact information in the file header.</p>
+<p><strong>Solution 1:</strong>
+Some models do not provide data for all years. See the model documentation in the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem.
+You can also find the model output requirements for CMIP5 here: <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/requirements.html">https://pcmdi.llnl.gov/mips/cmip5/requirements.html</a> and
+for CMIP6 here:  <a class="reference external" href="https://pcmdi.llnl.gov/CMIP6/Guide/modelers.html#4-model-output-fields">https://pcmdi.llnl.gov/CMIP6/Guide/modelers.html#4-model-output-fields</a>.</p>
+<p>In general, questions related to the models and possibly missing data should be addressed to the modeling centers using the supplied contact information in the file header.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ncdump -h &lt;filename&gt;  | grep contact
 </pre></div>
 </div>
+<p>The contact of the CMIP6 modelling groups is under the “[Show citation]” button in the list of “Full Dataset Services” in the information below the result of your search.</p>
+<p><strong>Solution 2:</strong>
+Look into the errata of the project, it might be a known issue. As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to look up or report an issue.</p>
 </div>
 <div class="section" id="what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5">
 <h3>What do ‘x’ and ‘y’ refer to in the ocean variables ‘hfx’ and ‘hfy’ in CMIP5?<a class="headerlink" href="#what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5" title="Permalink to this headline">¶</a></h3>
@@ -2268,7 +2274,7 @@ Especially now, in the phase of redeployment after ESGF overhaul, many data node
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 4</dt><dd><p>Look into the errata of the project whether the data you need are withdrawn. As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to find or report an issue.</p>
+<dt>Solution 4</dt><dd><p>Look into the errata of the project whether the data you need are withdrawn. As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to look up or report an issue.</p>
 </dd>
 </dl>
 </li>

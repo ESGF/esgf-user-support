@@ -599,12 +599,21 @@ More details in the `CDO documentation <https://code.zmaw.de/projects/cdo/embedd
 
 There seems to be missing data for some models.
 -----------------------------------------------
-Some models do not provide data for all years. For questions related to the models and possibly missing data,
-please contact the individual modeling centers using the supplied contact information in the file header.
 
+**Solution 1:**
+Some models do not provide data for all years. See the model documentation in the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem.
+You can also find the model output requirements for CMIP5 here: `<https://pcmdi.llnl.gov/mips/cmip5/requirements.html>`_ and
+for CMIP6 here:  `<https://pcmdi.llnl.gov/CMIP6/Guide/modelers.html#4-model-output-fields>`_.
+
+In general, questions related to the models and possibly missing data should be addressed to the modeling centers using the supplied contact information in the file header.
 ::
 
     $ ncdump -h <filename>  | grep contact
+
+The contact of the CMIP6 modelling groups is under the “[Show citation]” button in the list of “Full Dataset Services” in the information below the result of your search.
+
+**Solution 2:**
+Look into the errata of the project, it might be a known issue. As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to look up or report an issue.
 
 
 What do 'x' and 'y' refer to in the ocean variables 'hfx' and 'hfy' in CMIP5?
@@ -1582,7 +1591,7 @@ There might be several reasons and solutions for this issue:
     Especially now, in the phase of redeployment after ESGF overhaul, many data nodes are still down. The bitstreams of replica and master copy are identical if the number or date of the version is the same.
 
 * Solution 4
-    Look into the errata of the project whether the data you need are withdrawn. As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to find or report an issue.
+    Look into the errata of the project whether the data you need are withdrawn. As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to look up or report an issue.
 
 
 * Solution 5
