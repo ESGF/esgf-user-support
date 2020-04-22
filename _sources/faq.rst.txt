@@ -29,7 +29,8 @@ The contact of the CMIP6 modelling groups is under the "[Show citation]" button 
 How to contact us
 ******************
 
-For questions regarding the data management and the performance of ESGF portals and nodes, please send an email to the user support emailing list: esgf-user@lists.llnl.gov. 
+For questions regarding the data management and the performance of ESGF portals and nodes, 
+please send an email to the user support emailing list: esgf-user@lists.llnl.gov. 
 
 We are the data managers of several petabytes of data, in order to reproduce your issue we need the following information: 
 
@@ -1119,7 +1120,7 @@ Example error message:
     Under Mac OS this error may be thrown if Wget is not installed. Please install it, see question `Error: "wget: command not found"`_.
 
 * Solution 5
-    This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished. Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ page to find the nodes that are down. 
+    This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished. Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ page to find the nodes that are down. In the mean time, please enable ‘Show All Replicas’ in the faceted search engine to increase the chances of finding a suitable node that hosts the data of your interest.
 
 * Solution 6
     The data node is online, but the local operating system is outdated and does not recognize the data nodes's web certificate when trying to establish a secure connection via wget.  In this case, upgrade the local operating system, try a different client system.  This scenario is revealed if running the script in debug mode (-d).
@@ -1130,6 +1131,18 @@ Example error message:
         wget-XXXXXX -H -i
 
 In all other cases contact ESGF support esgf-user@lists.llnl.gov
+
+Error: "HTTP request to OpenID Provider service failed"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* Solution 1
+    Most of the data sets are unrestricted, for instance, CMIP3-6, obs4MIPs, input4MIPs, and E3SM. However you need to instruct the Wget script to bypass the login prompt using the option -s.
+
+    ::
+
+        $ bash wget-xxx.sh -s
+
+* Solution 2
+    Please send an email to the user support emailing list: esgf-user@lists.llnl.gov, the certificate of the node might have expired.
 
 Error: "401 Unauthorized"
 ^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -162,6 +162,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#issues-with-option-h">Issues with Option -H</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#error-retry-failed">Error: “Retry failed”</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#error-http-request-to-openid-relying-party-service-failed">Error: “HTTP request to OpenID Relying Party service failed”</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#error-http-request-to-openid-provider-service-failed">Error: “HTTP request to OpenID Provider service failed”</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#error-401-unauthorized">Error: “401 Unauthorized”</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#how-to-avoid-entering-openid-and-password-before-executing-a-wget-script">How to avoid entering OpenID and password before executing a Wget script?</a></li>
 </ul>
@@ -313,7 +314,8 @@
 </div>
 <div class="section" id="how-to-contact-us">
 <h2>How to contact us<a class="headerlink" href="#how-to-contact-us" title="Permalink to this headline">¶</a></h2>
-<p>For questions regarding the data management and the performance of ESGF portals and nodes, please send an email to the user support emailing list: <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a>.</p>
+<p>For questions regarding the data management and the performance of ESGF portals and nodes,
+please send an email to the user support emailing list: <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a>.</p>
 <p>We are the data managers of several petabytes of data, in order to reproduce your issue we need the following information:</p>
 <ul class="simple">
 <li><p>Your browser and operating sytem, e.g. Firefox 68.0.2 on Ubuntu 18.04.</p></li>
@@ -1771,7 +1773,7 @@ Certificate could not be retrieved
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 5</dt><dd><p>This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished. Visit the <a class="reference external" href="https://esgf-node.llnl.gov/status/">Data Nodes Status</a> page to find the nodes that are down.</p>
+<dt>Solution 5</dt><dd><p>This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished. Visit the <a class="reference external" href="https://esgf-node.llnl.gov/status/">Data Nodes Status</a> page to find the nodes that are down. In the mean time, please enable ‘Show All Replicas’ in the faceted search engine to increase the chances of finding a suitable node that hosts the data of your interest.</p>
 </dd>
 </dl>
 </li>
@@ -1786,6 +1788,24 @@ The following workaround using the -i option has shown to work when using -H:</p
 </li>
 </ul>
 <p>In all other cases contact ESGF support <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a></p>
+</div>
+<div class="section" id="error-http-request-to-openid-provider-service-failed">
+<h4>Error: “HTTP request to OpenID Provider service failed”<a class="headerlink" href="#error-http-request-to-openid-provider-service-failed" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><dl>
+<dt>Solution 1</dt><dd><p>Most of the data sets are unrestricted, for instance, CMIP3-6, obs4MIPs, input4MIPs, and E3SM. However you need to instruct the Wget script to bypass the login prompt using the option -s.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Solution 2</dt><dd><p>Please send an email to the user support emailing list: <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;lists&#46;llnl&#46;gov">esgf-user<span>&#64;</span>lists<span>&#46;</span>llnl<span>&#46;</span>gov</a>, the certificate of the node might have expired.</p>
+</dd>
+</dl>
+</li>
+</ul>
 </div>
 <div class="section" id="error-401-unauthorized">
 <h4>Error: “401 Unauthorized”<a class="headerlink" href="#error-401-unauthorized" title="Permalink to this headline">¶</a></h4>
