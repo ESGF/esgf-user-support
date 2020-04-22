@@ -7,7 +7,7 @@ IMPORTANT TIPS:
 
 + Enable 'Show All Replicas' in the faceted search engine to increase the chances of finding a suitable node that hosts the data of your interest. 
 
-+ Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ to find the nodes that are down. 
++ Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ page to find the nodes that are down. 
 
 
 This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes. For questions regarding models performance, please contact the individual modeling centers (see just below).
@@ -1119,7 +1119,7 @@ Example error message:
     Under Mac OS this error may be thrown if Wget is not installed. Please install it, see question `Error: "wget: command not found"`_.
 
 * Solution 5
-    This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished.
+    This error may also be thrown if a node is not fully online, for example, the node is offline for maintenance.  Please wait until maintenance has been finished. Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ page to find the nodes that are down. 
 
 * Solution 6
     The data node is online, but the local operating system is outdated and does not recognize the data nodes's web certificate when trying to establish a secure connection via wget.  In this case, upgrade the local operating system, try a different client system.  This scenario is revealed if running the script in debug mode (-d).
