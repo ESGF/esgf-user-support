@@ -3,10 +3,11 @@
 User Tutorials
 ==============
 
-ESGF manages several petabytes of data data distributed in several federated data centers, also called data nodes. 
+ESGF manages several petabytes of data distributed in several federated data centers, also called data nodes. 
 
 Some nodes also host portals to facilitate the search and download, find the list of nodes with portals and the link to the portals here: `<https://esgf.llnl.gov/nodes.html>`_.
 
+Visit the `Data Nodes Status <https://esgf-node.llnl.gov/status/>`_ page to find the nodes that are down, usually due to maintaince. 
 
 Login/OpenID
 ************
