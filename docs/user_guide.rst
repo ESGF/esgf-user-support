@@ -456,7 +456,6 @@ Before being able to execute a Wget download script, the following pre-requisite
     * Wget application (version 1.12 or later) compliled with the OpenSSL libraries. Under Linux, this is already installed with one of the base packages usually. Nevertheless, Mac users may have to install Wget first (details see ESGF Wget FAQ). Cygwin users have to install the package Web-Wget (again run the Cygwin setup executable to install it).
     * Tools for calculation of SHA256 and MD5 checksums. Under Linux and Cygwin, this is already installed usually. Mac users may have to install these tools first.
     * For use of Wget scripts in the default mode additionally Oracle Java, version 1.7 or newer. OpenJRE is not sufficient. Java is not needed if Wget scripts are used with the options -H or -s (details see below).
-* For unrestricted data, the user should use the -s option.  No authorization is required.
 * The user must have been registered with one of the ESGF sites (portals). To register with an ESGF node, simply use a browser to visit the portal's home page and follow the Create Account link.
 * The user must have been authorized to access the desired data, see tutorial "Authorization for ESGF data access".
 * Network port 7512 (TCP) has to be open.
@@ -479,12 +478,12 @@ Before being able to execute a Wget download script, the following pre-requisite
 
     Open a terminal window. Mac users can find a terminal icon in the Launchpad.
 
-    If the datasets to be downloaded are unrestricted, run the script with the option -s.
+    If the datasets to be downloaded are unrestricted, run the script with the option -s. No authorization is required. When using this method for download, ensure you are not using additional options, eg., -s and -H should never be combined
     ::
 
         bash wget-xxx.sh -s
 
-    If Oracle Java is available, run the script in the default mode:
+    For restricted data, if Oracle Java is available, run the script in the default mode:
     ::
 
         bash wget-xxx.sh
@@ -549,7 +548,10 @@ Wget script options
 
         bash wget-##############.sh -h
 
-     (-h for help). Different options can be combined. The following options are important:
+     (-h for help). Different options can be combined in some circumstances. The following options are important:
+
+    -s, unrestricted data 
+        Use this option if you know the data to be downloaded is unrestricted.  This includes CMIP3-6, E3SM, input- and obs- 4MIPs projects, more coming soon. When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined.  
 
     -d, the debug option
         This option causes the script to send more than the usual response to standard output. Use

@@ -657,7 +657,7 @@ General Wget Runtime Issues
 
 Do I need to use my username / password?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.
+If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
 
     ::
 
@@ -666,6 +666,8 @@ If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4
 
 Issues with Certificates or Java
 --------------------------------
+
+Note that these issues deal with restricted project downloads.  For unrestricted downloads see the  -s  option description above.
 
 Error: "Unsupported major.minor version 51.0"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1050,6 +1052,9 @@ Example error message:
     download failed
     done
 
+* Before considering any of the Solutions below, ensure that the data you are trying to download is from a restricted project, meaning that a login is required, if not use the -s option (see above). When using this method for download, ensure you are not using additional options eg. -s and -H should never be combined
+
+
 * Solution 1
     The user name alone is not sufficient. Enter your complete, correctly spelled OpenID behind
 
@@ -1081,7 +1086,7 @@ In all other cases contact ESGF support esgf-user@lists.llnl.gov
 
 Error: "401 Unauthorized"
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-Access to ESGF data is usually restricted. Before you can download data, you have to join a data access control group since acknowledgement of a policy is a condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script and options -H -d, you will get an error message like this:
+Access to ESGF data is restricted for some projects. Before you can download data, you have to join a data access control group since acknowledgement of a policy is a condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script and options -H -d, you will get an error message like this:
 
 ::
 
@@ -1296,7 +1301,7 @@ Other Wget Script Issues
 
 Error: "ERROR 403: Forbidden"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Access to ESGF data is usually restricted. Before you can download data, you have to join a data access control group since acknowledgement of a policy is condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script, you will get an error message like this:
+Access to ESGF data is restricted for some data projects. Before you can download data, you have to join a data access control group since acknowledgement of a policy is condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script, you will get an error message like this:
 
 ::
 
@@ -1403,7 +1408,7 @@ ESGF Login/Registration
 
 Do I have to have a user account to search for data?
 ----------------------------------------------------
-You don't need an account to search for data on a public project. You will need an account to download data. You should get an account on the node you wish to download data from.
+You don't need an account to search for data on a public project. You will need an account to download data from some data projects or to use the data cart feature. You should get an account on the node you wish to download data from.
 
 
 Do I need to join the project serving the data?
