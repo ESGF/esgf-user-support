@@ -4,6 +4,10 @@ ESGF Video Tutorials
 
 Several video tutorials have been created and uploaded to YouTube on how to get data from ESGF.
 
+ESGF Data Access
+----------------
+- `ESGF Data Access <https://www.youtube.com/watch?v=mtqyex1MKyU&t=1s>`_, part of the Webinar on Access to CORDEX and CMIP6 Climate data by the `IS-ENES3 <https://is.enes.org/>`_ project, the European part of ESFG.
+
 
 Globus Download from LLNL
 -------------------------
@@ -15,6 +19,6 @@ Globus Download from LLNL
 NSC/LiU Download
 ----------------
 - `Using Singularity and Docker Containers for downloading ESGF data <https://www.youtube.com/watch?v=FbviMoloXQU>`_
-- `Discovering and downloading data from ESGF <https://www.youtube.com/watch?v=PTtWfUni0sA>`_
+- `Discovering and downloading data from ESGF: CMIP5 example <https://www.youtube.com/watch?v=PTtWfUni0sA>`_ Note: registration is not longer needed for CMIP5 download.
 
 
