@@ -143,19 +143,20 @@ belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=
 
 Where can I find more CORDEX 3-hourly or 6-hourly data?
 -------------------------------------------------------
-CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modeling centers according to the
+CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modelling centers according to the
 `CORDEX Archive Design <http://is-enes-data.github.io/cordex_archive_specifications.pdf>`_. Please contact the modeling groups. Find the supplied contact information in the header of the downloaded NetCDF file:
 
 + with netCDF4 in python: dataset_name.contact  
 
 + in shell: ncdump -h dataset_name.nc  | grep contact
 
+or write to the CORDEX user support mailing list datasupport@cordex.org.
 
 Where are CORDEX regional climate models described?
 ---------------------------------------------------
 A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
 header with a global attribute "references", which usually contains a web address. You may see this and other attributes without a file download:
-Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section "Global Attributes".
+Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section "Global Attributes". Write to the CORDEX user support mailing list datasupport@cordex.org for further information.
 
 Where can I find the land sea mask or landfrac?
 -----------------------------------------------
