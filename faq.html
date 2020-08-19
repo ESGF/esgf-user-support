@@ -413,18 +413,19 @@ belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=
 </div>
 <div class="section" id="where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">
 <h3>Where can I find more CORDEX 3-hourly or 6-hourly data?<a class="headerlink" href="#where-can-i-find-more-cordex-3-hourly-or-6-hourly-data" title="Permalink to this headline">¶</a></h3>
-<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modeling centers according to the
+<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modelling centers according to the
 <a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design</a>. Please contact the modeling groups. Find the supplied contact information in the header of the downloaded NetCDF file:</p>
 <ul class="simple">
 <li><p>with netCDF4 in python: dataset_name.contact</p></li>
 <li><p>in shell: ncdump -h dataset_name.nc  | grep contact</p></li>
 </ul>
+<p>or write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a>.</p>
 </div>
 <div class="section" id="where-are-cordex-regional-climate-models-described">
 <h3>Where are CORDEX regional climate models described?<a class="headerlink" href="#where-are-cordex-regional-climate-models-described" title="Permalink to this headline">¶</a></h3>
 <p>A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
 header with a global attribute “references”, which usually contains a web address. You may see this and other attributes without a file download:
-Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”.</p>
+Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”. Write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a> for further information.</p>
 </div>
 <div class="section" id="where-can-i-find-the-land-sea-mask-or-landfrac">
 <h3>Where can I find the land sea mask or landfrac?<a class="headerlink" href="#where-can-i-find-the-land-sea-mask-or-landfrac" title="Permalink to this headline">¶</a></h3>
@@ -1326,7 +1327,7 @@ The subject should be blank. The body should contain only the following:</p>
 <h3>General Wget Runtime Issues<a class="headerlink" href="#general-wget-runtime-issues" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="do-i-need-to-use-my-username-password">
 <h4>Do I need to use my username / password?<a class="headerlink" href="#do-i-need-to-use-my-username-password" title="Permalink to this headline">¶</a></h4>
-<p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.</p>
+<p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
 </pre></div>
@@ -1336,6 +1337,7 @@ The subject should be blank. The body should contain only the following:</p>
 </div>
 <div class="section" id="issues-with-certificates-or-java">
 <h3>Issues with Certificates or Java<a class="headerlink" href="#issues-with-certificates-or-java" title="Permalink to this headline">¶</a></h3>
+<p>Note that these issues deal with restricted project downloads.  For unrestricted downloads see the  -s  option description above.</p>
 <div class="section" id="error-unsupported-major-minor-version-51-0">
 <h4>Error: “Unsupported major.minor version 51.0”<a class="headerlink" href="#error-unsupported-major-minor-version-51-0" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
@@ -1755,6 +1757,7 @@ Certificate could not be retrieved
 </pre></div>
 </div>
 <ul>
+<li><p>Before considering any of the Solutions below, ensure that the data you are trying to download is from a restricted project, meaning that a login is required, if not use the -s option (see above). When using this method for download, ensure you are not using additional options eg. -s and -H should never be combined</p></li>
 <li><dl>
 <dt>Solution 1</dt><dd><p>The user name alone is not sufficient. Enter your complete, correctly spelled OpenID behind</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">your</span> <span class="n">openid</span> <span class="p">:</span>
@@ -1815,7 +1818,7 @@ The following workaround using the -i option has shown to work when using -H:</p
 </div>
 <div class="section" id="error-401-unauthorized">
 <h4>Error: “401 Unauthorized”<a class="headerlink" href="#error-401-unauthorized" title="Permalink to this headline">¶</a></h4>
-<p>Access to ESGF data is usually restricted. Before you can download data, you have to join a data access control group since acknowledgement of a policy is a condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script and options -H -d, you will get an error message like this:</p>
+<p>Access to ESGF data is restricted for some projects. Before you can download data, you have to join a data access control group since acknowledgement of a policy is a condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script and options -H -d, you will get an error message like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span> <span class="n">request</span> <span class="n">sent</span><span class="p">,</span> <span class="n">awaiting</span> <span class="n">response</span><span class="o">...</span> <span class="mi">401</span> <span class="n">Unauthorized</span>
 <span class="n">Username</span><span class="o">/</span><span class="n">Password</span> <span class="n">Authentication</span> <span class="n">Failed</span><span class="o">.</span>
 </pre></div>
@@ -2042,7 +2045,7 @@ Sometimes the number of download files will still exceed 1000. Scripts for huge 
 <h3>Other Wget Script Issues<a class="headerlink" href="#other-wget-script-issues" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="error-error-403-forbidden">
 <h4>Error: “ERROR 403: Forbidden”<a class="headerlink" href="#error-error-403-forbidden" title="Permalink to this headline">¶</a></h4>
-<p>Access to ESGF data is usually restricted. Before you can download data, you have to join a data access control group since acknowledgement of a policy is condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script, you will get an error message like this:</p>
+<p>Access to ESGF data is restricted for some data projects. Before you can download data, you have to join a data access control group since acknowledgement of a policy is condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script, you will get an error message like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Connecting</span> <span class="n">to</span> <span class="n">esg</span><span class="o">.</span><span class="n">cnrm</span><span class="o">-</span><span class="n">game</span><span class="o">-</span><span class="n">meteo</span><span class="o">.</span><span class="n">fr</span> <span class="p">(</span><span class="n">esg</span><span class="o">.</span><span class="n">cnrm</span><span class="o">-</span><span class="n">game</span><span class="o">-</span><span class="n">meteo</span><span class="o">.</span><span class="n">fr</span><span class="p">)</span><span class="o">|</span><span class="mf">193.49</span><span class="o">.</span><span class="mf">97.157</span><span class="o">|</span><span class="p">:</span><span class="mf">443.</span><span class="o">..</span> <span class="n">connected</span><span class="o">.</span>
 <span class="n">HTTP</span> <span class="n">request</span> <span class="n">sent</span><span class="p">,</span> <span class="n">awaiting</span> <span class="n">response</span><span class="o">...</span> <span class="mi">403</span> <span class="n">Forbidden</span>
 <span class="mi">2016</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">27</span> <span class="mi">21</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span><span class="mi">18</span> <span class="n">ERROR</span> <span class="mi">403</span><span class="p">:</span> <span class="n">Forbidden</span><span class="o">.</span>
@@ -2149,7 +2152,7 @@ $ ./wget-xxx.sh
 <h2>ESGF Login/Registration<a class="headerlink" href="#esgf-login-registration" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="do-i-have-to-have-a-user-account-to-search-for-data">
 <h3>Do I have to have a user account to search for data?<a class="headerlink" href="#do-i-have-to-have-a-user-account-to-search-for-data" title="Permalink to this headline">¶</a></h3>
-<p>You don’t need an account to search for data on a public project. You will need an account to download data. You should get an account on the node you wish to download data from.</p>
+<p>You don’t need an account to search for data on a public project. You will need an account to download data from some data projects or to use the data cart feature. You should get an account on the node you wish to download data from.</p>
 </div>
 <div class="section" id="do-i-need-to-join-the-project-serving-the-data">
 <h3>Do I need to join the project serving the data?<a class="headerlink" href="#do-i-need-to-join-the-project-serving-the-data" title="Permalink to this headline">¶</a></h3>
