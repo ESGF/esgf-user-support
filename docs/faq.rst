@@ -957,6 +957,14 @@ Further example:
 * Solution 4
     Try to obtain certificates from another system. Run a short download with a Wget script there. Copy the certificates from the other system onto the system, where you want to run the script, in the location ~/.esg/credentials.pem then. Maybe the easiest way is to copy the whole credentials directory .esg
 
+
+* Solution 5
+    If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
+
+    ::
+
+        $ bash wget-xxx.sh -s
+
 The Wget script does not trust the certificate of the server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Example error message:
@@ -1144,6 +1152,14 @@ Example error message:
     ::
 
         wget-XXXXXX -H -i
+
+* Solution 7
+    If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
+
+    ::
+
+        $ bash wget-xxx.sh -s
+
 
 In all other cases contact ESGF support esgf-user@lists.llnl.gov
 
