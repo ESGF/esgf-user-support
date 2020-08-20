@@ -413,19 +413,18 @@ belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=
 </div>
 <div class="section" id="where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">
 <h3>Where can I find more CORDEX 3-hourly or 6-hourly data?<a class="headerlink" href="#where-can-i-find-more-cordex-3-hourly-or-6-hourly-data" title="Permalink to this headline">¶</a></h3>
-<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modelling centers according to the
+<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modeling centers according to the
 <a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design</a>. Please contact the modeling groups. Find the supplied contact information in the header of the downloaded NetCDF file:</p>
 <ul class="simple">
 <li><p>with netCDF4 in python: dataset_name.contact</p></li>
 <li><p>in shell: ncdump -h dataset_name.nc  | grep contact</p></li>
 </ul>
-<p>or write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a>.</p>
 </div>
 <div class="section" id="where-are-cordex-regional-climate-models-described">
 <h3>Where are CORDEX regional climate models described?<a class="headerlink" href="#where-are-cordex-regional-climate-models-described" title="Permalink to this headline">¶</a></h3>
 <p>A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
 header with a global attribute “references”, which usually contains a web address. You may see this and other attributes without a file download:
-Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”. Write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a> for further information.</p>
+Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”.</p>
 </div>
 <div class="section" id="where-can-i-find-the-land-sea-mask-or-landfrac">
 <h3>Where can I find the land sea mask or landfrac?<a class="headerlink" href="#where-can-i-find-the-land-sea-mask-or-landfrac" title="Permalink to this headline">¶</a></h3>
@@ -1577,6 +1576,14 @@ Certificate could not be retrieved
 </dd>
 </dl>
 </li>
+<li><dl>
+<dt>Solution 5</dt><dd><p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
 <div class="section" id="the-wget-script-does-not-trust-the-certificate-of-the-server">
@@ -1790,6 +1797,14 @@ Certificate could not be retrieved
 <dt>Solution 6</dt><dd><p>The data node is online, but the local operating system is outdated and does not recognize the data nodes’s web certificate when trying to establish a secure connection via wget.  In this case, upgrade the local operating system, try a different client system.  This scenario is revealed if running the script in debug mode (-d).
 The following workaround using the -i option has shown to work when using -H:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span><span class="o">-</span><span class="n">XXXXXX</span> <span class="o">-</span><span class="n">H</span> <span class="o">-</span><span class="n">i</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>Solution 7</dt><dd><p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
 </pre></div>
 </div>
 </dd>
