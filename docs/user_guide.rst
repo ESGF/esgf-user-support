@@ -1117,14 +1117,16 @@ The only syntax differences with respect to the search URL are:
 * The keyword parameter download_structure= is used for defining a relative directory structure for the download by using the facets value (i.e. of Files and not Datasets).
 * The keyword parameter download_emptypath= is used to define what to do when download_structure is set and the facet returned has no value (for example, when mixing files from CMIP5 and obs4MIP and selecting instrument as a facet value will result in all CMIP5 files returning an empty value)
 
-A typical workflow pattern consists in first identifying all datasets or files matching some scientific criteria, then changing the request URL from "/search?" to "/wget?" to generate the corresponding shell scripts for bulk download of files.
+A typical workflow pattern consists in first identifying all datasets or files matching some scientific criteria, then changing the request URL from "/search?" to "/wget?" to generate the corresponding shell scripts for bulk download of files. 
 
 Examples:
 
 * Download all obs4MIPs files from the JPL node with variable "hus" : http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&project=obs4MIPs&distrib=false
 * Download the files as in the previous examples, and organize them in a directory structure such as project/product/institute/time_frequency : http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&project=obs4MIPs&distrib=false&download_structure=project,product,institute,time_frequency
 
-For more information, see also the Wget FAQ.
+You can only filter the datasets (but not files) in this way. ESGF search consists of three different search cores and each core has a unique set of facets. Searching on ".../esg-search/search?..." will search for datasets by default while ".../esg-search/wget?..." will search for files. Unfortunately the "start=..." facet is not existent in the file metadata. For that kind of queries you might want to have a look at the ESGF Pyclient, a python based ESGF search package (see `this section <https://esgf.github.io/esgf-user-support/user_guide.html#own-python-scripts>`_ in the tutorial).
+
+For more information, see also the `Wget FAQs <https://esgf.github.io/esgf-user-support/faq.html#esgf-wget>`_.
 
 Projects
 ********

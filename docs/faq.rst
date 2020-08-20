@@ -689,6 +689,12 @@ How can I subscribe/unsubscribe esgf-user@lists.llnl.gov?
 ESGF Wget
 *********
 
+Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?
+-----------------------------------------------------------------------------------------------------------------------------------
+Unfortunately it is not possible to generate wget scripts for a certain period. You can only filter the datasets. For the files, you would need
+to remove those you don't need from the wget script. See the `Wget scripting <https://esgf.github.io/esgf-user-support/user_guide.html#wget-scripting>`_  information in the `RESTful API <https://esgf.github.io/esgf-user-support/user_guide.html#the-esgf-search-restful-api>`_ section in the tutorial.
+
+
 Issues with Script Generation
 -----------------------------
 
@@ -1085,7 +1091,7 @@ After an unsuccessful try, the script tries again to download a file, also witho
 One possible reason for this error is a missing membership in a data access control group. In debug mode, the script additionally throws the error message "403 Forbidden" in this case.
 
 * Solution
-    Join a matching :ref:`data access control group <data_access_groups>`.
+    Join a matching :ref:`data access control group <data_access_groups>`_.
 
 Server issues may also affect script runs with option -H. If you get the additional error message "Self-signed certificate encountered" when you use debug option -d, try the following.
 
