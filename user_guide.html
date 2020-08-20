@@ -883,7 +883,6 @@ This is because some CMIP modeling groups bundled their variables together when 
 </ul>
 </div></blockquote>
 </li>
-<li><p>For unrestricted data, the user should use the -s option.  No authorization is required.</p></li>
 <li><p>The user must have been registered with one of the ESGF sites (portals). To register with an ESGF node, simply use a browser to visit the portal’s home page and follow the Create Account link.</p></li>
 <li><p>The user must have been authorized to access the desired data, see tutorial “Authorization for ESGF data access”.</p></li>
 <li><p>Network port 7512 (TCP) has to be open.</p></li>
@@ -907,11 +906,11 @@ This is because some CMIP modeling groups bundled their variables together when 
 <li><p>Run the script</p>
 <blockquote>
 <div><p>Open a terminal window. Mac users can find a terminal icon in the Launchpad.</p>
-<p>If the datasets to be downloaded are unrestricted, run the script with the option -s.</p>
+<p>If the datasets to be downloaded are unrestricted, run the script with the option -s. No authorization is required. When using this method for download, ensure you are not using additional options, eg., -s and -H should never be combined</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="n">xxx</span><span class="o">.</span><span class="n">sh</span> <span class="o">-</span><span class="n">s</span>
 </pre></div>
 </div>
-<p>If Oracle Java is available, run the script in the default mode:</p>
+<p>For restricted data, if Oracle Java is available, run the script in the default mode:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="n">xxx</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
@@ -952,10 +951,12 @@ This is because some CMIP modeling groups bundled their variables together when 
 <dt>Wget script options</dt><dd><p>ESGF Wget scripts can be run with options. For an overview of possible options type-in.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="c1">##############.sh -h</span>
 
-<span class="p">(</span><span class="o">-</span><span class="n">h</span> <span class="k">for</span> <span class="n">help</span><span class="p">)</span><span class="o">.</span> <span class="n">Different</span> <span class="n">options</span> <span class="n">can</span> <span class="n">be</span> <span class="n">combined</span><span class="o">.</span> <span class="n">The</span> <span class="n">following</span> <span class="n">options</span> <span class="n">are</span> <span class="n">important</span><span class="p">:</span>
+<span class="p">(</span><span class="o">-</span><span class="n">h</span> <span class="k">for</span> <span class="n">help</span><span class="p">)</span><span class="o">.</span> <span class="n">Different</span> <span class="n">options</span> <span class="n">can</span> <span class="n">be</span> <span class="n">combined</span> <span class="ow">in</span> <span class="n">some</span> <span class="n">circumstances</span><span class="o">.</span> <span class="n">The</span> <span class="n">following</span> <span class="n">options</span> <span class="n">are</span> <span class="n">important</span><span class="p">:</span>
 </pre></div>
 </div>
 <dl>
+<dt>-s, unrestricted data</dt><dd><p>Use this option if you know the data to be downloaded is unrestricted.  This includes CMIP3-6, E3SM, input- and obs- 4MIPs projects, more coming soon. When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined.</p>
+</dd>
 <dt>-d, the debug option</dt><dd><p>This option causes the script to send more than the usual response to standard output. Use</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">bash</span> <span class="n">wget</span><span class="o">-</span><span class="c1">##############.sh -H -d</span>
 </pre></div>
@@ -1493,7 +1494,8 @@ type=Dataset (return results of type “Dataset”)</p>
 <li><p>Download all obs4MIPs files from the JPL node with variable “hus” : <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false">http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false</a></p></li>
 <li><p>Download the files as in the previous examples, and organize them in a directory structure such as project/product/institute/time_frequency : <a class="reference external" href="http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false&amp;download_structure=project,product,institute,time_frequency">http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&amp;project=obs4MIPs&amp;distrib=false&amp;download_structure=project,product,institute,time_frequency</a></p></li>
 </ul>
-<p>For more information, see also the Wget FAQ.</p>
+<p>You can only filter the datasets (but not files) in this way. ESGF search consists of three different search cores and each core has a unique set of facets. Searching on “…/esg-search/search?…” will search for datasets by default while “…/esg-search/wget?…” will search for files. Unfortunately the “start=…” facet is not existent in the file metadata. For that kind of queries you might want to have a look at the ESGF Pyclient, a python based ESGF search package (see <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#own-python-scripts">this section</a> in the tutorial).</p>
+<p>For more information, see also the <a class="reference external" href="https://esgf.github.io/esgf-user-support/faq.html#esgf-wget">Wget FAQs</a>.</p>
 </div>
 </div>
 </div>

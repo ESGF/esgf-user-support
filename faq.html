@@ -135,6 +135,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-wget">ESGF Wget</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000">Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#issues-with-script-generation">Issues with Script Generation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#i-get-the-error-request-uri-too-large">I get the error: “Request-URI Too Large”</a></li>
 </ul>
@@ -413,18 +414,19 @@ belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=
 </div>
 <div class="section" id="where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">
 <h3>Where can I find more CORDEX 3-hourly or 6-hourly data?<a class="headerlink" href="#where-can-i-find-more-cordex-3-hourly-or-6-hourly-data" title="Permalink to this headline">¶</a></h3>
-<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modeling centers according to the
+<p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modelling centers according to the
 <a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design</a>. Please contact the modeling groups. Find the supplied contact information in the header of the downloaded NetCDF file:</p>
 <ul class="simple">
 <li><p>with netCDF4 in python: dataset_name.contact</p></li>
 <li><p>in shell: ncdump -h dataset_name.nc  | grep contact</p></li>
 </ul>
+<p>or write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a>.</p>
 </div>
 <div class="section" id="where-are-cordex-regional-climate-models-described">
 <h3>Where are CORDEX regional climate models described?<a class="headerlink" href="#where-are-cordex-regional-climate-models-described" title="Permalink to this headline">¶</a></h3>
 <p>A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
 header with a global attribute “references”, which usually contains a web address. You may see this and other attributes without a file download:
-Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”.</p>
+Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”. Write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a> for further information.</p>
 </div>
 <div class="section" id="where-can-i-find-the-land-sea-mask-or-landfrac">
 <h3>Where can I find the land sea mask or landfrac?<a class="headerlink" href="#where-can-i-find-the-land-sea-mask-or-landfrac" title="Permalink to this headline">¶</a></h3>
@@ -1294,6 +1296,11 @@ The subject should be blank. The body should contain only the following:</p>
 </div>
 <div class="section" id="esgf-wget">
 <h2>ESGF Wget<a class="headerlink" href="#esgf-wget" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000">
+<h3>Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?<a class="headerlink" href="#is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000" title="Permalink to this headline">¶</a></h3>
+<p>Unfortunately it is not possible to generate wget scripts for a certain period. You can only filter the datasets. For the files, you would need
+to remove those you don’t need from the wget script. See the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#wget-scripting">Wget scripting</a>  information in the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#the-esgf-search-restful-api">RESTful API</a> section in the tutorial.</p>
+</div>
 <div class="section" id="issues-with-script-generation">
 <h3>Issues with Script Generation<a class="headerlink" href="#issues-with-script-generation" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="i-get-the-error-request-uri-too-large">
@@ -1719,7 +1726,7 @@ Certificate could not be retrieved
 <p>One possible reason for this error is a missing membership in a data access control group. In debug mode, the script additionally throws the error message “403 Forbidden” in this case.</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Solution</dt><dd><p>Join a matching <a class="reference internal" href="user_guide.html#data-access-groups"><span class="std std-ref">data access control group</span></a>.</p>
+<dt>Solution</dt><dd><p>Join a matching <a href="#id15"><span class="problematic" id="id16">:ref:`data access control group &lt;data_access_groups&gt;`_</span></a>.</p>
 </dd>
 </dl>
 </li>
