@@ -614,7 +614,7 @@ OPeNDAP is a data transport architecture and can be used for data download, data
 * Access data with own software
 
 Access via an ESGF portal
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Data access via OPeNDAP is possible by using any ESGF portal. Perform a usual ESGF search, an example is in the image below.
 
     .. image:: images/results.PNG
@@ -801,13 +801,13 @@ For installation of the demo notebook go to `Carsten's GitHub repository <https:
 Download data using Globus Online
 ---------------------------------
 
-ESGF is starting to enable `Globus <https://www.globus.org/>`_ as one of the options for downloading data to the user personal laptop. When available, Globus allows for easier, faster and more reliable downloads. "Globus Download" will show up as an additional access option when datasets are found by the ESGF Search, and when those datasets are saved in the Data Cart.
+ESGF provides limited support for `Globus <https://www.globus.org/>`_ as one of the options for downloading data to the user personal laptop. When available, Globus allows for easier, faster and more reliable downloads. "Globus Download" will show up as an additional access option when datasets are found by the ESGF Search, and when those datasets are saved in the Data Cart.  Globus is available at the major replica sites (show all replicas) but not all distributed original data sites as these often are unable to run the Globus endpoints.
 
 Setup Globus
 ^^^^^^^^^^^^
 * Sign up for a `Globus Account <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3Do5freyqqm7l%26signup%3D1&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&signup=1&redirect_name=Globus+Web+App>`_  (free)
-* Install the `Globus Connect Personal <https://www.globus.org/globus-connect-personal>`_  client on their machine (click-through)
-* Additionally, to use the Python scripts (download option #2 below), the user needs to upload their public ssh key to the Globus site (`see instructions <https://docs.globus.org/faq/ssh-keys-and-x509-certs/>`_ )
+* If you intend to transfer to your local system, you must install the `Globus Connect Personal <https://www.globus.org/globus-connect-personal>`_  client on your machine (click-through).  Skip this step if you plan to use an institutional Globus endpoint as a destination, such as a university or laboratory computing center.  Please contact your local admin for information on the endpoint.
+* To use the Python scripts (download option #2 below), the user needs to upload their public ssh key to the Globus site (`see instructions <https://docs.globus.org/faq/ssh-keys-and-x509-certs/>`_ ) and install the `Globus CLI  <https://docs.globus.org/cli/installation/>`_, also available on conda-forge via the globus-cli Python package.
 
 Globus Transfer
 ^^^^^^^^^^^^^^^
@@ -818,13 +818,40 @@ A user is allowed to start a Globus data transfer request by following the "[Glo
 There are two options for submitting this request.
 
 * **Option 1: Web Download.** The user submits the download request entirely through the web browser. He/she will be asked to sign-in to the Globus site (if not signed in already), and to select the destination Collection/Endpoint and folder using the Globus File Manager.  The destination could be a remote location, eg. a compute center or Globus Connect Personal that runs on a local system, eg. the user's laptop.
-* **Option 2: Script Download.** The user will download a Python script that he/she can later execute to submit the request. Python must be already installed on the user's machine, but no special libraries are needed. The general syntax to execute the script is: python globus_download_yyyymmddhhmmss.py -e <your globus endpoint> -u your globus username> -p <target directory>. For example: python globus_download_20150101033422.py -e globuser#themac -u globuser
+
+
 
     .. image:: images/globus_page.png
 
-You will get a confirmation that your download has started, but no matter how a data transfer request is started, the user must use the `Globus Activity <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3D132y5iamjyao&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&redirect_name=Globus+Web+App>`_ page to monitor their transfer. Additionally, Globus will send an email to the user at job completion.
+
 
     .. image:: images/globus_confirmation.png
+
+
+* **Option 2: Script Download.** The user will download a Python script that he/she can later execute to submit the request. Python must be already installed on the user's machine, but no special libraries are needed. The general syntax to execute the script is: 
+
+    ::
+
+        python globus_download_yyyymmddhhmmss.py -e <your globus endpoint> -u your globus username> -p <target directory>. 
+
+    For example: 
+
+    ::
+
+        python globus_download_20150101033422.py -e globuser#themac -u globuser
+
+    The host where you install these tools does NOT need to be one of the endpoints in the transfer.  We recommend you install the CLI to run the script on a system where you can access a web browser. The script makes use of the Globus CLI 'transfer' command. You need to ensure the endpoints involved are activated, see "Endpoints to be activated" in output (use "globus endpoint activate") By default, the transfer command will: - verify the checksum of the transfer - encrypt the transfer - and delete any fies at the user endpoint with the same name.  We recommend --web endpoint activation using the following (the UUID will be provided in the script output):
+
+    ::
+
+        globus endpoint activate --web UUID
+
+    If a browser window does not appear then you need to run on a system with a local default web browser that can be invoked.  (For a remote server you may consider using a virtual desktop such as VNC where a web browser can be displayed.)  In the browser window you will be prompted to login to the Globus webapp (with Globus-enabled credentials) and then activate the ESGF endpoint where the requested data resides with your ESGF username and password.
+
+
+
+You will get a confirmation that your download has started, but no matter how a data transfer request is started, please use the `Globus Activity <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3D132y5iamjyao&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&redirect_name=Globus+Web+App>`_ page to monitor their transfer. Additionally, Globus will send an email to you at job completion.
+
 
 .. _restful_api:
 

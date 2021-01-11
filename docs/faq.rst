@@ -1170,7 +1170,7 @@ Example error message:
 In all other cases contact ESGF support esgf-user@lists.llnl.gov
 
 Error: "HTTP request to OpenID Provider service failed"
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Solution 1
     Most of the data sets are unrestricted, for instance, CMIP3-6, obs4MIPs, input4MIPs, and E3SM. However you need to instruct the Wget script to bypass the login prompt using the option -s.
 
