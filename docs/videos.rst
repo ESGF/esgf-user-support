@@ -6,7 +6,7 @@ Several video tutorials have been created and uploaded to YouTube on how to get 
 
 ESGF Data Access
 ----------------
-- `ESGF Data Access <https://www.youtube.com/watch?v=mtqyex1MKyU&t=1s>`_, part of the Webinar on Access to CORDEX and CMIP6 Climate data by the `IS-ENES3 <https://is.enes.org/>`_ project, the European part of ESFG.
+- `ESGF Data Access <https://www.youtube.com/watch?v=mtqyex1MKyU&t=1s>`_, part of the Webinar on Access to CORDEX and CMIP6 Climate data by the `IS-ENES3 <https://is.enes.org/>`_ project, the European part of ESGF.
 
 
 Globus Download from LLNL
