@@ -468,7 +468,6 @@ Before being able to execute a Wget download script, the following pre-requisite
     * Wget application (version 1.12 or later) compliled with the OpenSSL libraries. Under Linux, this is already installed with one of the base packages usually. Nevertheless, Mac users may have to install Wget first (details see ESGF Wget FAQ). Cygwin users have to install the package Web-Wget (again run the Cygwin setup executable to install it).
     * Tools for calculation of SHA256 and MD5 checksums. Under Linux and Cygwin, this is already installed usually. Mac users may have to install these tools first.
     * For use of Wget scripts in the default mode additionally Oracle Java, version 1.7 or newer. OpenJRE is not sufficient. Java is not needed if Wget scripts are used with the options -H or -s (details see below).
-* For unrestricted data, the user should use the -s option.  No authorization is required.
 * The user must have been registered with one of the ESGF sites (portals). To register with an ESGF node, simply use a browser to visit the portal's home page and follow the Create Account link.
 * The user must have been authorized to access the desired data, see tutorial "Authorization for ESGF data access".
 * Network port 7512 (TCP) has to be open.
@@ -491,12 +490,12 @@ Before being able to execute a Wget download script, the following pre-requisite
 
     Open a terminal window. Mac users can find a terminal icon in the Launchpad.
 
-    If the datasets to be downloaded are unrestricted, run the script with the option -s.
+    If the datasets to be downloaded are unrestricted, run the script with the option -s. No authorization is required. When using this method for download, ensure you are not using additional options, eg., -s and -H should never be combined
     ::
 
         bash wget-xxx.sh -s
 
-    If Oracle Java is available, run the script in the default mode:
+    For restricted data, if Oracle Java is available, run the script in the default mode:
     ::
 
         bash wget-xxx.sh
@@ -561,7 +560,10 @@ Wget script options
 
         bash wget-##############.sh -h
 
-     (-h for help). Different options can be combined. The following options are important:
+     (-h for help). Different options can be combined in some circumstances. The following options are important:
+
+    -s, unrestricted data 
+        Use this option if you know the data to be downloaded is unrestricted.  This includes CMIP3-6, E3SM, input- and obs- 4MIPs projects, more coming soon. When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined.  
 
     -d, the debug option
         This option causes the script to send more than the usual response to standard output. Use
@@ -612,7 +614,7 @@ OPeNDAP is a data transport architecture and can be used for data download, data
 * Access data with own software
 
 Access via an ESGF portal
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 Data access via OPeNDAP is possible by using any ESGF portal. Perform a usual ESGF search, an example is in the image below.
 
     .. image:: images/results.PNG
@@ -799,13 +801,13 @@ For installation of the demo notebook go to `Carsten's GitHub repository <https:
 Download data using Globus Online
 ---------------------------------
 
-ESGF is starting to enable `Globus <https://www.globus.org/>`_ as one of the options for downloading data to the user personal laptop. When available, Globus allows for easier, faster and more reliable downloads. "Globus Download" will show up as an additional access option when datasets are found by the ESGF Search, and when those datasets are saved in the Data Cart.
+ESGF provides limited support for `Globus <https://www.globus.org/>`_ as one of the options for downloading data to the user personal laptop. When available, Globus allows for easier, faster and more reliable downloads. "Globus Download" will show up as an additional access option when datasets are found by the ESGF Search, and when those datasets are saved in the Data Cart.  Globus is available at the major replica sites (show all replicas) but not all distributed original data sites as these often are unable to run the Globus endpoints.
 
 Setup Globus
 ^^^^^^^^^^^^
 * Sign up for a `Globus Account <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3Do5freyqqm7l%26signup%3D1&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&signup=1&redirect_name=Globus+Web+App>`_  (free)
-* Install the `Globus Connect Personal <https://www.globus.org/globus-connect-personal>`_  client on their machine (click-through)
-* Additionally, to use the Python scripts (download option #2 below), the user needs to upload their public ssh key to the Globus site (`see instructions <https://docs.globus.org/faq/ssh-keys-and-x509-certs/>`_ )
+* If you intend to transfer to your local system, you must install the `Globus Connect Personal <https://www.globus.org/globus-connect-personal>`_  client on your machine (click-through).  Skip this step if you plan to use an institutional Globus endpoint as a destination, such as a university or laboratory computing center.  Please contact your local admin for information on the endpoint.
+* To use the Python scripts (download option #2 below), the user needs to upload their public ssh key to the Globus site (`see instructions <https://docs.globus.org/faq/ssh-keys-and-x509-certs/>`_ ) and install the `Globus CLI  <https://docs.globus.org/cli/installation/>`_, also available on conda-forge via the globus-cli Python package.
 
 Globus Transfer
 ^^^^^^^^^^^^^^^
@@ -816,13 +818,40 @@ A user is allowed to start a Globus data transfer request by following the "[Glo
 There are two options for submitting this request.
 
 * **Option 1: Web Download.** The user submits the download request entirely through the web browser. He/she will be asked to sign-in to the Globus site (if not signed in already), and to select the destination Collection/Endpoint and folder using the Globus File Manager.  The destination could be a remote location, eg. a compute center or Globus Connect Personal that runs on a local system, eg. the user's laptop.
-* **Option 2: Script Download.** The user will download a Python script that he/she can later execute to submit the request. Python must be already installed on the user's machine, but no special libraries are needed. The general syntax to execute the script is: python globus_download_yyyymmddhhmmss.py -e <your globus endpoint> -u your globus username> -p <target directory>. For example: python globus_download_20150101033422.py -e globuser#themac -u globuser
+
+
 
     .. image:: images/globus_page.png
 
-You will get a confirmation that your download has started, but no matter how a data transfer request is started, the user must use the `Globus Activity <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3D132y5iamjyao&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&redirect_name=Globus+Web+App>`_ page to monitor their transfer. Additionally, Globus will send an email to the user at job completion.
+
 
     .. image:: images/globus_confirmation.png
+
+
+* **Option 2: Script Download.** The user will download a Python script that he/she can later execute to submit the request. Python must be already installed on the user's machine, but no special libraries are needed. The general syntax to execute the script is: 
+
+    ::
+
+        python globus_download_yyyymmddhhmmss.py -e <your globus endpoint> -u your globus username> -p <target directory>. 
+
+    For example: 
+
+    ::
+
+        python globus_download_20150101033422.py -e globuser#themac -u globuser
+
+    The host where you install these tools does NOT need to be one of the endpoints in the transfer.  We recommend you install the CLI to run the script on a system where you can access a web browser. The script makes use of the Globus CLI 'transfer' command. You need to ensure the endpoints involved are activated, see "Endpoints to be activated" in output (use "globus endpoint activate") By default, the transfer command will: - verify the checksum of the transfer - encrypt the transfer - and delete any fies at the user endpoint with the same name.  We recommend --web endpoint activation using the following (the UUID will be provided in the script output):
+
+    ::
+
+        globus endpoint activate --web UUID
+
+    If a browser window does not appear then you need to run on a system with a local default web browser that can be invoked.  (For a remote server you may consider using a virtual desktop such as VNC where a web browser can be displayed.)  In the browser window you will be prompted to login to the Globus webapp (with Globus-enabled credentials) and then activate the ESGF endpoint where the requested data resides with your ESGF username and password.
+
+
+
+You will get a confirmation that your download has started, but no matter how a data transfer request is started, please use the `Globus Activity <https://auth.globus.org/p/login?client_name=globus_webapp&redirect_uri=%2Fv2%2Foauth2%2Fauthorize%3Fclient_id%3D89ba3e72-768f-4ddb-952d-e0bb7305e2c7%26client_name%3Dglobus_webapp%26scope%3Durn%253Aglobus%253Aauth%253Ascope%253Aauth.globus.org%253Aview_identities%2520urn%253Aglobus%253Aauth%253Ascope%253Anexus.api.globus.org%253Agroups%2520urn%253Aglobus%253Aauth%253Ascope%253Atransfer.api.globus.org%253Aall%26response_type%3Dtoken%26redirect_uri%3Dhttps%253A%252F%252Fwww.globus.org%252Fapp%252Flogin%26redirect_name%3DGlobus%2520Web%2520App%26state%3D132y5iamjyao&response_type=token&client_id=89ba3e72-768f-4ddb-952d-e0bb7305e2c7&scope=urn%3Aglobus%3Aauth%3Ascope%3Aauth.globus.org%3Aview_identities+urn%3Aglobus%3Aauth%3Ascope%3Anexus.api.globus.org%3Agroups+urn%3Aglobus%3Aauth%3Ascope%3Atransfer.api.globus.org%3Aall&redirect_name=Globus+Web+App>`_ page to monitor their transfer. Additionally, Globus will send an email to you at job completion.
+
 
 .. _restful_api:
 
@@ -1115,14 +1144,16 @@ The only syntax differences with respect to the search URL are:
 * The keyword parameter download_structure= is used for defining a relative directory structure for the download by using the facets value (i.e. of Files and not Datasets).
 * The keyword parameter download_emptypath= is used to define what to do when download_structure is set and the facet returned has no value (for example, when mixing files from CMIP5 and obs4MIP and selecting instrument as a facet value will result in all CMIP5 files returning an empty value)
 
-A typical workflow pattern consists in first identifying all datasets or files matching some scientific criteria, then changing the request URL from "/search?" to "/wget?" to generate the corresponding shell scripts for bulk download of files.
+A typical workflow pattern consists in first identifying all datasets or files matching some scientific criteria, then changing the request URL from "/search?" to "/wget?" to generate the corresponding shell scripts for bulk download of files. 
 
 Examples:
 
 * Download all obs4MIPs files from the JPL node with variable "hus" : http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&project=obs4MIPs&distrib=false
 * Download the files as in the previous examples, and organize them in a directory structure such as project/product/institute/time_frequency : http://esgf-node.jpl.nasa.gov/esg-search/wget?variable=hus&project=obs4MIPs&distrib=false&download_structure=project,product,institute,time_frequency
 
-For more information, see also the Wget FAQ.
+You can only filter the datasets (but not files) in this way. ESGF search consists of three different search cores and each core has a unique set of facets. Searching on ".../esg-search/search?..." will search for datasets by default while ".../esg-search/wget?..." will search for files. Unfortunately the "start=..." facet is not existent in the file metadata. For that kind of queries you might want to have a look at the ESGF Pyclient, a python based ESGF search package (see `this section <https://esgf.github.io/esgf-user-support/user_guide.html#own-python-scripts>`_ in the tutorial).
+
+For more information, see also the `Wget FAQs <https://esgf.github.io/esgf-user-support/faq.html#esgf-wget>`_.
 
 Projects
 ********
