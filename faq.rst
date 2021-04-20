@@ -688,6 +688,11 @@ How can I subscribe/unsubscribe esgf-user@lists.llnl.gov?
 
 ESGF Wget
 *********
+Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?
+-----------------------------------------------------------------------------------------------------------------------------------
+Unfortunately it is not possible to generate wget scripts for a certain period. You can only filter the datasets. For the files, you would need
+to remove those you don't need from the wget script. See the `Wget scripting <https://esgf.github.io/esgf-user-support/user_guide.html#wget-scripting>`_  information in the `RESTful API <https://esgf.github.io/esgf-user-support/user_guide.html#the-esgf-search-restful-api>`_ section in the tutorial.
+
 
 Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?
 -----------------------------------------------------------------------------------------------------------------------------------
