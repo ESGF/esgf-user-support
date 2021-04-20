@@ -140,6 +140,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#esgf-wget">ESGF Wget</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000">Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#issues-with-script-generation">Issues with Script Generation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#i-get-the-error-request-uri-too-large">I get the error: “Request-URI Too Large”</a></li>
 </ul>
@@ -1308,6 +1309,11 @@ The subject should be blank. The body should contain only the following:</p>
 <p>Unfortunately it is not possible to generate wget scripts for a certain period. You can only filter the datasets. For the files, you would need
 to remove those you don’t need from the wget script. See the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#wget-scripting">Wget scripting</a>  information in the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#the-esgf-search-restful-api">RESTful API</a> section in the tutorial.</p>
 </div>
+<div class="section" id="id15">
+<h3>Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>Unfortunately it is not possible to generate wget scripts for a certain period. You can only filter the datasets. For the files, you would need
+to remove those you don’t need from the wget script. See the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#wget-scripting">Wget scripting</a>  information in the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#the-esgf-search-restful-api">RESTful API</a> section in the tutorial.</p>
+</div>
 <div class="section" id="issues-with-script-generation">
 <h3>Issues with Script Generation<a class="headerlink" href="#issues-with-script-generation" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="i-get-the-error-request-uri-too-large">
@@ -1733,7 +1739,7 @@ Certificate could not be retrieved
 <p>One possible reason for this error is a missing membership in a data access control group. In debug mode, the script additionally throws the error message “403 Forbidden” in this case.</p>
 <ul class="simple">
 <li><dl class="simple">
-<dt>Solution</dt><dd><p>Join a matching <a href="#id15"><span class="problematic" id="id16">:ref:`data access control group &lt;data_access_groups&gt;`_</span></a>.</p>
+<dt>Solution</dt><dd><p>Join a matching <a href="#id18"><span class="problematic" id="id19">:ref:`data access control group &lt;data_access_groups&gt;`_</span></a>.</p>
 </dd>
 </dl>
 </li>
