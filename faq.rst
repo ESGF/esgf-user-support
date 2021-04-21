@@ -1610,24 +1610,20 @@ There might be several reasons and solutions for this issue:
     ESGF portals may be disturbed by Firefox's cache content or old cookies. Use Firefox in a private window (see Firefox menu).
 
 * Solution 2
-    Make sure the checkbox "Search Local Node Only" is not checked. Otherwise only data nodes locally connected with the portal you use are searched instead of a worldwide search.
-
-* Solution 3
-    If you need CMIP5 data, enable the checkbox "Show All Replicas". The most important part of the CMIP5 data, the output1 data, have been replicated. Replicas are a good choice if one or more data nodes are down.
+    If you need CMIP data, enable the checkbox "Show All Replicas". The most important part of the CMIP data, the output1 data, have been replicated. Replicas are exact copies and they are a good alternative if one or more data nodes are down (check the nodes status `here <https://esgf-node.llnl.gov/status/>`_).
     Especially now, in the phase of redeployment after ESGF overhaul, many data nodes are still down. The bitstreams of replica and master copy are identical if the number or date of the version is the same.
 
-* Solution 4
+* Solution 3
     Look into the errata of the project whether the data you need are withdrawn. As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to look up or report an issue.
 
+* Solution 4
+    Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
+    Which CMIP5 data have been required to the modeling groups for which time frequency and experiment is tabulated in the `CMIP5 Standard Output document <https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf>`_. For CMIP6, see the `CMIP6 Data Request <http://clipc-services.ceda.ac.uk/dreq/index.html>`_. For CORDEX, see the `Requested Variables <http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf>`_. 
 
 * Solution 5
-    Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
-    Which CMIP5 data have been required for which time frequency and experiment is tabulated in the `CMIP5 Standard Output document <https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf>`_.
+    In case a portal has technical problems, try another ESGF portal, find the list of portals, (also called index nodes or CoG nodes), `here <https://esgf.llnl.gov/nodes.html>`_
 
 * Solution 6
-    In case a portal has technical problems, try another ESGF portal
-
-* Solution 7
     Seldom metadata have not properly been overtaken from a data node. In this case circumvent portals and try finding data on the data nodes directly. With help of the usual ESGF Search, find out which model simulations have been stored on which data node. Go to the THREDDS catalog of that data node and use the download links there.
 
 I get the error: "transaction aborted undefined"
