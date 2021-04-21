@@ -3,9 +3,7 @@
 User Tutorials
 ==============
 
-Find what is ESGF and our mission `here <https://esgf.llnl.gov/index.html>`_ and the CMIP explanation video `here <https://www.youtube.com/watch?v=wTBkq9nWNEE>`_.
-
-ESGF manages more than 23 petabytes of CMIP and CMIP related data distributed in several federated data centers, also called data nodes. 
+ESGF manages several petabytes of data distributed in several federated data centers, also called data nodes. 
 
 Some nodes also host portals to facilitate the search and download, find the list of nodes with portals and the link to the portals here: `<https://esgf.llnl.gov/nodes.html>`_.
 
