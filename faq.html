@@ -2293,34 +2293,29 @@ See tutorial <a class="reference internal" href="user_guide.html#forgot-password
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 2</dt><dd><p>Make sure the checkbox “Search Local Node Only” is not checked. Otherwise only data nodes locally connected with the portal you use are searched instead of a worldwide search.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Solution 3</dt><dd><p>If you need CMIP5 data, enable the checkbox “Show All Replicas”. The most important part of the CMIP5 data, the output1 data, have been replicated. Replicas are a good choice if one or more data nodes are down.
+<dt>Solution 2</dt><dd><p>If you need CMIP data, enable the checkbox “Show All Replicas”. The most important part of the CMIP data, the output1 data, have been replicated. Replicas are exact copies and they are a good alternative if one or more data nodes are down (check the nodes status <a class="reference external" href="https://esgf-node.llnl.gov/status/">here</a>).
 Especially now, in the phase of redeployment after ESGF overhaul, many data nodes are still down. The bitstreams of replica and master copy are identical if the number or date of the version is the same.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 4</dt><dd><p>Look into the errata of the project whether the data you need are withdrawn. As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to look up or report an issue.</p>
+<dt>Solution 3</dt><dd><p>Look into the errata of the project whether the data you need are withdrawn. As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to look up or report an issue.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 5</dt><dd><p>Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
-Which CMIP5 data have been required for which time frequency and experiment is tabulated in the <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf">CMIP5 Standard Output document</a>.</p>
+<dt>Solution 4</dt><dd><p>Not all variables, times, altitude levels have been archived for all time frequencies and experiments. For example, CMIP5 RCP daily time series are only available for the years 2006-2100, 2181-2200, and 2281-2300.
+Which CMIP5 data have been required to the modeling groups for which time frequency and experiment is tabulated in the <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/docs/standard_output.pdf">CMIP5 Standard Output document</a>. For CMIP6, see the <a class="reference external" href="http://clipc-services.ceda.ac.uk/dreq/index.html">CMIP6 Data Request</a>. For CORDEX, see the <a class="reference external" href="http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf">Requested Variables</a>.</p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 6</dt><dd><p>In case a portal has technical problems, try another ESGF portal</p>
+<dt>Solution 5</dt><dd><p>In case a portal has technical problems, try another ESGF portal, find the list of portals, (also called index nodes or CoG nodes), <a class="reference external" href="https://esgf.llnl.gov/nodes.html">here</a></p>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Solution 7</dt><dd><p>Seldom metadata have not properly been overtaken from a data node. In this case circumvent portals and try finding data on the data nodes directly. With help of the usual ESGF Search, find out which model simulations have been stored on which data node. Go to the THREDDS catalog of that data node and use the download links there.</p>
+<dt>Solution 6</dt><dd><p>Seldom metadata have not properly been overtaken from a data node. In this case circumvent portals and try finding data on the data nodes directly. With help of the usual ESGF Search, find out which model simulations have been stored on which data node. Go to the THREDDS catalog of that data node and use the download links there.</p>
 </dd>
 </dl>
 </li>
