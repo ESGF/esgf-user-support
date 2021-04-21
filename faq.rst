@@ -726,7 +726,7 @@ General Wget Runtime Issues
 
 Do I need to use my username / password?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
+If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, or E3SM, the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
 
     ::
 
@@ -965,7 +965,7 @@ Further example:
 
 
 * Solution 5
-    If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
+    If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
 
     ::
 
@@ -1129,7 +1129,13 @@ Example error message:
     download failed
     done
 
-* Before considering any of the Solutions below, ensure that the data you are trying to download is from a restricted project, meaning that a login is required, if not use the -s option (see above). When using this method for download, ensure you are not using additional options eg. -s and -H should never be combined
+* Before considering any of the Solutions below, ensure that the data you are trying to download is from a restricted project, meaning that a login is required. If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.
+
+::
+
+    $ bash wget-xxx.sh -s
+
+When using this dowloading method, ensure you are not using additional options eg. -s and -H should never be combined.
 
 
 * Solution 1
@@ -1158,14 +1164,6 @@ Example error message:
     ::
 
         wget-XXXXXX -H -i
-
-* Solution 7
-    If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined
-
-    ::
-
-        $ bash wget-xxx.sh -s
-
 
 In all other cases contact ESGF support esgf-user@lists.llnl.gov
 

@@ -3,5 +3,10 @@ docs/_build/
 docs/_static/
 docs/_templates/
 docs/html/
+_build/
+_static/
+_templates/
+_html/
+
 # pycharm
 .idea
