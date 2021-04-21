@@ -1340,7 +1340,7 @@ to remove those you don’t need from the wget script. See the <a class="referen
 <h3>General Wget Runtime Issues<a class="headerlink" href="#general-wget-runtime-issues" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="do-i-need-to-use-my-username-password">
 <h4>Do I need to use my username / password?<a class="headerlink" href="#do-i-need-to-use-my-username-password" title="Permalink to this headline">¶</a></h4>
-<p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
+<p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, or E3SM, the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
 <blockquote>
 <div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
 </pre></div>
@@ -1591,7 +1591,7 @@ Certificate could not be retrieved
 </dl>
 </li>
 <li><dl>
-<dt>Solution 5</dt><dd><p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
+<dt>Solution 5</dt><dd><p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
 </pre></div>
 </div>
@@ -1777,8 +1777,14 @@ Certificate could not be retrieved
 <span class="n">done</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>Before considering any of the Solutions below, ensure that the data you are trying to download is from a restricted project, meaning that a login is required. If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
+</pre></div>
+</div>
+<p>When using this dowloading method, ensure you are not using additional options eg. -s and -H should never be combined.</p>
 <ul>
-<li><p>Before considering any of the Solutions below, ensure that the data you are trying to download is from a restricted project, meaning that a login is required, if not use the -s option (see above). When using this method for download, ensure you are not using additional options eg. -s and -H should never be combined</p></li>
 <li><dl>
 <dt>Solution 1</dt><dd><p>The user name alone is not sufficient. Enter your complete, correctly spelled OpenID behind</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">your</span> <span class="n">openid</span> <span class="p">:</span>
@@ -1811,14 +1817,6 @@ Certificate could not be retrieved
 <dt>Solution 6</dt><dd><p>The data node is online, but the local operating system is outdated and does not recognize the data nodes’s web certificate when trying to establish a secure connection via wget.  In this case, upgrade the local operating system, try a different client system.  This scenario is revealed if running the script in debug mode (-d).
 The following workaround using the -i option has shown to work when using -H:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span><span class="o">-</span><span class="n">XXXXXX</span> <span class="o">-</span><span class="n">H</span> <span class="o">-</span><span class="n">i</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt>Solution 7</dt><dd><p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, E3SM, then the answer is No: username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -s
 </pre></div>
 </div>
 </dd>
