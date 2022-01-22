@@ -13,6 +13,7 @@ Contents:
 
    user_guide
    faq
+   metagrid-beta
    videos
 
 Indices and tables
