@@ -1,4 +1,4 @@
-Metagrid: introduction/FAQ
+Metagrid (Beta): Introduction/FAQ
 ==========================
 
 Metagrid: an introduction
