@@ -83,7 +83,7 @@ Why data access control groups?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Often data users must accept a "terms of use" (e.g. agree to acknowledge the data producers in publications) before downloading data.
 Therefore, the creation of a ESGF portal account is normally not sufficient for data access, you also need the authorization to access data.
-User's must join a data access control group for the project they wish to download data from.
+Users must join a data access control group for the project they wish to download data from.
 If the right group is not joined, for example, Wget scripts will prematurely fail with a "Forbidden" error message.
 
 Which data access control groups currently exist in ESGF?
@@ -316,14 +316,14 @@ What the ESGF search returns
 
     The basic unit in ESGF is the dataset. Datasets are collections of individual files.
     Some datasets contain files that represent different variables. Some datasets are restricted to one variable.
-    Other, like CMIP5, contained many datasets with multiple variables. To search for individual files, save a dataset to your Data Cart
+    Others, like CMIP5, contain many datasets with multiple variables. To search for individual files, save a dataset to your Data Cart
     and search using the sub-select text box in the Data Cart itself
     (`see tutorial <https://esgf.github.io/esgf-user-support/user_guide.html#narrow-a-cmip5-data-search-to-just-one-variable>`_).
 
 #. Search Defaults
 
     By default, ESGF searches are conducted across all nodes and return only the latest version of a dataset (without replicas).
-    Use the check boxes (if enabled by the project administrator) below the text box to narrow the search (see figure). Note that searching the Local Node means searching on the node configured for this search. It is possible that node is not local.
+    Use the check boxes (if enabled by the project administrator) below the text box to narrow the search (see figure). Note that searching the Local Node means searching on the node configured for this search. It is possible that the node is not local.
 
     .. image:: images/search_options.png
 
