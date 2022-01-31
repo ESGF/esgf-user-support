@@ -4,7 +4,7 @@ Metagrid (Beta): Introduction/FAQ
 Metagrid: an introduction
 -------------------------
 
-Metagrid is a faceted search web application for use in ESGF data discovery.  Metagrid is the web application to replace the CoG web frontend.  Metagrid has many of the same search features and dataset information as was available in CoG.  The major distinction is that due to Metagrids use of a Javascript platform based on ReactJS, Metagrid is able to present an improved interactive user experience.
+Metagrid is a faceted search web application for use in ESGF data discovery.  Metagrid is the web application to replace the CoG web frontend.  Metagrid has many of the same search features and dataset information as was available in CoG.  The major distinction is that due to Metagrid's use of a Javascript platform based on ReactJS, Metagrid is able to present an improved interactive user experience.
 
 Several new features
 ---------------------
@@ -25,7 +25,7 @@ General
 
 Q: Where should I start with getting to know the Metagrid user interface?  I'm fairly new to ESGF and this all seems so unfamiliar?
 
-A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Dot Question Mark icon in lower left corner of the page, then click on the ``Take Tour``
+A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Question Mark icon in lower right corner of the page, then click on the available tour for your current page.
 
 Q: I would like to share some feedback of Metagrid.  Is there an easy way to do so?
 
