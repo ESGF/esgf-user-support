@@ -17,13 +17,21 @@ In addition, Metagrid addresses a long-standing issue that has impacted the CoG 
 
 Metagrid awaits your feedback.  Please give this interface a try for your ESGF data discovery needs.
 
+Known Issues
+------------
+
+* **Mobile Devices**:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.
+* **Edge Browser for Windows**: (*Tested witn Windows 10*)  Metagrid is incompatible with the Edge browser
+* **Long Facet Value Strings**:  Some values within the search facets, for example several *source_id* under *UofMD..* on the *input4MIPs* search are longer than the field permits and are truncated with elipses (...) characters without a means to display the full value string. 
+* **License info**: Under the "Citation" pane for each search result, the *License* info for the data set is not displayed/
+
 Metagrid FAQ
 ------------
 
 General
 *******
 
-Q: Where should I start with getting to know the Metagrid user interface?  I'm fairly new to ESGF and this all seems so unfamiliar?
+Q: Where should I start with getting to know the Metagrid user interface?  I'm fairly new to ESGF and this all seems so unfamiliar
 
 A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Question Mark icon in lower right corner of the page, then click on the available tour for your current page.
 
@@ -49,7 +57,8 @@ Search
 
 Q:  How do I include/exclude replicas in my search and search for old versions?
 
-A:  The fields to toggle replicas and versions is under the **Additional Properties** Tab of the Faceted search bar on the left.
+A:  The search selection *Dropdowms to toggle replicas and versions (latest or all) is under the **Additional Properties** tab of the Faceted search bar on the left.  
+Additionally, the search selectors for **Version Date Range** are located in this tab.
 
 
 User accounts
