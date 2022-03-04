@@ -23,7 +23,8 @@ Known Issues
 * **Mobile Devices**:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.
 * **Edge Browser for Windows**: (*Tested witn Windows 10*)  Metagrid is incompatible with the Edge browser
 * **Long Facet Value Strings**:  Some values within the search facets, for example several *source_id* under *UofMD..* on the *input4MIPs* search are longer than the field permits and are truncated with elipses (...) characters without a means to display the full value string. 
-* **License info**: Under the "Citation" pane for each search result, the *License* info for the data set is not displayed/
+* **License info**: Under the "Citation" pane for each search result, the *License* info for the data set is not displayed.
+
 
 Metagrid FAQ
 ------------
@@ -31,7 +32,7 @@ Metagrid FAQ
 General
 *******
 
-Q: Where should I start with getting to know the Metagrid user interface?  I'm fairly new to ESGF and this all seems so unfamiliar
+Q: Where should I start with getting to know the Metagrid user interface?  I'm fairly new to ESGF and this interface, search results seems rather unfamiliar.
 
 A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Question Mark icon in lower right corner of the page, then click on the available tour for your current page.
 
@@ -45,12 +46,13 @@ For more specific suggestion: bug reports, feature requests, etc., please open a
 
 Q: How can I find Cordex data. It is not listed under projects.
 
-A: For the time being Cordex data can be found under the last listed project All (except CMIP6)
+A: For the time being Cordex data can be found under the last listed project All (except CMIP6).  A search view for Cordex is coming soon.
 
-Q: Why exclude CMIP6 from all other projects
+Q: Why exclude CMIP6 from all other projects?
 
 A: CMIP6 introduced a different naming convention for several of the properties of the datasets in our search database, such as the model and experiment.  As we have been unable to reconcile the old and new conventions trivially, instead we provide results on separate pages.  
 We realize this may pose an inconvenince to comparing data between older project data.  
+
 
 Search
 ******
@@ -59,6 +61,15 @@ Q:  How do I include/exclude replicas in my search and search for old versions?
 
 A:  The search selection *Dropdowms to toggle replicas and versions (latest or all) is under the **Additional Properties** tab of the Faceted search bar on the left.  
 Additionally, the search selectors for **Version Date Range** are located in this tab.
+
+Q: Why do I see multiple instances of the same search results?
+
+A: Some datasets have replica copies published at additional sites.  (See *replicas* above) You can toggle replicas off and see only a single result.  Additionally, it might be advantageous to download a replica instead of the original, for instance the original data node might report being offline, or you are aware of geographical proximity to the host node, eg. North America, Europe or Asia.  You may use the ``Data Node`` search facet to select a node, each listed by the domain name with the reported status indicator.  
+
+Q: What can I do if there are no files for a particular dataset?  Is this an error?
+
+A:  Yes its likely this was due to an error in "publication" where we populate the file records for datasets.  First, modify your search to see if there is a more recent version of the data set available or a replica may have the files correctly published.  If that does not yield files for the dataset, then please contact support so the appropriate data managers can investigate the issue.
+
 
 
 User accounts

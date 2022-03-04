@@ -574,7 +574,7 @@ Wget script options
 
         if you have problems with option -H since scripts run with option -H are nearly silent. They don't even send useful error messages.
 
-        **Caution**: Do not send your standard output to the user support mailing list esgf-user@lists.llnl.gov because option -d may cause the script to print your password! Everyone can subscribe to esgf-user@lists.llnl.gov and your post will be distributed to every subscriber.
+        **Caution**: Do not send your standard output to the user support mailing list esgf-user@llnl.gov because option -d may cause the script to print your password! Everyone can subscribe to esgf-user@llnl.gov and your post will be distributed to every subscriber.
 
     -H, the certificate-less option
         Since many users have problems with Java and certificates on their local machines, the option -H was developed to avoid use of Java and locally stored certificates. Instead, your OpenID and password are sent with help of a Wget command. Your password is encrypted with SSL (or TLS if you have additionally switched to TLS with option -T). Without option -H, a local credential is created and sent to ESGF servers for the user's authentication but Oracle Java 1.7+ is needed for this purpose.

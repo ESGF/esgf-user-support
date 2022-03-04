@@ -30,7 +30,7 @@ How to contact us
 ******************
 
 For questions regarding the data management and the performance of ESGF portals and nodes, 
-please send an email to the user support emailing list: esgf-user@lists.llnl.gov. 
+please send an email to the user support emailing list: esgf-user@llnl.gov. 
 
 We are the data managers of several petabytes of data, in order to reproduce your issue we need the following information: 
 
@@ -656,7 +656,7 @@ This error has to do with encryption and seems to depend on Firefox version, ope
 
 I have a question or error to report to ESGF
 --------------------------------------------
-Questions and error reports related to the ESGF portals and nodes performance should be sent to esgf-user@lists.llnl.gov. 
+Questions and error reports related to the ESGF portals and nodes performance should be sent to esgf-user@llnl.gov. 
 
 For questions related to the models output or performance, please contact the individual modeling centers using the supplied contact information in the file header:
 
@@ -667,7 +667,7 @@ For questions related to the models output or performance, please contact the in
 
 As part of the `ES-DOC <https://es-doc.org/>`_ documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the `docs <https://es-doc.github.io/esdoc-errata-client/index.html>`_ about how to find or report an issue.
 
-How can I subscribe/unsubscribe esgf-user@lists.llnl.gov?
+How can I subscribe/unsubscribe esgf-user@llnl.gov?
 ---------------------------------------------------------
 * Subscribe:
     Send a mail to: listserv@listserv.llnl.gov.
@@ -1003,7 +1003,7 @@ Further example error message:
     Your certificates are maybe corrupted. Remove everything under the cert directory `~/.esg` and run the Wget script again. The .esg will automatically be rebuilt when you run the next Wget script.
 
 * Solution 3
-    Contact the ESGF users mailing list esgf-user@lists.llnl.gov to notify the ESGF administrators there might be a problem with the server certificate.
+    Contact the ESGF users mailing list esgf-user@llnl.gov to notify the ESGF administrators there might be a problem with the server certificate.
 
 Error: "no CA certificates found"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1165,7 +1165,7 @@ When using this dowloading method, ensure you are not using additional options e
 
         wget-XXXXXX -H -i
 
-In all other cases contact ESGF support esgf-user@lists.llnl.gov
+In all other cases contact ESGF support esgf-user@llnl.gov
 
 Error: "HTTP request to OpenID Provider service failed"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1177,7 +1177,7 @@ Error: "HTTP request to OpenID Provider service failed"
         $ bash wget-xxx.sh -s
 
 * Solution 2
-    Please send an email to the user support emailing list: esgf-user@lists.llnl.gov, the certificate of the node might have expired.
+    Please send an email to the user support emailing list: esgf-user@llnl.gov, the certificate of the node might have expired.
 
 Error: "401 Unauthorized"
 ^^^^^^^^^^^^^^^^^^^^^^^^^
