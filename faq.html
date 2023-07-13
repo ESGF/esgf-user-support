@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAQs &mdash; ESGF User Support 0.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -177,6 +176,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#does-esgf-support-opendap-downloads">Does ESGF support OPeNDAP downloads?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#i-can-t-add-data-to-my-datacart">I can’t add data to my DataCart</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#where-can-i-get-data-on-media">Where can I get data on media?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#http-download-links-are-not-working-in-chrome">HTTP Download links are not working (in Chrome)</a></li>
 </ul>
 </li>
 </ul>
@@ -209,7 +209,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="faqs">
+  <div class="section" id="faqs">
 <span id="faq"></span><h1>FAQs<a class="headerlink" href="#faqs" title="Permalink to this headline">¶</a></h1>
 <p>IMPORTANT TIPS:</p>
 <ul class="simple">
@@ -217,7 +217,7 @@
 <li><p>Visit the <a class="reference external" href="https://esgf-node.llnl.gov/status/">Data Nodes Status</a> page to find the nodes that are down.</p></li>
 </ul>
 <p>This FAQ focuses on question concerning the data management and the performance of the ESGF portals and nodes. For questions regarding models performance, please contact the individual modeling centers (see just below).</p>
-<section id="how-to-contact-the-modelling-group">
+<div class="section" id="how-to-contact-the-modelling-group">
 <h2>How to contact the modelling group<a class="headerlink" href="#how-to-contact-the-modelling-group" title="Permalink to this headline">¶</a></h2>
 <p>The contact information is in the header of the downloaded NetCDF file:</p>
 <ul class="simple">
@@ -228,8 +228,8 @@
 </pre></div>
 </div>
 <p>The contact of the CMIP6 modelling groups is under the “[Show citation]” button in the list of “Full Dataset Services” in the information below the result of your search.</p>
-</section>
-<section id="how-to-contact-us">
+</div>
+<div class="section" id="how-to-contact-us">
 <h2>How to contact us<a class="headerlink" href="#how-to-contact-us" title="Permalink to this headline">¶</a></h2>
 <p>For questions regarding the data management and the performance of ESGF portals and nodes,
 please send an email to the user support emailing list: <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;llnl&#46;gov">esgf-user<span>&#64;</span>llnl<span>&#46;</span>gov</a>.</p>
@@ -246,40 +246,40 @@ please send an email to the user support emailing list: <a class="reference exte
 </pre></div>
 </div>
 <p>If you want to meet the community and be informed of downtime notifications and updates, please subscribe to the emailing list <a class="reference external" href="https://esgf.llnl.gov/mailing-list.html">here</a>.</p>
-</section>
-<section id="data">
+</div>
+<div class="section" id="data">
 <h2>Data<a class="headerlink" href="#data" title="Permalink to this headline">¶</a></h2>
 <p>This FAQ focuses on questions concerning data, e.g. data format, data processing, CMIP and CORDEX data.</p>
 <p>Each ESGF question is sorted into exactly one topic. Questions of general interest and questions matching
 several topics are under topic <a class="reference internal" href="#esgf-general">ESGF General</a>.</p>
-<section id="what-are-ensembles">
+<div class="section" id="what-are-ensembles">
 <h3>What are ensembles?<a class="headerlink" href="#what-are-ensembles" title="Permalink to this headline">¶</a></h3>
 <p>Results of climate model runs depend on the starting point of the calculation, on the initialisation method and on the model physics.
 Ensemble calculations facilitate quantifying the variability of simulation data concerning a single model. In the CMIP and CORDEX projects,
 ensemble members are named in the rip-nomenclature, r for realization (starting point), i for initialization, p for physics, followed by an
 integer, e.g. “r1i1p1”. Find more on the data structure <a class="reference external" href="https://verc.enes.org/data/enes-model-data/cmip5/datastructure">here</a>.</p>
-</section>
-<section id="do-means-over-ensembles-exist">
+</div>
+<div class="section" id="do-means-over-ensembles-exist">
 <h3>Do means over ensembles exist?<a class="headerlink" href="#do-means-over-ensembles-exist" title="Permalink to this headline">¶</a></h3>
 <p>Means over several ensemble members are not in the ESGF.
 You may download the individual ensemble members and calculate the mean using tools, e.g. with
 <a class="reference external" href="https://code.zmaw.de/projects/cdo/wiki/Cdo">Climate Data Operators (CDO)</a>.</p>
-</section>
-<section id="does-an-internationally-common-or-recommended-model-exist">
+</div>
+<div class="section" id="does-an-internationally-common-or-recommended-model-exist">
 <h3>Does an internationally common or recommended model exist?<a class="headerlink" href="#does-an-internationally-common-or-recommended-model-exist" title="Permalink to this headline">¶</a></h3>
 <p>A generally recommended model doesn’t exist in the CMIP and CORDEX projects. Many researchers take data from more than one model and also more
 than one ensemble member per model and calculate a mean or plot them together to have a measure for the deviations of the models.</p>
-</section>
-<section id="where-can-i-find-model-descriptions-and-associated-literature">
+</div>
+<div class="section" id="where-can-i-find-model-descriptions-and-associated-literature">
 <h3>Where can I find model descriptions and associated literature?<a class="headerlink" href="#where-can-i-find-model-descriptions-and-associated-literature" title="Permalink to this headline">¶</a></h3>
 <p>Go to the <a class="reference external" href="http://es-doc.org/">ES-DOC portal</a>.</p>
-</section>
-<section id="how-can-i-find-the-definition-of-a-variable">
+</div>
+<div class="section" id="how-can-i-find-the-definition-of-a-variable">
 <h3>How can I find the definition of a variable?<a class="headerlink" href="#how-can-i-find-the-definition-of-a-variable" title="Permalink to this headline">¶</a></h3>
 <p>CMIP and CORDEX variables obey the CF standard incl. the <a class="reference external" href="http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html">CF Standard Name Table</a>
 (CF for “Climate and Forecast”). In this table is also a definition of the variable. Additional information is in the variable requirement tables of the projects, see next question.</p>
-</section>
-<section id="what-is-the-relation-between-variable-cf-standard-name-and-variable-long-name">
+</div>
+<div class="section" id="what-is-the-relation-between-variable-cf-standard-name-and-variable-long-name">
 <h3>What is the relation between Variable, CF Standard Name and Variable Long Name?<a class="headerlink" href="#what-is-the-relation-between-variable-cf-standard-name-and-variable-long-name" title="Permalink to this headline">¶</a></h3>
 <p>The search category Variable only contains abbreviations. The CF Standard Name obeys the <a class="reference external" href="http://cfconventions.org/Data/cf-standard-names/40/build/cf-standard-name-table.html">CF Standard Name Table</a>
 (CF for “Climate and Forecast”).</p>
@@ -288,8 +288,8 @@ than one ensemble member per model and calculate a mean or plot them together to
 <li><p>For CORDEX variables see the <a class="reference external" href="http://is-enes-data.github.io/CORDEX_variables_requirement_table.pdf">CORDEX Variables Requirement Table</a>.</p></li>
 <li><p>For CMIP6 variables see here: <a class="reference external" href="http://clipc-services.ceda.ac.uk/dreq/mipVars.html">CMIP6 variable name</a>, <a class="reference external" href="http://clipc-services.ceda.ac.uk/dreq/index/miptable.html">CMIP6 variable frequency</a>, and <a class="reference external" href="https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html">CMIP6 Excel table</a>.</p></li>
 </ul>
-</section>
-<section id="where-can-i-find-cmip-scenarios">
+</div>
+<div class="section" id="where-can-i-find-cmip-scenarios">
 <h3>Where can I find CMIP scenarios?<a class="headerlink" href="#where-can-i-find-cmip-scenarios" title="Permalink to this headline">¶</a></h3>
 <p>In the CMIP5 project, Near-Term (10-30 years) or Long-Term (century and longer) climate simulations have been performed by many models.
 Some of the decadal experiments are Near Term future scenarios. CMIP5 Long Term scenarios are the Representative Concentration Pathways (RCPs),
@@ -297,23 +297,23 @@ which represent the full bandwidth of future emission trajectories for the years
 Find more information on <a class="reference external" href="https://verc.enes.org/data/enes-model-data/cmip5/datastructure">here</a>.</p>
 <p>CMIP6 does not have experiments based on the RCP that were used for CMIP5, because scenarios are based on the Shared Socioeconomic Pathways
 (SSP) instead (see “ssp…” under the Experiment ID). The reference paper is <a class="reference external" href="https://www.geosci-model-dev.net/9/3461/2016/gmd-9-3461-2016.html">The Scenario Model Intercomparison Project (ScenarioMIP) for CMIP6</a> as part of the <a class="reference external" href="https://www.geosci-model-dev.net/special_issue590.html">CMIP6 Special Issue</a> “Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization”.</p>
-</section>
-<section id="where-are-cmip5-historicalaa-data">
+</div>
+<div class="section" id="where-are-cmip5-historicalaa-data">
 <h3>Where are CMIP5 historicalAA data?<a class="headerlink" href="#where-are-cmip5-historicalaa-data" title="Permalink to this headline">¶</a></h3>
 <p>CMIP5 historicalAA, historical data with anthropogenic aerosol forcing only, can be found in the historicalMisc experiment.
 Select historicalMisc and look for “Forcing = AA” in the metadata of the search results.</p>
 <p>An overview which CMIP5 data for historicalAA and other forcings should exist can be found in the
 <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/historical_Misc_forcing.pdf">tables of Gavin Schmidt</a>, for CCSM and CESM models see the updated
 <a class="reference external" href="http://www.cgd.ucar.edu/ccr/strandwg/SingleForcings_20C.html">table of Gary Strand</a>.</p>
-</section>
-<section id="where-are-cmip5-historicalsl-data">
+</div>
+<div class="section" id="where-are-cmip5-historicalsl-data">
 <h3>Where are CMIP5 historicalSl data?<a class="headerlink" href="#where-are-cmip5-historicalsl-data" title="Permalink to this headline">¶</a></h3>
 <p>CMIP5 historicalSl, historical data with solar forcing only, can be found in the historicalMisc experiment.
 Select historicalMisc and look for “Forcing = Sl” in the metadata of the search results.</p>
 <p>An overview which CMIP5 data for historicalSl and other forcings should exist can be found in the
 <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/historical_Misc_forcing.pdf">tables of Gavin Schmidt</a>.</p>
-</section>
-<section id="where-can-i-find-ar5-data">
+</div>
+<div class="section" id="where-can-i-find-ar5-data">
 <h3>Where can I find AR5 data?<a class="headerlink" href="#where-can-i-find-ar5-data" title="Permalink to this headline">¶</a></h3>
 <p>Climate model output used in the IPCC’s Fifth Assessment Report (AR5) is a subset of CMIP5 data. Two snapshots of these data were taken for documentation.
 Both are based on the status of CMIP5 data on March 15, 2013, the cutoff date for literature to be included in the
@@ -322,13 +322,13 @@ Data updates since March 15, 2013, are not included in the snapshots. A more det
 found on the <a class="reference external" href="http://www.ipcc-data.org/sim/gcm_monthly/AR5/index.html">AR5 GCM data page</a> of Data Distribution Centre (DDC).</p>
 <p>Unless you really need the frozen data with deadline March 15, 2013, we recommend CMIP5 data because erroneous CMIP5 data have usually been corrected by
 publication of a new version. CMIP5 data can be downloaded from ESGF.</p>
-</section>
-<section id="where-are-the-sres-scenarios-a1b-a2-and-b1">
+</div>
+<div class="section" id="where-are-the-sres-scenarios-a1b-a2-and-b1">
 <h3>Where are the SRES scenarios A1B, A2 and B1?<a class="headerlink" href="#where-are-the-sres-scenarios-a1b-a2-and-b1" title="Permalink to this headline">¶</a></h3>
 <p>The SRES scenarios (<a class="reference external" href="http://sedac.ipcc-data.org/ddc/sres/index.html">Special Report on Emission Scenarios</a>, for the Third Assessment Report)
 belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=CMIP3 and, for example, experiment=sresa1b.</p>
-</section>
-<section id="where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">
+</div>
+<div class="section" id="where-can-i-find-more-cordex-3-hourly-or-6-hourly-data">
 <h3>Where can I find more CORDEX 3-hourly or 6-hourly data?<a class="headerlink" href="#where-can-i-find-more-cordex-3-hourly-or-6-hourly-data" title="Permalink to this headline">¶</a></h3>
 <p>CORDEX 3hr and 6hr data are usually not in the ESGF but locally stored at the modelling centers according to the
 <a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design</a>. Please contact the modeling groups. Find the supplied contact information in the header of the downloaded NetCDF file:</p>
@@ -337,21 +337,21 @@ belong to CMIP3. CMIP3 data are in the ESGF now. In ESGF search, select project=
 <li><p>in shell: ncdump -h dataset_name.nc  | grep contact</p></li>
 </ul>
 <p>or write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a>.</p>
-</section>
-<section id="where-are-cordex-regional-climate-models-described">
+</div>
+<div class="section" id="where-are-cordex-regional-climate-models-described">
 <h3>Where are CORDEX regional climate models described?<a class="headerlink" href="#where-are-cordex-regional-climate-models-described" title="Permalink to this headline">¶</a></h3>
 <p>A central database with descriptions of CORDEX regional climate models does not exist. Nevertheless, every CORDEX data file has a
 header with a global attribute “references”, which usually contains a web address. You may see this and other attributes without a file download:
 Simply select a CORDEX file in an ESGF portal, follow the OPENDAP link and search the section “Global Attributes”. Write to the CORDEX user support mailing list <a class="reference external" href="mailto:datasupport&#37;&#52;&#48;cordex&#46;org">datasupport<span>&#64;</span>cordex<span>&#46;</span>org</a> for further information.</p>
-</section>
-<section id="where-can-i-find-the-land-sea-mask-or-landfrac">
+</div>
+<div class="section" id="where-can-i-find-the-land-sea-mask-or-landfrac">
 <h3>Where can I find the land sea mask or landfrac?<a class="headerlink" href="#where-can-i-find-the-land-sea-mask-or-landfrac" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>“landfrac” is not a variable name in ESGF. Please look for variable “sftlf”, standard name “land_area_fraction”.
 This is the land sea mask of the model in the projects CMIP5, CORDEX, GeoMIP, LUCID, PMIP3, …</p>
 </div></blockquote>
-</section>
-<section id="which-grid-resolutions-do-cmip5-models-have">
+</div>
+<div class="section" id="which-grid-resolutions-do-cmip5-models-have">
 <h3>Which grid resolutions do CMIP5 models have?<a class="headerlink" href="#which-grid-resolutions-do-cmip5-models-have" title="Permalink to this headline">¶</a></h3>
 <p>The following table lists the grid resolutions, i.e. the distance between adjacent grid points in degrees.</p>
 <table class="docutils align-default">
@@ -711,8 +711,8 @@ For higher latitudes deviations may occur.</p>
 The first value is that for the equator, the second for the poles (maximum for the two poles if different).
 In case of rotated poles the resolutions for the rotated coordinates rlon and rlat are tabulated. If latitude and longitude are defined with two indices i and j,
 the resolution cannot simply be read out. In this case lat(i,j) and lon(i,j) have been entered.</p>
-</section>
-<section id="how-can-the-mpi-m-ocean-grid-be-remapped">
+</div>
+<div class="section" id="how-can-the-mpi-m-ocean-grid-be-remapped">
 <h3>How can the MPI-M ocean grid be remapped?<a class="headerlink" href="#how-can-the-mpi-m-ocean-grid-be-remapped" title="Permalink to this headline">¶</a></h3>
 <p>MPI-M ocean data are upside down, due to the MPI-M history to store the data from North to South (positive to negative latitude values). Additionally, a curvilinear grid with the North Pole over Greenland is used.</p>
 <p><strong>Solution:</strong> Use Climate Data Operator remapbil:</p>
@@ -720,8 +720,8 @@ the resolution cannot simply be read out. In this case lat(i,j) and lon(i,j) hav
 </pre></div>
 </div>
 <p>More details in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>.</p>
-</section>
-<section id="do-all-cmip5-models-use-the-same-calendar">
+</div>
+<div class="section" id="do-all-cmip5-models-use-the-same-calendar">
 <h3>Do all CMIP5 models use the same calendar?<a class="headerlink" href="#do-all-cmip5-models-use-the-same-calendar" title="Permalink to this headline">¶</a></h3>
 <p>No, see the table below.</p>
 <table class="docutils align-default">
@@ -977,8 +977,8 @@ the resolution cannot simply be read out. In this case lat(i,j) and lon(i,j) hav
 are identical as well as “noleap” and “365_day”, only the latter are used in the table. CMIP calendars are defined in the
 <a class="reference external" href="http://cfconventions.org/cf-conventions/cf-conventions.html#calendar">CF standard</a> and in the model output specifications for
 <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/output_req.html#metadata">CMIP5</a> and <a class="reference external" href="https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html">CMIP6</a>.</p>
-</section>
-<section id="how-may-i-cite-esgf-and-cmip-data-in-my-paper">
+</div>
+<div class="section" id="how-may-i-cite-esgf-and-cmip-data-in-my-paper">
 <h3>How may I cite ESGF and CMIP data in my paper?<a class="headerlink" href="#how-may-i-cite-esgf-and-cmip-data-in-my-paper" title="Permalink to this headline">¶</a></h3>
 <p>Find here the citation guidelines for <a class="reference external" href="https://pcmdi.llnl.gov/CMIP6/Guide/dataUsers.html#4-terms-of-use-and-citation-requirements">CMIP6</a>
 and <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/citation.html">CMIP5</a>.</p>
@@ -988,14 +988,14 @@ and <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/citati
 <li><p>CMIP6 “Coupled Model Intercomparison Project Phase 6 (CMIP6) Experimental Design and Organization” <a class="reference external" href="https://www.geosci-model-dev.net/special_issue590.html">(special issue)</a></p></li>
 <li><p>CMIP5 <a class="reference external" href="https://pcmdi.llnl.gov/mips/cmip5/cmip5-references.html">(list or articles)</a></p></li>
 </ul>
-</section>
-<section id="may-cmip5-historical-and-rcp-data-be-combined-to-one-long-time-series">
+</div>
+<div class="section" id="may-cmip5-historical-and-rcp-data-be-combined-to-one-long-time-series">
 <h3>May CMIP5 historical and RCP data be combined to one long time series?<a class="headerlink" href="#may-cmip5-historical-and-rcp-data-be-combined-to-one-long-time-series" title="Permalink to this headline">¶</a></h3>
 <p>Yes, if you select matching ensemble members. Look into the header of the RCP data file:
 The attributes parent_experiment_id and parent_experiment_rip name the right ensemble member for combination. Find here more
 <a class="reference external" href="https://verc.enes.org/data/enes-model-data/cmip5/datastructure">background information</a>.</p>
-</section>
-<section id="which-height-levels-do-the-data-have">
+</div>
+<div class="section" id="which-height-levels-do-the-data-have">
 <h3>Which height levels do the data have?<a class="headerlink" href="#which-height-levels-do-the-data-have" title="Permalink to this headline">¶</a></h3>
 <p><strong>CORDEX data:</strong> The height level is part of the short variable name. For example, ta500 is the air temperature at the 500 hPa pressure level.</p>
 <p><strong>Before download with OPeNDAP:</strong> Expand the dataset you need with “Show Files” and click on “OPENDAP”. In the OPeNDAP Dataset Access Form look for lev and enable it. Click on “Get ASCII” and login. The lev array with the height levels will be listed.</p>
@@ -1005,8 +1005,8 @@ The attributes parent_experiment_id and parent_experiment_rip name the right ens
 </pre></div>
 </div>
 <p>The option -c causes ncdump to output header and coordinate arrays.</p>
-</section>
-<section id="which-heigth-boundaries-do-cordex-cloud-layers-have">
+</div>
+<div class="section" id="which-heigth-boundaries-do-cordex-cloud-layers-have">
 <h3>Which heigth boundaries do CORDEX cloud layers have?<a class="headerlink" href="#which-heigth-boundaries-do-cordex-cloud-layers-have" title="Permalink to this headline">¶</a></h3>
 <p>CORDEX offers cloud fraction variables for the following three height layers.</p>
 <table class="docutils align-default">
@@ -1044,8 +1044,8 @@ The attributes parent_experiment_id and parent_experiment_rip name the right ens
 <p>The height boundaries for the three layers are given as pressure levels and are defined in the
 <a class="reference external" href="http://is-enes-data.github.io/cordex_archive_specifications.pdf">CORDEX Archive Design document</a>.
 The height boundaries of the layer are also stored in the netCDF file in the variable plev_bnds.</p>
-</section>
-<section id="in-which-sequence-are-the-data-ordered-inside-a-netcdf-file">
+</div>
+<div class="section" id="in-which-sequence-are-the-data-ordered-inside-a-netcdf-file">
 <h3>In which sequence are the data ordered inside a NetCDF file?<a class="headerlink" href="#in-which-sequence-are-the-data-ordered-inside-a-netcdf-file" title="Permalink to this headline">¶</a></h3>
 <p>The Network Common Data Format (NetCDF) is a binary data format for the exchange of scientific data and consists of a header and a data part.
 The header contains beside attributes the structure of the data part. The data itself are deposited in arrays in the data part. This enables quick access.</p>
@@ -1062,8 +1062,8 @@ The index set of the data variable is the cartesian product of the index sets of
 </pre></div>
 </div>
 <p>The values are written to the array in a nested loop. The innermost loop is lon, the outermost is time with lat in the middle.</p>
-</section>
-<section id="how-can-i-verify-that-the-data-have-not-been-updated-since-i-downloaded-them">
+</div>
+<div class="section" id="how-can-i-verify-that-the-data-have-not-been-updated-since-i-downloaded-them">
 <h3>How can I verify that the data have not been updated since I downloaded them?<a class="headerlink" href="#how-can-i-verify-that-the-data-have-not-been-updated-since-i-downloaded-them" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution 1:</strong> You may compare the version of the data. The version is part of the metadata and can be found in the ESGF portals. It is also printed in the NetCDF header.</p>
 <p><strong>Solution 2:</strong> ESGF offers a comfortable comparison using Wget scripting. Keep your Wget script after download and again run it with the -u option.</p>
@@ -1075,8 +1075,8 @@ The index set of the data variable is the cartesian product of the index sets of
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ md5sum myfile.nc
 </pre></div>
 </div>
-</section>
-<section id="how-can-i-read-or-process-downloaded-data">
+</div>
+<div class="section" id="how-can-i-read-or-process-downloaded-data">
 <h3>How can I read or process downloaded data?<a class="headerlink" href="#how-can-i-read-or-process-downloaded-data" title="Permalink to this headline">¶</a></h3>
 <p>Data downloaded from ESGF are usually in NetCDF format. NetCDF is a header based binary format and can be read/processed by</p>
 <ul class="simple">
@@ -1087,8 +1087,8 @@ The index set of the data variable is the cartesian product of the index sets of
 <li><p>Python: <a class="reference external" href="https://pypi.python.org/pypi/netCDF4">netcdf4-python</a> is a Python interface to the netCDF C library</p></li>
 </ul>
 <p>An exception is NetCDF OPeNDAP download. Here you can get ASCII CSV, i.e. readable text (Comma Separated Values), or dodc (binary OPeNDAP data format). ASCII CSV can directly be imported, for example, into Microsoft Excel.</p>
-</section>
-<section id="i-cannot-process-downloaded-data">
+</div>
+<div class="section" id="i-cannot-process-downloaded-data">
 <h3>I cannot process downloaded data<a class="headerlink" href="#i-cannot-process-downloaded-data" title="Permalink to this headline">¶</a></h3>
 <p>There might be several reasons and solutions for this issue:</p>
 <p><strong>Solution 1:</strong> If you have downloaded the file with your browser’s download manager (following a HTTPServer link),
@@ -1096,8 +1096,8 @@ compare the checksum of your downloaded file with that in the metadata. In case 
 repeat the download since the file may have been changed during download. ESGF Wget scripts perform this check automatically.</p>
 <p><strong>Solution 2:</strong> Many data, especially CORDEX data, are stored in the format <a class="reference external" href="http://www.unidata.ucar.edu/software/netcdf/">NetCDF4</a>
 or compressed NetCDF4. Ensure that your local software can handle this relatively new data format.</p>
-</section>
-<section id="how-can-i-calculate-a-multi-year-average-for-each-month-of-year">
+</div>
+<div class="section" id="how-can-i-calculate-a-multi-year-average-for-each-month-of-year">
 <h3>How can I calculate a multi-year average for each month of year?<a class="headerlink" href="#how-can-i-calculate-a-multi-year-average-for-each-month-of-year" title="Permalink to this headline">¶</a></h3>
 <p>A multi-year average for each month of year can easily be calculated with CDO ymonavg. Example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span># split into years
@@ -1109,8 +1109,8 @@ $ cdo ymonavg OH_Amon_ULAQ_rcp45_r1i1p1_1995-2004.nc OH_average_over_1195-2004_U
 </pre></div>
 </div>
 <p>More details are in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>,</p>
-</section>
-<section id="how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back">
+</div>
+<div class="section" id="how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back">
 <h3>How can CORDEX data on a grid with rotated poles be rotated back?<a class="headerlink" href="#how-can-cordex-data-on-a-grid-with-rotated-poles-be-rotated-back" title="Permalink to this headline">¶</a></h3>
 <p>Some native CORDEX grids have rotated poles, for example the native European domains EUR-44 and EUR-11. They can easily be regridded (rotated back).</p>
 <p><strong>Solution 1:</strong> Use interpolated data
@@ -1129,8 +1129,8 @@ cf-python uses the ESMF regridding library as its regridding engine, and current
 Climate Data Operators (CDO) offer <a class="reference external" href="https://code.zmaw.de/boards/2/topics/1283">different ways of regridding</a>,
 for example cdo rotuvb can perform a backward transformation of velocity components U and V from a rotated spherical system to a geographical system.
 More details in the <a class="reference external" href="https://code.zmaw.de/projects/cdo/embedded/index.html">CDO documentation</a>.</p>
-</section>
-<section id="there-seems-to-be-missing-data-for-some-models">
+</div>
+<div class="section" id="there-seems-to-be-missing-data-for-some-models">
 <h3>There seems to be missing data for some models.<a class="headerlink" href="#there-seems-to-be-missing-data-for-some-models" title="Permalink to this headline">¶</a></h3>
 <p><strong>Solution 1:</strong>
 Some models do not provide data for all years. See the model documentation in the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem.
@@ -1143,17 +1143,17 @@ for CMIP6 here:  <a class="reference external" href="https://pcmdi.llnl.gov/CMIP
 <p>The contact of the CMIP6 modelling groups is under the “[Show citation]” button in the list of “Full Dataset Services” in the information below the result of your search.</p>
 <p><strong>Solution 2:</strong>
 Look into the errata of the project, it might be a known issue. As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to look up or report an issue.</p>
-</section>
-<section id="what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5">
+</div>
+<div class="section" id="what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5">
 <h3>What do ‘x’ and ‘y’ refer to in the ocean variables ‘hfx’ and ‘hfy’ in CMIP5?<a class="headerlink" href="#what-do-x-and-y-refer-to-in-the-ocean-variables-hfx-and-hfy-in-cmip5" title="Permalink to this headline">¶</a></h3>
 <p>‘x’ and ‘y’ refer to grid directions, which may vary from one grid cell to another.
 This is explained in the definitions of the standard names, e.g. for ocean_heat_x_transport: ‘x’ indicates a vector component along the grid x-axis,
 positive with increasing x.</p>
-</section>
-</section>
-<section id="esgf-general">
+</div>
+</div>
+<div class="section" id="esgf-general">
 <h2>ESGF General<a class="headerlink" href="#esgf-general" title="Permalink to this headline">¶</a></h2>
-<section id="what-browsers-does-esgf-support">
+<div class="section" id="what-browsers-does-esgf-support">
 <h3>What browsers does ESGF support?<a class="headerlink" href="#what-browsers-does-esgf-support" title="Permalink to this headline">¶</a></h3>
 <p>ESGF supports the following browsers. These are the browsers we test on.</p>
 <ul class="simple">
@@ -1164,19 +1164,19 @@ positive with increasing x.</p>
 <p><strong>Safari Issue:</strong> Safari has a known bug that prevents it from sending too many certificates when interacting over SSL.
 This results in some ESGF sites failing to display the login page. If you encounter such a problem, please use Firefox or Chrome.</p>
 <p><strong>Internet Explorer Issue:</strong> Registration to an ESGF data access group may be slow with Internet Explorer. If you experience this, try another browser.</p>
-</section>
-<section id="shall-i-use-my-personal-certificate-in-the-browser">
+</div>
+<div class="section" id="shall-i-use-my-personal-certificate-in-the-browser">
 <h3>Shall I use my personal certificate in the browser?<a class="headerlink" href="#shall-i-use-my-personal-certificate-in-the-browser" title="Permalink to this headline">¶</a></h3>
 <p>No. If a message appears whether to use your personal credials imported into your browser, please press “Cancel”.</p>
-</section>
-<section id="i-get-the-error-secure-connection-failed-with-firefox">
+</div>
+<div class="section" id="i-get-the-error-secure-connection-failed-with-firefox">
 <h3>I get the error: “Secure Connection Failed” with Firefox<a class="headerlink" href="#i-get-the-error-secure-connection-failed-with-firefox" title="Permalink to this headline">¶</a></h3>
 <p>This error has to do with encryption and seems to depend on Firefox version, operating system and ESGF portal.</p>
 <img alt="_images/secure_connection_failed.png" src="_images/secure_connection_failed.png" />
 <p><strong>Solution:</strong> In Firefox open local page <a class="reference external" href="about:config">about:config</a> and add the portal or site name to the security.tls.insecure_fallback_hosts. An example is shown in the image below.</p>
 <img alt="_images/secure_connection_failed_solution.png" src="_images/secure_connection_failed_solution.png" />
-</section>
-<section id="i-have-a-question-or-error-to-report-to-esgf">
+</div>
+<div class="section" id="i-have-a-question-or-error-to-report-to-esgf">
 <h3>I have a question or error to report to ESGF<a class="headerlink" href="#i-have-a-question-or-error-to-report-to-esgf" title="Permalink to this headline">¶</a></h3>
 <p>Questions and error reports related to the ESGF portals and nodes performance should be sent to <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;llnl&#46;gov">esgf-user<span>&#64;</span>llnl<span>&#46;</span>gov</a>.</p>
 <p>For questions related to the models output or performance, please contact the individual modeling centers using the supplied contact information in the file header:</p>
@@ -1185,8 +1185,8 @@ This results in some ESGF sites failing to display the login page. If you encoun
 <li><p>in shell: ncdump -h dataset_name.nc  | grep contact</p></li>
 </ul>
 <p>As part of the <a class="reference external" href="https://es-doc.org/">ES-DOC</a> documentation ecosystem, the ESGF Errata Service centralizes timely information about known issues of ESGF data. Please, visit the <a class="reference external" href="https://es-doc.github.io/esdoc-errata-client/index.html">docs</a> about how to find or report an issue.</p>
-</section>
-<section id="how-can-i-subscribe-unsubscribe-esgf-user-llnl-gov">
+</div>
+<div class="section" id="how-can-i-subscribe-unsubscribe-esgf-user-llnl-gov">
 <h3>How can I subscribe/unsubscribe <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;llnl&#46;gov">esgf-user<span>&#64;</span>llnl<span>&#46;</span>gov</a>?<a class="headerlink" href="#how-can-i-subscribe-unsubscribe-esgf-user-llnl-gov" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><dl>
@@ -1208,18 +1208,18 @@ The subject should be blank. The body should contain only the following:</p>
 </dl>
 </li>
 </ul>
-</section>
-</section>
-<section id="esgf-wget">
+</div>
+</div>
+<div class="section" id="esgf-wget">
 <h2>ESGF Wget<a class="headerlink" href="#esgf-wget" title="Permalink to this headline">¶</a></h2>
-<section id="is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000">
+<div class="section" id="is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000">
 <h3>Is there any easy way to generate wget scripts for downloading lots of model data only during a certain period, such as 1950-2000?<a class="headerlink" href="#is-there-any-easy-way-to-generate-wget-scripts-for-downloading-lots-of-model-data-only-during-a-certain-period-such-as-1950-2000" title="Permalink to this headline">¶</a></h3>
 <p>Unfortunately, it is not possible to generate wget scripts for a certain period. You can only filter the datasets. For the files, you would need
 to remove those you don’t need from the wget script. See the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#wget-scripting">Wget scripting</a>  information in the <a class="reference external" href="https://esgf.github.io/esgf-user-support/user_guide.html#the-esgf-search-restful-api">RESTful API</a> section in the tutorial.</p>
-</section>
-<section id="issues-with-script-generation">
+</div>
+<div class="section" id="issues-with-script-generation">
 <h3>Issues with Script Generation<a class="headerlink" href="#issues-with-script-generation" title="Permalink to this headline">¶</a></h3>
-<section id="i-get-the-error-request-uri-too-large">
+<div class="section" id="i-get-the-error-request-uri-too-large">
 <h4>I get the error: “Request-URI Too Large”<a class="headerlink" href="#i-get-the-error-request-uri-too-large" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Request</span><span class="o">-</span><span class="n">URI</span> <span class="n">Too</span> <span class="n">Large</span>
@@ -1243,11 +1243,11 @@ to remove those you don’t need from the wget script. See the <a class="referen
 </dl>
 </li>
 </ul>
-</section>
-</section>
-<section id="general-wget-runtime-issues">
+</div>
+</div>
+<div class="section" id="general-wget-runtime-issues">
 <h3>General Wget Runtime Issues<a class="headerlink" href="#general-wget-runtime-issues" title="Permalink to this headline">¶</a></h3>
-<section id="do-i-need-to-use-my-username-password">
+<div class="section" id="do-i-need-to-use-my-username-password">
 <h4>Do I need to use my username / password?<a class="headerlink" href="#do-i-need-to-use-my-username-password" title="Permalink to this headline">¶</a></h4>
 <p>If you are trying to download unrestricted datasets with Wget, eg, CMIP3-6, obs4MIPs, input4MIPs, or E3SM, the username / password are not required.  However you need to instruct the Wget script to bypass the login prompt using the option -s.  When using this method for download, ensure you are not using additional options, eg. -s and -H should never be combined</p>
 <blockquote>
@@ -1255,12 +1255,12 @@ to remove those you don’t need from the wget script. See the <a class="referen
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-</section>
-<section id="issues-with-certificates-or-java">
+</div>
+</div>
+<div class="section" id="issues-with-certificates-or-java">
 <h3>Issues with Certificates or Java<a class="headerlink" href="#issues-with-certificates-or-java" title="Permalink to this headline">¶</a></h3>
 <p>Note that these issues deal with restricted project downloads.  For unrestricted downloads see the  -s  option description above.</p>
-<section id="error-unsupported-major-minor-version-51-0">
+<div class="section" id="error-unsupported-major-minor-version-51-0">
 <h4>Error: “Unsupported major.minor version 51.0”<a class="headerlink" href="#error-unsupported-major-minor-version-51-0" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Retrieving Credentials...Exception in thread &quot;main&quot; java.lang.UnsupportedClassVersionError: esg/security/myproxy/MyProxyConsole :
@@ -1297,8 +1297,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-rsa-premaster-secret-error">
+</div>
+<div class="section" id="error-rsa-premaster-secret-error">
 <h4>Error: “RSA premaster secret error”<a class="headerlink" href="#error-rsa-premaster-secret-error" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Retrieving</span> <span class="n">Credentials</span><span class="o">...</span><span class="n">RSA</span> <span class="n">premaster</span> <span class="n">secret</span> <span class="n">error</span>
@@ -1323,8 +1323,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-algorithm-rsa-ecb-pkcs1padding-is-not-available-from-provider-cryptix">
+</div>
+<div class="section" id="error-algorithm-rsa-ecb-pkcs1padding-is-not-available-from-provider-cryptix">
 <h4>Error: “algorithm/RSA/ECB/PKCS1Padding is not available from provider Cryptix”<a class="headerlink" href="#error-algorithm-rsa-ecb-pkcs1padding-is-not-available-from-provider-cryptix" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span><span class="o">.</span><span class="n">security</span><span class="o">.</span><span class="n">NoSuchAlgorithmException</span><span class="p">:</span> <span class="n">algorithm</span><span class="o">/</span><span class="n">RSA</span><span class="o">/</span><span class="n">ECB</span><span class="o">/</span><span class="n">PKCS1Padding</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">available</span> <span class="kn">from</span> <span class="nn">provider</span> <span class="n">Cryptix</span>
@@ -1347,8 +1347,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-gssexception">
+</div>
+<div class="section" id="error-gssexception">
 <h4>Error: “GSSException”<a class="headerlink" href="#error-gssexception" title="Permalink to this headline">¶</a></h4>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Please give your OpenID (hit ENTER to accept default)
@@ -1379,8 +1379,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-myproxy-bootstraptrust-failed">
+</div>
+<div class="section" id="error-myproxy-bootstraptrust-failed">
 <h4>Error: “MyProxy bootstrapTrust failed”<a class="headerlink" href="#error-myproxy-bootstraptrust-failed" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Connecting</span> <span class="n">to</span> <span class="n">esgf</span><span class="o">-</span><span class="n">node</span><span class="o">.</span><span class="n">llnl</span><span class="o">.</span><span class="n">gov</span><span class="o">...</span>
@@ -1413,8 +1413,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-received-fatal-alert-handshake-failure">
+</div>
+<div class="section" id="error-received-fatal-alert-handshake-failure">
 <h4>Error: “Received fatal alert: handshake_failure”<a class="headerlink" href="#error-received-fatal-alert-handshake-failure" title="Permalink to this headline">¶</a></h4>
 <p>Error message:</p>
 <blockquote>
@@ -1448,8 +1448,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="getcert-jar-cannot-be-retrieved">
+</div>
+<div class="section" id="getcert-jar-cannot-be-retrieved">
 <h4>getcert.jar cannot be retrieved<a class="headerlink" href="#getcert-jar-cannot-be-retrieved" title="Permalink to this headline">¶</a></h4>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>MyProxy Password?
@@ -1508,8 +1508,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="the-wget-script-does-not-trust-the-certificate-of-the-server">
+</div>
+<div class="section" id="the-wget-script-does-not-trust-the-certificate-of-the-server">
 <h4>The Wget script does not trust the certificate of the server<a class="headerlink" href="#the-wget-script-does-not-trust-the-certificate-of-the-server" title="Permalink to this headline">¶</a></h4>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Self</span><span class="o">-</span><span class="n">signed</span> <span class="n">certificate</span> <span class="n">encountered</span><span class="o">.</span>
@@ -1544,8 +1544,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-no-ca-certificates-found">
+</div>
+<div class="section" id="error-no-ca-certificates-found">
 <h4>Error: “no CA certificates found”<a class="headerlink" href="#error-no-ca-certificates-found" title="Permalink to this headline">¶</a></h4>
 <p>The user’s local ESGF certificates directory ~/.esg is incomplete. Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span><span class="o">.</span><span class="n">security</span><span class="o">.</span><span class="n">cert</span><span class="o">.</span><span class="n">CertificateException</span><span class="p">:</span> <span class="n">no</span> <span class="n">CA</span> <span class="n">certificates</span> <span class="n">found</span> <span class="ow">in</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">user_name</span><span class="o">/.</span><span class="n">esg</span><span class="o">/</span><span class="n">certificates</span>
@@ -1560,8 +1560,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-unknown-ca">
+</div>
+<div class="section" id="error-unknown-ca">
 <h4>Error: “Unknown CA”<a class="headerlink" href="#error-unknown-ca" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">Authentication</span> <span class="n">failed</span> <span class="p">[</span><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">Failure</span> <span class="n">unspecified</span> <span class="n">at</span> <span class="n">GSS</span><span class="o">-</span><span class="n">API</span> <span class="n">level</span> <span class="p">[</span><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">Unknown</span> <span class="n">CA</span><span class="p">]]]</span>
 </pre></div>
@@ -1573,8 +1573,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-unrecognized-ssl-message-plaintext-connection">
+</div>
+<div class="section" id="error-unrecognized-ssl-message-plaintext-connection">
 <h4>Error: “Unrecognized SSL message, plaintext connection?”<a class="headerlink" href="#error-unrecognized-ssl-message-plaintext-connection" title="Permalink to this headline">¶</a></h4>
 <p>This error occurs if an OpenID provider is not properly registered after the ESGF overhaul. The ESGF federation began to upgrade its servers in October 2015. Not every Node has been upgraded yet. OpenIDs issued from un-upgraded nodes, will not work. Example error message:</p>
 <blockquote>
@@ -1600,8 +1600,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-failed-to-open-cert">
+</div>
+<div class="section" id="error-failed-to-open-cert">
 <h4>Error: “Failed to open cert”<a class="headerlink" href="#error-failed-to-open-cert" title="Permalink to this headline">¶</a></h4>
 <p>Example error message:</p>
 <blockquote>
@@ -1617,20 +1617,20 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="i-have-a-problem-running-myproxylogon-application">
+</div>
+<div class="section" id="i-have-a-problem-running-myproxylogon-application">
 <h4>I have a problem running MyProxyLogon application<a class="headerlink" href="#i-have-a-problem-running-myproxylogon-application" title="Permalink to this headline">¶</a></h4>
 <p>MyProxyLogon application may be used to prepare a download script run (Wget script run) but this is error prone. Under Linux or Mac OS this is also outdated since Wget scripts are itself able to fetch the necessary credentials and to inquire OpenID and password.</p>
 <p>Please try running the wget script alone. Before you try it again, remove your credentials directory .esg since your credentials may be damaged due to the MyProxyLogon failure. ESGF Wget scripts will automatically rebuild the credentials directory if it is missing.</p>
-</section>
-</section>
-<section id="issues-with-option-h">
+</div>
+</div>
+<div class="section" id="issues-with-option-h">
 <h3>Issues with Option -H<a class="headerlink" href="#issues-with-option-h" title="Permalink to this headline">¶</a></h3>
 <p>An ESGF Wget script with option -H does not need locally stored certificates for user authentication but sends OpenID and password encrypted with Wget. On the one hand, use of option -H can avoid many potential error sources. On the other hand, some new errors may occur, which come without verbose respose, sometimes even without an error message. Please enable debug mode with option -d to get an error message in this case.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh -H -d
 </pre></div>
 </div>
-<section id="error-retry-failed">
+<div class="section" id="error-retry-failed">
 <h4>Error: “Retry failed”<a class="headerlink" href="#error-retry-failed" title="Permalink to this headline">¶</a></h4>
 <p>After an unsuccessful try, the script tries again to download a file, also without success.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sftlf_fx_HadGEM2</span><span class="o">-</span><span class="n">ES_esmFixClim1_r0i0p0</span><span class="o">.</span><span class="n">nc</span> <span class="o">...</span><span class="n">Downloading</span>
@@ -1676,8 +1676,8 @@ Certificate could not be retrieved
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-http-request-to-openid-relying-party-service-failed">
+</div>
+<div class="section" id="error-http-request-to-openid-relying-party-service-failed">
 <h4>Error: “HTTP request to OpenID Relying Party service failed”<a class="headerlink" href="#error-http-request-to-openid-relying-party-service-failed" title="Permalink to this headline">¶</a></h4>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sftgif_ARC</span><span class="o">-</span><span class="mi">44</span><span class="n">_ECMWF</span><span class="o">-</span><span class="n">ERAINT_evaluation_r1i1p1_AWI</span><span class="o">-</span><span class="n">HIRHAM5_v1_fx</span><span class="o">.</span><span class="n">nc</span> <span class="o">...</span><span class="n">Downloading</span>
@@ -1733,8 +1733,8 @@ The following workaround using the -i option has shown to work when using -H:</p
 </li>
 </ul>
 <p>In all other cases contact ESGF support <a class="reference external" href="mailto:esgf-user&#37;&#52;&#48;llnl&#46;gov">esgf-user<span>&#64;</span>llnl<span>&#46;</span>gov</a></p>
-</section>
-<section id="error-http-request-to-openid-provider-service-failed">
+</div>
+<div class="section" id="error-http-request-to-openid-provider-service-failed">
 <h4>Error: “HTTP request to OpenID Provider service failed”<a class="headerlink" href="#error-http-request-to-openid-provider-service-failed" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><dl>
@@ -1751,8 +1751,8 @@ The following workaround using the -i option has shown to work when using -H:</p
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-401-unauthorized">
+</div>
+<div class="section" id="error-401-unauthorized">
 <h4>Error: “401 Unauthorized”<a class="headerlink" href="#error-401-unauthorized" title="Permalink to this headline">¶</a></h4>
 <p>Access to ESGF data is restricted for some projects. Before you can download data, you have to join a data access control group since acknowledgement of a policy is a condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script and options -H -d, you will get an error message like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span> <span class="n">request</span> <span class="n">sent</span><span class="p">,</span> <span class="n">awaiting</span> <span class="n">response</span><span class="o">...</span> <span class="mi">401</span> <span class="n">Unauthorized</span>
@@ -1766,15 +1766,15 @@ The following workaround using the -i option has shown to work when using -H:</p
 </dl>
 </li>
 </ul>
-</section>
-<section id="how-to-avoid-entering-openid-and-password-before-executing-a-wget-script">
+</div>
+<div class="section" id="how-to-avoid-entering-openid-and-password-before-executing-a-wget-script">
 <h4>How to avoid entering OpenID and password before executing a Wget script?<a class="headerlink" href="#how-to-avoid-entering-openid-and-password-before-executing-a-wget-script" title="Permalink to this headline">¶</a></h4>
 <p>If Oracle Java, version 1.7 or newer, is locally installed and Wget scripts are run without option -H, OpenID and password are only inquired once per data node.</p>
-</section>
-</section>
-<section id="network-issues">
+</div>
+</div>
+<div class="section" id="network-issues">
 <h3>Network Issues<a class="headerlink" href="#network-issues" title="Permalink to this headline">¶</a></h3>
-<section id="error-connection-timed-out-or-connection-refused">
+<div class="section" id="error-connection-timed-out-or-connection-refused">
 <h4>Error: “Connection timed out” or “Connection refused”<a class="headerlink" href="#error-connection-timed-out-or-connection-refused" title="Permalink to this headline">¶</a></h4>
 <p>Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Retrieving</span> <span class="n">Credentials</span><span class="o">...</span><span class="n">MyProxy</span> <span class="n">get</span> <span class="n">failed</span><span class="o">.</span> <span class="p">[</span><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">connect</span> <span class="n">timed</span> <span class="n">out</span><span class="p">]</span>
@@ -1811,18 +1811,18 @@ The following workaround using the -i option has shown to work when using -H:</p
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-no-route-to-host">
+</div>
+<div class="section" id="error-no-route-to-host">
 <h4>Error: “No route to host”<a class="headerlink" href="#error-no-route-to-host" title="Permalink to this headline">¶</a></h4>
 <p>Your request could not be routed to the server. This problem can be caused at the server’s or the user’s site or in between. Maybe a part of the network is down.</p>
-</section>
-</section>
-<section id="checksum-issues-or-command-not-found">
+</div>
+</div>
+<div class="section" id="checksum-issues-or-command-not-found">
 <h3>Checksum Issues or Command not Found<a class="headerlink" href="#checksum-issues-or-command-not-found" title="Permalink to this headline">¶</a></h3>
 <p>ESGF Wget scripts contain a SHA256 or MD5 checksum for each download file. After download, the checksum is
 again calculated on the user’s local machine and compared with that in the script. In case of a mismatch the
 downloaded file is deleted. This shall prevent unwanted bitstream changes during download.</p>
-<section id="sha256-or-md5-fails-or-file-gets-downloaded-over-and-over">
+<div class="section" id="sha256-or-md5-fails-or-file-gets-downloaded-over-and-over">
 <h4>sha256 or md5 fails or file gets downloaded over and over<a class="headerlink" href="#sha256-or-md5-fails-or-file-gets-downloaded-over-and-over" title="Permalink to this headline">¶</a></h4>
 <p>The SHA256 or MD5 checksum does not match. Example error message:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sftlf_EUR-11_CNRM-CERFACS-CNRM-CM5_rcp45_r1i1p1_CNRM-ALADIN53_v1_fx.nc ...Downloading
@@ -1866,8 +1866,8 @@ Contact the data owner to verify what is happening.
 </dl>
 </li>
 </ol>
-</section>
-<section id="error-sha256sum-command-not-found">
+</div>
+<div class="section" id="error-sha256sum-command-not-found">
 <h4>Error: “sha256sum: command not found”<a class="headerlink" href="#error-sha256sum-command-not-found" title="Permalink to this headline">¶</a></h4>
 <p>ESGF Wget scripts for data download need a command line tool to calculate the SHA256 checksum after download. Under Linux, it is sha256sum, which is usually in one of the standard packages. Under Mac OS, SHA software is not standard.</p>
 <ul>
@@ -1898,8 +1898,8 @@ Contact the data owner to verify what is happening.
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-md5sum-command-not-found">
+</div>
+<div class="section" id="error-md5sum-command-not-found">
 <h4>Error: “md5sum: command not found”<a class="headerlink" href="#error-md5sum-command-not-found" title="Permalink to this headline">¶</a></h4>
 <p>ESGF Wget scripts need the command line tool md5sum. Please install it. mdsum5 is sometimes used instead of sha256sum for calculating a checksum after download. This checksum is compared with the checksum in the file list. In this way, a proper download, i.e. an unchanged file, is ensured.</p>
 <ul>
@@ -1913,8 +1913,8 @@ Contact the data owner to verify what is happening.
 </dl>
 </li>
 </ul>
-</section>
-<section id="error-wget-command-not-found">
+</div>
+<div class="section" id="error-wget-command-not-found">
 <h4>Error: “wget: command not found”<a class="headerlink" href="#error-wget-command-not-found" title="Permalink to this headline">¶</a></h4>
 <p>For fetching files, ESGF Wget scripts need the command line tool Wget. Please install it.</p>
 <ul>
@@ -1928,11 +1928,11 @@ Contact the data owner to verify what is happening.
 </dl>
 </li>
 </ul>
-</section>
-</section>
-<section id="wget-script-file-list-issues">
+</div>
+</div>
+<div class="section" id="wget-script-file-list-issues">
 <h3>Wget Script File List Issues<a class="headerlink" href="#wget-script-file-list-issues" title="Permalink to this headline">¶</a></h3>
-<section id="the-download-file-list-in-wget-script-is-incomplete">
+<div class="section" id="the-download-file-list-in-wget-script-is-incomplete">
 <h4>The download file list in Wget script is incomplete<a class="headerlink" href="#the-download-file-list-in-wget-script-is-incomplete" title="Permalink to this headline">¶</a></h4>
 <p>Downloads with ESGF wget scripts are usually limited to 1000 files per run. Therefore the download file list is truncated if the number of files exceeds 1000. Two ways are possible to overcome this issue:</p>
 <ul>
@@ -1960,8 +1960,8 @@ Sometimes the number of download files will still exceed 1000. Scripts for huge 
 </li>
 </ul>
 <p>A comprehensive description of ESGF Search RESTful URLs can be found in section “<a class="reference internal" href="user_guide.html#restful-api"><span class="std std-ref">The ESGF search RESTful API</span></a>”.</p>
-</section>
-<section id="how-to-create-a-wget-script-that-contains-only-the-files-for-some-selected-variables">
+</div>
+<div class="section" id="how-to-create-a-wget-script-that-contains-only-the-files-for-some-selected-variables">
 <h4>How to create a wget script that contains only the files for some selected variables?<a class="headerlink" href="#how-to-create-a-wget-script-that-contains-only-the-files-for-some-selected-variables" title="Permalink to this headline">¶</a></h4>
 <p>Please follow these steps:</p>
 <ol class="arabic simple">
@@ -1975,11 +1975,11 @@ Sometimes the number of download files will still exceed 1000. Scripts for huge 
 </ol>
 <p>In case you need more than one variable, use a blank as delimiter, for example:</p>
 <img alt="_images/textfeld.png" src="_images/textfeld.png" />
-</section>
-</section>
-<section id="other-wget-script-issues">
+</div>
+</div>
+<div class="section" id="other-wget-script-issues">
 <h3>Other Wget Script Issues<a class="headerlink" href="#other-wget-script-issues" title="Permalink to this headline">¶</a></h3>
-<section id="error-error-403-forbidden">
+<div class="section" id="error-error-403-forbidden">
 <h4>Error: “ERROR 403: Forbidden”<a class="headerlink" href="#error-error-403-forbidden" title="Permalink to this headline">¶</a></h4>
 <p>Access to ESGF data is restricted for some data projects. Before you can download data, you have to join a data access control group since acknowledgement of a policy is condition for data download. If you lack a group membership and try to get data from ESGF with a Wget script, you will get an error message like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Connecting</span> <span class="n">to</span> <span class="n">esg</span><span class="o">.</span><span class="n">cnrm</span><span class="o">-</span><span class="n">game</span><span class="o">-</span><span class="n">meteo</span><span class="o">.</span><span class="n">fr</span> <span class="p">(</span><span class="n">esg</span><span class="o">.</span><span class="n">cnrm</span><span class="o">-</span><span class="n">game</span><span class="o">-</span><span class="n">meteo</span><span class="o">.</span><span class="n">fr</span><span class="p">)</span><span class="o">|</span><span class="mf">193.49</span><span class="o">.</span><span class="mf">97.157</span><span class="o">|</span><span class="p">:</span><span class="mf">443.</span><span class="o">..</span> <span class="n">connected</span><span class="o">.</span>
@@ -2002,13 +2002,13 @@ Sometimes the number of download files will still exceed 1000. Scripts for huge 
 </dl>
 </li>
 </ul>
-</section>
-<section id="info-302-moved-temporarily">
+</div>
+<div class="section" id="info-302-moved-temporarily">
 <h4>Info: “302 Moved temporarily”<a class="headerlink" href="#info-302-moved-temporarily" title="Permalink to this headline">¶</a></h4>
 <p>This is not an error but a usual message in the output of an ESGF wget script. For example, it may be printed by ESGF-CoG authentication system or in case of a redirect from the node’s THREDDS catalog to the device where the data are really stored.</p>
 <p>If your download failed, look for a later error message below.</p>
-</section>
-<section id="wget-script-was-not-recognized-as-a-batch-file">
+</div>
+<div class="section" id="wget-script-was-not-recognized-as-a-batch-file">
 <h4>Wget script was not recognized as a batch file<a class="headerlink" href="#wget-script-was-not-recognized-as-a-batch-file" title="Permalink to this headline">¶</a></h4>
 <p>Example error messages:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span><span class="o">-</span><span class="n">xxx</span><span class="o">.</span><span class="n">sh</span><span class="p">:</span> <span class="n">Permission</span> <span class="n">denied</span>
@@ -2034,8 +2034,8 @@ $ ./wget-xxx.sh
 </dl>
 </li>
 </ul>
-</section>
-<section id="wget-script-stopped-after-inquiring-the-openid">
+</div>
+<div class="section" id="wget-script-stopped-after-inquiring-the-openid">
 <h4>Wget script stopped after inquiring the OpenID<a class="headerlink" href="#wget-script-stopped-after-inquiring-the-openid" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ bash wget-xxx.sh &amp;
     ...
@@ -2045,8 +2045,8 @@ $ ./wget-xxx.sh
 </pre></div>
 </div>
 <p>Do not send the script to the background with the ampersand at the end of the command. Instead run the script in the foreground (without “&amp;” at the end).</p>
-</section>
-<section id="are-myproxy-password-and-account-password-the-same">
+</div>
+<div class="section" id="are-myproxy-password-and-account-password-the-same">
 <h4>Are MyProxy password and account password the same?<a class="headerlink" href="#are-myproxy-password-and-account-password-the-same" title="Permalink to this headline">¶</a></h4>
 <p>Yes, the following passwords are all the same:</p>
 <ul class="simple">
@@ -2054,8 +2054,8 @@ $ ./wget-xxx.sh
 <li><p>ESGF-CoG account password</p></li>
 <li><p>OpenID password</p></li>
 </ul>
-</section>
-<section id="how-to-preserve-the-directory-structure">
+</div>
+<div class="section" id="how-to-preserve-the-directory-structure">
 <h4>How to preserve the directory structure?<a class="headerlink" href="#how-to-preserve-the-directory-structure" title="Permalink to this headline">¶</a></h4>
 <p>If you want to create a directory structure on your local computer and to copy your downloaded files into this structure, create your Wget script via URL (more precisely ESGF Search RESTful API) and use the download_structure command. For example, a CMIP5 directory structure can be created with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>http://esgf-data.dkrz.de/esg-search/wget?download_structure=project,product,institute,model,experiment,time_frequency,realm,cmor_table,ensemble,variable&amp;project=CMIP5&amp;experiment=historical&amp;cmor_table=Amon&amp;variable=tas&amp;variable=pr
@@ -2077,38 +2077,38 @@ $ ./wget-xxx.sh
 <p>ESGF Search RESTful API cannot use the original CORDEX DRS (Data Reference Syntax). Instead a similar structure is used. Whereas the CORDEX DRS specifies “rcm-model” for the real directory structure, use “rcm-name” here instead.</p>
 </div>
 <p>A description of ESGF Search RESTful URLs can be found in section “<a class="reference internal" href="user_guide.html#restful-api"><span class="std std-ref">The ESGF search RESTful API</span></a>”.</p>
-</section>
-<section id="are-esgf-download-scripts-also-available-for-the-ms-windows-command-prompt">
+</div>
+<div class="section" id="are-esgf-download-scripts-also-available-for-the-ms-windows-command-prompt">
 <h4>Are ESGF download scripts also available for the MS Windows command prompt?<a class="headerlink" href="#are-esgf-download-scripts-also-available-for-the-ms-windows-command-prompt" title="Permalink to this headline">¶</a></h4>
 <p>No, but you may try to run the downloaded script in a Linux emulation as Cygwin under Windows. Cygwin/Windows is not officially supported by ESGF but some users prefer it. Or install a virtual Linux machine under Windows.</p>
-</section>
-</section>
-</section>
-<section id="esgf-login-registration">
+</div>
+</div>
+</div>
+<div class="section" id="esgf-login-registration">
 <h2>ESGF Login/Registration<a class="headerlink" href="#esgf-login-registration" title="Permalink to this headline">¶</a></h2>
-<section id="do-i-have-to-have-a-user-account-to-search-for-data">
+<div class="section" id="do-i-have-to-have-a-user-account-to-search-for-data">
 <h3>Do I have to have a user account to search for data?<a class="headerlink" href="#do-i-have-to-have-a-user-account-to-search-for-data" title="Permalink to this headline">¶</a></h3>
 <p>You don’t need an account to search for data on a public project. You will need an account to download data from some data projects or to use the data cart feature. You should get an account on the node you wish to download data from.</p>
-</section>
-<section id="do-i-need-to-join-the-project-serving-the-data">
+</div>
+<div class="section" id="do-i-need-to-join-the-project-serving-the-data">
 <h3>Do I need to join the project serving the data?<a class="headerlink" href="#do-i-need-to-join-the-project-serving-the-data" title="Permalink to this headline">¶</a></h3>
 <p>You only need to join the project if you plan to edit wiki pages, upload files etc. In case you want to download data from ESGF, you will most likely have to join a data access control group.
 These groups are not the same as projects. For details about data access groups see tutorial <a class="reference internal" href="user_guide.html#data-access-groups"><span class="std std-ref">Authorization for ESGF Data Access</span></a>.</p>
-</section>
-<section id="which-group-membership-is-necessary-for-download-of-esgf-data">
+</div>
+<div class="section" id="which-group-membership-is-necessary-for-download-of-esgf-data">
 <h3>Which group membership is necessary for download of ESGF data?<a class="headerlink" href="#which-group-membership-is-necessary-for-download-of-esgf-data" title="Permalink to this headline">¶</a></h3>
 <p>See tutorial <a class="reference internal" href="user_guide.html#data-access-groups"><span class="std std-ref">Authorization for ESGF Data Access</span></a>.</p>
-</section>
-<section id="my-group-memberships-are-not-shown">
+</div>
+<div class="section" id="my-group-memberships-are-not-shown">
 <h3>My group memberships are not shown<a class="headerlink" href="#my-group-memberships-are-not-shown" title="Permalink to this headline">¶</a></h3>
 <p>Normally, group memberships are shown on your User Profile. User Profiles and group registration are related to an account, not a person. You may have registered for group access using a different account or an account created before the 2015 ESGF overhaul, that no longer exists.</p>
-</section>
-<section id="i-am-getting-a-security-warning-when-trying-to-login">
+</div>
+<div class="section" id="i-am-getting-a-security-warning-when-trying-to-login">
 <h3>I am getting a security warning when trying to login<a class="headerlink" href="#i-am-getting-a-security-warning-when-trying-to-login" title="Permalink to this headline">¶</a></h3>
 <p>ESGF uses a self-signed certificate. You have to tell your browser to accept this non-commerical certificate. Each browser does this differently.
 See tutorial <a class="reference internal" href="user_guide.html#accept-esgf-cert"><span class="std std-ref">Get your browser to accept the ESGF certificate</span></a></p>
-</section>
-<section id="i-get-a-java-error-on-login">
+</div>
+<div class="section" id="i-get-a-java-error-on-login">
 <h3>I get a Java error on login<a class="headerlink" href="#i-get-a-java-error-on-login" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/java_err.png" src="_images/java_err.png" />
 <ul class="simple">
@@ -2123,12 +2123,12 @@ See tutorial <a class="reference internal" href="user_guide.html#accept-esgf-cer
 </dl>
 </li>
 </ul>
-</section>
-<section id="the-project-i-have-navigated-to-does-not-have-a-search-widget">
+</div>
+<div class="section" id="the-project-i-have-navigated-to-does-not-have-a-search-widget">
 <h3>The project I have navigated to does not have a search widget?<a class="headerlink" href="#the-project-i-have-navigated-to-does-not-have-a-search-widget" title="Permalink to this headline">¶</a></h3>
 <p>That project may not be serving any data or they have turned off the widget and instead have a link somewhere on the page to the search area.</p>
-</section>
-<section id="i-cannot-login-with-my-openid-issued-by-pcmdi-llnl-gov">
+</div>
+<div class="section" id="i-cannot-login-with-my-openid-issued-by-pcmdi-llnl-gov">
 <h3>I cannot login with my OpenID issued by pcmdi.llnl.gov<a class="headerlink" href="#i-cannot-login-with-my-openid-issued-by-pcmdi-llnl-gov" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/pcmdi_openid_failed.png" src="_images/pcmdi_openid_failed.png" />
 <ul>
@@ -2139,14 +2139,14 @@ See tutorial <a class="reference internal" href="user_guide.html#accept-esgf-cer
 </dl>
 </li>
 </ul>
-</section>
-<section id="i-cannot-login-with-my-openid-created-before-january-2016">
+</div>
+<div class="section" id="i-cannot-login-with-my-openid-created-before-january-2016">
 <h3>I cannot login with my OpenID created before January 2016<a class="headerlink" href="#i-cannot-login-with-my-openid-created-before-january-2016" title="Permalink to this headline">¶</a></h3>
 <p>Instead, I’m getting an error “Error: unable to resolve OpenID identifier” or I’m guided to a Group Registration Request page and, after pressing “Register”, I’m getting a “HTTP Status 500”.</p>
 <p>Most ESGF partners do not maintain accounts from before the ESGF overhaul. The same may be true for accounts created on test nodes during the overhaul (June 2015 - January 2016). These include OpenIDs from pcmdi9 and esg-dev.</p>
 <p>Please create a new account on an ESGF node of your choice. Your new account should be accepted by every ESGF portal and ESGF data nodes. Note to change your password and account information, you must login into the ESGF node you created the account on. Also register to the data access control groups again, e.g. CMIP5 Research or CMIP5 Commercial (for download of CMIP5 data).</p>
-</section>
-<section id="i-get-the-error-cannot-resolve-openid">
+</div>
+<div class="section" id="i-get-the-error-cannot-resolve-openid">
 <h3>I get the error: “Cannot resolve openid”<a class="headerlink" href="#i-get-the-error-cannot-resolve-openid" title="Permalink to this headline">¶</a></h3>
 <p>This could be either a problem with the user account, or with the server setup where the user registered:</p>
 <ul class="simple">
@@ -2167,32 +2167,32 @@ See tutorial <a class="reference internal" href="user_guide.html#accept-esgf-cer
 </dl>
 </li>
 </ul>
-</section>
-<section id="i-get-the-error-openid-discovery-error-unrecognized-by-the-identity-provider">
+</div>
+<div class="section" id="i-get-the-error-openid-discovery-error-unrecognized-by-the-identity-provider">
 <h3>I get the error: “OpenID Discovery Error: unrecognized by the Identity Provider”<a class="headerlink" href="#i-get-the-error-openid-discovery-error-unrecognized-by-the-identity-provider" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/openid_discovery_error.png" src="_images/openid_discovery_error.png" />
 <p>The server which issued the OpenID was retired or now has a different name, e.g. pcmdi3, pcmdi9 and pcmdi.llnl.gov were changed to esgf-node.llnl.gov and esgf-node.ipsl.fr was changed to esgf-node.ipsl.upmc.fr. If you have an OpenID <a class="reference external" href="https://pcmdi.llnl.gov/esgf-idp/openid/your_username">https://pcmdi.llnl.gov/esgf-idp/openid/your_username</a>, simply use <a class="reference external" href="https://esgf-node.llnl.gov/esgf-idp/openid/your_username">https://esgf-node.llnl.gov/esgf-idp/openid/your_username</a> instead. In all other cases, the old OpenIDs are no longer valid. Create a new OpenID at the ESGF node of your choice.</p>
-</section>
-<section id="my-new-openid-is-not-available-in-firefox">
+</div>
+<div class="section" id="my-new-openid-is-not-available-in-firefox">
 <h3>My new OpenID is not available in Firefox<a class="headerlink" href="#my-new-openid-is-not-available-in-firefox" title="Permalink to this headline">¶</a></h3>
 <p>Instead Firefox uses an old OpenID.</p>
 <p>Did a message appear in the same Firefox session whether to use your credials imported into your browser? Please respond that query with pressing “cancel” since an old OpenID may have been assigned to your credential. This can even happen in a private window.</p>
-</section>
-<section id="i-have-not-received-an-email-confirming-my-registration">
+</div>
+<div class="section" id="i-have-not-received-an-email-confirming-my-registration">
 <h3>I have not received an email confirming my registration<a class="headerlink" href="#i-have-not-received-an-email-confirming-my-registration" title="Permalink to this headline">¶</a></h3>
 <p>ESGF does not require the user to reply to any confirmation email. You can immediately use your new account.</p>
 <p>I forgot my password
 See tutorial <a class="reference internal" href="user_guide.html#forgot-password"><span class="std std-ref">Forgot Password</span></a></p>
-</section>
-</section>
-<section id="esgf-search">
+</div>
+</div>
+<div class="section" id="esgf-search">
 <h2>ESGF Search<a class="headerlink" href="#esgf-search" title="Permalink to this headline">¶</a></h2>
-<section id="how-do-i-find-data">
+<div class="section" id="how-do-i-find-data">
 <h3>How do I find data?<a class="headerlink" href="#how-do-i-find-data" title="Permalink to this headline">¶</a></h3>
 <p>Visit the home page of one of the ESGF portals with your web browser and follow one of the general or project-specific links to a search surface.  In easy cases you also may use the Search &amp; Download Data box with its search text field. This box contains a link “Search with options” to a general search surface as well.</p>
 <img alt="_images/search_and_download.png" src="_images/search_and_download.png" />
-</section>
-<section id="i-don-t-find-the-expected-data">
+</div>
+<div class="section" id="i-don-t-find-the-expected-data">
 <h3>I don’t find the expected data<a class="headerlink" href="#i-don-t-find-the-expected-data" title="Permalink to this headline">¶</a></h3>
 <p>There might be several reasons and solutions for this issue:</p>
 <ul class="simple">
@@ -2229,8 +2229,8 @@ Which CMIP5 data have been required to the modeling groups for which time freque
 </dl>
 </li>
 </ul>
-</section>
-<section id="i-get-the-error-transaction-aborted-undefined">
+</div>
+<div class="section" id="i-get-the-error-transaction-aborted-undefined">
 <h3>I get the error: “transaction aborted undefined”<a class="headerlink" href="#i-get-the-error-transaction-aborted-undefined" title="Permalink to this headline">¶</a></h3>
 <p>This error may occur after clicking on “Show Files” to expand the file list of a dataset and is probably caused by Firefox’s cache content or old cookies.</p>
 <img alt="_images/transaction_aborted_undefined.png" src="_images/transaction_aborted_undefined.png" />
@@ -2241,11 +2241,11 @@ Which CMIP5 data have been required to the modeling groups for which time freque
 </dl>
 </li>
 </ul>
-</section>
-</section>
-<section id="esgf-download">
+</div>
+</div>
+<div class="section" id="esgf-download">
 <h2>ESGF Download<a class="headerlink" href="#esgf-download" title="Permalink to this headline">¶</a></h2>
-<section id="how-can-i-get-data-for-a-specified-area-only">
+<div class="section" id="how-can-i-get-data-for-a-specified-area-only">
 <h3>How can I get data for a specified area only?<a class="headerlink" href="#how-can-i-get-data-for-a-specified-area-only" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><dl>
@@ -2269,22 +2269,38 @@ Which CMIP5 data have been required to the modeling groups for which time freque
 </dl>
 </li>
 </ul>
-</section>
-<section id="does-esgf-support-opendap-downloads">
+</div>
+<div class="section" id="does-esgf-support-opendap-downloads">
 <h3>Does ESGF support OPeNDAP downloads?<a class="headerlink" href="#does-esgf-support-opendap-downloads" title="Permalink to this headline">¶</a></h3>
-<p>Yes, OPeNDAP URLs are available for all data files now. Once search results (datasets) have been added to your Data Cart, on that pane use the “Show Files” link for a dataset, to reveal the files and OPeNDAP links for each.</p>
-</section>
-<section id="i-can-t-add-data-to-my-datacart">
+<p>Yes, OPeNDAP URLs are available for all data files now. Once search results (datasets) have been added to your Data Cart, on that pane use the “Show Files” link for a dataset, to reveal the files and OPeNDAP links for each.  The OPenDAP link should be copied and pasted to be used in your OPenDAP client and the extension should be changed to use <code class="docutils literal notranslate"><span class="pre">.nc</span></code> (remove <code class="docutils literal notranslate"><span class="pre">.dods</span></code>/<code class="docutils literal notranslate"><span class="pre">.html</span></code> if found).  The ASCII OPenDAP form page if linked via the <code class="docutils literal notranslate"><span class="pre">.http</span></code> link is not considered a reliable service and therefore has been disabled for some data nodes.</p>
+</div>
+<div class="section" id="i-can-t-add-data-to-my-datacart">
 <h3>I can’t add data to my DataCart<a class="headerlink" href="#i-can-t-add-data-to-my-datacart" title="Permalink to this headline">¶</a></h3>
 <p>Please login first.</p>
-</section>
-<section id="where-can-i-get-data-on-media">
+</div>
+<div class="section" id="where-can-i-get-data-on-media">
 <h3>Where can I get data on media?<a class="headerlink" href="#where-can-i-get-data-on-media" title="Permalink to this headline">¶</a></h3>
 <p>World Data Centre for Climate (WDCC) offers a <a class="reference external" href="http://www.dkrz.de/daten-en/wdcc/projects_cooperations/ipcc-data/order-ipcc-data-on-dvd">subset of CMIP5/AR5 data on a medium, usually on a USB stick</a>.
 This service may especially be useful for scientists who cannot download data from ESGF because of very low network bandwidth.</p>
-</section>
-</section>
-</section>
+</div>
+<div class="section" id="http-download-links-are-not-working-in-chrome">
+<h3>HTTP Download links are not working (in Chrome)<a class="headerlink" href="#http-download-links-are-not-working-in-chrome" title="Permalink to this headline">¶</a></h3>
+<p>If you are trying to download a single file via the HTTPServer link, this may not work in Chrome because the original file listing was published with HTTP (insecure) URLs while the CoG portal site loads HTTPS (secure).  A security feature of Chrome prevents the insecure HTTP links to be followed by default.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Solution 1</dt><dd><p>Search for replica data that has been published with HTTPS URLs</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Solution 2</dt><dd><p>You will need to modify the settings in Chrome.  Open (Preferences/Settings) -&gt; Security &amp; Privacy -&gt; Site Settings -&gt; Additional Content Settings -&gt; Insecure content.  <strong>Add</strong> a site (using the button) to add the site name (example <code class="docutils literal notranslate"><span class="pre">esgf-node.llnl.gov</span></code>) or whatever CoG host you are connected to.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
 
 
            </div>
