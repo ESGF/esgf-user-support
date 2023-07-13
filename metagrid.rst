@@ -23,7 +23,6 @@ Known Issues
 * **Mobile Devices**:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.
 * **Edge Browser for Windows**: (*Tested witn Windows 10*)  Metagrid is incompatible with the Edge browser
 * **Long Facet Value Strings**:  Some values within the search facets, for example several *source_id* under *UofMD..* on the *input4MIPs* search are longer than the field permits and are truncated with elipses (...) characters without a means to display the full value string. 
-* **License info**: Under the "Citation" pane for each search result, the *License* info for the data set is not displayed.
 
 
 Metagrid FAQ
@@ -36,6 +35,10 @@ Q: Where should I start with getting to know the Metagrid user interface?  I'm f
 
 A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Question Mark icon in lower right corner of the page, then click on the available tour for your current page.
 
+Q: Where can I find the Metagrid interface?
+
+A: Lawrence Livermore National Laboratory hosts a beta-test version at https://aims2.llnl.gov/ 
+
 Q: I would like to share some feedback of Metagrid.  Is there an easy way to do so?
 
 A: We have integrated HotJar into Metagrid to collect feedback.  Locate the gray tab in the lower-right corner of the page.  The HotJar popup window will ask a series of questions. The freetext answer fields are optional so can be skipped with the "Skip" link, but answers to the questions on a scale of 0-10 are required to complete the short survey. 
@@ -44,9 +47,9 @@ For more specific suggestion: bug reports, feature requests, etc., please open a
 
    .. image:: images/Metagrid-shot.png
 
-Q: How can I find Cordex data. It is not listed under projects.
+Q: How can I find CORDEX data. It is not listed under projects.
 
-A: For the time being Cordex data can be found under the last listed project All (except CMIP6).  A search view for Cordex is coming soon.
+A: For the time being CORDEX data can be found under the last listed project All (except CMIP6).  A search view for CORDEX is coming soon.
 
 Q: Why exclude CMIP6 from all other projects?
 
@@ -71,7 +74,6 @@ Q: What can I do if there are no files for a particular dataset?  Is this an err
 A:  Yes its likely this was due to an error in "publication" where we populate the file records for datasets.  First, modify your search to see if there is a more recent version of the data set available or a replica may have the files correctly published.  If that does not yield files for the dataset, then please contact support so the appropriate data managers can investigate the issue.
 
 
-
 User accounts
 *************
 
@@ -88,6 +90,6 @@ A:  As ESGF is a distributed system, meaning that the data files are hosted and 
 
 For Chrome users, you will need to go to your Settings -> Security & Privacy -> Site Settings -> Additional Content Settings -> Insecure content.  **Add** a site (using the button) to add ``aims2.llnl.gov`` to your list of sites.  That site execption will enable the downloads to proceed.
 
-Q: Can I perform a Globus download using Metagrid?
+Q: Can I perform a Globus transfer using Metagrid?
 
-A:  Not at present.  Access to Globus script downloads is coming soon.
+A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.

@@ -1659,7 +1659,7 @@ How can I get data for a specified area only?
 
 Does ESGF support OPeNDAP downloads?
 ------------------------------------
-Yes, OPeNDAP URLs are available for all data files now. Once search results (datasets) have been added to your Data Cart, on that pane use the "Show Files" link for a dataset, to reveal the files and OPeNDAP links for each.
+Yes, OPeNDAP URLs are available for all data files now. Once search results (datasets) have been added to your Data Cart, on that pane use the "Show Files" link for a dataset, to reveal the files and OPeNDAP links for each.  The OPenDAP link should be copied and pasted to be used in your OPenDAP client and the extension should be changed to use ``.nc`` (remove ``.dods``/``.html`` if found).  The ASCII OPenDAP form page if linked via the ``.http`` link is not considered a reliable service and therefore has been disabled for some data nodes.
 
 I can't add data to my DataCart
 -------------------------------
@@ -1669,3 +1669,15 @@ Where can I get data on media?
 ------------------------------
 World Data Centre for Climate (WDCC) offers a `subset of CMIP5/AR5 data on a medium, usually on a USB stick <http://www.dkrz.de/daten-en/wdcc/projects_cooperations/ipcc-data/order-ipcc-data-on-dvd>`_.
 This service may especially be useful for scientists who cannot download data from ESGF because of very low network bandwidth.
+
+HTTP Download links are not working (in Chrome)
+----------------------------------------------- 
+
+If you are trying to download a single file via the HTTPServer link, this may not work in Chrome because the original file listing was published with HTTP (insecure) URLs while the CoG portal site loads HTTPS (secure).  A security feature of Chrome prevents the insecure HTTP links to be followed by default.  
+
+* Solution 1
+    Search for replica data that has been published with HTTPS URLs
+
+* Solution 2
+    You will need to modify the settings in Chrome.  Open (Preferences/Settings) -> Security & Privacy -> Site Settings -> Additional Content Settings -> Insecure content.  **Add** a site (using the button) to add the site name (example ``esgf-node.llnl.gov``) or whatever CoG host you are connected to.
+
