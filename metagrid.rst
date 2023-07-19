@@ -22,7 +22,7 @@ Known Issues
 
 * **Mobile Devices**:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.
 * **Edge Browser for Windows**: (*Tested witn Windows 10*)  Metagrid is incompatible with the Edge browser
-* **Long Facet Value Strings**:  Some values within the search facets, for example several *source_id* under *UofMD..* on the *input4MIPs* search are longer than the field permits and are truncated with elipses (...) characters without a means to display the full value string. 
+* **Sign out**:  When signing out, an *Error* page appears with the text "We are sorry...  Invalid parameter: redirect_uri".  In this case, the sign out did in fact success, please use the browser's **back** button to return to Metagrid.
 
 
 Metagrid FAQ
@@ -37,7 +37,7 @@ A: If you are unfamiliar with the interface, you may want to take a tour.  Click
 
 Q: Where can I find the Metagrid interface?
 
-A: Lawrence Livermore National Laboratory hosts a beta-test version at https://aims2.llnl.gov/ 
+A: Lawrence Livermore National Laboratory hosts a beta-test version at https://aims2.llnl.gov/.  Oak Ridge National Laboratory hosts the interface at https://esgf-node.ornl.gov/
 
 Q: I would like to share some feedback of Metagrid.  Is there an easy way to do so?
 
@@ -92,4 +92,4 @@ For Chrome users, you will need to go to your Settings -> Security & Privacy -> 
 
 Q: Can I perform a Globus transfer using Metagrid?
 
-A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.
+A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  Additionally, the feature is enabled only at LLNL for LLNL hosted data.  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.
