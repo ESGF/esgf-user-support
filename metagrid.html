@@ -95,6 +95,7 @@
 <section id="metagrid-an-introduction">
 <h2>Metagrid: an introduction<a class="headerlink" href="#metagrid-an-introduction" title="Permalink to this heading">¶</a></h2>
 <p>Metagrid is a faceted search web application for use in ESGF data discovery.  Metagrid is the web application to replace the CoG web frontend.  Metagrid has many of the same search features and dataset information as was available in CoG.  The major distinction is that due to Metagrid’s use of a Javascript platform based on ReactJS, Metagrid is able to present an improved interactive user experience.</p>
+<p>The LLNL ESGF site (esgf-node.llnl.gov) now presents Metagrid as the Web Interface platform.</p>
 </section>
 <section id="several-new-features">
 <h2>Several new features<a class="headerlink" href="#several-new-features" title="Permalink to this heading">¶</a></h2>
@@ -102,16 +103,16 @@
 <li><p><strong>Facet value free-text entry</strong>:  Users no longer must scroll through a long list of value names for models, experiments, variables, etc.  Instead, they can start typing the name and the Metagrid webapp will make a list of suggestions based on string pattern matching.</p></li>
 <li><p><strong>Saved searches</strong>: Save and re-run your search query at a later date on a different browser or system.</p></li>
 <li><p><strong>Shareable result links</strong>:  Hand a link off to your colleagues to repeat your search</p></li>
+<li><p><strong>New Sign-in</strong>:  Sign in to Metagrid to create persistent Saved Searches or Data Carts beyond a single web browser session.  Sign-in at LLNL is based on Globus Auth (see <a class="reference external" href="https://globus.org/">https://globus.org/</a>)</p></li>
 </ul>
 <p>In addition, Metagrid addresses a long-standing issue that has impacted the CoG web frontend’s ability to deliver the “Wget Script”.  Download of the script with specific browser versions would produce a script with incorrect files.  To our knowledge this is no longer an issue for Metagrid.</p>
-<p>Metagrid awaits your feedback.  Please give this interface a try for your ESGF data discovery needs.</p>
 </section>
 <section id="known-issues">
 <h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Mobile Devices</strong>:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.</p></li>
 <li><p><strong>Edge Browser for Windows</strong>: (<em>Tested witn Windows 10</em>)  Metagrid is incompatible with the Edge browser</p></li>
-<li><p><strong>Long Facet Value Strings</strong>:  Some values within the search facets, for example several <em>source_id</em> under <em>UofMD..</em> on the <em>input4MIPs</em> search are longer than the field permits and are truncated with elipses (…) characters without a means to display the full value string.</p></li>
+<li><p><strong>Globus Transfers to Managed Endpoints</strong>: Some Institutions have deployed managed Globus Connect Endpoints.  We are working on a solution to allow transfers to these endpoints, but in the meantime, transfer tasks will fail to submit to some endpoints.</p></li>
 </ul>
 </section>
 <section id="metagrid-faq">
@@ -121,7 +122,7 @@
 <p>Q: Where should I start with getting to know the Metagrid user interface?  I’m fairly new to ESGF and this interface, search results seems rather unfamiliar.</p>
 <p>A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Question Mark icon in lower right corner of the page, then click on the available tour for your current page.</p>
 <p>Q: Where can I find the Metagrid interface?</p>
-<p>A: Lawrence Livermore National Laboratory hosts a beta-test version at <a class="reference external" href="https://aims2.llnl.gov/">https://aims2.llnl.gov/</a></p>
+<p>A: Lawrence Livermore National Laboratory hosts a beta-test version at <a class="reference external" href="https://aims2.llnl.gov/">https://aims2.llnl.gov/</a>.  Oak Ridge National Laboratory hosts the interface at <a class="reference external" href="https://esgf-node.ornl.gov/">https://esgf-node.ornl.gov/</a></p>
 <p>Q: I would like to share some feedback of Metagrid.  Is there an easy way to do so?</p>
 <p>A: We have integrated HotJar into Metagrid to collect feedback.  Locate the gray tab in the lower-right corner of the page.  The HotJar popup window will ask a series of questions. The freetext answer fields are optional so can be skipped with the “Skip” link, but answers to the questions on a scale of 0-10 are required to complete the short survey.</p>
 <p>For more specific suggestion: bug reports, feature requests, etc., please open an issue on the Metagrid GitHub repo:  <a class="reference external" href="https://github.com/aims-group/metagrid/issues">https://github.com/aims-group/metagrid/issues</a></p>
@@ -147,7 +148,7 @@ Additionally, the search selectors for <strong>Version Date Range</strong> are l
 <section id="user-accounts">
 <h3>User accounts<a class="headerlink" href="#user-accounts" title="Permalink to this heading">¶</a></h3>
 <p>Q:  Can I use my existing ESGF account?</p>
-<p>A:  Existing ESGF accounts are not compatible with Metagrid.  For now, <em>test</em> accounts are available.  You have the option to create a test account at the CEDA server or use credentials from GitHUb or your ORCID</p>
+<p>A:  Existing ESGF accounts are not compatible with Metagrid.  Sign in is managed by the Globus Auth capability with hundreds of Insitutional Identity providers, also incluing OrcID, Google, and Github accounts.</p>
 </section>
 <section id="downloads">
 <h3>Downloads<a class="headerlink" href="#downloads" title="Permalink to this heading">¶</a></h3>
@@ -155,7 +156,9 @@ Additionally, the search selectors for <strong>Version Date Range</strong> are l
 <p>A:  As ESGF is a distributed system, meaning that the data files are hosted and served from many independent servers, some of the servers have published their data using http links (as opposed to secure https links).  Such links are listed in the search results without modification.  In the recent past (several years ago) this arrangement was not of concern for the major browsers (Chrome, Firefox).  somewhat recently, the browsers have introduced a security feature to disable insecure content when linked from a secure page.  The consequence is that the http links provided from some servers are disabled by default.   The remedy is to adjust security/privacy settings for your broswer.</p>
 <p>For Chrome users, you will need to go to your Settings -&gt; Security &amp; Privacy -&gt; Site Settings -&gt; Additional Content Settings -&gt; Insecure content.  <strong>Add</strong> a site (using the button) to add <code class="docutils literal notranslate"><span class="pre">aims2.llnl.gov</span></code> to your list of sites.  That site execption will enable the downloads to proceed.</p>
 <p>Q: Can I perform a Globus transfer using Metagrid?</p>
-<p>A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.</p>
+<p>A:  Yes, Globus Transfers are enabled via the Data Cart, but these only work with some destination endpoint.  <em>Managed endpoints</em> at some institutions will not work for the moment, but Personal endpoints are supported.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  Additionally, the feature is enabled only at LLNL for LLNL hosted data.  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.</p>
+<p>Q:  I get an Unknown Error with a wget script tranfser.  How do I fix this?</p>
+<p>A:  Please try another browser or reboot your system.  Restarting the browser may not solve the issue.</p>
 </section>
 </section>
 </section>
