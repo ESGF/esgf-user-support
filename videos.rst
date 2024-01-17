@@ -19,7 +19,7 @@ Globus Download from LLNL
 NSC/LiU Download
 ----------------
 - `Using Singularity and Docker Containers for downloading ESGF data <https://www.youtube.com/watch?v=FbviMoloXQU>`_
-- `Discovering and downloading data from ESGF: CMIP5 example <https://www.youtube.com/watch?v=PTtWfUni0sA>`_ Note: registration is not longer needed for CMIP5 download.
+- `Discovering and downloading data from ESGF: CMIP5 example <https://www.youtube.com/watch?v=PTtWfUni0sA>`_ Note: registration is no longer needed for CMIP5 download.
 
 Webinar Series
 --------------
