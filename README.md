@@ -1,3 +1,3 @@
 GitHub Pages of [ESGF/esgf-user-support](https://github.com/ESGF/esgf-user-support.git)
 ===
-Sphinx html documentation of [914fb927](https://github.com/ESGF/esgf-user-support/tree/914fb9277e4071b5853971ee7cb7fff204e500e1)
+Sphinx html documentation of [69b4a0ca](https://github.com/ESGF/esgf-user-support/tree/69b4a0ca2d0fd298d3c6b3e84e03a8dbce87c6d7)

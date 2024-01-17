@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Metagrid (Beta): Introduction/FAQ &mdash; ESGF User Support 0.0.0 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
     <link rel="shortcut icon" href="_static/esgf_globe.ico"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/doctools.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=525cde36"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -27,15 +29,19 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> ESGF User Support
-            <img src="_static/esgf_logo.png" class="logo" alt="Logo"/>
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ESGF User Support
+              <img src="_static/esgf_logo.png" class="logo" alt="Logo"/>
           </a>
               <div class="version">
                 0.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -73,8 +79,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Metagrid (Beta): Introduction/FAQ</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Metagrid (Beta): Introduction/FAQ</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/metagrid.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -84,14 +90,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="metagrid-beta-introduction-faq">
-<h1>Metagrid (Beta): Introduction/FAQ<a class="headerlink" href="#metagrid-beta-introduction-faq" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="metagrid-an-introduction">
-<h2>Metagrid: an introduction<a class="headerlink" href="#metagrid-an-introduction" title="Permalink to this headline">¶</a></h2>
+  <section id="metagrid-beta-introduction-faq">
+<h1>Metagrid (Beta): Introduction/FAQ<a class="headerlink" href="#metagrid-beta-introduction-faq" title="Permalink to this heading">¶</a></h1>
+<section id="metagrid-an-introduction">
+<h2>Metagrid: an introduction<a class="headerlink" href="#metagrid-an-introduction" title="Permalink to this heading">¶</a></h2>
 <p>Metagrid is a faceted search web application for use in ESGF data discovery.  Metagrid is the web application to replace the CoG web frontend.  Metagrid has many of the same search features and dataset information as was available in CoG.  The major distinction is that due to Metagrid’s use of a Javascript platform based on ReactJS, Metagrid is able to present an improved interactive user experience.</p>
-</div>
-<div class="section" id="several-new-features">
-<h2>Several new features<a class="headerlink" href="#several-new-features" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="several-new-features">
+<h2>Several new features<a class="headerlink" href="#several-new-features" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Facet value free-text entry</strong>:  Users no longer must scroll through a long list of value names for models, experiments, variables, etc.  Instead, they can start typing the name and the Metagrid webapp will make a list of suggestions based on string pattern matching.</p></li>
 <li><p><strong>Saved searches</strong>: Save and re-run your search query at a later date on a different browser or system.</p></li>
@@ -99,23 +105,23 @@
 </ul>
 <p>In addition, Metagrid addresses a long-standing issue that has impacted the CoG web frontend’s ability to deliver the “Wget Script”.  Download of the script with specific browser versions would produce a script with incorrect files.  To our knowledge this is no longer an issue for Metagrid.</p>
 <p>Metagrid awaits your feedback.  Please give this interface a try for your ESGF data discovery needs.</p>
-</div>
-<div class="section" id="known-issues">
-<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Mobile Devices</strong>:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.</p></li>
 <li><p><strong>Edge Browser for Windows</strong>: (<em>Tested witn Windows 10</em>)  Metagrid is incompatible with the Edge browser</p></li>
-<li><p><strong>Sign out</strong>:  When signing out, an <em>Error</em> page appears with the text “We are sorry…  Invalid parameter: redirect_uri”.  In this case, the sign out did in fact success, please use the browser’s <strong>back</strong> button to return to Metagrid.</p></li>
+<li><p><strong>Long Facet Value Strings</strong>:  Some values within the search facets, for example several <em>source_id</em> under <em>UofMD..</em> on the <em>input4MIPs</em> search are longer than the field permits and are truncated with elipses (…) characters without a means to display the full value string.</p></li>
 </ul>
-</div>
-<div class="section" id="metagrid-faq">
-<h2>Metagrid FAQ<a class="headerlink" href="#metagrid-faq" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="general">
-<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="metagrid-faq">
+<h2>Metagrid FAQ<a class="headerlink" href="#metagrid-faq" title="Permalink to this heading">¶</a></h2>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h3>
 <p>Q: Where should I start with getting to know the Metagrid user interface?  I’m fairly new to ESGF and this interface, search results seems rather unfamiliar.</p>
 <p>A: If you are unfamiliar with the interface, you may want to take a tour.  Click on the Blue Question Mark icon in lower right corner of the page, then click on the available tour for your current page.</p>
 <p>Q: Where can I find the Metagrid interface?</p>
-<p>A: Lawrence Livermore National Laboratory hosts a beta-test version at <a class="reference external" href="https://aims2.llnl.gov/">https://aims2.llnl.gov/</a>.  Oak Ridge National Laboratory hosts the interface at <a class="reference external" href="https://esgf-node.ornl.gov/">https://esgf-node.ornl.gov/</a></p>
+<p>A: Lawrence Livermore National Laboratory hosts a beta-test version at <a class="reference external" href="https://aims2.llnl.gov/">https://aims2.llnl.gov/</a></p>
 <p>Q: I would like to share some feedback of Metagrid.  Is there an easy way to do so?</p>
 <p>A: We have integrated HotJar into Metagrid to collect feedback.  Locate the gray tab in the lower-right corner of the page.  The HotJar popup window will ask a series of questions. The freetext answer fields are optional so can be skipped with the “Skip” link, but answers to the questions on a scale of 0-10 are required to complete the short survey.</p>
 <p>For more specific suggestion: bug reports, feature requests, etc., please open an issue on the Metagrid GitHub repo:  <a class="reference external" href="https://github.com/aims-group/metagrid/issues">https://github.com/aims-group/metagrid/issues</a></p>
@@ -127,9 +133,9 @@
 <p>Q: Why exclude CMIP6 from all other projects?</p>
 <p>A: CMIP6 introduced a different naming convention for several of the properties of the datasets in our search database, such as the model and experiment.  As we have been unable to reconcile the old and new conventions trivially, instead we provide results on separate pages.
 We realize this may pose an inconvenince to comparing data between older project data.</p>
-</div>
-<div class="section" id="search">
-<h3>Search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="search">
+<h3>Search<a class="headerlink" href="#search" title="Permalink to this heading">¶</a></h3>
 <p>Q:  How do I include/exclude replicas in my search and search for old versions?</p>
 <p>A:  The search selection <em>Dropdowms to toggle replicas and versions (latest or all) is under the **Additional Properties*</em> tab of the Faceted search bar on the left.
 Additionally, the search selectors for <strong>Version Date Range</strong> are located in this tab.</p>
@@ -137,22 +143,22 @@ Additionally, the search selectors for <strong>Version Date Range</strong> are l
 <p>A: Some datasets have replica copies published at additional sites.  (See <em>replicas</em> above) You can toggle replicas off and see only a single result.  Additionally, it might be advantageous to download a replica instead of the original, for instance the original data node might report being offline, or you are aware of geographical proximity to the host node, eg. North America, Europe or Asia.  You may use the <code class="docutils literal notranslate"><span class="pre">Data</span> <span class="pre">Node</span></code> search facet to select a node, each listed by the domain name with the reported status indicator.</p>
 <p>Q: What can I do if there are no files for a particular dataset?  Is this an error?</p>
 <p>A:  Yes its likely this was due to an error in “publication” where we populate the file records for datasets.  First, modify your search to see if there is a more recent version of the data set available or a replica may have the files correctly published.  If that does not yield files for the dataset, then please contact support so the appropriate data managers can investigate the issue.</p>
-</div>
-<div class="section" id="user-accounts">
-<h3>User accounts<a class="headerlink" href="#user-accounts" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="user-accounts">
+<h3>User accounts<a class="headerlink" href="#user-accounts" title="Permalink to this heading">¶</a></h3>
 <p>Q:  Can I use my existing ESGF account?</p>
 <p>A:  Existing ESGF accounts are not compatible with Metagrid.  For now, <em>test</em> accounts are available.  You have the option to create a test account at the CEDA server or use credentials from GitHUb or your ORCID</p>
-</div>
-<div class="section" id="downloads">
-<h3>Downloads<a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="downloads">
+<h3>Downloads<a class="headerlink" href="#downloads" title="Permalink to this heading">¶</a></h3>
 <p>Q:  Why doesn’t my Http download work in Chrome?</p>
 <p>A:  As ESGF is a distributed system, meaning that the data files are hosted and served from many independent servers, some of the servers have published their data using http links (as opposed to secure https links).  Such links are listed in the search results without modification.  In the recent past (several years ago) this arrangement was not of concern for the major browsers (Chrome, Firefox).  somewhat recently, the browsers have introduced a security feature to disable insecure content when linked from a secure page.  The consequence is that the http links provided from some servers are disabled by default.   The remedy is to adjust security/privacy settings for your broswer.</p>
 <p>For Chrome users, you will need to go to your Settings -&gt; Security &amp; Privacy -&gt; Site Settings -&gt; Additional Content Settings -&gt; Insecure content.  <strong>Add</strong> a site (using the button) to add <code class="docutils literal notranslate"><span class="pre">aims2.llnl.gov</span></code> to your list of sites.  That site execption will enable the downloads to proceed.</p>
 <p>Q: Can I perform a Globus transfer using Metagrid?</p>
-<p>A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  Additionally, the feature is enabled only at LLNL for LLNL hosted data.  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.</p>
-</div>
-</div>
-</div>
+<p>A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.</p>
+</section>
+</section>
+</section>
 
 
            </div>
