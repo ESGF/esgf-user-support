@@ -6,23 +6,25 @@ Metagrid: an introduction
 
 Metagrid is a faceted search web application for use in ESGF data discovery.  Metagrid is the web application to replace the CoG web frontend.  Metagrid has many of the same search features and dataset information as was available in CoG.  The major distinction is that due to Metagrid's use of a Javascript platform based on ReactJS, Metagrid is able to present an improved interactive user experience.
 
+The LLNL ESGF site (esgf-node.llnl.gov) now presents Metagrid as the Web Interface platform.
+
 Several new features
 ---------------------
 
 * **Facet value free-text entry**:  Users no longer must scroll through a long list of value names for models, experiments, variables, etc.  Instead, they can start typing the name and the Metagrid webapp will make a list of suggestions based on string pattern matching.
 * **Saved searches**: Save and re-run your search query at a later date on a different browser or system.
 * **Shareable result links**:  Hand a link off to your colleagues to repeat your search
+* **New Sign-in**:  Sign in to Metagrid to create persistent Saved Searches or Data Carts beyond a single web browser session.  Sign-in at LLNL is based on Globus Auth (see https://globus.org/)
 
 In addition, Metagrid addresses a long-standing issue that has impacted the CoG web frontend's ability to deliver the "Wget Script".  Download of the script with specific browser versions would produce a script with incorrect files.  To our knowledge this is no longer an issue for Metagrid.
 
-Metagrid awaits your feedback.  Please give this interface a try for your ESGF data discovery needs.
 
 Known Issues
 ------------
 
 * **Mobile Devices**:  Metagrid cannot render on a mobile device: the search results are collapsed in the small sized window.
 * **Edge Browser for Windows**: (*Tested witn Windows 10*)  Metagrid is incompatible with the Edge browser
-* **Sign out**:  When signing out, an *Error* page appears with the text "We are sorry...  Invalid parameter: redirect_uri".  In this case, the sign out did in fact success, please use the browser's **back** button to return to Metagrid.
+* **Globus Transfers to Managed Endpoints**: Some Institutions have deployed managed Globus Connect Endpoints.  We are working on a solution to allow transfers to these endpoints, but in the meantime, transfer tasks will fail to submit to some endpoints.
 
 
 Metagrid FAQ
@@ -79,7 +81,7 @@ User accounts
 
 Q:  Can I use my existing ESGF account?
 
-A:  Existing ESGF accounts are not compatible with Metagrid.  For now, *test* accounts are available.  You have the option to create a test account at the CEDA server or use credentials from GitHUb or your ORCID
+A:  Existing ESGF accounts are not compatible with Metagrid.  Sign in is managed by the Globus Auth capability with hundreds of Insitutional Identity providers, also incluing OrcID, Google, and Github accounts.
 
 Downloads
 *********
@@ -92,4 +94,8 @@ For Chrome users, you will need to go to your Settings -> Security & Privacy -> 
 
 Q: Can I perform a Globus transfer using Metagrid?
 
-A:  Yes, Globus Transfers are enabled via the Data Cart.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  Additionally, the feature is enabled only at LLNL for LLNL hosted data.  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.
+A:  Yes, Globus Transfers are enabled via the Data Cart, but these only work with some destination endpoint.  *Managed endpoints* at some institutions will not work for the moment, but Personal endpoints are supported.  However, at present they cannot be performed on an individual dataset basis (this feature was available in the CoG interface).  Additionally, the feature is enabled only at LLNL for LLNL hosted data.  On the Data Cart page, select the data you want included in the transfer via checkboxes, and select Globus on the bottom left of the cart pane.   Use the Transfer button to start the process.  You will be prompted to log into Globus, then select you destination endpoint.
+
+Q:  I get an Unknown Error with a wget script tranfser.  How do I fix this?
+
+A:  Please try another browser or reboot your system.  Restarting the browser may not solve the issue. 
