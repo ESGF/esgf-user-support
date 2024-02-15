@@ -184,7 +184,7 @@ Method 2: Use the pull down to select your OpenID issuer
 Forgot OpenID
 -------------
 
-#. Go to the Login page of any ESGF portal, e.g `<esgf-data.dkrz.de>`_, `<esgf-node.llnl.gov>`_, ...
+#. Go to the Login page of any ESGF portal, e.g `<https://esgf-data.dkrz.de>`_, `<https://esgf-node.llnl.gov>`_, ...
 
     .. image:: images/login_link.png
 
